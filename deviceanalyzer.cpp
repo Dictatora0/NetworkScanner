@@ -1,0 +1,395 @@
+#include "deviceanalyzer.h"
+#include <QVBoxLayout>
+#include <QHBoxLayout>
+#include <QLabel>
+#include <QPushButton>
+#include <QGroupBox>
+#include <QMap>
+#include <QStringList>
+#include <QDebug>
+#include <QApplication>
+#include <algorithm>
+
+DeviceAnalyzer::DeviceAnalyzer(QWidget *parent)
+    : QWidget(parent), m_totalHosts(0), m_reachableHosts(0),
+    m_deviceTypeChart(nullptr), m_deviceTypeSeries(nullptr),
+    m_portDistributionChart(nullptr), m_portSeries(nullptr),
+    m_vendorDistributionChart(nullptr), m_vendorSeries(nullptr)
+{
+    // 初始化图表
+    createDeviceTypeChart();
+    createPortDistributionChart();
+    createVendorDistributionChart();
+}
+
+void DeviceAnalyzer::createDeviceTypeChart()
+{
+    if (m_deviceTypeChart) {
+        delete m_deviceTypeChart;
+    }
+    
+    m_deviceTypeChart = new QChart();
+    m_deviceTypeChart->setTitle("设备类型分布");
+    m_deviceTypeChart->setAnimationOptions(QChart::SeriesAnimations);
+    
+    // 创建饼图系列
+    if (m_deviceTypeSeries) {
+        delete m_deviceTypeSeries;
+    }
+    
+    m_deviceTypeSeries = new QPieSeries();
+    m_deviceTypeChart->addSeries(m_deviceTypeSeries);
+    m_deviceTypeChart->legend()->setAlignment(Qt::AlignRight);
+}
+
+void DeviceAnalyzer::createPortDistributionChart()
+{
+    if (m_portDistributionChart) {
+        delete m_portDistributionChart;
+    }
+    
+    m_portDistributionChart = new QChart();
+    m_portDistributionChart->setTitle("常见端口分布");
+    m_portDistributionChart->setAnimationOptions(QChart::SeriesAnimations);
+    
+    // 创建柱状图系列
+    if (m_portSeries) {
+        delete m_portSeries;
+    }
+    
+    m_portSeries = new QBarSeries();
+    m_portDistributionChart->addSeries(m_portSeries);
+    
+    // 设置坐标轴
+    QBarCategoryAxis *axisX = new QBarCategoryAxis();
+    m_portDistributionChart->addAxis(axisX, Qt::AlignBottom);
+    m_portSeries->attachAxis(axisX);
+    
+    QValueAxis *axisY = new QValueAxis();
+    axisY->setRange(0, 10);
+    m_portDistributionChart->addAxis(axisY, Qt::AlignLeft);
+    m_portSeries->attachAxis(axisY);
+    
+    m_portDistributionChart->legend()->setVisible(false);
+}
+
+void DeviceAnalyzer::createVendorDistributionChart()
+{
+    if (m_vendorDistributionChart) {
+        delete m_vendorDistributionChart;
+    }
+    
+    m_vendorDistributionChart = new QChart();
+    m_vendorDistributionChart->setTitle("设备厂商分布");
+    m_vendorDistributionChart->setAnimationOptions(QChart::SeriesAnimations);
+    
+    // 创建饼图系列
+    if (m_vendorSeries) {
+        delete m_vendorSeries;
+    }
+    
+    m_vendorSeries = new QPieSeries();
+    m_vendorDistributionChart->addSeries(m_vendorSeries);
+    m_vendorDistributionChart->legend()->setAlignment(Qt::AlignRight);
+}
+
+void DeviceAnalyzer::analyzeHosts(const QList<HostInfo> &hosts)
+{
+    // 清除旧数据
+    clear();
+    
+    m_totalHosts = hosts.size();
+    
+    // 设备类型统计
+    QMap<QString, int> deviceTypes;
+    
+    // 端口统计
+    QMap<int, int> portCounts;
+    QList<int> commonPorts = {21, 22, 23, 25, 53, 80, 443, 3306, 3389, 8080};
+    
+    // 厂商统计
+    QMap<QString, int> vendorCounts;
+    
+    // 分析每台主机
+    for (const HostInfo &host : hosts) {
+        if (host.isReachable) {
+            m_reachableHosts++;
+            
+            // 设备类型统计
+            QString deviceType = determineDeviceType(host);
+            deviceTypes[deviceType]++;
+            
+            // 端口统计
+            QMapIterator<int, bool> i(host.openPorts);
+            while (i.hasNext()) {
+                i.next();
+                if (i.value() && commonPorts.contains(i.key())) {
+                    portCounts[i.key()]++;
+                }
+            }
+            
+            // 厂商统计
+            QString vendor = host.macVendor;
+            if (vendor.isEmpty()) {
+                vendor = "未知厂商";
+            }
+            vendorCounts[vendor]++;
+        }
+    }
+    
+    // 更新设备类型图表
+    if (m_deviceTypeSeries) {
+        m_deviceTypeSeries->clear();
+        QMapIterator<QString, int> dt(deviceTypes);
+        while (dt.hasNext()) {
+            dt.next();
+            if (dt.value() > 0) {
+                QString label = QString("%1 (%2)").arg(dt.key()).arg(dt.value());
+                QPieSlice *slice = m_deviceTypeSeries->append(label, dt.value());
+                
+                // 设置不同颜色
+                if (dt.key() == "路由器") {
+                    slice->setColor(QColor(255, 0, 0));
+                } else if (dt.key() == "服务器") {
+                    slice->setColor(QColor(0, 0, 255));
+                } else if (dt.key() == "个人电脑") {
+                    slice->setColor(QColor(0, 128, 0));
+                } else if (dt.key() == "移动设备") {
+                    slice->setColor(QColor(255, 165, 0));
+                } else if (dt.key() == "打印机") {
+                    slice->setColor(QColor(128, 0, 128));
+                } else if (dt.key() == "智能设备") {
+                    slice->setColor(QColor(0, 128, 128));
+                }
+                
+                slice->setLabelVisible();
+            }
+        }
+    }
+    
+    // 更新端口图表
+    if (m_portSeries) {
+        // 先删除旧的数据集
+        while (!m_portSeries->barSets().isEmpty()) {
+            m_portSeries->remove(m_portSeries->barSets().first());
+        }
+        
+        // 创建新的数据集
+        QBarSet *portSet = new QBarSet("端口");
+        
+        // 设置坐标轴类别
+        QStringList categories;
+        
+        // 添加端口数据
+        int maxCount = 1; // 至少为1，避免除零错误
+        for (int port : commonPorts) {
+            int count = portCounts.value(port, 0);
+            portSet->append(count);
+            categories << QString::number(port);
+            if (count > maxCount) {
+                maxCount = count;
+            }
+        }
+        
+        m_portSeries->append(portSet);
+        
+        // 更新坐标轴
+        QBarCategoryAxis *axisX = qobject_cast<QBarCategoryAxis*>(m_portDistributionChart->axes(Qt::Horizontal).first());
+        if (axisX) {
+            axisX->setCategories(categories);
+        }
+        
+        QValueAxis *axisY = qobject_cast<QValueAxis*>(m_portDistributionChart->axes(Qt::Vertical).first());
+        if (axisY) {
+            axisY->setRange(0, maxCount + 1);
+        }
+    }
+    
+    // 更新厂商图表
+    if (m_vendorSeries) {
+        m_vendorSeries->clear();
+        QMapIterator<QString, int> vc(vendorCounts);
+        
+        // 只显示前5个主要厂商，其余归为"其他"
+        int count = 0;
+        int otherCount = 0;
+        
+        while (vc.hasNext()) {
+            vc.next();
+            if (count < 5) {
+                QString label = QString("%1 (%2)").arg(vc.key()).arg(vc.value());
+                QPieSlice *slice = m_vendorSeries->append(label, vc.value());
+                slice->setLabelVisible();
+                count++;
+            } else {
+                otherCount += vc.value();
+            }
+        }
+        
+        if (otherCount > 0) {
+            QPieSlice *slice = m_vendorSeries->append(QString("其他 (%1)").arg(otherCount), otherCount);
+            slice->setLabelVisible();
+        }
+    }
+    
+    emit analysisCompleted();
+}
+
+void DeviceAnalyzer::clear()
+{
+    m_totalHosts = 0;
+    m_reachableHosts = 0;
+    
+    // 清空设备类型图表
+    if (m_deviceTypeSeries) {
+        m_deviceTypeSeries->clear();
+    }
+    
+    // 清空端口图表
+    if (m_portSeries) {
+        while (!m_portSeries->barSets().isEmpty()) {
+            m_portSeries->remove(m_portSeries->barSets().first());
+        }
+    }
+    
+    // 清空厂商图表
+    if (m_vendorSeries) {
+        m_vendorSeries->clear();
+    }
+    
+    emit analysisCompleted();
+}
+
+QString DeviceAnalyzer::generateSecurityReport(const QList<HostInfo> &hosts)
+{
+    QString report = "网络安全分析报告\n";
+    report += "=====================\n\n";
+    
+    // 统计主机数量
+    report += QString("发现总设备数：%1\n").arg(m_totalHosts);
+    report += QString("可访问设备数：%1\n").arg(m_reachableHosts);
+    report += QString("不可访问设备数：%1\n\n").arg(m_totalHosts - m_reachableHosts);
+    
+    // 检查高风险端口
+    QMap<int, QStringList> riskPorts;
+    riskPorts[21] = QStringList() << "FTP" << "文件传输协议，明文传输凭据，存在安全风险";
+    riskPorts[22] = QStringList() << "SSH" << "远程管理端口，应限制访问";
+    riskPorts[23] = QStringList() << "Telnet" << "未加密的远程管理，极高安全风险";
+    riskPorts[3389] = QStringList() << "RDP" << "远程桌面协议，存在多种漏洞";
+    riskPorts[445] = QStringList() << "SMB" << "文件共享服务，曾存在多种漏洞";
+    
+    // 检查风险端口开放情况
+    QMap<QString, QStringList> hostsWithRiskPorts;
+    
+    for (const HostInfo &host : hosts) {
+        if (!host.isReachable) continue;
+        
+        for (auto it = riskPorts.begin(); it != riskPorts.end(); ++it) {
+            int port = it.key();
+            
+            if (host.openPorts.contains(port) && host.openPorts[port]) {
+                hostsWithRiskPorts[host.ipAddress].append(
+                    QString("%1 (%2)").arg(port).arg(it.value()[0])
+                );
+            }
+        }
+    }
+    
+    // 生成风险报告
+    if (hostsWithRiskPorts.isEmpty()) {
+        report += "未发现高风险端口开放\n\n";
+    } else {
+        report += "发现以下设备开放了高风险端口：\n";
+        
+        for (auto it = hostsWithRiskPorts.begin(); it != hostsWithRiskPorts.end(); ++it) {
+            QString ip = it.key();
+            QStringList ports = it.value();
+            
+            // 查找主机名
+            QString hostname = "未知";
+            for (const HostInfo &host : hosts) {
+                if (host.ipAddress == ip) {
+                    hostname = host.hostName;
+                    break;
+                }
+            }
+            
+            report += QString("设备：%1 (%2)\n").arg(ip).arg(hostname);
+            report += QString("开放的高风险端口：%1\n").arg(ports.join(", "));
+            report += "------------\n";
+        }
+        
+        report += "\n";
+    }
+    
+    // 添加建议措施
+    report += "安全建议：\n";
+    report += "1. 限制远程管理端口(22, 23, 3389)的访问范围\n";
+    report += "2. 禁用未加密的服务(如Telnet, FTP)\n";
+    report += "3. 对必要的服务设置强密码和访问控制\n";
+    report += "4. 及时更新系统和应用补丁\n";
+    report += "5. 对重要设备设置防火墙规则\n";
+    
+    return report;
+}
+
+QString DeviceAnalyzer::determineDeviceType(const HostInfo &host)
+{
+    // 根据IP地址、主机名、MAC厂商等信息推断设备类型
+    QString ipLower = host.ipAddress.toLower();
+    QString hostLower = host.hostName.toLower();
+    QString vendorLower = host.macVendor.toLower();
+    
+    // 检测路由器
+    if (vendorLower.contains("路由") || 
+        vendorLower.contains("router") ||
+        hostLower.contains("router") || 
+        hostLower.contains("gateway") ||
+        ipLower.endsWith(".1") || 
+        ipLower.endsWith(".254")) {
+        return "路由器";
+    }
+    
+    // 检测服务器
+    if (hostLower.contains("server") || 
+        vendorLower.contains("server") ||
+        vendorLower.contains("dell") || 
+        vendorLower.contains("ibm") ||
+        vendorLower.contains("hp") && !vendorLower.contains("printer")) {
+        return "服务器";
+    }
+    
+    // 检测打印机
+    if (hostLower.contains("print") || 
+        vendorLower.contains("print") ||
+        vendorLower.contains("canon") || 
+        vendorLower.contains("hp") && vendorLower.contains("printer") ||
+        vendorLower.contains("epson")) {
+        return "打印机";
+    }
+    
+    // 检测移动设备
+    if (vendorLower.contains("apple") || 
+        vendorLower.contains("iphone") ||
+        vendorLower.contains("ipad") || 
+        vendorLower.contains("android") ||
+        vendorLower.contains("xiaomi") || 
+        vendorLower.contains("huawei") ||
+        vendorLower.contains("oppo") || 
+        vendorLower.contains("vivo")) {
+        return "移动设备";
+    }
+    
+    // 检测IoT设备
+    if (hostLower.contains("esp") || 
+        hostLower.contains("arduino") ||
+        hostLower.contains("raspberry") || 
+        hostLower.contains("iot") ||
+        vendorLower.contains("nest") || 
+        vendorLower.contains("smart")) {
+        return "智能设备";
+    }
+    
+    // 默认为PC
+    return "个人电脑";
+} 

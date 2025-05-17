@@ -75,4 +75,9 @@ _deps
 .Spotlight-V100
 .Trashes
 ehthumbs.db
-Thumbs.db 
+Thumbs.db
+
+# Cursor IDE specific
+cursorrule.yaml
+.vscode/
+.idea/ 
