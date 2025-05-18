@@ -333,10 +333,25 @@ QString NetworkScanner::lookupMacAddress(const QHostAddress &address)
     
     // macOS的arp输出通常看起来像:
     // ? (192.168.1.1) at 11:22:33:44:55:66 on en0 ifscope [ethernet]
+    // 改进的MAC地址正则表达式，能处理不规则MAC地址格式
     QRegularExpression macRegex("at\\s+([0-9A-Fa-f]{1,2}:[0-9A-Fa-f]{1,2}:[0-9A-Fa-f]{1,2}:[0-9A-Fa-f]{1,2}:[0-9A-Fa-f]{1,2}:[0-9A-Fa-f]{1,2})");
     QRegularExpressionMatch match = macRegex.match(output);
     if (match.hasMatch()) {
         macAddress = match.captured(1).toUpper();
+        
+        // 标准化MAC地址格式，确保每段都是两位
+        QStringList parts = macAddress.split(":");
+        QStringList standardizedParts;
+        for (const QString &part : parts) {
+            if (part.length() == 1) {
+                standardizedParts << "0" + part;
+            } else {
+                standardizedParts << part;
+            }
+        }
+        if (standardizedParts.size() == 6) {
+            return standardizedParts.join(":");
+        }
         return macAddress;
     }
     
@@ -349,8 +364,20 @@ QString NetworkScanner::lookupMacAddress(const QHostAddress &address)
                 QString part = parts[i];
                 // 尝试匹配MAC地址格式: xx:xx:xx:xx:xx:xx
                 if (part.count(":") == 5 || part.count("-") == 5) {
-                    macAddress = part.toUpper();
-                    return macAddress;
+                    // 标准化MAC地址格式
+                    QStringList macParts = part.split(part.contains(":") ? ":" : "-");
+                    QStringList standardizedParts;
+                    for (const QString &macPart : macParts) {
+                        if (macPart.length() == 1) {
+                            standardizedParts << "0" + macPart;
+                        } else {
+                            standardizedParts << macPart;
+                        }
+                    }
+                    if (standardizedParts.size() == 6) {
+                        return standardizedParts.join(":");
+                    }
+                    return part.toUpper().replace("-", ":");
                 }
             }
         }

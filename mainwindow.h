@@ -141,7 +141,6 @@ private:
     // 网络拓扑标签页
     QWidget *m_topologyTab;
     NetworkTopology *m_networkTopology;
-    QGraphicsView *m_topologyView;
     
     // 统计分析标签页
     QWidget *m_statisticsTab;

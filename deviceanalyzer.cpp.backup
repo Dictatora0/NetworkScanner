@@ -394,5 +394,18 @@ QString DeviceAnalyzer::determineDeviceType(const HostInfo &host)
     return "个人电脑";
 }
 
+// 获取图表的getter方法，这些应该在头文件中声明
+QChart* DeviceAnalyzer::getDeviceTypeChart() const
+{
+    return m_deviceTypeChart;
+}
 
+QChart* DeviceAnalyzer::getPortDistributionChart() const
+{
+    return m_portDistributionChart;
+}
 
+QChart* DeviceAnalyzer::getVendorDistributionChart() const
+{
+    return m_vendorDistributionChart;
+} 

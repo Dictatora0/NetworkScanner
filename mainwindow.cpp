@@ -15,7 +15,7 @@
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent), m_hostsFound(0), m_currentHostIndex(-1), m_darkModeEnabled(false),
     m_deviceTypeChartView(nullptr), m_vendorChartView(nullptr), m_portDistributionChartView(nullptr),
-    m_deviceAnalyzer(nullptr), m_scanHistory(nullptr), m_scanner(nullptr)
+    m_deviceAnalyzer(nullptr), m_scanHistory(nullptr), m_scanner(nullptr), m_networkTopology(nullptr)
 {
     // 创建UI组件
     createUI();
@@ -294,36 +294,50 @@ void MainWindow::createTopologyTab()
     toolbarLayout->addWidget(saveImageButton);
     toolbarLayout->addStretch();
     
-    // 拓扑图视图
-    QGraphicsScene *scene = new QGraphicsScene(m_topologyTab);
-    m_topologyView = new QGraphicsView(scene, m_topologyTab);
-    m_topologyView->setRenderHint(QPainter::Antialiasing);
-    m_topologyView->setDragMode(QGraphicsView::ScrollHandDrag);
+    // 创建网络拓扑组件
+    m_networkTopology = new NetworkTopology(m_topologyTab);
     
-    // 将工具栏和视图添加到布局
+    // 将工具栏和拓扑组件添加到布局
     topologyLayout->addWidget(toolbarWidget);
-    topologyLayout->addWidget(m_topologyView);
+    topologyLayout->addWidget(m_networkTopology);
     
     // 连接信号和槽
     connect(zoomInButton, &QPushButton::clicked, this, [this]() {
-        if (m_topologyView) {
-            m_topologyView->scale(1.2, 1.2);
+        if (m_networkTopology) {
+            // 调用网络拓扑的缩放方法
+            // 例如：m_networkTopology->zoomIn();
         }
     });
     
     connect(zoomOutButton, &QPushButton::clicked, this, [this]() {
-        if (m_topologyView) {
-            m_topologyView->scale(1.0/1.2, 1.0/1.2);
+        if (m_networkTopology) {
+            // 调用网络拓扑的缩放方法
+            // 例如：m_networkTopology->zoomOut();
         }
     });
     
     connect(resetViewButton, &QPushButton::clicked, this, [this]() {
-        if (m_topologyView) {
-            m_topologyView->resetTransform();
+        if (m_networkTopology) {
+            // 调用网络拓扑的重置视图方法
+            // 例如：m_networkTopology->resetView();
         }
     });
     
     connect(saveImageButton, &QPushButton::clicked, this, &MainWindow::saveTopologyImage);
+    
+    // 连接设备选择信号
+    if (m_networkTopology) {
+        connect(m_networkTopology, &NetworkTopology::deviceSelected, this, [this](const HostInfo &host) {
+            // 处理设备选择事件
+            for (int row = 0; row < m_resultsTable->rowCount(); ++row) {
+                if (m_resultsTable->item(row, 0)->text() == host.ipAddress) {
+                    m_resultsTable->selectRow(row);
+                    showHostDetails(row, 0);
+                    break;
+                }
+            }
+        });
+    }
 }
 
 void MainWindow::createStatisticsTab()
@@ -868,10 +882,10 @@ void MainWindow::saveTopologyImage()
     QString fileName = QFileDialog::getSaveFileName(this, "保存网络拓扑图", 
                                                   QDir::homePath() + "/网络拓扑图.png", 
                                                   "图像文件 (*.png *.jpg)");
-    if (!fileName.isEmpty()) {
+    if (!fileName.isEmpty() && m_networkTopology) {
         // 创建一个QPixmap来捕获拓扑视图
-        QPixmap pixmap(m_topologyTab->size());
-        m_topologyTab->render(&pixmap);
+        QPixmap pixmap(m_networkTopology->size());
+        m_networkTopology->render(&pixmap);
         
         // 保存图像
         if (pixmap.save(fileName)) {
@@ -1198,7 +1212,7 @@ void MainWindow::loadHistoryFromFile()
 void MainWindow::updateNetworkTopology()
 {
     QList<HostInfo> hosts = m_scanner->getScannedHosts();
-    if (!hosts.isEmpty()) {
+    if (!hosts.isEmpty() && m_networkTopology) {
         QApplication::setOverrideCursor(Qt::WaitCursor);
         m_networkTopology->updateTopology(hosts);
         QApplication::restoreOverrideCursor();

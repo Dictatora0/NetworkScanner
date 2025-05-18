@@ -1,0 +1,2 @@
+set(__QT_DEPLOY_TARGET_NetScanner_FILE /Users/lifulin/Desktop/NetworkScanner/NetScanner)
+set(__QT_DEPLOY_TARGET_NetScanner_TYPE EXECUTABLE)

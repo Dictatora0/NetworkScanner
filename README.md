@@ -43,9 +43,11 @@
 6. 运行程序：`./NetScanner`
 
 ```bash
-cd build
+cd /Users/lifulin/Desktop/NetworkScanner
+rm -rf build
+mkdir build && cd build
 cmake ..
-make
+make -j8
 ./NetScanner
 ```
 
