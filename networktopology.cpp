@@ -522,4 +522,18 @@ void NetworkTopology::updateTopology(const QList<HostInfo> &hosts)
 void NetworkTopology::clear()
 {
     m_topologyView->clear();
+}
+
+void NetworkTopology::scale(qreal factor)
+{
+    if (m_topologyView) {
+        m_topologyView->scale(factor, factor);
+    }
+}
+
+void NetworkTopology::resetView()
+{
+    if (m_topologyView && m_topologyView->scene()) {
+        m_topologyView->fitInView(m_topologyView->scene()->itemsBoundingRect(), Qt::KeepAspectRatio);
+    }
 } 

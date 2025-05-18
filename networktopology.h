@@ -101,6 +101,10 @@ public:
     void updateTopology(const QList<HostInfo> &hosts);
     void clear();
     
+    // 缩放和视图控制方法
+    void scale(qreal factor);
+    void resetView();
+    
 signals:
     void deviceSelected(const HostInfo &host);
     

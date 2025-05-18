@@ -304,22 +304,19 @@ void MainWindow::createTopologyTab()
     // 连接信号和槽
     connect(zoomInButton, &QPushButton::clicked, this, [this]() {
         if (m_networkTopology) {
-            // 调用网络拓扑的缩放方法
-            // 例如：m_networkTopology->zoomIn();
+            m_networkTopology->scale(1.2);
         }
     });
     
     connect(zoomOutButton, &QPushButton::clicked, this, [this]() {
         if (m_networkTopology) {
-            // 调用网络拓扑的缩放方法
-            // 例如：m_networkTopology->zoomOut();
+            m_networkTopology->scale(1/1.2);
         }
     });
     
     connect(resetViewButton, &QPushButton::clicked, this, [this]() {
         if (m_networkTopology) {
-            // 调用网络拓扑的重置视图方法
-            // 例如：m_networkTopology->resetView();
+            m_networkTopology->resetView();
         }
     });
     
