@@ -1,0 +1,386 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Network Scanner: networkscanner.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Network Scanner
+   </div>
+   <div id="projectbrief">网络扫描和拓扑分析工具</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('networkscanner_8h_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">networkscanner.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="networkscanner_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// networkscanner.h</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#ifndef NETWORKSCANNER_H</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#define NETWORKSCANNER_H</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;QObject&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;QHostAddress&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;QList&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;QMap&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;QMutex&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;QTcpSocket&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;QDateTime&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;QNetworkInterface&gt;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;QFuture&gt;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;QtConcurrent/QtConcurrent&gt;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;QHostInfo&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;QThreadPool&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;QRunnable&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span></div>
+<div class="foldopen" id="foldopen00035" data-start="{" data-end="};">
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="struct_host_info.html">   35</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_host_info.html">HostInfo</a> {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="struct_host_info.html#adb270c7d65c45949804bda482899adc7">   36</a></span>    QString <a class="code hl_variable" href="struct_host_info.html#adb270c7d65c45949804bda482899adc7">ipAddress</a>;   </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="struct_host_info.html#a3ab938742358fff31e219e7f06cfe328">   37</a></span>    QString <a class="code hl_variable" href="struct_host_info.html#a3ab938742358fff31e219e7f06cfe328">hostName</a>;    </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="struct_host_info.html#ada851d6f94fb0540fedfe9d731662f41">   38</a></span>    QString <a class="code hl_variable" href="struct_host_info.html#ada851d6f94fb0540fedfe9d731662f41">macAddress</a>;  </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="struct_host_info.html#a31770b83b034ab5b4c224714418dc4ee">   39</a></span>    QString <a class="code hl_variable" href="struct_host_info.html#a31770b83b034ab5b4c224714418dc4ee">macVendor</a>;   </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="struct_host_info.html#acccff6374bda31a33dfc065ece37131c">   40</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="struct_host_info.html#acccff6374bda31a33dfc065ece37131c">isReachable</a>;    </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="struct_host_info.html#ac15e8da2ca6b09a6e04c59cee5534a76">   41</a></span>    QDateTime <a class="code hl_variable" href="struct_host_info.html#ac15e8da2ca6b09a6e04c59cee5534a76">scanTime</a>;  </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="struct_host_info.html#acfdc7912247d3855e2ed5e810ac1f4d1">   42</a></span>    QMap&lt;int, bool&gt; <a class="code hl_variable" href="struct_host_info.html#acfdc7912247d3855e2ed5e810ac1f4d1">openPorts</a>; </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>};</div>
+</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span></div>
+<div class="foldopen" id="foldopen00050" data-start="{" data-end="};">
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_scan_strategy.html">   50</a></span><span class="keyword">class </span><a class="code hl_function" href="class_scan_strategy.html#a76ab981f4500728e20b1c63bfc44ff01">ScanStrategy</a> {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00056" data-start="{" data-end="};">
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="class_scan_strategy.html#a0e3c3f47f30a45bd2a1e9f0533d893aa">   56</a></span>    <span class="keyword">enum</span> <a class="code hl_enumeration" href="class_scan_strategy.html#a0e3c3f47f30a45bd2a1e9f0533d893aa">ScanMode</a> {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="class_scan_strategy.html#a0e3c3f47f30a45bd2a1e9f0533d893aaa12f5f00989512bdcac4b50b6317dd39a">   57</a></span>        <a class="code hl_enumvalue" href="class_scan_strategy.html#a0e3c3f47f30a45bd2a1e9f0533d893aaa12f5f00989512bdcac4b50b6317dd39a">QUICK_SCAN</a>,      </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_scan_strategy.html#a0e3c3f47f30a45bd2a1e9f0533d893aaa91a37fa685743f83714c4d40d0200c90">   58</a></span>        <a class="code hl_enumvalue" href="class_scan_strategy.html#a0e3c3f47f30a45bd2a1e9f0533d893aaa91a37fa685743f83714c4d40d0200c90">STANDARD_SCAN</a>,   </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="class_scan_strategy.html#a0e3c3f47f30a45bd2a1e9f0533d893aaac99476d88991212074d9b25f37ef3f32">   59</a></span>        <a class="code hl_enumvalue" href="class_scan_strategy.html#a0e3c3f47f30a45bd2a1e9f0533d893aaac99476d88991212074d9b25f37ef3f32">DEEP_SCAN</a>        </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    };</div>
+</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <a class="code hl_function" href="class_scan_strategy.html#a76ab981f4500728e20b1c63bfc44ff01">ScanStrategy</a>(<a class="code hl_enumeration" href="class_scan_strategy.html#a0e3c3f47f30a45bd2a1e9f0533d893aa">ScanMode</a> mode = <a class="code hl_enumvalue" href="class_scan_strategy.html#a0e3c3f47f30a45bd2a1e9f0533d893aaa91a37fa685743f83714c4d40d0200c90">STANDARD_SCAN</a>);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    QList&lt;int&gt; <a class="code hl_function" href="class_scan_strategy.html#a241232a2d2d446d56970be5cbce6380e">getPortsToScan</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_scan_strategy.html#a332364d3bec278a0bc52b5673571167e">getScanTimeout</a>(<span class="keyword">const</span> QString &amp;ip) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_scan_strategy.html#af1dd90fe689b039c15a47f95ca30f9a9">getMaxParallelTasks</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_scan_strategy.html#a200cc390646b7699a0c0e97edc83350e">updateHostResponseTime</a>(<span class="keyword">const</span> QString &amp;ip, <span class="keywordtype">int</span> responseTime);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="class_scan_strategy.html#a35d27b67331e023b1e5917dae36822de">   98</a></span>    <a class="code hl_enumeration" href="class_scan_strategy.html#a0e3c3f47f30a45bd2a1e9f0533d893aa">ScanMode</a> <a class="code hl_function" href="class_scan_strategy.html#a35d27b67331e023b1e5917dae36822de">getMode</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_scan_strategy.html#add8cd73d31e5146283413d44ba2805ec">m_mode</a>; }</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="class_scan_strategy.html#a69c75a9a4bb267c649a0bc784e884256">  104</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_scan_strategy.html#a69c75a9a4bb267c649a0bc784e884256">setMode</a>(<a class="code hl_enumeration" href="class_scan_strategy.html#a0e3c3f47f30a45bd2a1e9f0533d893aa">ScanMode</a> mode) { <a class="code hl_variable" href="class_scan_strategy.html#add8cd73d31e5146283413d44ba2805ec">m_mode</a> = mode; }</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="class_scan_strategy.html#add8cd73d31e5146283413d44ba2805ec">  107</a></span>    <a class="code hl_enumeration" href="class_scan_strategy.html#a0e3c3f47f30a45bd2a1e9f0533d893aa">ScanMode</a> <a class="code hl_variable" href="class_scan_strategy.html#add8cd73d31e5146283413d44ba2805ec">m_mode</a>;  </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="class_scan_strategy.html#a5110a9e267f184295696c2c14cc0e42f">  108</a></span>    QMap&lt;QString, int&gt; <a class="code hl_variable" href="class_scan_strategy.html#a5110a9e267f184295696c2c14cc0e42f">m_hostResponseTimes</a>;  </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>};</div>
+</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span></div>
+<div class="foldopen" id="foldopen00116" data-start="{" data-end="};">
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="class_scan_task.html">  116</a></span><span class="keyword">class </span><a class="code hl_function" href="class_scan_task.html#a1c317cbf241b9a74554f70464880cfb3">ScanTask</a> : <span class="keyword">public</span> QRunnable {</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <a class="code hl_function" href="class_scan_task.html#a1c317cbf241b9a74554f70464880cfb3">ScanTask</a>(QObject* parent, <span class="keyword">const</span> QHostAddress &amp;address, </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>             <span class="keyword">const</span> QList&lt;int&gt; &amp;ports, <span class="keywordtype">int</span> timeout);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_scan_task.html#a7cd062b55f9e5cef3273946219c68483">run</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno"><a class="line" href="class_scan_task.html#a30929a1dd40b1cbd669f12b1baed775b">  134</a></span>    QObject* <a class="code hl_variable" href="class_scan_task.html#a30929a1dd40b1cbd669f12b1baed775b">m_parent</a>;          </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="class_scan_task.html#aa1d37c401e097d0ebea70c9104185fd7">  135</a></span>    QHostAddress <a class="code hl_variable" href="class_scan_task.html#aa1d37c401e097d0ebea70c9104185fd7">m_address</a>;     </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno"><a class="line" href="class_scan_task.html#a0a234d389d4dcb3f74c74eff05132ee8">  136</a></span>    QList&lt;int&gt; <a class="code hl_variable" href="class_scan_task.html#a0a234d389d4dcb3f74c74eff05132ee8">m_ports</a>;         </div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno"><a class="line" href="class_scan_task.html#a609c1dc70ddfcdab5de7b69de3347582">  137</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_scan_task.html#a609c1dc70ddfcdab5de7b69de3347582">m_timeout</a>;              </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>};</div>
+</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span></div>
+<div class="foldopen" id="foldopen00145" data-start="{" data-end="};">
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno"><a class="line" href="class_network_scanner.html">  145</a></span><span class="keyword">class </span><a class="code hl_function" href="class_network_scanner.html#aa2dcdd86a95aa5a347d48efc6eb0dcb1">NetworkScanner</a> : <span class="keyword">public</span> QObject</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>{</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    Q_OBJECT</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    <a class="code hl_function" href="class_network_scanner.html#aa2dcdd86a95aa5a347d48efc6eb0dcb1">NetworkScanner</a>(QObject *parent = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    </div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    <a class="code hl_function" href="class_network_scanner.html#abeccb1ea9774d7962fac4901f738e692">~NetworkScanner</a>();</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    </div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_network_scanner.html#aea1a793e46ec7cc8e2a75b5bc71366ed">setCustomPortsToScan</a>(<span class="keyword">const</span> QList&lt;int&gt; &amp;ports);</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    </div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_network_scanner.html#ae34823cd436f8345ee7dedda3fe56bf6">setScanTimeout</a>(<span class="keywordtype">int</span> msecs);</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    </div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_network_scanner.html#ae86106ecdb8aab43231f7d48d6840e50">setCustomIPRange</a>(<span class="keyword">const</span> QString &amp;startIP, <span class="keyword">const</span> QString &amp;endIP);</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno"><a class="line" href="class_network_scanner.html#a20f31e911444bcc321a733b5015710fb">  184</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_network_scanner.html#a20f31e911444bcc321a733b5015710fb">setScanStrategy</a>(<a class="code hl_enumeration" href="class_scan_strategy.html#a0e3c3f47f30a45bd2a1e9f0533d893aa">ScanStrategy::ScanMode</a> mode);</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    </div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    QList&lt;HostInfo&gt; <a class="code hl_function" href="class_network_scanner.html#a1ff09dda96ac397a6700a79651123ae4">getScannedHosts</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    </div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_network_scanner.html#a65c572325e53a912f34394e7beabb867">saveResultsToFile</a>(<span class="keyword">const</span> QString &amp;filename) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    </div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_network_scanner.html#a3d1a653bce80d595a1c302fda393e5b9">startScan</a>();</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    </div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_network_scanner.html#a390dcda3d4cd1d76633e6f4611ae8410">stopScan</a>();</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    </div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_network_scanner.html#a10e2ee230d5126ea043febd28f0559e3">isScanning</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    </div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno"><a class="line" href="class_network_scanner.html#ac1d45fc1180ff72ae369fe0966f67d08">  219</a></span>    QList&lt;QHostAddress&gt; <a class="code hl_function" href="class_network_scanner.html#ac1d45fc1180ff72ae369fe0966f67d08">quickPingScan</a>(<span class="keyword">const</span> QList&lt;QHostAddress&gt; &amp;addresses);</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>    </div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_network_scanner.html#a34fbb26df044a6ee3f830f79eb2d1ce6">isHostReachable</a>(<span class="keyword">const</span> QHostAddress &amp;address, <span class="keywordtype">int</span> timeout);</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    </div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno"><a class="line" href="class_network_scanner.html#a27baba5addfba7cdcd71878c6c9e442a">  236</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_network_scanner.html#a27baba5addfba7cdcd71878c6c9e442a">isReachableOnPorts</a>(<span class="keyword">const</span> QHostAddress &amp;address, <span class="keyword">const</span> QList&lt;int&gt; &amp;ports, <span class="keywordtype">int</span> timeout);</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>    </div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_network_scanner.html#ae1c58186285b571608eb3e1ef699a1d4">scanHost</a>(<span class="keyword">const</span> QHostAddress &amp;address);</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>    </div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>    QString <a class="code hl_function" href="class_network_scanner.html#afcc19f1f23e444aef7b689e5d64c1422">lookupHostName</a>(<span class="keyword">const</span> QHostAddress &amp;address);</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>    </div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    QString <a class="code hl_function" href="class_network_scanner.html#a879abf7e7a058dda14f6f36645d6763b">lookupMacAddress</a>(<span class="keyword">const</span> QHostAddress &amp;address);</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>    </div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>    QString <a class="code hl_function" href="class_network_scanner.html#a86214dd708b98209915b29514cd58296">lookupMacVendor</a>(<span class="keyword">const</span> QString &amp;macAddress);</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>    </div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>    QString <a class="code hl_function" href="class_network_scanner.html#a618ee5322d0843ad65a341fff40ce43d">generatePseudoMACFromIP</a>(<span class="keyword">const</span> QString &amp;ip);</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>    </div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>signals:</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="class_network_scanner.html#a941867644d70f3b1c512c9e98f082ed3">hostFound</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_host_info.html">HostInfo</a> &amp;host);</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>    </div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="class_network_scanner.html#a56499014f2f0ee9a87fcbf19ba034eeb">scanStarted</a>();</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>    </div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="class_network_scanner.html#a311c4f6158b867640590a03f85879b6b">scanFinished</a>();</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>    </div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="class_network_scanner.html#a9e780f0ca7e0519b0a7b8ee6db11996e">scanProgress</a>(<span class="keywordtype">int</span> progress);</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>    </div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="class_network_scanner.html#a7d443adacaa45d4babee9c5c8cc3927b">scanError</a>(<span class="keyword">const</span> QString &amp;errorMessage);</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>    </div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span><span class="keyword">public</span> slots:</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_network_scanner.html#ad50732f1a5d713a4229d29a2cec1295c">onScanTaskFinished</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_host_info.html">HostInfo</a> &amp;hostInfo);</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>    </div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_network_scanner.html#ae86a6e70a9c71be92ae45209a5a89bfe">updateScanProgress</a>();</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>    </div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_network_scanner.html#a5d6e606c028e6b934e5562254c016710">onHostNameLookedUp</a>(<span class="keyword">const</span> QHostInfo &amp;hostInfo);</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>    </div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>    QList&lt;QHostAddress&gt; <a class="code hl_function" href="class_network_scanner.html#af088a70b884ccc65b363ecc235af3058">getLocalNetworkAddresses</a>();</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>    </div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>    QString <a class="code hl_function" href="class_network_scanner.html#a37b59a466d4daa5a5f89d1eb8f588626">normalizeMacAddress</a>(<span class="keyword">const</span> QString &amp;macAddress);</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>    </div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno"><a class="line" href="class_network_scanner.html#a35e8651f2b899836b25b68f1ee673520">  339</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_network_scanner.html#a35e8651f2b899836b25b68f1ee673520">pingTargetWithTimeout</a>(<span class="keyword">const</span> QString &amp;ip, <span class="keywordtype">int</span> timeout);</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>    </div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno"><a class="line" href="class_network_scanner.html#a1499c78a310999b583c7008a106379d7">  346</a></span>    QString <a class="code hl_function" href="class_network_scanner.html#a1499c78a310999b583c7008a106379d7">getMacAddressFromSystemCalls</a>(<span class="keyword">const</span> QString &amp;ip);</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>    </div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>    QList&lt;QPair&lt;QHostAddress, QString&gt;&gt; <a class="code hl_function" href="class_network_scanner.html#ac28925e0859afc5ae1165c98a7e537c4">performARPScan</a>();</div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>    </div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_network_scanner.html#acdcb120eceeec289b7feb2f5d8256b2a">scanHostPorts</a>(<a class="code hl_struct" href="struct_host_info.html">HostInfo</a> &amp;hostInfo);</div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>    </div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno"><a class="line" href="class_network_scanner.html#aca3185ddc77f6f4bcc13279cb290d858">  364</a></span>    QList&lt;QHostAddress&gt; <a class="code hl_function" href="class_network_scanner.html#aca3185ddc77f6f4bcc13279cb290d858">getAddressesToScan</a>();</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>    </div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_network_scanner.html#a3b1ddceb6c092aa96f97cb6aba9321b5">processScanResults</a>();</div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>    </div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno"><a class="line" href="class_network_scanner.html#ab552ddb02bf45cc7293e68d819b08da6">  371</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_network_scanner.html#ab552ddb02bf45cc7293e68d819b08da6">m_isScanning</a>;  </div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>    </div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno"><a class="line" href="class_network_scanner.html#af1c4f86f0bf57509498127e25bd2dd99">  373</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_network_scanner.html#af1c4f86f0bf57509498127e25bd2dd99">m_scannedHosts</a>;  </div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno"><a class="line" href="class_network_scanner.html#abf3fa14815d6a3cdec60bbcdb1b9c649">  374</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_network_scanner.html#abf3fa14815d6a3cdec60bbcdb1b9c649">m_totalHosts</a>;    </div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno"><a class="line" href="class_network_scanner.html#a423ce8a2179223e48189772f80cebb9c">  375</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_network_scanner.html#a423ce8a2179223e48189772f80cebb9c">m_scanTimeout</a>;   </div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>    </div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno"><a class="line" href="class_network_scanner.html#a1606df18aa388acb9b685d0f72ba2d8f">  377</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_network_scanner.html#a1606df18aa388acb9b685d0f72ba2d8f">m_useCustomRange</a>;       </div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno"><a class="line" href="class_network_scanner.html#a86b547fcfdd0be16c9c689731887e255">  378</a></span>    QHostAddress <a class="code hl_variable" href="class_network_scanner.html#a86b547fcfdd0be16c9c689731887e255">m_startIPRange</a>; </div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno"><a class="line" href="class_network_scanner.html#adc7a00ffc172c1dfc141d30240a8ac67">  379</a></span>    QHostAddress <a class="code hl_variable" href="class_network_scanner.html#adc7a00ffc172c1dfc141d30240a8ac67">m_endIPRange</a>;   </div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>    </div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno"><a class="line" href="class_network_scanner.html#aaa8e5c1ecbb18e30b3eaa41ea030aa8b">  381</a></span>    QList&lt;int&gt; <a class="code hl_variable" href="class_network_scanner.html#aaa8e5c1ecbb18e30b3eaa41ea030aa8b">m_portsToScan</a>;  </div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>    </div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno"><a class="line" href="class_network_scanner.html#a794bc857be82d6b7b9cc3449df61bc0a">  383</a></span>    QList&lt;HostInfo&gt; <a class="code hl_variable" href="class_network_scanner.html#a794bc857be82d6b7b9cc3449df61bc0a">m_scannedHostsList</a>;  </div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno"><a class="line" href="class_network_scanner.html#a519b23696e548ce76d19b0923b1b2e31">  384</a></span>    QMutex <a class="code hl_variable" href="class_network_scanner.html#a519b23696e548ce76d19b0923b1b2e31">m_mutex</a>;  </div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>    </div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno"><a class="line" href="class_network_scanner.html#a07591f97b42d5ba072f1dd383ac5aaaf">  386</a></span>    QList&lt;QFuture&lt;void&gt;&gt; <a class="code hl_variable" href="class_network_scanner.html#a07591f97b42d5ba072f1dd383ac5aaaf">m_scanFutures</a>;  </div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno"><a class="line" href="class_network_scanner.html#a95c25f8c2863d81f3c9348d8b90c313f">  387</a></span>    QThreadPool <a class="code hl_variable" href="class_network_scanner.html#a95c25f8c2863d81f3c9348d8b90c313f">m_threadPool</a>;  </div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>    </div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno"><a class="line" href="class_network_scanner.html#a6565994e3e77dd1f39ed03f7a31f79fb">  389</a></span>    QMap&lt;QString, QString&gt; <a class="code hl_variable" href="class_network_scanner.html#a6565994e3e77dd1f39ed03f7a31f79fb">m_macAddressCache</a>;  </div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>    </div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno"><a class="line" href="class_network_scanner.html#adfa250375b6ed189a694030f831a441c">  391</a></span>    <a class="code hl_class" href="class_scan_strategy.html">ScanStrategy</a> <a class="code hl_variable" href="class_network_scanner.html#adfa250375b6ed189a694030f831a441c">m_scanStrategy</a>;  </div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>    </div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno"><a class="line" href="class_network_scanner.html#a29d0e3495e8170c1b40420d5e301b8d2">  393</a></span>    QList&lt;QHostAddress&gt; <a class="code hl_variable" href="class_network_scanner.html#a29d0e3495e8170c1b40420d5e301b8d2">m_activeHosts</a>;  </div>
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>    </div>
+<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_network_scanner.html#a3d61598311556d7ab706e013005f7c5f">executeProcess</a>(<span class="keyword">const</span> QString &amp;program, <span class="keyword">const</span> QStringList &amp;args, QString &amp;stdOutOutput, QString &amp;stdErrOutput, <span class="keywordtype">int</span> startTimeout = 2000, <span class="keywordtype">int</span> finishTimeout = 5000);</div>
+<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>};</div>
+</div>
+<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span> </div>
+<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span><span class="preprocessor">#endif </span><span class="comment">// NETWORKSCANNER_H </span></div>
+<div class="ttc" id="aclass_network_scanner_html_a07591f97b42d5ba072f1dd383ac5aaaf"><div class="ttname"><a href="class_network_scanner.html#a07591f97b42d5ba072f1dd383ac5aaaf">NetworkScanner::m_scanFutures</a></div><div class="ttdeci">QList&lt; QFuture&lt; void &gt; &gt; m_scanFutures</div><div class="ttdoc">并行扫描任务</div><div class="ttdef"><b>定义</b> networkscanner.h:386</div></div>
+<div class="ttc" id="aclass_network_scanner_html_a10e2ee230d5126ea043febd28f0559e3"><div class="ttname"><a href="class_network_scanner.html#a10e2ee230d5126ea043febd28f0559e3">NetworkScanner::isScanning</a></div><div class="ttdeci">bool isScanning() const</div><div class="ttdoc">检查是否正在扫描</div><div class="ttdef"><b>定义</b> networkscanner.cpp:285</div></div>
+<div class="ttc" id="aclass_network_scanner_html_a1499c78a310999b583c7008a106379d7"><div class="ttname"><a href="class_network_scanner.html#a1499c78a310999b583c7008a106379d7">NetworkScanner::getMacAddressFromSystemCalls</a></div><div class="ttdeci">QString getMacAddressFromSystemCalls(const QString &amp;ip)</div><div class="ttdoc">通过系统调用获取MAC地址</div></div>
+<div class="ttc" id="aclass_network_scanner_html_a1606df18aa388acb9b685d0f72ba2d8f"><div class="ttname"><a href="class_network_scanner.html#a1606df18aa388acb9b685d0f72ba2d8f">NetworkScanner::m_useCustomRange</a></div><div class="ttdeci">bool m_useCustomRange</div><div class="ttdoc">是否使用自定义IP范围</div><div class="ttdef"><b>定义</b> networkscanner.h:377</div></div>
+<div class="ttc" id="aclass_network_scanner_html_a1ff09dda96ac397a6700a79651123ae4"><div class="ttname"><a href="class_network_scanner.html#a1ff09dda96ac397a6700a79651123ae4">NetworkScanner::getScannedHosts</a></div><div class="ttdeci">QList&lt; HostInfo &gt; getScannedHosts() const</div><div class="ttdoc">获取扫描结果</div><div class="ttdef"><b>定义</b> networkscanner.cpp:116</div></div>
+<div class="ttc" id="aclass_network_scanner_html_a20f31e911444bcc321a733b5015710fb"><div class="ttname"><a href="class_network_scanner.html#a20f31e911444bcc321a733b5015710fb">NetworkScanner::setScanStrategy</a></div><div class="ttdeci">void setScanStrategy(ScanStrategy::ScanMode mode)</div><div class="ttdoc">设置扫描策略</div></div>
+<div class="ttc" id="aclass_network_scanner_html_a27baba5addfba7cdcd71878c6c9e442a"><div class="ttname"><a href="class_network_scanner.html#a27baba5addfba7cdcd71878c6c9e442a">NetworkScanner::isReachableOnPorts</a></div><div class="ttdeci">bool isReachableOnPorts(const QHostAddress &amp;address, const QList&lt; int &gt; &amp;ports, int timeout)</div><div class="ttdoc">检查主机在多个端口上是否可达</div></div>
+<div class="ttc" id="aclass_network_scanner_html_a29d0e3495e8170c1b40420d5e301b8d2"><div class="ttname"><a href="class_network_scanner.html#a29d0e3495e8170c1b40420d5e301b8d2">NetworkScanner::m_activeHosts</a></div><div class="ttdeci">QList&lt; QHostAddress &gt; m_activeHosts</div><div class="ttdoc">活跃主机列表</div><div class="ttdef"><b>定义</b> networkscanner.h:393</div></div>
+<div class="ttc" id="aclass_network_scanner_html_a311c4f6158b867640590a03f85879b6b"><div class="ttname"><a href="class_network_scanner.html#a311c4f6158b867640590a03f85879b6b">NetworkScanner::scanFinished</a></div><div class="ttdeci">void scanFinished()</div><div class="ttdoc">扫描完成信号</div><div class="ttdef"><b>定义</b> moc_networkscanner.cpp:190</div></div>
+<div class="ttc" id="aclass_network_scanner_html_a34fbb26df044a6ee3f830f79eb2d1ce6"><div class="ttname"><a href="class_network_scanner.html#a34fbb26df044a6ee3f830f79eb2d1ce6">NetworkScanner::isHostReachable</a></div><div class="ttdeci">bool isHostReachable(const QHostAddress &amp;address, int timeout)</div><div class="ttdoc">检查主机是否可达</div><div class="ttdef"><b>定义</b> networkscanner.cpp:373</div></div>
+<div class="ttc" id="aclass_network_scanner_html_a35e8651f2b899836b25b68f1ee673520"><div class="ttname"><a href="class_network_scanner.html#a35e8651f2b899836b25b68f1ee673520">NetworkScanner::pingTargetWithTimeout</a></div><div class="ttdeci">bool pingTargetWithTimeout(const QString &amp;ip, int timeout)</div><div class="ttdoc">使用ping命令检测目标是否可达</div></div>
+<div class="ttc" id="aclass_network_scanner_html_a37b59a466d4daa5a5f89d1eb8f588626"><div class="ttname"><a href="class_network_scanner.html#a37b59a466d4daa5a5f89d1eb8f588626">NetworkScanner::normalizeMacAddress</a></div><div class="ttdeci">QString normalizeMacAddress(const QString &amp;macAddress)</div><div class="ttdoc">MAC地址规范化</div><div class="ttdef"><b>定义</b> networkscanner.cpp:588</div></div>
+<div class="ttc" id="aclass_network_scanner_html_a390dcda3d4cd1d76633e6f4611ae8410"><div class="ttname"><a href="class_network_scanner.html#a390dcda3d4cd1d76633e6f4611ae8410">NetworkScanner::stopScan</a></div><div class="ttdeci">void stopScan()</div><div class="ttdoc">停止扫描</div><div class="ttdef"><b>定义</b> networkscanner.cpp:269</div></div>
+<div class="ttc" id="aclass_network_scanner_html_a3b1ddceb6c092aa96f97cb6aba9321b5"><div class="ttname"><a href="class_network_scanner.html#a3b1ddceb6c092aa96f97cb6aba9321b5">NetworkScanner::processScanResults</a></div><div class="ttdeci">void processScanResults()</div><div class="ttdoc">处理扫描结果</div><div class="ttdef"><b>定义</b> networkscanner.cpp:552</div></div>
+<div class="ttc" id="aclass_network_scanner_html_a3d1a653bce80d595a1c302fda393e5b9"><div class="ttname"><a href="class_network_scanner.html#a3d1a653bce80d595a1c302fda393e5b9">NetworkScanner::startScan</a></div><div class="ttdeci">void startScan()</div><div class="ttdoc">开始扫描</div><div class="ttdef"><b>定义</b> networkscanner.cpp:162</div></div>
+<div class="ttc" id="aclass_network_scanner_html_a3d61598311556d7ab706e013005f7c5f"><div class="ttname"><a href="class_network_scanner.html#a3d61598311556d7ab706e013005f7c5f">NetworkScanner::executeProcess</a></div><div class="ttdeci">static bool executeProcess(const QString &amp;program, const QStringList &amp;args, QString &amp;stdOutOutput, QString &amp;stdErrOutput, int startTimeout=2000, int finishTimeout=5000)</div><div class="ttdoc">执行外部进程</div><div class="ttdef"><b>定义</b> networkscanner.cpp:702</div></div>
+<div class="ttc" id="aclass_network_scanner_html_a423ce8a2179223e48189772f80cebb9c"><div class="ttname"><a href="class_network_scanner.html#a423ce8a2179223e48189772f80cebb9c">NetworkScanner::m_scanTimeout</a></div><div class="ttdeci">int m_scanTimeout</div><div class="ttdoc">扫描超时时间</div><div class="ttdef"><b>定义</b> networkscanner.h:375</div></div>
+<div class="ttc" id="aclass_network_scanner_html_a519b23696e548ce76d19b0923b1b2e31"><div class="ttname"><a href="class_network_scanner.html#a519b23696e548ce76d19b0923b1b2e31">NetworkScanner::m_mutex</a></div><div class="ttdeci">QMutex m_mutex</div><div class="ttdoc">线程同步互斥锁</div><div class="ttdef"><b>定义</b> networkscanner.h:384</div></div>
+<div class="ttc" id="aclass_network_scanner_html_a56499014f2f0ee9a87fcbf19ba034eeb"><div class="ttname"><a href="class_network_scanner.html#a56499014f2f0ee9a87fcbf19ba034eeb">NetworkScanner::scanStarted</a></div><div class="ttdeci">void scanStarted()</div><div class="ttdoc">扫描开始信号</div><div class="ttdef"><b>定义</b> moc_networkscanner.cpp:184</div></div>
+<div class="ttc" id="aclass_network_scanner_html_a5d6e606c028e6b934e5562254c016710"><div class="ttname"><a href="class_network_scanner.html#a5d6e606c028e6b934e5562254c016710">NetworkScanner::onHostNameLookedUp</a></div><div class="ttdeci">void onHostNameLookedUp(const QHostInfo &amp;hostInfo)</div><div class="ttdoc">主机名查询完成处理</div><div class="ttdef"><b>定义</b> networkscanner.cpp:933</div></div>
+<div class="ttc" id="aclass_network_scanner_html_a618ee5322d0843ad65a341fff40ce43d"><div class="ttname"><a href="class_network_scanner.html#a618ee5322d0843ad65a341fff40ce43d">NetworkScanner::generatePseudoMACFromIP</a></div><div class="ttdeci">QString generatePseudoMACFromIP(const QString &amp;ip)</div><div class="ttdoc">根据IP地址生成伪MAC地址</div><div class="ttdef"><b>定义</b> networkscanner.cpp:717</div></div>
+<div class="ttc" id="aclass_network_scanner_html_a6565994e3e77dd1f39ed03f7a31f79fb"><div class="ttname"><a href="class_network_scanner.html#a6565994e3e77dd1f39ed03f7a31f79fb">NetworkScanner::m_macAddressCache</a></div><div class="ttdeci">QMap&lt; QString, QString &gt; m_macAddressCache</div><div class="ttdoc">MAC地址缓存</div><div class="ttdef"><b>定义</b> networkscanner.h:389</div></div>
+<div class="ttc" id="aclass_network_scanner_html_a65c572325e53a912f34394e7beabb867"><div class="ttname"><a href="class_network_scanner.html#a65c572325e53a912f34394e7beabb867">NetworkScanner::saveResultsToFile</a></div><div class="ttdeci">void saveResultsToFile(const QString &amp;filename) const</div><div class="ttdoc">保存结果到文件</div><div class="ttdef"><b>定义</b> networkscanner.cpp:125</div></div>
+<div class="ttc" id="aclass_network_scanner_html_a794bc857be82d6b7b9cc3449df61bc0a"><div class="ttname"><a href="class_network_scanner.html#a794bc857be82d6b7b9cc3449df61bc0a">NetworkScanner::m_scannedHostsList</a></div><div class="ttdeci">QList&lt; HostInfo &gt; m_scannedHostsList</div><div class="ttdoc">扫描结果列表</div><div class="ttdef"><b>定义</b> networkscanner.h:383</div></div>
+<div class="ttc" id="aclass_network_scanner_html_a7d443adacaa45d4babee9c5c8cc3927b"><div class="ttname"><a href="class_network_scanner.html#a7d443adacaa45d4babee9c5c8cc3927b">NetworkScanner::scanError</a></div><div class="ttdeci">void scanError(const QString &amp;errorMessage)</div><div class="ttdoc">扫描错误信号</div><div class="ttdef"><b>定义</b> moc_networkscanner.cpp:202</div></div>
+<div class="ttc" id="aclass_network_scanner_html_a86214dd708b98209915b29514cd58296"><div class="ttname"><a href="class_network_scanner.html#a86214dd708b98209915b29514cd58296">NetworkScanner::lookupMacVendor</a></div><div class="ttdeci">QString lookupMacVendor(const QString &amp;macAddress)</div><div class="ttdoc">查询MAC地址对应的厂商</div><div class="ttdef"><b>定义</b> networkscanner.cpp:459</div></div>
+<div class="ttc" id="aclass_network_scanner_html_a86b547fcfdd0be16c9c689731887e255"><div class="ttname"><a href="class_network_scanner.html#a86b547fcfdd0be16c9c689731887e255">NetworkScanner::m_startIPRange</a></div><div class="ttdeci">QHostAddress m_startIPRange</div><div class="ttdoc">起始IP地址</div><div class="ttdef"><b>定义</b> networkscanner.h:378</div></div>
+<div class="ttc" id="aclass_network_scanner_html_a879abf7e7a058dda14f6f36645d6763b"><div class="ttname"><a href="class_network_scanner.html#a879abf7e7a058dda14f6f36645d6763b">NetworkScanner::lookupMacAddress</a></div><div class="ttdeci">QString lookupMacAddress(const QHostAddress &amp;address)</div><div class="ttdoc">查询MAC地址</div><div class="ttdef"><b>定义</b> networkscanner.cpp:441</div></div>
+<div class="ttc" id="aclass_network_scanner_html_a941867644d70f3b1c512c9e98f082ed3"><div class="ttname"><a href="class_network_scanner.html#a941867644d70f3b1c512c9e98f082ed3">NetworkScanner::hostFound</a></div><div class="ttdeci">void hostFound(const HostInfo &amp;host)</div><div class="ttdoc">找到主机信号</div><div class="ttdef"><b>定义</b> moc_networkscanner.cpp:178</div></div>
+<div class="ttc" id="aclass_network_scanner_html_a95c25f8c2863d81f3c9348d8b90c313f"><div class="ttname"><a href="class_network_scanner.html#a95c25f8c2863d81f3c9348d8b90c313f">NetworkScanner::m_threadPool</a></div><div class="ttdeci">QThreadPool m_threadPool</div><div class="ttdoc">线程池</div><div class="ttdef"><b>定义</b> networkscanner.h:387</div></div>
+<div class="ttc" id="aclass_network_scanner_html_a9e780f0ca7e0519b0a7b8ee6db11996e"><div class="ttname"><a href="class_network_scanner.html#a9e780f0ca7e0519b0a7b8ee6db11996e">NetworkScanner::scanProgress</a></div><div class="ttdeci">void scanProgress(int progress)</div><div class="ttdoc">扫描进度更新信号</div><div class="ttdef"><b>定义</b> moc_networkscanner.cpp:196</div></div>
+<div class="ttc" id="aclass_network_scanner_html_aa2dcdd86a95aa5a347d48efc6eb0dcb1"><div class="ttname"><a href="class_network_scanner.html#aa2dcdd86a95aa5a347d48efc6eb0dcb1">NetworkScanner::NetworkScanner</a></div><div class="ttdeci">NetworkScanner(QObject *parent=nullptr)</div><div class="ttdoc">构造函数</div><div class="ttdef"><b>定义</b> networkscanner.cpp:31</div></div>
+<div class="ttc" id="aclass_network_scanner_html_aaa8e5c1ecbb18e30b3eaa41ea030aa8b"><div class="ttname"><a href="class_network_scanner.html#aaa8e5c1ecbb18e30b3eaa41ea030aa8b">NetworkScanner::m_portsToScan</a></div><div class="ttdeci">QList&lt; int &gt; m_portsToScan</div><div class="ttdoc">要扫描的端口列表</div><div class="ttdef"><b>定义</b> networkscanner.h:381</div></div>
+<div class="ttc" id="aclass_network_scanner_html_ab552ddb02bf45cc7293e68d819b08da6"><div class="ttname"><a href="class_network_scanner.html#ab552ddb02bf45cc7293e68d819b08da6">NetworkScanner::m_isScanning</a></div><div class="ttdeci">bool m_isScanning</div><div class="ttdoc">是否正在扫描</div><div class="ttdef"><b>定义</b> networkscanner.h:371</div></div>
+<div class="ttc" id="aclass_network_scanner_html_abeccb1ea9774d7962fac4901f738e692"><div class="ttname"><a href="class_network_scanner.html#abeccb1ea9774d7962fac4901f738e692">NetworkScanner::~NetworkScanner</a></div><div class="ttdeci">~NetworkScanner()</div><div class="ttdoc">析构函数</div><div class="ttdef"><b>定义</b> networkscanner.cpp:55</div></div>
+<div class="ttc" id="aclass_network_scanner_html_abf3fa14815d6a3cdec60bbcdb1b9c649"><div class="ttname"><a href="class_network_scanner.html#abf3fa14815d6a3cdec60bbcdb1b9c649">NetworkScanner::m_totalHosts</a></div><div class="ttdeci">int m_totalHosts</div><div class="ttdoc">总主机数</div><div class="ttdef"><b>定义</b> networkscanner.h:374</div></div>
+<div class="ttc" id="aclass_network_scanner_html_ac1d45fc1180ff72ae369fe0966f67d08"><div class="ttname"><a href="class_network_scanner.html#ac1d45fc1180ff72ae369fe0966f67d08">NetworkScanner::quickPingScan</a></div><div class="ttdeci">QList&lt; QHostAddress &gt; quickPingScan(const QList&lt; QHostAddress &gt; &amp;addresses)</div><div class="ttdoc">快速Ping扫描方法</div></div>
+<div class="ttc" id="aclass_network_scanner_html_ac28925e0859afc5ae1165c98a7e537c4"><div class="ttname"><a href="class_network_scanner.html#ac28925e0859afc5ae1165c98a7e537c4">NetworkScanner::performARPScan</a></div><div class="ttdeci">QList&lt; QPair&lt; QHostAddress, QString &gt; &gt; performARPScan()</div><div class="ttdoc">执行ARP扫描</div><div class="ttdef"><b>定义</b> networkscanner.cpp:657</div></div>
+<div class="ttc" id="aclass_network_scanner_html_aca3185ddc77f6f4bcc13279cb290d858"><div class="ttname"><a href="class_network_scanner.html#aca3185ddc77f6f4bcc13279cb290d858">NetworkScanner::getAddressesToScan</a></div><div class="ttdeci">QList&lt; QHostAddress &gt; getAddressesToScan()</div><div class="ttdoc">获取要扫描的地址列表</div></div>
+<div class="ttc" id="aclass_network_scanner_html_acdcb120eceeec289b7feb2f5d8256b2a"><div class="ttname"><a href="class_network_scanner.html#acdcb120eceeec289b7feb2f5d8256b2a">NetworkScanner::scanHostPorts</a></div><div class="ttdeci">void scanHostPorts(HostInfo &amp;hostInfo)</div><div class="ttdoc">扫描主机端口</div><div class="ttdef"><b>定义</b> networkscanner.cpp:410</div></div>
+<div class="ttc" id="aclass_network_scanner_html_ad50732f1a5d713a4229d29a2cec1295c"><div class="ttname"><a href="class_network_scanner.html#ad50732f1a5d713a4229d29a2cec1295c">NetworkScanner::onScanTaskFinished</a></div><div class="ttdeci">void onScanTaskFinished(const HostInfo &amp;hostInfo)</div><div class="ttdoc">处理扫描任务完成</div><div class="ttdef"><b>定义</b> networkscanner.cpp:901</div></div>
+<div class="ttc" id="aclass_network_scanner_html_adc7a00ffc172c1dfc141d30240a8ac67"><div class="ttname"><a href="class_network_scanner.html#adc7a00ffc172c1dfc141d30240a8ac67">NetworkScanner::m_endIPRange</a></div><div class="ttdeci">QHostAddress m_endIPRange</div><div class="ttdoc">结束IP地址</div><div class="ttdef"><b>定义</b> networkscanner.h:379</div></div>
+<div class="ttc" id="aclass_network_scanner_html_adfa250375b6ed189a694030f831a441c"><div class="ttname"><a href="class_network_scanner.html#adfa250375b6ed189a694030f831a441c">NetworkScanner::m_scanStrategy</a></div><div class="ttdeci">ScanStrategy m_scanStrategy</div><div class="ttdoc">扫描策略</div><div class="ttdef"><b>定义</b> networkscanner.h:391</div></div>
+<div class="ttc" id="aclass_network_scanner_html_ae1c58186285b571608eb3e1ef699a1d4"><div class="ttname"><a href="class_network_scanner.html#ae1c58186285b571608eb3e1ef699a1d4">NetworkScanner::scanHost</a></div><div class="ttdeci">void scanHost(const QHostAddress &amp;address)</div><div class="ttdoc">扫描单个主机</div><div class="ttdef"><b>定义</b> networkscanner.cpp:318</div></div>
+<div class="ttc" id="aclass_network_scanner_html_ae34823cd436f8345ee7dedda3fe56bf6"><div class="ttname"><a href="class_network_scanner.html#ae34823cd436f8345ee7dedda3fe56bf6">NetworkScanner::setScanTimeout</a></div><div class="ttdeci">void setScanTimeout(int msecs)</div><div class="ttdoc">设置扫描超时时间</div><div class="ttdef"><b>定义</b> networkscanner.cpp:85</div></div>
+<div class="ttc" id="aclass_network_scanner_html_ae86106ecdb8aab43231f7d48d6840e50"><div class="ttname"><a href="class_network_scanner.html#ae86106ecdb8aab43231f7d48d6840e50">NetworkScanner::setCustomIPRange</a></div><div class="ttdeci">void setCustomIPRange(const QString &amp;startIP, const QString &amp;endIP)</div><div class="ttdoc">设置自定义IP范围</div><div class="ttdef"><b>定义</b> networkscanner.cpp:97</div></div>
+<div class="ttc" id="aclass_network_scanner_html_ae86a6e70a9c71be92ae45209a5a89bfe"><div class="ttname"><a href="class_network_scanner.html#ae86a6e70a9c71be92ae45209a5a89bfe">NetworkScanner::updateScanProgress</a></div><div class="ttdeci">void updateScanProgress()</div><div class="ttdoc">更新扫描进度</div><div class="ttdef"><b>定义</b> networkscanner.cpp:918</div></div>
+<div class="ttc" id="aclass_network_scanner_html_aea1a793e46ec7cc8e2a75b5bc71366ed"><div class="ttname"><a href="class_network_scanner.html#aea1a793e46ec7cc8e2a75b5bc71366ed">NetworkScanner::setCustomPortsToScan</a></div><div class="ttdeci">void setCustomPortsToScan(const QList&lt; int &gt; &amp;ports)</div><div class="ttdoc">设置自定义端口扫描列表</div><div class="ttdef"><b>定义</b> networkscanner.cpp:74</div></div>
+<div class="ttc" id="aclass_network_scanner_html_af088a70b884ccc65b363ecc235af3058"><div class="ttname"><a href="class_network_scanner.html#af088a70b884ccc65b363ecc235af3058">NetworkScanner::getLocalNetworkAddresses</a></div><div class="ttdeci">QList&lt; QHostAddress &gt; getLocalNetworkAddresses()</div><div class="ttdoc">获取本地网络地址列表</div><div class="ttdef"><b>定义</b> networkscanner.cpp:290</div></div>
+<div class="ttc" id="aclass_network_scanner_html_af1c4f86f0bf57509498127e25bd2dd99"><div class="ttname"><a href="class_network_scanner.html#af1c4f86f0bf57509498127e25bd2dd99">NetworkScanner::m_scannedHosts</a></div><div class="ttdeci">int m_scannedHosts</div><div class="ttdoc">已扫描主机数</div><div class="ttdef"><b>定义</b> networkscanner.h:373</div></div>
+<div class="ttc" id="aclass_network_scanner_html_afcc19f1f23e444aef7b689e5d64c1422"><div class="ttname"><a href="class_network_scanner.html#afcc19f1f23e444aef7b689e5d64c1422">NetworkScanner::lookupHostName</a></div><div class="ttdeci">QString lookupHostName(const QHostAddress &amp;address)</div><div class="ttdoc">查询主机名</div><div class="ttdef"><b>定义</b> networkscanner.cpp:432</div></div>
+<div class="ttc" id="aclass_scan_strategy_html"><div class="ttname"><a href="class_scan_strategy.html">ScanStrategy</a></div><div class="ttdoc">扫描策略类</div><div class="ttdef"><b>定义</b> networkscanner.h:50</div></div>
+<div class="ttc" id="aclass_scan_strategy_html_a0e3c3f47f30a45bd2a1e9f0533d893aa"><div class="ttname"><a href="class_scan_strategy.html#a0e3c3f47f30a45bd2a1e9f0533d893aa">ScanStrategy::ScanMode</a></div><div class="ttdeci">ScanMode</div><div class="ttdoc">扫描模式枚举</div><div class="ttdef"><b>定义</b> networkscanner.h:56</div></div>
+<div class="ttc" id="aclass_scan_strategy_html_a0e3c3f47f30a45bd2a1e9f0533d893aaa12f5f00989512bdcac4b50b6317dd39a"><div class="ttname"><a href="class_scan_strategy.html#a0e3c3f47f30a45bd2a1e9f0533d893aaa12f5f00989512bdcac4b50b6317dd39a">ScanStrategy::QUICK_SCAN</a></div><div class="ttdeci">@ QUICK_SCAN</div><div class="ttdoc">仅检测主机存活</div><div class="ttdef"><b>定义</b> networkscanner.h:57</div></div>
+<div class="ttc" id="aclass_scan_strategy_html_a0e3c3f47f30a45bd2a1e9f0533d893aaa91a37fa685743f83714c4d40d0200c90"><div class="ttname"><a href="class_scan_strategy.html#a0e3c3f47f30a45bd2a1e9f0533d893aaa91a37fa685743f83714c4d40d0200c90">ScanStrategy::STANDARD_SCAN</a></div><div class="ttdeci">@ STANDARD_SCAN</div><div class="ttdoc">扫描常用端口</div><div class="ttdef"><b>定义</b> networkscanner.h:58</div></div>
+<div class="ttc" id="aclass_scan_strategy_html_a0e3c3f47f30a45bd2a1e9f0533d893aaac99476d88991212074d9b25f37ef3f32"><div class="ttname"><a href="class_scan_strategy.html#a0e3c3f47f30a45bd2a1e9f0533d893aaac99476d88991212074d9b25f37ef3f32">ScanStrategy::DEEP_SCAN</a></div><div class="ttdeci">@ DEEP_SCAN</div><div class="ttdoc">全面端口扫描</div><div class="ttdef"><b>定义</b> networkscanner.h:59</div></div>
+<div class="ttc" id="aclass_scan_strategy_html_a200cc390646b7699a0c0e97edc83350e"><div class="ttname"><a href="class_scan_strategy.html#a200cc390646b7699a0c0e97edc83350e">ScanStrategy::updateHostResponseTime</a></div><div class="ttdeci">void updateHostResponseTime(const QString &amp;ip, int responseTime)</div><div class="ttdoc">更新主机响应时间记录</div><div class="ttdef"><b>定义</b> networkscanner.cpp:820</div></div>
+<div class="ttc" id="aclass_scan_strategy_html_a241232a2d2d446d56970be5cbce6380e"><div class="ttname"><a href="class_scan_strategy.html#a241232a2d2d446d56970be5cbce6380e">ScanStrategy::getPortsToScan</a></div><div class="ttdeci">QList&lt; int &gt; getPortsToScan() const</div><div class="ttdoc">获取要扫描的端口列表</div><div class="ttdef"><b>定义</b> networkscanner.cpp:750</div></div>
+<div class="ttc" id="aclass_scan_strategy_html_a332364d3bec278a0bc52b5673571167e"><div class="ttname"><a href="class_scan_strategy.html#a332364d3bec278a0bc52b5673571167e">ScanStrategy::getScanTimeout</a></div><div class="ttdeci">int getScanTimeout(const QString &amp;ip) const</div><div class="ttdoc">获取扫描超时时间</div><div class="ttdef"><b>定义</b> networkscanner.cpp:780</div></div>
+<div class="ttc" id="aclass_scan_strategy_html_a35d27b67331e023b1e5917dae36822de"><div class="ttname"><a href="class_scan_strategy.html#a35d27b67331e023b1e5917dae36822de">ScanStrategy::getMode</a></div><div class="ttdeci">ScanMode getMode() const</div><div class="ttdoc">获取当前扫描模式</div><div class="ttdef"><b>定义</b> networkscanner.h:98</div></div>
+<div class="ttc" id="aclass_scan_strategy_html_a5110a9e267f184295696c2c14cc0e42f"><div class="ttname"><a href="class_scan_strategy.html#a5110a9e267f184295696c2c14cc0e42f">ScanStrategy::m_hostResponseTimes</a></div><div class="ttdeci">QMap&lt; QString, int &gt; m_hostResponseTimes</div><div class="ttdoc">IP地址 -&gt; 响应时间映射</div><div class="ttdef"><b>定义</b> networkscanner.h:108</div></div>
+<div class="ttc" id="aclass_scan_strategy_html_a69c75a9a4bb267c649a0bc784e884256"><div class="ttname"><a href="class_scan_strategy.html#a69c75a9a4bb267c649a0bc784e884256">ScanStrategy::setMode</a></div><div class="ttdeci">void setMode(ScanMode mode)</div><div class="ttdoc">设置扫描模式</div><div class="ttdef"><b>定义</b> networkscanner.h:104</div></div>
+<div class="ttc" id="aclass_scan_strategy_html_a76ab981f4500728e20b1c63bfc44ff01"><div class="ttname"><a href="class_scan_strategy.html#a76ab981f4500728e20b1c63bfc44ff01">ScanStrategy::ScanStrategy</a></div><div class="ttdeci">ScanStrategy(ScanMode mode=STANDARD_SCAN)</div><div class="ttdoc">构造函数</div><div class="ttdef"><b>定义</b> networkscanner.cpp:745</div></div>
+<div class="ttc" id="aclass_scan_strategy_html_add8cd73d31e5146283413d44ba2805ec"><div class="ttname"><a href="class_scan_strategy.html#add8cd73d31e5146283413d44ba2805ec">ScanStrategy::m_mode</a></div><div class="ttdeci">ScanMode m_mode</div><div class="ttdoc">当前扫描模式</div><div class="ttdef"><b>定义</b> networkscanner.h:107</div></div>
+<div class="ttc" id="aclass_scan_strategy_html_af1dd90fe689b039c15a47f95ca30f9a9"><div class="ttname"><a href="class_scan_strategy.html#af1dd90fe689b039c15a47f95ca30f9a9">ScanStrategy::getMaxParallelTasks</a></div><div class="ttdeci">int getMaxParallelTasks() const</div><div class="ttdoc">获取最大并行任务数</div><div class="ttdef"><b>定义</b> networkscanner.cpp:802</div></div>
+<div class="ttc" id="aclass_scan_task_html_a0a234d389d4dcb3f74c74eff05132ee8"><div class="ttname"><a href="class_scan_task.html#a0a234d389d4dcb3f74c74eff05132ee8">ScanTask::m_ports</a></div><div class="ttdeci">QList&lt; int &gt; m_ports</div><div class="ttdoc">扫描端口列表</div><div class="ttdef"><b>定义</b> networkscanner.h:136</div></div>
+<div class="ttc" id="aclass_scan_task_html_a1c317cbf241b9a74554f70464880cfb3"><div class="ttname"><a href="class_scan_task.html#a1c317cbf241b9a74554f70464880cfb3">ScanTask::ScanTask</a></div><div class="ttdeci">ScanTask(QObject *parent, const QHostAddress &amp;address, const QList&lt; int &gt; &amp;ports, int timeout)</div><div class="ttdoc">构造函数</div><div class="ttdef"><b>定义</b> networkscanner.cpp:835</div></div>
+<div class="ttc" id="aclass_scan_task_html_a30929a1dd40b1cbd669f12b1baed775b"><div class="ttname"><a href="class_scan_task.html#a30929a1dd40b1cbd669f12b1baed775b">ScanTask::m_parent</a></div><div class="ttdeci">QObject * m_parent</div><div class="ttdoc">父对象指针</div><div class="ttdef"><b>定义</b> networkscanner.h:134</div></div>
+<div class="ttc" id="aclass_scan_task_html_a609c1dc70ddfcdab5de7b69de3347582"><div class="ttname"><a href="class_scan_task.html#a609c1dc70ddfcdab5de7b69de3347582">ScanTask::m_timeout</a></div><div class="ttdeci">int m_timeout</div><div class="ttdoc">超时时间</div><div class="ttdef"><b>定义</b> networkscanner.h:137</div></div>
+<div class="ttc" id="aclass_scan_task_html_a7cd062b55f9e5cef3273946219c68483"><div class="ttname"><a href="class_scan_task.html#a7cd062b55f9e5cef3273946219c68483">ScanTask::run</a></div><div class="ttdeci">void run() override</div><div class="ttdoc">执行扫描任务</div><div class="ttdef"><b>定义</b> networkscanner.cpp:842</div></div>
+<div class="ttc" id="aclass_scan_task_html_aa1d37c401e097d0ebea70c9104185fd7"><div class="ttname"><a href="class_scan_task.html#aa1d37c401e097d0ebea70c9104185fd7">ScanTask::m_address</a></div><div class="ttdeci">QHostAddress m_address</div><div class="ttdoc">扫描地址</div><div class="ttdef"><b>定义</b> networkscanner.h:135</div></div>
+<div class="ttc" id="astruct_host_info_html"><div class="ttname"><a href="struct_host_info.html">HostInfo</a></div><div class="ttdoc">存储主机信息的结构体</div><div class="ttdef"><b>定义</b> networkscanner.h:35</div></div>
+<div class="ttc" id="astruct_host_info_html_a31770b83b034ab5b4c224714418dc4ee"><div class="ttname"><a href="struct_host_info.html#a31770b83b034ab5b4c224714418dc4ee">HostInfo::macVendor</a></div><div class="ttdeci">QString macVendor</div><div class="ttdoc">MAC地址对应的厂商</div><div class="ttdef"><b>定义</b> networkscanner.h:39</div></div>
+<div class="ttc" id="astruct_host_info_html_a3ab938742358fff31e219e7f06cfe328"><div class="ttname"><a href="struct_host_info.html#a3ab938742358fff31e219e7f06cfe328">HostInfo::hostName</a></div><div class="ttdeci">QString hostName</div><div class="ttdoc">主机名称</div><div class="ttdef"><b>定义</b> networkscanner.h:37</div></div>
+<div class="ttc" id="astruct_host_info_html_ac15e8da2ca6b09a6e04c59cee5534a76"><div class="ttname"><a href="struct_host_info.html#ac15e8da2ca6b09a6e04c59cee5534a76">HostInfo::scanTime</a></div><div class="ttdeci">QDateTime scanTime</div><div class="ttdoc">扫描时间</div><div class="ttdef"><b>定义</b> networkscanner.h:41</div></div>
+<div class="ttc" id="astruct_host_info_html_acccff6374bda31a33dfc065ece37131c"><div class="ttname"><a href="struct_host_info.html#acccff6374bda31a33dfc065ece37131c">HostInfo::isReachable</a></div><div class="ttdeci">bool isReachable</div><div class="ttdoc">主机是否可达</div><div class="ttdef"><b>定义</b> networkscanner.h:40</div></div>
+<div class="ttc" id="astruct_host_info_html_acfdc7912247d3855e2ed5e810ac1f4d1"><div class="ttname"><a href="struct_host_info.html#acfdc7912247d3855e2ed5e810ac1f4d1">HostInfo::openPorts</a></div><div class="ttdeci">QMap&lt; int, bool &gt; openPorts</div><div class="ttdoc">开放的端口及状态 (端口号 -&gt; 是否开放)</div><div class="ttdef"><b>定义</b> networkscanner.h:42</div></div>
+<div class="ttc" id="astruct_host_info_html_ada851d6f94fb0540fedfe9d731662f41"><div class="ttname"><a href="struct_host_info.html#ada851d6f94fb0540fedfe9d731662f41">HostInfo::macAddress</a></div><div class="ttdeci">QString macAddress</div><div class="ttdoc">MAC物理地址</div><div class="ttdef"><b>定义</b> networkscanner.h:38</div></div>
+<div class="ttc" id="astruct_host_info_html_adb270c7d65c45949804bda482899adc7"><div class="ttname"><a href="struct_host_info.html#adb270c7d65c45949804bda482899adc7">HostInfo::ipAddress</a></div><div class="ttdeci">QString ipAddress</div><div class="ttdoc">主机IP地址</div><div class="ttdef"><b>定义</b> networkscanner.h:36</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="networkscanner_8h.html">networkscanner.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

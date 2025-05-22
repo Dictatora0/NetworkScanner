@@ -1,0 +1,7 @@
+<map id="类继承关系图" name="类继承关系图">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,31,75,56"/>
+<area shape="rect" id="Node000001" href="$class_network_scanner.html" title="网络扫描器类" alt="" coords="123,5,241,31"/>
+<area shape="poly" id="edge5_Node000000_Node000001" title=" " alt="" coords="90,32,122,26,123,31,91,37"/>
+<area shape="rect" id="Node000002" href="$class_scan_history.html" title=" " alt="" coords="135,55,228,80"/>
+<area shape="poly" id="edge6_Node000000_Node000002" title=" " alt="" coords="90,49,135,57,134,62,90,55"/>
+</map>

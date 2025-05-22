@@ -1,0 +1,841 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Network Scanner: DeviceAnalyzer类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Network Scanner
+   </div>
+   <div id="projectbrief">网络扫描和拓扑分析工具</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('class_device_analyzer.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#signals">信号</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="class_device_analyzer-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">DeviceAnalyzer类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="deviceanalyzer_8h_source.html">deviceanalyzer.h</a>&gt;</code></p>
+<div class="dynheader">
+类 DeviceAnalyzer 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_device_analyzer__inherit__graph.png" border="0" usemap="#a_device_analyzer_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_device_analyzer_inherit__map" id="a_device_analyzer_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,120,209,833"/>
+<area shape="rect" title=" " alt="" coords="76,5,138,72"/>
+<area shape="poly" title=" " alt="" coords="110,87,110,120,105,120,105,87"/>
+</map>
+</div>
+<div class="dynheader">
+DeviceAnalyzer 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_device_analyzer__coll__graph.png" border="0" usemap="#a_device_analyzer_coll__map" alt="Collaboration graph"/></div>
+<map name="a_device_analyzer_coll__map" id="a_device_analyzer_coll__map">
+<area shape="rect" title=" " alt="" coords="5,120,209,833"/>
+<area shape="rect" title=" " alt="" coords="76,5,138,72"/>
+<area shape="poly" title=" " alt="" coords="110,87,110,120,105,120,105,87"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="signals" name="signals"></a>
+信号</h2></td></tr>
+<tr class="memitem:a43106c31b5650719f2021a888a33eb0e" id="r_a43106c31b5650719f2021a888a33eb0e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a43106c31b5650719f2021a888a33eb0e">analysisCompleted</a> ()</td></tr>
+<tr class="separator:a43106c31b5650719f2021a888a33eb0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a95f05b6ca9338dcd3057c6f8ba45e29f" id="r_a95f05b6ca9338dcd3057c6f8ba45e29f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95f05b6ca9338dcd3057c6f8ba45e29f">DeviceAnalyzer</a> (QWidget *parent=nullptr)</td></tr>
+<tr class="separator:a95f05b6ca9338dcd3057c6f8ba45e29f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19be8ebf49dc7bca1bf30b65f223bfaa" id="r_a19be8ebf49dc7bca1bf30b65f223bfaa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a19be8ebf49dc7bca1bf30b65f223bfaa">analyzeHosts</a> (const QList&lt; <a class="el" href="struct_host_info.html">HostInfo</a> &gt; &amp;hosts)</td></tr>
+<tr class="separator:a19be8ebf49dc7bca1bf30b65f223bfaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afce9b8c3e1c86f649573a86a479b36b4" id="r_afce9b8c3e1c86f649573a86a479b36b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afce9b8c3e1c86f649573a86a479b36b4">clear</a> ()</td></tr>
+<tr class="separator:afce9b8c3e1c86f649573a86a479b36b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7f467d41bcd65318fca93f013557d74" id="r_ab7f467d41bcd65318fca93f013557d74"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab7f467d41bcd65318fca93f013557d74">getTotalHostsCount</a> () const</td></tr>
+<tr class="separator:ab7f467d41bcd65318fca93f013557d74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c4a840a69de561a48d5104334a863eb" id="r_a0c4a840a69de561a48d5104334a863eb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c4a840a69de561a48d5104334a863eb">getReachableHostsCount</a> () const</td></tr>
+<tr class="separator:a0c4a840a69de561a48d5104334a863eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c0135082a28d35305d7ac6f404c7b41" id="r_a3c0135082a28d35305d7ac6f404c7b41"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c0135082a28d35305d7ac6f404c7b41">getUnreachableHostsCount</a> () const</td></tr>
+<tr class="separator:a3c0135082a28d35305d7ac6f404c7b41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7e2e841da029673df14b2bee3a68223" id="r_ac7e2e841da029673df14b2bee3a68223"><td class="memItemLeft" align="right" valign="top">QChart *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7e2e841da029673df14b2bee3a68223">getDeviceTypeChart</a> () const</td></tr>
+<tr class="separator:ac7e2e841da029673df14b2bee3a68223"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b55877833dbc9de3e4f96c9d9a075f8" id="r_a8b55877833dbc9de3e4f96c9d9a075f8"><td class="memItemLeft" align="right" valign="top">QChart *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b55877833dbc9de3e4f96c9d9a075f8">getPortDistributionChart</a> () const</td></tr>
+<tr class="separator:a8b55877833dbc9de3e4f96c9d9a075f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06ac4b0aa36fc58d192e4591d25e8bc4" id="r_a06ac4b0aa36fc58d192e4591d25e8bc4"><td class="memItemLeft" align="right" valign="top">QChart *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a06ac4b0aa36fc58d192e4591d25e8bc4">getVendorDistributionChart</a> () const</td></tr>
+<tr class="separator:a06ac4b0aa36fc58d192e4591d25e8bc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9e9ff2343814056bad22fa12e79a5a4" id="r_af9e9ff2343814056bad22fa12e79a5a4"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af9e9ff2343814056bad22fa12e79a5a4">generateSecurityReport</a> (const QList&lt; <a class="el" href="struct_host_info.html">HostInfo</a> &gt; &amp;hosts)</td></tr>
+<tr class="separator:af9e9ff2343814056bad22fa12e79a5a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a04ee4061971ab92cb07142b81d164f5f" id="r_a04ee4061971ab92cb07142b81d164f5f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04ee4061971ab92cb07142b81d164f5f">createDeviceTypeChart</a> ()</td></tr>
+<tr class="separator:a04ee4061971ab92cb07142b81d164f5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a596302fbac6f657d1bf2705b66466d3e" id="r_a596302fbac6f657d1bf2705b66466d3e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a596302fbac6f657d1bf2705b66466d3e">createPortDistributionChart</a> ()</td></tr>
+<tr class="separator:a596302fbac6f657d1bf2705b66466d3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a769e2dec72b2b674d2da0ef2232a2f2d" id="r_a769e2dec72b2b674d2da0ef2232a2f2d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a769e2dec72b2b674d2da0ef2232a2f2d">createVendorDistributionChart</a> ()</td></tr>
+<tr class="separator:a769e2dec72b2b674d2da0ef2232a2f2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a603a6ce4ef60afc7c88a33a259834152" id="r_a603a6ce4ef60afc7c88a33a259834152"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a603a6ce4ef60afc7c88a33a259834152">determineDeviceType</a> (const <a class="el" href="struct_host_info.html">HostInfo</a> &amp;host)</td></tr>
+<tr class="separator:a603a6ce4ef60afc7c88a33a259834152"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a7d0c5bf299955eb2b5b5989f502cddb9" id="r_a7d0c5bf299955eb2b5b5989f502cddb9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d0c5bf299955eb2b5b5989f502cddb9">m_totalHosts</a></td></tr>
+<tr class="separator:a7d0c5bf299955eb2b5b5989f502cddb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17e59e962534a6e52394574f8b4a2127" id="r_a17e59e962534a6e52394574f8b4a2127"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a17e59e962534a6e52394574f8b4a2127">m_reachableHosts</a></td></tr>
+<tr class="separator:a17e59e962534a6e52394574f8b4a2127"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe97f524a3f4be45e747755f0190cc92" id="r_afe97f524a3f4be45e747755f0190cc92"><td class="memItemLeft" align="right" valign="top">QChart *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe97f524a3f4be45e747755f0190cc92">m_deviceTypeChart</a></td></tr>
+<tr class="separator:afe97f524a3f4be45e747755f0190cc92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafd3c366544d437cc0cf20e8bc1bcd07" id="r_aafd3c366544d437cc0cf20e8bc1bcd07"><td class="memItemLeft" align="right" valign="top">QPieSeries *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aafd3c366544d437cc0cf20e8bc1bcd07">m_deviceTypeSeries</a></td></tr>
+<tr class="separator:aafd3c366544d437cc0cf20e8bc1bcd07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a3bb2942a47d12c383274e4fbbdf1a8" id="r_a8a3bb2942a47d12c383274e4fbbdf1a8"><td class="memItemLeft" align="right" valign="top">QChart *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a3bb2942a47d12c383274e4fbbdf1a8">m_portDistributionChart</a></td></tr>
+<tr class="separator:a8a3bb2942a47d12c383274e4fbbdf1a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84825b7c44b36081233b8efec34297c5" id="r_a84825b7c44b36081233b8efec34297c5"><td class="memItemLeft" align="right" valign="top">QBarSeries *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a84825b7c44b36081233b8efec34297c5">m_portSeries</a></td></tr>
+<tr class="separator:a84825b7c44b36081233b8efec34297c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac742bcabdf7da5708db1c5068e10da3a" id="r_ac742bcabdf7da5708db1c5068e10da3a"><td class="memItemLeft" align="right" valign="top">QChart *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac742bcabdf7da5708db1c5068e10da3a">m_vendorDistributionChart</a></td></tr>
+<tr class="separator:ac742bcabdf7da5708db1c5068e10da3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d52f009ee62d2e8bff9ae2f42ebac4b" id="r_a0d52f009ee62d2e8bff9ae2f42ebac4b"><td class="memItemLeft" align="right" valign="top">QPieSeries *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d52f009ee62d2e8bff9ae2f42ebac4b">m_vendorSeries</a></td></tr>
+<tr class="separator:a0d52f009ee62d2e8bff9ae2f42ebac4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a95f05b6ca9338dcd3057c6f8ba45e29f" name="a95f05b6ca9338dcd3057c6f8ba45e29f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95f05b6ca9338dcd3057c6f8ba45e29f">&#9670;&#160;</a></span>DeviceAnalyzer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DeviceAnalyzer::DeviceAnalyzer </td>
+          <td>(</td>
+          <td class="paramtype">QWidget *</td>          <td class="paramname"><span class="paramname"><em>parent</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_device_analyzer_a95f05b6ca9338dcd3057c6f8ba45e29f_cgraph.png" border="0" usemap="#aclass_device_analyzer_a95f05b6ca9338dcd3057c6f8ba45e29f_cgraph" alt=""/></div>
+<map name="aclass_device_analyzer_a95f05b6ca9338dcd3057c6f8ba45e29f_cgraph" id="aclass_device_analyzer_a95f05b6ca9338dcd3057c6f8ba45e29f_cgraph">
+<area shape="rect" title=" " alt="" coords="5,78,219,104"/>
+<area shape="rect" href="class_device_analyzer.html#a04ee4061971ab92cb07142b81d164f5f" title=" " alt="" coords="267,5,465,46"/>
+<area shape="poly" title=" " alt="" coords="164,75,269,48,270,53,165,80"/>
+<area shape="rect" href="class_device_analyzer.html#a596302fbac6f657d1bf2705b66466d3e" title=" " alt="" coords="275,71,456,111"/>
+<area shape="poly" title=" " alt="" coords="219,88,260,88,260,94,219,94"/>
+<area shape="rect" href="class_device_analyzer.html#a769e2dec72b2b674d2da0ef2232a2f2d" title=" " alt="" coords="267,136,465,177"/>
+<area shape="poly" title=" " alt="" coords="165,102,270,129,269,134,164,107"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a43106c31b5650719f2021a888a33eb0e" name="a43106c31b5650719f2021a888a33eb0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43106c31b5650719f2021a888a33eb0e">&#9670;&#160;</a></span>analysisCompleted</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DeviceAnalyzer::analysisCompleted </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel signal">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_device_analyzer_a43106c31b5650719f2021a888a33eb0e_icgraph.png" border="0" usemap="#aclass_device_analyzer_a43106c31b5650719f2021a888a33eb0e_icgraph" alt=""/></div>
+<map name="aclass_device_analyzer_a43106c31b5650719f2021a888a33eb0e_icgraph" id="aclass_device_analyzer_a43106c31b5650719f2021a888a33eb0e_icgraph">
+<area shape="rect" title=" " alt="" coords="512,23,681,64"/>
+<area shape="rect" href="class_device_analyzer.html#a19be8ebf49dc7bca1bf30b65f223bfaa" title=" " alt="" coords="5,5,207,31"/>
+<area shape="poly" title=" " alt="" coords="496,25,464,21,330,14,207,16,207,10,330,9,464,16,497,20"/>
+<area shape="rect" href="class_device_analyzer.html#afce9b8c3e1c86f649573a86a479b36b4" title=" " alt="" coords="285,31,434,56"/>
+<area shape="poly" title=" " alt="" coords="497,46,434,46,434,41,497,41"/>
+<area shape="rect" href="class_main_window.html#a95dc085bf70bd0c1ad05bd80f897fd1d" title=" " alt="" coords="255,80,464,106"/>
+<area shape="poly" title=" " alt="" coords="498,67,425,82,424,77,497,62"/>
+<area shape="poly" title=" " alt="" coords="269,37,207,31,207,26,269,32"/>
+<area shape="rect" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="16,80,196,106"/>
+<area shape="poly" title=" " alt="" coords="239,96,196,96,196,90,239,90"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a19be8ebf49dc7bca1bf30b65f223bfaa" name="a19be8ebf49dc7bca1bf30b65f223bfaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19be8ebf49dc7bca1bf30b65f223bfaa">&#9670;&#160;</a></span>analyzeHosts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DeviceAnalyzer::analyzeHosts </td>
+          <td>(</td>
+          <td class="paramtype">const QList&lt; <a class="el" href="struct_host_info.html">HostInfo</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>hosts</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_device_analyzer_a19be8ebf49dc7bca1bf30b65f223bfaa_cgraph.png" border="0" usemap="#aclass_device_analyzer_a19be8ebf49dc7bca1bf30b65f223bfaa_cgraph" alt=""/></div>
+<map name="aclass_device_analyzer_a19be8ebf49dc7bca1bf30b65f223bfaa_cgraph" id="aclass_device_analyzer_a19be8ebf49dc7bca1bf30b65f223bfaa_cgraph">
+<area shape="rect" title=" " alt="" coords="5,38,207,64"/>
+<area shape="rect" href="class_device_analyzer.html#a43106c31b5650719f2021a888a33eb0e" title=" " alt="" coords="481,5,650,46"/>
+<area shape="poly" title=" " alt="" coords="171,35,254,23,364,18,466,19,466,24,364,23,255,28,172,40"/>
+<area shape="rect" href="class_device_analyzer.html#afce9b8c3e1c86f649573a86a479b36b4" title=" " alt="" coords="269,38,418,64"/>
+<area shape="poly" title=" " alt="" coords="207,48,254,48,254,54,207,54"/>
+<area shape="rect" href="class_device_analyzer.html#a603a6ce4ef60afc7c88a33a259834152" title=" " alt="" coords="255,88,433,129"/>
+<area shape="poly" title=" " alt="" coords="163,62,242,81,241,86,162,67"/>
+<area shape="poly" title=" " alt="" coords="418,40,465,34,466,40,419,45"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="afce9b8c3e1c86f649573a86a479b36b4" name="afce9b8c3e1c86f649573a86a479b36b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afce9b8c3e1c86f649573a86a479b36b4">&#9670;&#160;</a></span>clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DeviceAnalyzer::clear </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_device_analyzer_afce9b8c3e1c86f649573a86a479b36b4_cgraph.png" border="0" usemap="#aclass_device_analyzer_afce9b8c3e1c86f649573a86a479b36b4_cgraph" alt=""/></div>
+<map name="aclass_device_analyzer_afce9b8c3e1c86f649573a86a479b36b4_cgraph" id="aclass_device_analyzer_afce9b8c3e1c86f649573a86a479b36b4_cgraph">
+<area shape="rect" title=" " alt="" coords="5,13,155,38"/>
+<area shape="rect" href="class_device_analyzer.html#a43106c31b5650719f2021a888a33eb0e" title=" " alt="" coords="203,5,372,46"/>
+<area shape="poly" title=" " alt="" coords="155,23,187,23,187,28,155,28"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_device_analyzer_afce9b8c3e1c86f649573a86a479b36b4_icgraph.png" border="0" usemap="#aclass_device_analyzer_afce9b8c3e1c86f649573a86a479b36b4_icgraph" alt=""/></div>
+<map name="aclass_device_analyzer_afce9b8c3e1c86f649573a86a479b36b4_icgraph" id="aclass_device_analyzer_afce9b8c3e1c86f649573a86a479b36b4_icgraph">
+<area shape="rect" title=" " alt="" coords="255,5,404,31"/>
+<area shape="rect" href="class_device_analyzer.html#a19be8ebf49dc7bca1bf30b65f223bfaa" title=" " alt="" coords="5,5,207,31"/>
+<area shape="poly" title=" " alt="" coords="239,21,207,21,207,16,239,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a04ee4061971ab92cb07142b81d164f5f" name="a04ee4061971ab92cb07142b81d164f5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04ee4061971ab92cb07142b81d164f5f">&#9670;&#160;</a></span>createDeviceTypeChart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DeviceAnalyzer::createDeviceTypeChart </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_device_analyzer_a04ee4061971ab92cb07142b81d164f5f_icgraph.png" border="0" usemap="#aclass_device_analyzer_a04ee4061971ab92cb07142b81d164f5f_icgraph" alt=""/></div>
+<map name="aclass_device_analyzer_a04ee4061971ab92cb07142b81d164f5f_icgraph" id="aclass_device_analyzer_a04ee4061971ab92cb07142b81d164f5f_icgraph">
+<area shape="rect" title=" " alt="" coords="267,5,465,46"/>
+<area shape="rect" href="class_device_analyzer.html#a95f05b6ca9338dcd3057c6f8ba45e29f" title=" " alt="" coords="5,13,219,38"/>
+<area shape="poly" title=" " alt="" coords="251,28,219,28,219,23,251,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a596302fbac6f657d1bf2705b66466d3e" name="a596302fbac6f657d1bf2705b66466d3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a596302fbac6f657d1bf2705b66466d3e">&#9670;&#160;</a></span>createPortDistributionChart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DeviceAnalyzer::createPortDistributionChart </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_device_analyzer_a596302fbac6f657d1bf2705b66466d3e_icgraph.png" border="0" usemap="#aclass_device_analyzer_a596302fbac6f657d1bf2705b66466d3e_icgraph" alt=""/></div>
+<map name="aclass_device_analyzer_a596302fbac6f657d1bf2705b66466d3e_icgraph" id="aclass_device_analyzer_a596302fbac6f657d1bf2705b66466d3e_icgraph">
+<area shape="rect" title=" " alt="" coords="267,5,448,46"/>
+<area shape="rect" href="class_device_analyzer.html#a95f05b6ca9338dcd3057c6f8ba45e29f" title=" " alt="" coords="5,13,219,38"/>
+<area shape="poly" title=" " alt="" coords="251,28,219,28,219,23,251,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a769e2dec72b2b674d2da0ef2232a2f2d" name="a769e2dec72b2b674d2da0ef2232a2f2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a769e2dec72b2b674d2da0ef2232a2f2d">&#9670;&#160;</a></span>createVendorDistributionChart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DeviceAnalyzer::createVendorDistributionChart </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_device_analyzer_a769e2dec72b2b674d2da0ef2232a2f2d_icgraph.png" border="0" usemap="#aclass_device_analyzer_a769e2dec72b2b674d2da0ef2232a2f2d_icgraph" alt=""/></div>
+<map name="aclass_device_analyzer_a769e2dec72b2b674d2da0ef2232a2f2d_icgraph" id="aclass_device_analyzer_a769e2dec72b2b674d2da0ef2232a2f2d_icgraph">
+<area shape="rect" title=" " alt="" coords="267,5,465,46"/>
+<area shape="rect" href="class_device_analyzer.html#a95f05b6ca9338dcd3057c6f8ba45e29f" title=" " alt="" coords="5,13,219,38"/>
+<area shape="poly" title=" " alt="" coords="251,28,219,28,219,23,251,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a603a6ce4ef60afc7c88a33a259834152" name="a603a6ce4ef60afc7c88a33a259834152"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a603a6ce4ef60afc7c88a33a259834152">&#9670;&#160;</a></span>determineDeviceType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString DeviceAnalyzer::determineDeviceType </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_host_info.html">HostInfo</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>host</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_device_analyzer_a603a6ce4ef60afc7c88a33a259834152_icgraph.png" border="0" usemap="#aclass_device_analyzer_a603a6ce4ef60afc7c88a33a259834152_icgraph" alt=""/></div>
+<map name="aclass_device_analyzer_a603a6ce4ef60afc7c88a33a259834152_icgraph" id="aclass_device_analyzer_a603a6ce4ef60afc7c88a33a259834152_icgraph">
+<area shape="rect" title=" " alt="" coords="255,5,433,46"/>
+<area shape="rect" href="class_device_analyzer.html#a19be8ebf49dc7bca1bf30b65f223bfaa" title=" " alt="" coords="5,13,207,38"/>
+<area shape="poly" title=" " alt="" coords="239,28,207,28,207,23,239,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af9e9ff2343814056bad22fa12e79a5a4" name="af9e9ff2343814056bad22fa12e79a5a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9e9ff2343814056bad22fa12e79a5a4">&#9670;&#160;</a></span>generateSecurityReport()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString DeviceAnalyzer::generateSecurityReport </td>
+          <td>(</td>
+          <td class="paramtype">const QList&lt; <a class="el" href="struct_host_info.html">HostInfo</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>hosts</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac7e2e841da029673df14b2bee3a68223" name="ac7e2e841da029673df14b2bee3a68223"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7e2e841da029673df14b2bee3a68223">&#9670;&#160;</a></span>getDeviceTypeChart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QChart * DeviceAnalyzer::getDeviceTypeChart </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8b55877833dbc9de3e4f96c9d9a075f8" name="a8b55877833dbc9de3e4f96c9d9a075f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b55877833dbc9de3e4f96c9d9a075f8">&#9670;&#160;</a></span>getPortDistributionChart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QChart * DeviceAnalyzer::getPortDistributionChart </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0c4a840a69de561a48d5104334a863eb" name="a0c4a840a69de561a48d5104334a863eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c4a840a69de561a48d5104334a863eb">&#9670;&#160;</a></span>getReachableHostsCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DeviceAnalyzer::getReachableHostsCount </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab7f467d41bcd65318fca93f013557d74" name="ab7f467d41bcd65318fca93f013557d74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7f467d41bcd65318fca93f013557d74">&#9670;&#160;</a></span>getTotalHostsCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DeviceAnalyzer::getTotalHostsCount </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3c0135082a28d35305d7ac6f404c7b41" name="a3c0135082a28d35305d7ac6f404c7b41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c0135082a28d35305d7ac6f404c7b41">&#9670;&#160;</a></span>getUnreachableHostsCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DeviceAnalyzer::getUnreachableHostsCount </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a06ac4b0aa36fc58d192e4591d25e8bc4" name="a06ac4b0aa36fc58d192e4591d25e8bc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06ac4b0aa36fc58d192e4591d25e8bc4">&#9670;&#160;</a></span>getVendorDistributionChart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QChart * DeviceAnalyzer::getVendorDistributionChart </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="afe97f524a3f4be45e747755f0190cc92" name="afe97f524a3f4be45e747755f0190cc92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe97f524a3f4be45e747755f0190cc92">&#9670;&#160;</a></span>m_deviceTypeChart</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QChart* DeviceAnalyzer::m_deviceTypeChart</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aafd3c366544d437cc0cf20e8bc1bcd07" name="aafd3c366544d437cc0cf20e8bc1bcd07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafd3c366544d437cc0cf20e8bc1bcd07">&#9670;&#160;</a></span>m_deviceTypeSeries</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QPieSeries* DeviceAnalyzer::m_deviceTypeSeries</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8a3bb2942a47d12c383274e4fbbdf1a8" name="a8a3bb2942a47d12c383274e4fbbdf1a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a3bb2942a47d12c383274e4fbbdf1a8">&#9670;&#160;</a></span>m_portDistributionChart</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QChart* DeviceAnalyzer::m_portDistributionChart</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a84825b7c44b36081233b8efec34297c5" name="a84825b7c44b36081233b8efec34297c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84825b7c44b36081233b8efec34297c5">&#9670;&#160;</a></span>m_portSeries</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QBarSeries* DeviceAnalyzer::m_portSeries</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a17e59e962534a6e52394574f8b4a2127" name="a17e59e962534a6e52394574f8b4a2127"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17e59e962534a6e52394574f8b4a2127">&#9670;&#160;</a></span>m_reachableHosts</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DeviceAnalyzer::m_reachableHosts</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7d0c5bf299955eb2b5b5989f502cddb9" name="a7d0c5bf299955eb2b5b5989f502cddb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d0c5bf299955eb2b5b5989f502cddb9">&#9670;&#160;</a></span>m_totalHosts</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DeviceAnalyzer::m_totalHosts</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac742bcabdf7da5708db1c5068e10da3a" name="ac742bcabdf7da5708db1c5068e10da3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac742bcabdf7da5708db1c5068e10da3a">&#9670;&#160;</a></span>m_vendorDistributionChart</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QChart* DeviceAnalyzer::m_vendorDistributionChart</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0d52f009ee62d2e8bff9ae2f42ebac4b" name="a0d52f009ee62d2e8bff9ae2f42ebac4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d52f009ee62d2e8bff9ae2f42ebac4b">&#9670;&#160;</a></span>m_vendorSeries</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QPieSeries* DeviceAnalyzer::m_vendorSeries</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="deviceanalyzer_8h_source.html">deviceanalyzer.h</a></li>
+<li>build/NetScanner_autogen/EWIEGA46WW/<a class="el" href="build_2_net_scanner__autogen_2_e_w_i_e_g_a46_w_w_2moc__deviceanalyzer_8cpp_source.html">moc_deviceanalyzer.cpp</a></li>
+<li><a class="el" href="deviceanalyzer_8cpp.html">deviceanalyzer.cpp</a></li>
+<li>NetScanner_autogen/EWIEGA46WW/<a class="el" href="_net_scanner__autogen_2_e_w_i_e_g_a46_w_w_2moc__deviceanalyzer_8cpp_source.html">moc_deviceanalyzer.cpp</a></li>
+<li>NetScanner_autogen/JRIAJ772TK/<a class="el" href="_net_scanner__autogen_2_j_r_i_a_j772_t_k_2moc__deviceanalyzer_8cpp_source.html">moc_deviceanalyzer.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_device_analyzer.html">DeviceAnalyzer</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

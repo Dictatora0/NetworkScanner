@@ -1,0 +1,412 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Network Scanner: ConnectionLine类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Network Scanner
+   </div>
+   <div id="projectbrief">网络扫描和拓扑分析工具</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('class_connection_line.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="class_connection_line-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">ConnectionLine类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="networktopology_8h_source.html">networktopology.h</a>&gt;</code></p>
+<div class="dynheader">
+类 ConnectionLine 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_connection_line__inherit__graph.png" border="0" usemap="#a_connection_line_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_connection_line_inherit__map" id="a_connection_line_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,120,317,448"/>
+<area shape="rect" title=" " alt="" coords="112,5,211,72"/>
+<area shape="poly" title=" " alt="" coords="164,87,164,120,159,120,159,87"/>
+</map>
+</div>
+<div class="dynheader">
+ConnectionLine 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_connection_line__coll__graph.png" border="0" usemap="#a_connection_line_coll__map" alt="Collaboration graph"/></div>
+<map name="a_connection_line_coll__map" id="a_connection_line_coll__map">
+<area shape="rect" title=" " alt="" coords="5,1183,317,1471"/>
+<area shape="rect" title=" " alt="" coords="91,66,189,133"/>
+<area shape="poly" title=" " alt="" coords="143,147,162,1183,156,1183,138,147"/>
+<area shape="rect" href="class_device_node.html" title=" " alt="" coords="178,257,382,1105"/>
+<area shape="poly" title=" " alt="" coords="154,146,180,256,175,257,149,148"/>
+<area shape="poly" title=" " alt="" coords="205,1105,193,1167,188,1166,199,1104"/>
+<area shape="rect" href="struct_host_info.html" title="存储主机信息的结构体" alt="" coords="213,5,405,194"/>
+<area shape="poly" title=" " alt="" coords="307,193,305,240,300,240,302,193"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a693b4ce7bcae3a65cecb9817b5e1dd3d" id="r_a693b4ce7bcae3a65cecb9817b5e1dd3d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a693b4ce7bcae3a65cecb9817b5e1dd3d">ConnectionLine</a> (<a class="el" href="class_device_node.html">DeviceNode</a> *source, <a class="el" href="class_device_node.html">DeviceNode</a> *target, <a class="el" href="networktopology_8h.html#aa1f0e2efd52935fd01bfece0fbead81f">ConnectionType</a> type=<a class="el" href="networktopology_8h.html#aa1f0e2efd52935fd01bfece0fbead81fa1170f811f066620fe382b20395e9c31c">CONNECTION_DIRECT</a>)</td></tr>
+<tr class="separator:a693b4ce7bcae3a65cecb9817b5e1dd3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c7d47271ba7f0e7ec27b2b85fc32f36" id="r_a0c7d47271ba7f0e7ec27b2b85fc32f36"><td class="memItemLeft" align="right" valign="top">QRectF&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c7d47271ba7f0e7ec27b2b85fc32f36">boundingRect</a> () const override</td></tr>
+<tr class="separator:a0c7d47271ba7f0e7ec27b2b85fc32f36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1740cffc2a385a430d8637a1c559e2c6" id="r_a1740cffc2a385a430d8637a1c559e2c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1740cffc2a385a430d8637a1c559e2c6">paint</a> (QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override</td></tr>
+<tr class="separator:a1740cffc2a385a430d8637a1c559e2c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0218b726097ec9e949be522d08353d7f" id="r_a0218b726097ec9e949be522d08353d7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0218b726097ec9e949be522d08353d7f">updatePosition</a> ()</td></tr>
+<tr class="separator:a0218b726097ec9e949be522d08353d7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74b7744c136bf84c7dbe323580de01e5" id="r_a74b7744c136bf84c7dbe323580de01e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a74b7744c136bf84c7dbe323580de01e5">setConnectionType</a> (<a class="el" href="networktopology_8h.html#aa1f0e2efd52935fd01bfece0fbead81f">ConnectionType</a> type)</td></tr>
+<tr class="separator:a74b7744c136bf84c7dbe323580de01e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a631cf3fbdbf13c1530429016eabb6992" id="r_a631cf3fbdbf13c1530429016eabb6992"><td class="memItemLeft" align="right" valign="top"><a class="el" href="networktopology_8h.html#aa1f0e2efd52935fd01bfece0fbead81f">ConnectionType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a631cf3fbdbf13c1530429016eabb6992">connectionType</a> () const</td></tr>
+<tr class="separator:a631cf3fbdbf13c1530429016eabb6992"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:ad404939adbcdd87d86b389e236c2d806" id="r_ad404939adbcdd87d86b389e236c2d806"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_device_node.html">DeviceNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad404939adbcdd87d86b389e236c2d806">m_source</a></td></tr>
+<tr class="separator:ad404939adbcdd87d86b389e236c2d806"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab5f6fc9b560e5bafb6c1ee9c08a835a" id="r_aab5f6fc9b560e5bafb6c1ee9c08a835a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_device_node.html">DeviceNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab5f6fc9b560e5bafb6c1ee9c08a835a">m_target</a></td></tr>
+<tr class="separator:aab5f6fc9b560e5bafb6c1ee9c08a835a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4298630c2696233ba09bb033057cb0bd" id="r_a4298630c2696233ba09bb033057cb0bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="networktopology_8h.html#aa1f0e2efd52935fd01bfece0fbead81f">ConnectionType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4298630c2696233ba09bb033057cb0bd">m_connectionType</a></td></tr>
+<tr class="separator:a4298630c2696233ba09bb033057cb0bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a693b4ce7bcae3a65cecb9817b5e1dd3d" name="a693b4ce7bcae3a65cecb9817b5e1dd3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a693b4ce7bcae3a65cecb9817b5e1dd3d">&#9670;&#160;</a></span>ConnectionLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ConnectionLine::ConnectionLine </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_device_node.html">DeviceNode</a> *</td>          <td class="paramname"><span class="paramname"><em>source</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_device_node.html">DeviceNode</a> *</td>          <td class="paramname"><span class="paramname"><em>target</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="networktopology_8h.html#aa1f0e2efd52935fd01bfece0fbead81f">ConnectionType</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="networktopology_8h.html#aa1f0e2efd52935fd01bfece0fbead81fa1170f811f066620fe382b20395e9c31c">CONNECTION_DIRECT</a></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_connection_line_a693b4ce7bcae3a65cecb9817b5e1dd3d_cgraph.png" border="0" usemap="#aclass_connection_line_a693b4ce7bcae3a65cecb9817b5e1dd3d_cgraph" alt=""/></div>
+<map name="aclass_connection_line_a693b4ce7bcae3a65cecb9817b5e1dd3d_cgraph" id="aclass_connection_line_a693b4ce7bcae3a65cecb9817b5e1dd3d_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,215,31"/>
+<area shape="rect" href="class_connection_line.html#a0218b726097ec9e949be522d08353d7f" title=" " alt="" coords="263,5,468,31"/>
+<area shape="poly" title=" " alt="" coords="215,16,247,16,247,21,215,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a0c7d47271ba7f0e7ec27b2b85fc32f36" name="a0c7d47271ba7f0e7ec27b2b85fc32f36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c7d47271ba7f0e7ec27b2b85fc32f36">&#9670;&#160;</a></span>boundingRect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QRectF ConnectionLine::boundingRect </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a631cf3fbdbf13c1530429016eabb6992" name="a631cf3fbdbf13c1530429016eabb6992"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a631cf3fbdbf13c1530429016eabb6992">&#9670;&#160;</a></span>connectionType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="networktopology_8h.html#aa1f0e2efd52935fd01bfece0fbead81f">ConnectionType</a> ConnectionLine::connectionType </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1740cffc2a385a430d8637a1c559e2c6" name="a1740cffc2a385a430d8637a1c559e2c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1740cffc2a385a430d8637a1c559e2c6">&#9670;&#160;</a></span>paint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ConnectionLine::paint </td>
+          <td>(</td>
+          <td class="paramtype">QPainter *</td>          <td class="paramname"><span class="paramname"><em>painter</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QStyleOptionGraphicsItem *</td>          <td class="paramname"><span class="paramname"><em>option</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QWidget *</td>          <td class="paramname"><span class="paramname"><em>widget</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a74b7744c136bf84c7dbe323580de01e5" name="a74b7744c136bf84c7dbe323580de01e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74b7744c136bf84c7dbe323580de01e5">&#9670;&#160;</a></span>setConnectionType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ConnectionLine::setConnectionType </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="networktopology_8h.html#aa1f0e2efd52935fd01bfece0fbead81f">ConnectionType</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0218b726097ec9e949be522d08353d7f" name="a0218b726097ec9e949be522d08353d7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0218b726097ec9e949be522d08353d7f">&#9670;&#160;</a></span>updatePosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ConnectionLine::updatePosition </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_connection_line_a0218b726097ec9e949be522d08353d7f_icgraph.png" border="0" usemap="#aclass_connection_line_a0218b726097ec9e949be522d08353d7f_icgraph" alt=""/></div>
+<map name="aclass_connection_line_a0218b726097ec9e949be522d08353d7f_icgraph" id="aclass_connection_line_a0218b726097ec9e949be522d08353d7f_icgraph">
+<area shape="rect" title=" " alt="" coords="263,5,468,31"/>
+<area shape="rect" href="class_connection_line.html#a693b4ce7bcae3a65cecb9817b5e1dd3d" title=" " alt="" coords="5,5,215,31"/>
+<area shape="poly" title=" " alt="" coords="247,21,215,21,215,16,247,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a4298630c2696233ba09bb033057cb0bd" name="a4298630c2696233ba09bb033057cb0bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4298630c2696233ba09bb033057cb0bd">&#9670;&#160;</a></span>m_connectionType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="networktopology_8h.html#aa1f0e2efd52935fd01bfece0fbead81f">ConnectionType</a> ConnectionLine::m_connectionType</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad404939adbcdd87d86b389e236c2d806" name="ad404939adbcdd87d86b389e236c2d806"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad404939adbcdd87d86b389e236c2d806">&#9670;&#160;</a></span>m_source</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_device_node.html">DeviceNode</a>* ConnectionLine::m_source</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aab5f6fc9b560e5bafb6c1ee9c08a835a" name="aab5f6fc9b560e5bafb6c1ee9c08a835a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab5f6fc9b560e5bafb6c1ee9c08a835a">&#9670;&#160;</a></span>m_target</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_device_node.html">DeviceNode</a>* ConnectionLine::m_target</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="networktopology_8h_source.html">networktopology.h</a></li>
+<li><a class="el" href="networktopology_8cpp.html">networktopology.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_connection_line.html">ConnectionLine</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

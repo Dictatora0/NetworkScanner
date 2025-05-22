@@ -1,0 +1,25 @@
+<map id="scanhistory.h" name="scanhistory.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="446,5,544,31"/>
+<area shape="rect" id="Node000002" href="$_net_scanner__autogen_2_j_r_i_a_j772_t_k_2moc__scanhistory_8cpp.html" title=" " alt="" coords="24,79,251,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="431,36,228,81,226,76,430,31"/>
+<area shape="rect" id="Node000004" href="$build_2_net_scanner__autogen_2_e_w_i_e_g_a46_w_w_2moc__scanhistory_8cpp.html" title=" " alt="" coords="471,79,716,120"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="524,39,571,77,568,81,520,43"/>
+<area shape="rect" id="Node000006" href="$mainwindow_8h.html" title=" " alt="" coords="345,86,448,112"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="470,43,413,88,410,84,467,39"/>
+<area shape="rect" id="Node000011" href="$scanhistory_8cpp.html" title=" " alt="" coords="741,86,852,112"/>
+<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="559,33,729,76,754,83,753,88,728,82,558,38"/>
+<area shape="rect" id="Node000003" href="$_net_scanner__autogen_2mocs__compilation_8cpp.html" title=" " alt="" coords="5,256,161,297"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="74,130,51,147,33,169,29,191,35,214,48,236,64,254,60,258,44,239,30,216,23,191,29,167,47,143,71,125"/>
+<area shape="rect" id="Node000005" href="$build_2_net_scanner__autogen_2mocs__compilation_8cpp.html" title=" " alt="" coords="658,256,833,297"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="706,121,766,141,789,153,804,166,810,178,811,191,804,215,789,239,770,258,766,254,784,235,799,213,806,190,805,180,800,169,786,157,764,146,704,127"/>
+<area shape="rect" id="Node000007" href="$_net_scanner__autogen_2_j_r_i_a_j772_t_k_2moc__mainwindow_8cpp.html" title=" " alt="" coords="43,168,275,208"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="350,120,214,170,212,165,348,115"/>
+<area shape="rect" id="Node000008" href="$build_2_net_scanner__autogen_2_e_w_i_e_g_a46_w_w_2moc__mainwindow_8cpp.html" title=" " alt="" coords="539,168,790,208"/>
+<area shape="poly" id="edge8_Node000006_Node000008" title=" " alt="" coords="449,115,604,165,603,170,448,120"/>
+<area shape="rect" id="Node000009" href="$main_8cpp.html" title=" " alt="" coords="299,175,374,201"/>
+<area shape="poly" id="edge10_Node000006_Node000009" title=" " alt="" coords="382,127,347,176,342,173,377,123"/>
+<area shape="rect" id="Node000010" href="$mainwindow_8cpp.html" title=" " alt="" coords="398,175,514,201"/>
+<area shape="poly" id="edge11_Node000006_Node000010" title=" " alt="" coords="415,123,450,173,446,176,411,127"/>
+<area shape="poly" id="edge7_Node000007_Node000003" title=" " alt="" coords="134,222,102,258,98,254,130,218"/>
+<area shape="poly" id="edge9_Node000008_Node000005" title=" " alt="" coords="695,218,729,254,725,258,691,222"/>
+</map>

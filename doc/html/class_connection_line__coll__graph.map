@@ -1,0 +1,10 @@
+<map id="ConnectionLine" name="ConnectionLine">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,1183,317,1471"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="91,66,189,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="143,147,162,1183,156,1183,138,147"/>
+<area shape="rect" id="Node000003" href="$class_device_node.html" title=" " alt="" coords="178,257,382,1105"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="154,146,180,256,175,257,149,148"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="205,1105,193,1167,188,1166,199,1104"/>
+<area shape="rect" id="Node000004" href="$struct_host_info.html" title="存储主机信息的结构体" alt="" coords="213,5,405,194"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="307,193,305,240,300,240,302,193"/>
+</map>

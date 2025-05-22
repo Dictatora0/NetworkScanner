@@ -1,0 +1,27 @@
+<map id="MainWindow" name="MainWindow">
+<area shape="rect" id="Node000001" title=" " alt="" coords="338,2296,553,3194"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,1598,101,1664"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="53,1680,51,1782,56,1921,63,1998,75,2077,92,2156,114,2232,160,2338,217,2441,279,2534,340,2616,336,2619,275,2538,213,2443,155,2341,109,2234,87,2157,70,2078,58,1999,51,1921,46,1782,48,1679"/>
+<area shape="rect" id="Node000003" href="$class_network_topology.html" title=" " alt="" coords="353,1489,537,1773"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="448,1773,448,2279,442,2279,442,1773"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="228,711,289,778"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="270,792,288,874,314,966,329,997,342,1029,374,1149,400,1271,433,1490,428,1490,394,1272,369,1150,337,1031,324,999,309,968,283,875,265,793"/>
+<area shape="rect" id="Node000008" href="$class_device_analyzer.html" title=" " alt="" coords="124,1275,328,1988"/>
+<area shape="poly" id="edge8_Node000008_Node000004" title=" " alt="" coords="259,792,242,1275,237,1275,254,792"/>
+<area shape="rect" id="Node000005" href="$class_network_topology_view.html" title=" " alt="" coords="324,522,566,967"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="448,967,448,1472,442,1472,442,967"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="302,199,404,266"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="364,279,408,522,403,523,359,280"/>
+<area shape="rect" id="Node000007" href="$class_topology_analyzer.html" title=" " alt="" coords="428,5,646,459"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="499,459,491,506,485,505,494,459"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="277,1987,327,2271,337,2315,331,2316,322,2272,272,1988"/>
+<area shape="rect" id="Node000009" href="$class_scan_history.html" title=" " alt="" coords="561,1402,798,1861"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="651,1861,618,2062,577,2272,559,2349,554,2348,572,2271,613,2061,646,1860"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="718,711,777,778"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="747,793,700,1402,695,1401,742,792"/>
+<area shape="rect" id="Node000011" href="$class_network_scanner.html" title="网络扫描器类" alt="" coords="822,1030,1039,2233"/>
+<area shape="poly" id="edge12_Node000011_Node000010" title=" " alt="" coords="761,791,813,1029,825,1085,819,1086,808,1030,756,793"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="824,2206,813,2234,760,2339,697,2440,630,2533,565,2614,561,2610,626,2530,692,2437,755,2336,808,2232,820,2204"/>
+<area shape="rect" id="Node000012" href="$class_scan_strategy.html" title="扫描策略类" alt="" coords="827,573,1034,916"/>
+<area shape="poly" id="edge13_Node000011_Node000012" title=" " alt="" coords="933,916,933,1012,928,1012,928,916"/>
+</map>

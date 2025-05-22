@@ -1,0 +1,5 @@
+<map id="NetworkScanner::lookupHostName" name="NetworkScanner::lookupHostName">
+<area shape="rect" id="Node000001" title="查询主机名" alt="" coords="159,5,386,31"/>
+<area shape="rect" id="Node000002" href="$class_scan_task.html#a7cd062b55f9e5cef3273946219c68483" title="执行扫描任务" alt="" coords="5,5,111,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="143,21,111,21,111,16,143,16"/>
+</map>

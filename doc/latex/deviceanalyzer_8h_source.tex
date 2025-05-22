@@ -1,0 +1,77 @@
+\doxysection{deviceanalyzer.\+h}
+\hypertarget{deviceanalyzer_8h_source}{}\label{deviceanalyzer_8h_source}\mbox{\hyperlink{deviceanalyzer_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DEVICEANALYZER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DEVICEANALYZER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QWidget>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QMap>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QVector>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QPair>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QString>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QtCharts/QChart>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QtCharts/QPieSeries>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <QtCharts/QBarSeries>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <QtCharts/QBarSet>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <QtCharts/QBarCategoryAxis>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <QtCharts/QValueAxis>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <QtCharts/QChartView>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{networkscanner_8h}{networkscanner.h}}"{}}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ 设备分析器类\ -\/\ 提供对扫描结果的统计分析}}
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_device_analyzer_a95f05b6ca9338dcd3057c6f8ba45e29f}{DeviceAnalyzer}}\ :\ \textcolor{keyword}{public}\ QWidget}
+\DoxyCodeLine{00020\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00022\ \ \ \ \ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_device_analyzer_a95f05b6ca9338dcd3057c6f8ba45e29f}{DeviceAnalyzer}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00025\ \ \ \ \ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{comment}{//\ 分析扫描结果并更新统计图表}}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_device_analyzer_a19be8ebf49dc7bca1bf30b65f223bfaa}{analyzeHosts}}(\textcolor{keyword}{const}\ QList<HostInfo>\ \&hosts);}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_device_analyzer_afce9b8c3e1c86f649573a86a479b36b4}{clear}}();}
+\DoxyCodeLine{00029\ \ \ \ \ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{comment}{//\ 获取各种统计信息}}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_device_analyzer_ab7f467d41bcd65318fca93f013557d74}{getTotalHostsCount}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_device_analyzer_a7d0c5bf299955eb2b5b5989f502cddb9}{m\_totalHosts}};\ \}}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_device_analyzer_a0c4a840a69de561a48d5104334a863eb}{getReachableHostsCount}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_device_analyzer_a17e59e962534a6e52394574f8b4a2127}{m\_reachableHosts}};\ \}}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_device_analyzer_a3c0135082a28d35305d7ac6f404c7b41}{getUnreachableHostsCount}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_device_analyzer_a7d0c5bf299955eb2b5b5989f502cddb9}{m\_totalHosts}}\ -\/\ \mbox{\hyperlink{class_device_analyzer_a17e59e962534a6e52394574f8b4a2127}{m\_reachableHosts}};\ \}}
+\DoxyCodeLine{00034\ \ \ \ \ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{//\ 获取各种图表}}
+\DoxyCodeLine{00036\ \ \ \ \ QChart*\ \mbox{\hyperlink{class_device_analyzer_ac7e2e841da029673df14b2bee3a68223}{getDeviceTypeChart}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_device_analyzer_afe97f524a3f4be45e747755f0190cc92}{m\_deviceTypeChart}};\ \}}
+\DoxyCodeLine{00037\ \ \ \ \ QChart*\ \mbox{\hyperlink{class_device_analyzer_a8b55877833dbc9de3e4f96c9d9a075f8}{getPortDistributionChart}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_device_analyzer_a8a3bb2942a47d12c383274e4fbbdf1a8}{m\_portDistributionChart}};\ \}}
+\DoxyCodeLine{00038\ \ \ \ \ QChart*\ \mbox{\hyperlink{class_device_analyzer_a06ac4b0aa36fc58d192e4591d25e8bc4}{getVendorDistributionChart}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_device_analyzer_ac742bcabdf7da5708db1c5068e10da3a}{m\_vendorDistributionChart}};\ \}}
+\DoxyCodeLine{00039\ \ \ \ \ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{comment}{//\ 创建安全风险报告}}
+\DoxyCodeLine{00041\ \ \ \ \ QString\ \mbox{\hyperlink{class_device_analyzer_af9e9ff2343814056bad22fa12e79a5a4}{generateSecurityReport}}(\textcolor{keyword}{const}\ QList<HostInfo>\ \&hosts);}
+\DoxyCodeLine{00042\ \ \ \ \ }
+\DoxyCodeLine{00043\ signals:}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_device_analyzer_a43106c31b5650719f2021a888a33eb0e}{analysisCompleted}}();}
+\DoxyCodeLine{00045\ \ \ \ \ }
+\DoxyCodeLine{00046\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{comment}{//\ 扫描统计}}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_device_analyzer_a7d0c5bf299955eb2b5b5989f502cddb9}{m\_totalHosts}};}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_device_analyzer_a17e59e962534a6e52394574f8b4a2127}{m\_reachableHosts}};}
+\DoxyCodeLine{00050\ \ \ \ \ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{comment}{//\ 设备类型分布图表}}
+\DoxyCodeLine{00052\ \ \ \ \ QChart\ *\mbox{\hyperlink{class_device_analyzer_afe97f524a3f4be45e747755f0190cc92}{m\_deviceTypeChart}};}
+\DoxyCodeLine{00053\ \ \ \ \ QPieSeries\ *\mbox{\hyperlink{class_device_analyzer_aafd3c366544d437cc0cf20e8bc1bcd07}{m\_deviceTypeSeries}};}
+\DoxyCodeLine{00054\ \ \ \ \ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{comment}{//\ 端口分布图表}}
+\DoxyCodeLine{00056\ \ \ \ \ QChart\ *\mbox{\hyperlink{class_device_analyzer_a8a3bb2942a47d12c383274e4fbbdf1a8}{m\_portDistributionChart}};}
+\DoxyCodeLine{00057\ \ \ \ \ QBarSeries\ *\mbox{\hyperlink{class_device_analyzer_a84825b7c44b36081233b8efec34297c5}{m\_portSeries}};}
+\DoxyCodeLine{00058\ \ \ \ \ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{comment}{//\ 厂商分布图表}}
+\DoxyCodeLine{00060\ \ \ \ \ QChart\ *\mbox{\hyperlink{class_device_analyzer_ac742bcabdf7da5708db1c5068e10da3a}{m\_vendorDistributionChart}};}
+\DoxyCodeLine{00061\ \ \ \ \ QPieSeries\ *\mbox{\hyperlink{class_device_analyzer_a0d52f009ee62d2e8bff9ae2f42ebac4b}{m\_vendorSeries}};}
+\DoxyCodeLine{00062\ \ \ \ \ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{comment}{//\ 创建各类图表}}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_device_analyzer_a04ee4061971ab92cb07142b81d164f5f}{createDeviceTypeChart}}();}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_device_analyzer_a596302fbac6f657d1bf2705b66466d3e}{createPortDistributionChart}}();}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_device_analyzer_a769e2dec72b2b674d2da0ef2232a2f2d}{createVendorDistributionChart}}();}
+\DoxyCodeLine{00067\ \ \ \ \ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{comment}{//\ 设备类型判断}}
+\DoxyCodeLine{00069\ \ \ \ \ QString\ \mbox{\hyperlink{class_device_analyzer_a603a6ce4ef60afc7c88a33a259834152}{determineDeviceType}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_host_info}{HostInfo}}\ \&host);}
+\DoxyCodeLine{00070\ \};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ DEVICEANALYZER\_H\ }}
+
+\end{DoxyCode}

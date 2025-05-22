@@ -1,0 +1,498 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Network Scanner: ScanHistory类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Network Scanner
+   </div>
+   <div id="projectbrief">网络扫描和拓扑分析工具</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('class_scan_history.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#signals">信号</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="class_scan_history-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">ScanHistory类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="scanhistory_8h_source.html">scanhistory.h</a>&gt;</code></p>
+<div class="dynheader">
+类 ScanHistory 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_scan_history__inherit__graph.png" border="0" usemap="#a_scan_history_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_scan_history_inherit__map" id="a_scan_history_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,120,242,579"/>
+<area shape="rect" title=" " alt="" coords="94,5,153,72"/>
+<area shape="poly" title=" " alt="" coords="126,87,126,120,121,120,121,87"/>
+</map>
+</div>
+<div class="dynheader">
+ScanHistory 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_scan_history__coll__graph.png" border="0" usemap="#a_scan_history_coll__map" alt="Collaboration graph"/></div>
+<map name="a_scan_history_coll__map" id="a_scan_history_coll__map">
+<area shape="rect" title=" " alt="" coords="5,120,242,579"/>
+<area shape="rect" title=" " alt="" coords="94,5,153,72"/>
+<area shape="poly" title=" " alt="" coords="126,87,126,120,121,120,121,87"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="signals" name="signals"></a>
+信号</h2></td></tr>
+<tr class="memitem:a829c6ffa9ea8de6291f2f0a6fe1bac95" id="r_a829c6ffa9ea8de6291f2f0a6fe1bac95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a829c6ffa9ea8de6291f2f0a6fe1bac95">historyChanged</a> ()</td></tr>
+<tr class="separator:a829c6ffa9ea8de6291f2f0a6fe1bac95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a7c4c7700e47c076954e79e8706580f47" id="r_a7c4c7700e47c076954e79e8706580f47"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c4c7700e47c076954e79e8706580f47">ScanHistory</a> (QObject *parent=nullptr)</td></tr>
+<tr class="separator:a7c4c7700e47c076954e79e8706580f47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa51b13a02fdbfac59135178d95eeb373" id="r_aa51b13a02fdbfac59135178d95eeb373"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa51b13a02fdbfac59135178d95eeb373">addSession</a> (const QList&lt; <a class="el" href="struct_host_info.html">HostInfo</a> &gt; &amp;hosts, const QString &amp;description=QString())</td></tr>
+<tr class="separator:aa51b13a02fdbfac59135178d95eeb373"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d6b0f71d8f344ad6e04ecb99a0a3d27" id="r_a6d6b0f71d8f344ad6e04ecb99a0a3d27"><td class="memItemLeft" align="right" valign="top">QList&lt; <a class="el" href="struct_scan_session.html">ScanSession</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d6b0f71d8f344ad6e04ecb99a0a3d27">getSessions</a> () const</td></tr>
+<tr class="separator:a6d6b0f71d8f344ad6e04ecb99a0a3d27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4db1e8fb7b0763f08d3181971cacefe0" id="r_a4db1e8fb7b0763f08d3181971cacefe0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_scan_session.html">ScanSession</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4db1e8fb7b0763f08d3181971cacefe0">getSession</a> (int index) const</td></tr>
+<tr class="separator:a4db1e8fb7b0763f08d3181971cacefe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a2c133d218117972edcb61ee88adcae" id="r_a5a2c133d218117972edcb61ee88adcae"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a2c133d218117972edcb61ee88adcae">sessionCount</a> () const</td></tr>
+<tr class="separator:a5a2c133d218117972edcb61ee88adcae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e37fba8e166c4771976611c6c237426" id="r_a8e37fba8e166c4771976611c6c237426"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e37fba8e166c4771976611c6c237426">clearHistory</a> ()</td></tr>
+<tr class="separator:a8e37fba8e166c4771976611c6c237426"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a340fad8d0f3d11a82f1b0e0a524765cb" id="r_a340fad8d0f3d11a82f1b0e0a524765cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a340fad8d0f3d11a82f1b0e0a524765cb">removeSession</a> (int index)</td></tr>
+<tr class="separator:a340fad8d0f3d11a82f1b0e0a524765cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab50694b4ad4960001bf713552d374809" id="r_ab50694b4ad4960001bf713552d374809"><td class="memItemLeft" align="right" valign="top">QPair&lt; QList&lt; <a class="el" href="struct_host_info.html">HostInfo</a> &gt;, QList&lt; <a class="el" href="struct_host_info.html">HostInfo</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab50694b4ad4960001bf713552d374809">compareScans</a> (int sessionIndex1, int sessionIndex2) const</td></tr>
+<tr class="separator:ab50694b4ad4960001bf713552d374809"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f479a71412cad71786d49dd1b566748" id="r_a4f479a71412cad71786d49dd1b566748"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4f479a71412cad71786d49dd1b566748">saveToFile</a> (const QString &amp;filename) const</td></tr>
+<tr class="separator:a4f479a71412cad71786d49dd1b566748"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a773eca78349c881eccf7fbce5f9a0e4c" id="r_a773eca78349c881eccf7fbce5f9a0e4c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a773eca78349c881eccf7fbce5f9a0e4c">loadFromFile</a> (const QString &amp;filename)</td></tr>
+<tr class="separator:a773eca78349c881eccf7fbce5f9a0e4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a8e4ee2bf3362ec5cb7bfce12b9496c93" id="r_a8e4ee2bf3362ec5cb7bfce12b9496c93"><td class="memItemLeft" align="right" valign="top">QList&lt; <a class="el" href="struct_scan_session.html">ScanSession</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e4ee2bf3362ec5cb7bfce12b9496c93">m_sessions</a></td></tr>
+<tr class="separator:a8e4ee2bf3362ec5cb7bfce12b9496c93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a7c4c7700e47c076954e79e8706580f47" name="a7c4c7700e47c076954e79e8706580f47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c4c7700e47c076954e79e8706580f47">&#9670;&#160;</a></span>ScanHistory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ScanHistory::ScanHistory </td>
+          <td>(</td>
+          <td class="paramtype">QObject *</td>          <td class="paramname"><span class="paramname"><em>parent</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="aa51b13a02fdbfac59135178d95eeb373" name="aa51b13a02fdbfac59135178d95eeb373"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa51b13a02fdbfac59135178d95eeb373">&#9670;&#160;</a></span>addSession()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ScanHistory::addSession </td>
+          <td>(</td>
+          <td class="paramtype">const QList&lt; <a class="el" href="struct_host_info.html">HostInfo</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>hosts</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>description</em></span><span class="paramdefsep"> = </span><span class="paramdefval">QString()</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_scan_history_aa51b13a02fdbfac59135178d95eeb373_cgraph.png" border="0" usemap="#aclass_scan_history_aa51b13a02fdbfac59135178d95eeb373_cgraph" alt=""/></div>
+<map name="aclass_scan_history_aa51b13a02fdbfac59135178d95eeb373_cgraph" id="aclass_scan_history_aa51b13a02fdbfac59135178d95eeb373_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,175,31"/>
+<area shape="rect" href="class_scan_history.html#a829c6ffa9ea8de6291f2f0a6fe1bac95" title=" " alt="" coords="223,5,415,31"/>
+<area shape="poly" title=" " alt="" coords="175,16,207,16,207,21,175,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8e37fba8e166c4771976611c6c237426" name="a8e37fba8e166c4771976611c6c237426"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e37fba8e166c4771976611c6c237426">&#9670;&#160;</a></span>clearHistory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ScanHistory::clearHistory </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_scan_history_a8e37fba8e166c4771976611c6c237426_cgraph.png" border="0" usemap="#aclass_scan_history_a8e37fba8e166c4771976611c6c237426_cgraph" alt=""/></div>
+<map name="aclass_scan_history_a8e37fba8e166c4771976611c6c237426_cgraph" id="aclass_scan_history_a8e37fba8e166c4771976611c6c237426_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,177,31"/>
+<area shape="rect" href="class_scan_history.html#a829c6ffa9ea8de6291f2f0a6fe1bac95" title=" " alt="" coords="225,5,417,31"/>
+<area shape="poly" title=" " alt="" coords="177,16,209,16,209,21,177,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab50694b4ad4960001bf713552d374809" name="ab50694b4ad4960001bf713552d374809"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab50694b4ad4960001bf713552d374809">&#9670;&#160;</a></span>compareScans()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QPair&lt; QList&lt; <a class="el" href="struct_host_info.html">HostInfo</a> &gt;, QList&lt; <a class="el" href="struct_host_info.html">HostInfo</a> &gt; &gt; ScanHistory::compareScans </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>sessionIndex1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>sessionIndex2</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4db1e8fb7b0763f08d3181971cacefe0" name="a4db1e8fb7b0763f08d3181971cacefe0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4db1e8fb7b0763f08d3181971cacefe0">&#9670;&#160;</a></span>getSession()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_scan_session.html">ScanSession</a> ScanHistory::getSession </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6d6b0f71d8f344ad6e04ecb99a0a3d27" name="a6d6b0f71d8f344ad6e04ecb99a0a3d27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d6b0f71d8f344ad6e04ecb99a0a3d27">&#9670;&#160;</a></span>getSessions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QList&lt; <a class="el" href="struct_scan_session.html">ScanSession</a> &gt; ScanHistory::getSessions </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a829c6ffa9ea8de6291f2f0a6fe1bac95" name="a829c6ffa9ea8de6291f2f0a6fe1bac95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a829c6ffa9ea8de6291f2f0a6fe1bac95">&#9670;&#160;</a></span>historyChanged</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ScanHistory::historyChanged </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel signal">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_scan_history_a829c6ffa9ea8de6291f2f0a6fe1bac95_icgraph.png" border="0" usemap="#aclass_scan_history_a829c6ffa9ea8de6291f2f0a6fe1bac95_icgraph" alt=""/></div>
+<map name="aclass_scan_history_a829c6ffa9ea8de6291f2f0a6fe1bac95_icgraph" id="aclass_scan_history_a829c6ffa9ea8de6291f2f0a6fe1bac95_icgraph">
+<area shape="rect" title=" " alt="" coords="490,104,682,130"/>
+<area shape="rect" href="class_scan_history.html#aa51b13a02fdbfac59135178d95eeb373" title=" " alt="" coords="253,5,422,31"/>
+<area shape="poly" title=" " alt="" coords="549,98,499,70,441,45,407,34,409,29,443,40,501,66,552,93"/>
+<area shape="rect" href="class_scan_history.html#a8e37fba8e166c4771976611c6c237426" title=" " alt="" coords="252,55,423,80"/>
+<area shape="poly" title=" " alt="" coords="502,103,405,84,406,78,503,98"/>
+<area shape="rect" href="class_scan_history.html#a773eca78349c881eccf7fbce5f9a0e4c" title=" " alt="" coords="249,104,426,130"/>
+<area shape="poly" title=" " alt="" coords="475,120,426,120,426,114,475,114"/>
+<area shape="rect" href="class_scan_history.html#a340fad8d0f3d11a82f1b0e0a524765cb" title=" " alt="" coords="242,153,433,179"/>
+<area shape="poly" title=" " alt="" coords="503,136,406,155,405,150,502,131"/>
+<area shape="rect" href="class_main_window.html#a95dc085bf70bd0c1ad05bd80f897fd1d" title=" " alt="" coords="233,203,442,228"/>
+<area shape="poly" title=" " alt="" coords="552,140,501,168,443,194,409,205,407,199,441,189,499,163,549,136"/>
+<area shape="rect" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,203,185,228"/>
+<area shape="poly" title=" " alt="" coords="217,218,185,218,185,213,217,213"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a773eca78349c881eccf7fbce5f9a0e4c" name="a773eca78349c881eccf7fbce5f9a0e4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a773eca78349c881eccf7fbce5f9a0e4c">&#9670;&#160;</a></span>loadFromFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ScanHistory::loadFromFile </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>filename</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_scan_history_a773eca78349c881eccf7fbce5f9a0e4c_cgraph.png" border="0" usemap="#aclass_scan_history_a773eca78349c881eccf7fbce5f9a0e4c_cgraph" alt=""/></div>
+<map name="aclass_scan_history_a773eca78349c881eccf7fbce5f9a0e4c_cgraph" id="aclass_scan_history_a773eca78349c881eccf7fbce5f9a0e4c_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,182,31"/>
+<area shape="rect" href="class_scan_history.html#a829c6ffa9ea8de6291f2f0a6fe1bac95" title=" " alt="" coords="230,5,422,31"/>
+<area shape="poly" title=" " alt="" coords="182,16,214,16,214,21,182,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a340fad8d0f3d11a82f1b0e0a524765cb" name="a340fad8d0f3d11a82f1b0e0a524765cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a340fad8d0f3d11a82f1b0e0a524765cb">&#9670;&#160;</a></span>removeSession()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ScanHistory::removeSession </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_scan_history_a340fad8d0f3d11a82f1b0e0a524765cb_cgraph.png" border="0" usemap="#aclass_scan_history_a340fad8d0f3d11a82f1b0e0a524765cb_cgraph" alt=""/></div>
+<map name="aclass_scan_history_a340fad8d0f3d11a82f1b0e0a524765cb_cgraph" id="aclass_scan_history_a340fad8d0f3d11a82f1b0e0a524765cb_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,197,31"/>
+<area shape="rect" href="class_scan_history.html#a829c6ffa9ea8de6291f2f0a6fe1bac95" title=" " alt="" coords="245,5,437,31"/>
+<area shape="poly" title=" " alt="" coords="197,16,229,16,229,21,197,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4f479a71412cad71786d49dd1b566748" name="a4f479a71412cad71786d49dd1b566748"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f479a71412cad71786d49dd1b566748">&#9670;&#160;</a></span>saveToFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ScanHistory::saveToFile </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>filename</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5a2c133d218117972edcb61ee88adcae" name="a5a2c133d218117972edcb61ee88adcae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a2c133d218117972edcb61ee88adcae">&#9670;&#160;</a></span>sessionCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ScanHistory::sessionCount </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a8e4ee2bf3362ec5cb7bfce12b9496c93" name="a8e4ee2bf3362ec5cb7bfce12b9496c93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e4ee2bf3362ec5cb7bfce12b9496c93">&#9670;&#160;</a></span>m_sessions</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QList&lt;<a class="el" href="struct_scan_session.html">ScanSession</a>&gt; ScanHistory::m_sessions</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="scanhistory_8h_source.html">scanhistory.h</a></li>
+<li>build/NetScanner_autogen/EWIEGA46WW/<a class="el" href="build_2_net_scanner__autogen_2_e_w_i_e_g_a46_w_w_2moc__scanhistory_8cpp_source.html">moc_scanhistory.cpp</a></li>
+<li>NetScanner_autogen/JRIAJ772TK/<a class="el" href="_net_scanner__autogen_2_j_r_i_a_j772_t_k_2moc__scanhistory_8cpp_source.html">moc_scanhistory.cpp</a></li>
+<li><a class="el" href="scanhistory_8cpp.html">scanhistory.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_scan_history.html">ScanHistory</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

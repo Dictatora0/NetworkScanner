@@ -1,0 +1,5 @@
+<map id="ConnectionLine" name="ConnectionLine">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,120,317,448"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="112,5,211,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="164,87,164,120,159,120,159,87"/>
+</map>

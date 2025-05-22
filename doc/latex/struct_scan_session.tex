@@ -1,0 +1,114 @@
+\doxysection{Scan\+Session结构体 参考}
+\hypertarget{struct_scan_session}{}\label{struct_scan_session}\index{ScanSession@{ScanSession}}
+
+
+{\ttfamily \#include $<$scanhistory.\+h$>$}
+
+
+
+Scan\+Session 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{struct_scan_session__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{struct_scan_session_ac05359624e702e2563bf76491bf4c743}{total\+Hosts}} () const
+\item 
+int \mbox{\hyperlink{struct_scan_session_a0840c4b4379a33d36d9a2856d3333be9}{reachable\+Hosts}} () const
+\item 
+int \mbox{\hyperlink{struct_scan_session_a1fa497179de9e557e47f9d9be7ca807a}{unreachable\+Hosts}} () const
+\item 
+QMap$<$ int, int $>$ \mbox{\hyperlink{struct_scan_session_abca74c6fee7271ba216a797b2c604e74}{port\+Distribution}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+QDate\+Time \mbox{\hyperlink{struct_scan_session_a737c514772b31ab3943292358795a82c}{scan\+Time}}
+\item 
+QString \mbox{\hyperlink{struct_scan_session_af41515e0cd18ccfc0294399c1773956c}{description}}
+\item 
+QList$<$ \mbox{\hyperlink{struct_host_info}{Host\+Info}} $>$ \mbox{\hyperlink{struct_scan_session_a7b5a4c810d9e35bfeab221e589e90aa2}{hosts}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{成员函数说明}
+\Hypertarget{struct_scan_session_abca74c6fee7271ba216a797b2c604e74}\index{ScanSession@{ScanSession}!portDistribution@{portDistribution}}
+\index{portDistribution@{portDistribution}!ScanSession@{ScanSession}}
+\doxysubsubsection{\texorpdfstring{portDistribution()}{portDistribution()}}
+{\footnotesize\ttfamily \label{struct_scan_session_abca74c6fee7271ba216a797b2c604e74} 
+QMap$<$ int, int $>$ Scan\+Session\+::port\+Distribution (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{struct_scan_session_a0840c4b4379a33d36d9a2856d3333be9}\index{ScanSession@{ScanSession}!reachableHosts@{reachableHosts}}
+\index{reachableHosts@{reachableHosts}!ScanSession@{ScanSession}}
+\doxysubsubsection{\texorpdfstring{reachableHosts()}{reachableHosts()}}
+{\footnotesize\ttfamily \label{struct_scan_session_a0840c4b4379a33d36d9a2856d3333be9} 
+int Scan\+Session\+::reachable\+Hosts (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_scan_session_a0840c4b4379a33d36d9a2856d3333be9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{struct_scan_session_ac05359624e702e2563bf76491bf4c743}\index{ScanSession@{ScanSession}!totalHosts@{totalHosts}}
+\index{totalHosts@{totalHosts}!ScanSession@{ScanSession}}
+\doxysubsubsection{\texorpdfstring{totalHosts()}{totalHosts()}}
+{\footnotesize\ttfamily \label{struct_scan_session_ac05359624e702e2563bf76491bf4c743} 
+int Scan\+Session\+::total\+Hosts (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_scan_session_ac05359624e702e2563bf76491bf4c743_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{struct_scan_session_a1fa497179de9e557e47f9d9be7ca807a}\index{ScanSession@{ScanSession}!unreachableHosts@{unreachableHosts}}
+\index{unreachableHosts@{unreachableHosts}!ScanSession@{ScanSession}}
+\doxysubsubsection{\texorpdfstring{unreachableHosts()}{unreachableHosts()}}
+{\footnotesize\ttfamily \label{struct_scan_session_a1fa497179de9e557e47f9d9be7ca807a} 
+int Scan\+Session\+::unreachable\+Hosts (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_scan_session_a1fa497179de9e557e47f9d9be7ca807a_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\Hypertarget{struct_scan_session_af41515e0cd18ccfc0294399c1773956c}\index{ScanSession@{ScanSession}!description@{description}}
+\index{description@{description}!ScanSession@{ScanSession}}
+\doxysubsubsection{\texorpdfstring{description}{description}}
+{\footnotesize\ttfamily \label{struct_scan_session_af41515e0cd18ccfc0294399c1773956c} 
+QString Scan\+Session\+::description}
+
+\Hypertarget{struct_scan_session_a7b5a4c810d9e35bfeab221e589e90aa2}\index{ScanSession@{ScanSession}!hosts@{hosts}}
+\index{hosts@{hosts}!ScanSession@{ScanSession}}
+\doxysubsubsection{\texorpdfstring{hosts}{hosts}}
+{\footnotesize\ttfamily \label{struct_scan_session_a7b5a4c810d9e35bfeab221e589e90aa2} 
+QList$<$\mbox{\hyperlink{struct_host_info}{Host\+Info}}$>$ Scan\+Session\+::hosts}
+
+\Hypertarget{struct_scan_session_a737c514772b31ab3943292358795a82c}\index{ScanSession@{ScanSession}!scanTime@{scanTime}}
+\index{scanTime@{scanTime}!ScanSession@{ScanSession}}
+\doxysubsubsection{\texorpdfstring{scanTime}{scanTime}}
+{\footnotesize\ttfamily \label{struct_scan_session_a737c514772b31ab3943292358795a82c} 
+QDate\+Time Scan\+Session\+::scan\+Time}
+
+
+
+该结构体的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{scanhistory_8h}{scanhistory.\+h}}\item 
+\mbox{\hyperlink{scanhistory_8cpp}{scanhistory.\+cpp}}\end{DoxyCompactItemize}

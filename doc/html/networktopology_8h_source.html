@@ -1,0 +1,417 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Network Scanner: networktopology.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Network Scanner
+   </div>
+   <div id="projectbrief">网络扫描和拓扑分析工具</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('networktopology_8h_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">networktopology.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="networktopology_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef NETWORKTOPOLOGY_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define NETWORKTOPOLOGY_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;QWidget&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;QGraphicsView&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;QGraphicsScene&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;QGraphicsItem&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;QMap&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;QPair&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;QProcess&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="networkscanner_8h.html">networkscanner.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">// 定义设备类型枚举</span></div>
+<div class="foldopen" id="foldopen00014" data-start="{" data-end="};">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="networktopology_8h.html#ad258d4c51629346fceac4679b3209ad9">   14</a></span><span class="keyword">enum</span> <a class="code hl_enumeration" href="networktopology_8h.html#ad258d4c51629346fceac4679b3209ad9">DeviceType</a> {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="networktopology_8h.html#ad258d4c51629346fceac4679b3209ad9af6c26de5cb6bbe4e8ff24a92a7a297b6">   15</a></span>    <a class="code hl_enumvalue" href="networktopology_8h.html#ad258d4c51629346fceac4679b3209ad9af6c26de5cb6bbe4e8ff24a92a7a297b6">DEVICE_UNKNOWN</a>,</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="networktopology_8h.html#ad258d4c51629346fceac4679b3209ad9a54d234e97b2cf460474fe8d12f05b7e8">   16</a></span>    <a class="code hl_enumvalue" href="networktopology_8h.html#ad258d4c51629346fceac4679b3209ad9a54d234e97b2cf460474fe8d12f05b7e8">DEVICE_ROUTER</a>,</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="networktopology_8h.html#ad258d4c51629346fceac4679b3209ad9a8a476e120bc7257c86ff09c74df30666">   17</a></span>    <a class="code hl_enumvalue" href="networktopology_8h.html#ad258d4c51629346fceac4679b3209ad9a8a476e120bc7257c86ff09c74df30666">DEVICE_SERVER</a>,</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="networktopology_8h.html#ad258d4c51629346fceac4679b3209ad9ae149fffe078cf15212885a3d4dd0a485">   18</a></span>    <a class="code hl_enumvalue" href="networktopology_8h.html#ad258d4c51629346fceac4679b3209ad9ae149fffe078cf15212885a3d4dd0a485">DEVICE_PC</a>,</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="networktopology_8h.html#ad258d4c51629346fceac4679b3209ad9a54c75bb379d16adfae33363dead54ed8">   19</a></span>    <a class="code hl_enumvalue" href="networktopology_8h.html#ad258d4c51629346fceac4679b3209ad9a54c75bb379d16adfae33363dead54ed8">DEVICE_MOBILE</a>,</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="networktopology_8h.html#ad258d4c51629346fceac4679b3209ad9adec14bc8c782d6b0a36d04462c588a08">   20</a></span>    <a class="code hl_enumvalue" href="networktopology_8h.html#ad258d4c51629346fceac4679b3209ad9adec14bc8c782d6b0a36d04462c588a08">DEVICE_PRINTER</a>,</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="networktopology_8h.html#ad258d4c51629346fceac4679b3209ad9ad9ebd12cf0fa401d0a3f1da4243cfd1a">   21</a></span>    <a class="code hl_enumvalue" href="networktopology_8h.html#ad258d4c51629346fceac4679b3209ad9ad9ebd12cf0fa401d0a3f1da4243cfd1a">DEVICE_IOT</a></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>};</div>
+</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">// 设备连接类型</span></div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="};">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="networktopology_8h.html#aa1f0e2efd52935fd01bfece0fbead81f">   25</a></span><span class="keyword">enum</span> <a class="code hl_enumeration" href="networktopology_8h.html#aa1f0e2efd52935fd01bfece0fbead81f">ConnectionType</a> {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="networktopology_8h.html#aa1f0e2efd52935fd01bfece0fbead81faaa98c30b12cac8536b62c99df201f423">   26</a></span>    <a class="code hl_enumvalue" href="networktopology_8h.html#aa1f0e2efd52935fd01bfece0fbead81faaa98c30b12cac8536b62c99df201f423">CONNECTION_UNKNOWN</a>,</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="networktopology_8h.html#aa1f0e2efd52935fd01bfece0fbead81fa1170f811f066620fe382b20395e9c31c">   27</a></span>    <a class="code hl_enumvalue" href="networktopology_8h.html#aa1f0e2efd52935fd01bfece0fbead81fa1170f811f066620fe382b20395e9c31c">CONNECTION_DIRECT</a>,     <span class="comment">// 直接连接</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="networktopology_8h.html#aa1f0e2efd52935fd01bfece0fbead81fae7bf041bcdbcd512b79b5df05e2ce98f">   28</a></span>    <a class="code hl_enumvalue" href="networktopology_8h.html#aa1f0e2efd52935fd01bfece0fbead81fae7bf041bcdbcd512b79b5df05e2ce98f">CONNECTION_WIRELESS</a>,   <span class="comment">// 无线连接</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="networktopology_8h.html#aa1f0e2efd52935fd01bfece0fbead81faa31a9471f8a05033b3871d6834b656ca">   29</a></span>    <a class="code hl_enumvalue" href="networktopology_8h.html#aa1f0e2efd52935fd01bfece0fbead81faa31a9471f8a05033b3871d6834b656ca">CONNECTION_VPN</a>,        <span class="comment">// VPN连接</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="networktopology_8h.html#aa1f0e2efd52935fd01bfece0fbead81fabc86d8c960abdc757484b756233d9fb0">   30</a></span>    <a class="code hl_enumvalue" href="networktopology_8h.html#aa1f0e2efd52935fd01bfece0fbead81fabc86d8c960abdc757484b756233d9fb0">CONNECTION_ROUTED</a>      <span class="comment">// 通过路由器连接</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>};</div>
+</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">// 拓扑分析器类</span></div>
+<div class="foldopen" id="foldopen00034" data-start="{" data-end="};">
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_topology_analyzer.html">   34</a></span><span class="keyword">class </span><a class="code hl_function" href="class_topology_analyzer.html#ad6c85d36fcbf1ab7db558d63e8aa54a2">TopologyAnalyzer</a> {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <a class="code hl_function" href="class_topology_analyzer.html#ad6c85d36fcbf1ab7db558d63e8aa54a2">TopologyAnalyzer</a>();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="comment">// 推断设备连接关系</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    QMap&lt;QString, QStringList&gt; <a class="code hl_function" href="class_topology_analyzer.html#a021bd84b23c85b54b4d0ca7c1182368d">inferDeviceConnections</a>(<span class="keyword">const</span> QList&lt;HostInfo&gt; &amp;hosts);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="comment">// 分析网络层次结构</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    QMap&lt;int, QStringList&gt; <a class="code hl_function" href="class_topology_analyzer.html#a81a27566be573cdc031363af453dc1dc">analyzeTTLLayers</a>(<span class="keyword">const</span> QList&lt;HostInfo&gt; &amp;hosts);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="comment">// 分析子网结构</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    QMap&lt;QString, QStringList&gt; <a class="code hl_function" href="class_topology_analyzer.html#ac47a81690019df3a439fbb519cd2c15f">analyzeSubnets</a>(<span class="keyword">const</span> QList&lt;HostInfo&gt; &amp;hosts);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="comment">// 基于响应时间的设备聚类</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    QList&lt;QStringList&gt; <a class="code hl_function" href="class_topology_analyzer.html#a5aaf6e3f9357fde10c889d0958ecba48">clusterDevicesByResponseTime</a>(<span class="keyword">const</span> QList&lt;HostInfo&gt; &amp;hosts);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="comment">// 获取特定IP的TTL值</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_topology_analyzer.html#ac4175e160d1d548586f8b4bb3d6c7d92">getTTLValue</a>(<span class="keyword">const</span> QString &amp;ipAddress);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="comment">// 执行traceroute命令获取路径信息</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    QStringList <a class="code hl_function" href="class_topology_analyzer.html#a5e0e8a9760cb1f3899e5c25e692edb3c">performTraceRoute</a>(<span class="keyword">const</span> QString &amp;targetIP);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="comment">// 计算子网掩码 - 改为公共方法</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    QString <a class="code hl_function" href="class_topology_analyzer.html#ad138e7cbfe33cf0dcf7c2aa39c9e62b3">calculateSubnet</a>(<span class="keyword">const</span> QString &amp;ip, <span class="keywordtype">int</span> prefixLength = 24);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="comment">// 判断两个IP是否在同一子网</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_topology_analyzer.html#a16c5a69468922b5c355d0f317c221570">inSameSubnet</a>(<span class="keyword">const</span> QString &amp;ip1, <span class="keyword">const</span> QString &amp;ip2, <span class="keywordtype">int</span> prefixLength = 24);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="comment">// 已移除private中的calculateSubnet声明</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>};</div>
+</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="comment">// 设备节点</span></div>
+<div class="foldopen" id="foldopen00067" data-start="{" data-end="};">
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="class_device_node.html">   67</a></span><span class="keyword">class </span><a class="code hl_function" href="class_device_node.html#a4944312715c13f9c5b42342944851ab3">DeviceNode</a> : <span class="keyword">public</span> QGraphicsItem</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>{</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <a class="code hl_function" href="class_device_node.html#a4944312715c13f9c5b42342944851ab3">DeviceNode</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_host_info.html">HostInfo</a> &amp;host, <a class="code hl_enumeration" href="networktopology_8h.html#ad258d4c51629346fceac4679b3209ad9">DeviceType</a> type = <a class="code hl_enumvalue" href="networktopology_8h.html#ad258d4c51629346fceac4679b3209ad9af6c26de5cb6bbe4e8ff24a92a7a297b6">DEVICE_UNKNOWN</a>);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    QRectF <a class="code hl_function" href="class_device_node.html#aa280521ab40d3bd66235eff06a75ea30">boundingRect</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_device_node.html#ad11a8f575a8d6df6b7545e7071af181e">paint</a>(QPainter *painter, <span class="keyword">const</span> QStyleOptionGraphicsItem *option, QWidget *widget) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_device_node.html#af113b3eb8c31ece100489938be417ece">setDeviceType</a>(<a class="code hl_enumeration" href="networktopology_8h.html#ad258d4c51629346fceac4679b3209ad9">DeviceType</a> type);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="class_device_node.html#a8e325a01381c951dd58a432f2eda6369">   76</a></span>    <a class="code hl_enumeration" href="networktopology_8h.html#ad258d4c51629346fceac4679b3209ad9">DeviceType</a> <a class="code hl_function" href="class_device_node.html#a8e325a01381c951dd58a432f2eda6369">deviceType</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_device_node.html#ad57955c067a58853e3cce781ed8ea330">m_type</a>; }</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="class_device_node.html#a94ab579715500c27047b6a6636dd0b1c">   78</a></span>    QString <a class="code hl_function" href="class_device_node.html#a94ab579715500c27047b6a6636dd0b1c">ipAddress</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_device_node.html#a3c4db426da62437969a9064365ee4756">m_host</a>.ipAddress; }</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="class_device_node.html#ac0f6f8035bd7b65c6205ac2878d9ec1d">   79</a></span>    <a class="code hl_struct" href="struct_host_info.html">HostInfo</a> <a class="code hl_function" href="class_device_node.html#ac0f6f8035bd7b65c6205ac2878d9ec1d">hostInfo</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_device_node.html#a3c4db426da62437969a9064365ee4756">m_host</a>; }</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="class_device_node.html#aef416a5365cf9d935f84a9a0949fdcdc">   80</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_device_node.html#aef416a5365cf9d935f84a9a0949fdcdc">setPosition</a>(<span class="keyword">const</span> QPointF &amp;pos);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="comment">// 新增：设置网络层级</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="class_device_node.html#a3c1916cf448115bf13debb1ccaecca7f">   83</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_device_node.html#a3c1916cf448115bf13debb1ccaecca7f">setNetworkLayer</a>(<span class="keywordtype">int</span> layer) { <a class="code hl_variable" href="class_device_node.html#a2f155857f4146e91d68d2d855ee0d764">m_networkLayer</a> = layer; }</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="class_device_node.html#a7ee68a7e96c77fa95d71f7a728e6c454">   84</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_device_node.html#a7ee68a7e96c77fa95d71f7a728e6c454">networkLayer</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_device_node.html#a2f155857f4146e91d68d2d855ee0d764">m_networkLayer</a>; }</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="comment">// 新增：设置子网组</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="class_device_node.html#a8763e7f52f3239f6cd31234a89060dbe">   87</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_device_node.html#a8763e7f52f3239f6cd31234a89060dbe">setSubnetGroup</a>(<span class="keyword">const</span> QString &amp;subnet) { <a class="code hl_variable" href="class_device_node.html#ac44d1abd7597f0d28c5d3d6689393412">m_subnetGroup</a> = subnet; }</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="class_device_node.html#a9a93233328d9a5db24a23daa965f49ad">   88</a></span>    QString <a class="code hl_function" href="class_device_node.html#a9a93233328d9a5db24a23daa965f49ad">subnetGroup</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_device_node.html#ac44d1abd7597f0d28c5d3d6689393412">m_subnetGroup</a>; }</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_device_node.html#a8e6b5f8a328666bdb5f6645d82b1e49c">mousePressEvent</a>(QGraphicsSceneMouseEvent *event) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_device_node.html#a8537016aab46cbc8f9c52351c5746b66">mouseMoveEvent</a>(QGraphicsSceneMouseEvent *event) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_device_node.html#afce1d9bffed9ff781b7bdf338d71918a">mouseReleaseEvent</a>(QGraphicsSceneMouseEvent *event) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_device_node.html#a63cf0e5f0f3e0d5be9bd1bbd11338248">hoverEnterEvent</a>(QGraphicsSceneHoverEvent *event) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_device_node.html#a007391437e3fce24db87c97d8cdf2686">hoverLeaveEvent</a>(QGraphicsSceneHoverEvent *event) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="class_device_node.html#a3c4db426da62437969a9064365ee4756">   98</a></span>    <a class="code hl_struct" href="struct_host_info.html">HostInfo</a> <a class="code hl_variable" href="class_device_node.html#a3c4db426da62437969a9064365ee4756">m_host</a>;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="class_device_node.html#ad57955c067a58853e3cce781ed8ea330">   99</a></span>    <a class="code hl_enumeration" href="networktopology_8h.html#ad258d4c51629346fceac4679b3209ad9">DeviceType</a> <a class="code hl_variable" href="class_device_node.html#ad57955c067a58853e3cce781ed8ea330">m_type</a>;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="class_device_node.html#a66bbeea661e3d2ab8a1c69d9371999e5">  100</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_device_node.html#a66bbeea661e3d2ab8a1c69d9371999e5">m_highlight</a>;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="class_device_node.html#a1c9052a67546060bdf04485d12b2bbb4">  101</a></span>    QPointF <a class="code hl_variable" href="class_device_node.html#a1c9052a67546060bdf04485d12b2bbb4">m_dragStartPosition</a>;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="class_device_node.html#a2f155857f4146e91d68d2d855ee0d764">  102</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_device_node.html#a2f155857f4146e91d68d2d855ee0d764">m_networkLayer</a>;       <span class="comment">// 网络层级</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="class_device_node.html#ac44d1abd7597f0d28c5d3d6689393412">  103</a></span>    QString <a class="code hl_variable" href="class_device_node.html#ac44d1abd7597f0d28c5d3d6689393412">m_subnetGroup</a>;    <span class="comment">// 子网组</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>};</div>
+</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="comment">// 连接线</span></div>
+<div class="foldopen" id="foldopen00107" data-start="{" data-end="};">
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="class_connection_line.html">  107</a></span><span class="keyword">class </span><a class="code hl_function" href="class_connection_line.html#a693b4ce7bcae3a65cecb9817b5e1dd3d">ConnectionLine</a> : <span class="keyword">public</span> QGraphicsItem</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>{</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <a class="code hl_function" href="class_connection_line.html#a693b4ce7bcae3a65cecb9817b5e1dd3d">ConnectionLine</a>(<a class="code hl_class" href="class_device_node.html">DeviceNode</a> *source, <a class="code hl_class" href="class_device_node.html">DeviceNode</a> *target, </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>                  <a class="code hl_enumeration" href="networktopology_8h.html#aa1f0e2efd52935fd01bfece0fbead81f">ConnectionType</a> type = <a class="code hl_enumvalue" href="networktopology_8h.html#aa1f0e2efd52935fd01bfece0fbead81fa1170f811f066620fe382b20395e9c31c">CONNECTION_DIRECT</a>);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    QRectF <a class="code hl_function" href="class_connection_line.html#a0c7d47271ba7f0e7ec27b2b85fc32f36">boundingRect</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_connection_line.html#a1740cffc2a385a430d8637a1c559e2c6">paint</a>(QPainter *painter, <span class="keyword">const</span> QStyleOptionGraphicsItem *option, QWidget *widget) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_connection_line.html#a0218b726097ec9e949be522d08353d7f">updatePosition</a>();</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <span class="comment">// 设置连接类型</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_connection_line.html#a74b7744c136bf84c7dbe323580de01e5">setConnectionType</a>(<a class="code hl_enumeration" href="networktopology_8h.html#aa1f0e2efd52935fd01bfece0fbead81f">ConnectionType</a> type);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="class_connection_line.html#a631cf3fbdbf13c1530429016eabb6992">  120</a></span>    <a class="code hl_enumeration" href="networktopology_8h.html#aa1f0e2efd52935fd01bfece0fbead81f">ConnectionType</a> <a class="code hl_function" href="class_connection_line.html#a631cf3fbdbf13c1530429016eabb6992">connectionType</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_connection_line.html#a4298630c2696233ba09bb033057cb0bd">m_connectionType</a>; }</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="class_connection_line.html#ad404939adbcdd87d86b389e236c2d806">  123</a></span>    <a class="code hl_class" href="class_device_node.html">DeviceNode</a> *<a class="code hl_variable" href="class_connection_line.html#ad404939adbcdd87d86b389e236c2d806">m_source</a>;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="class_connection_line.html#aab5f6fc9b560e5bafb6c1ee9c08a835a">  124</a></span>    <a class="code hl_class" href="class_device_node.html">DeviceNode</a> *<a class="code hl_variable" href="class_connection_line.html#aab5f6fc9b560e5bafb6c1ee9c08a835a">m_target</a>;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="class_connection_line.html#a4298630c2696233ba09bb033057cb0bd">  125</a></span>    <a class="code hl_enumeration" href="networktopology_8h.html#aa1f0e2efd52935fd01bfece0fbead81f">ConnectionType</a> <a class="code hl_variable" href="class_connection_line.html#a4298630c2696233ba09bb033057cb0bd">m_connectionType</a>;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>};</div>
+</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="comment">// 拓扑图视图</span></div>
+<div class="foldopen" id="foldopen00129" data-start="{" data-end="};">
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno"><a class="line" href="class_network_topology_view.html">  129</a></span><span class="keyword">class </span><a class="code hl_function" href="class_network_topology_view.html#a72fef779d6a4e9b35e234f183bf3fdb4">NetworkTopologyView</a> : <span class="keyword">public</span> QGraphicsView</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>{</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    Q_OBJECT</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <a class="code hl_function" href="class_network_topology_view.html#a72fef779d6a4e9b35e234f183bf3fdb4">NetworkTopologyView</a>(QWidget *parent = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_network_topology_view.html#abb26033011fdad463562d3cb56df316b">setHosts</a>(<span class="keyword">const</span> QList&lt;HostInfo&gt; &amp;hosts);</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_network_topology_view.html#a28f8bd8a7ca94d2bf012df95baa8528f">clear</a>();</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_network_topology_view.html#a8bf0a46be9b0a9443996a0dcc5d4185a">autoLayout</a>();</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    <span class="comment">// 新增布局方法</span></div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_network_topology_view.html#aaf91e8f992d89a55c382815abcb84184">hierarchicalLayout</a>(<span class="keyword">const</span> QMap&lt;int, QStringList&gt; &amp;layers);</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_network_topology_view.html#aec7caac1d0446056144e3d994ed3965b">groupedLayout</a>(<span class="keyword">const</span> QMap&lt;QString, QStringList&gt; &amp;groups);</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    </div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>signals:</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="class_network_topology_view.html#a126996c6425f4947275c79bc42a8c2f8">nodeSelected</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_host_info.html">HostInfo</a> &amp;host);</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno"><a class="line" href="class_network_topology_view.html#a0990f2f190b7226d4759c9b98de3678a">  148</a></span>    QGraphicsScene *<a class="code hl_variable" href="class_network_topology_view.html#a0990f2f190b7226d4759c9b98de3678a">m_scene</a>;</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="class_network_topology_view.html#a4b6e2ef46c59706a2e75bb262017b37c">  149</a></span>    QMap&lt;QString, DeviceNode*&gt; <a class="code hl_variable" href="class_network_topology_view.html#a4b6e2ef46c59706a2e75bb262017b37c">m_nodes</a>;</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="class_network_topology_view.html#a484340064517ec22f07682e5807f80de">  150</a></span>    QList&lt;ConnectionLine*&gt; <a class="code hl_variable" href="class_network_topology_view.html#a484340064517ec22f07682e5807f80de">m_connections</a>;</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno"><a class="line" href="class_network_topology_view.html#a208658d74b982b5213f9f9713ca8c4a9">  152</a></span>    <a class="code hl_class" href="class_topology_analyzer.html">TopologyAnalyzer</a> <a class="code hl_variable" href="class_network_topology_view.html#a208658d74b982b5213f9f9713ca8c4a9">m_analyzer</a>;</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    </div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    <a class="code hl_enumeration" href="networktopology_8h.html#ad258d4c51629346fceac4679b3209ad9">DeviceType</a> <a class="code hl_function" href="class_network_topology_view.html#ab4a6db2c2d7f558ce80a155cc6e960c1">determineDeviceType</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_host_info.html">HostInfo</a> &amp;host);</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_network_topology_view.html#a35a7ee9e7b84f4d268fa4c371a75c803">createConnection</a>(<a class="code hl_class" href="class_device_node.html">DeviceNode</a> *source, <a class="code hl_class" href="class_device_node.html">DeviceNode</a> *target, </div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>                          <a class="code hl_enumeration" href="networktopology_8h.html#aa1f0e2efd52935fd01bfece0fbead81f">ConnectionType</a> type = <a class="code hl_enumvalue" href="networktopology_8h.html#aa1f0e2efd52935fd01bfece0fbead81fa1170f811f066620fe382b20395e9c31c">CONNECTION_DIRECT</a>);</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>};</div>
+</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span><span class="comment">// 网络拓扑组件（包含拓扑图和控制面板）</span></div>
+<div class="foldopen" id="foldopen00160" data-start="{" data-end="};">
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno"><a class="line" href="class_network_topology.html">  160</a></span><span class="keyword">class </span><a class="code hl_function" href="class_network_topology.html#a7c64308620bf6f3ef5b2eb00a37b3438">NetworkTopology</a> : <span class="keyword">public</span> QWidget</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>{</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    Q_OBJECT</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    </div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    <a class="code hl_function" href="class_network_topology.html#a7c64308620bf6f3ef5b2eb00a37b3438">NetworkTopology</a>(QWidget *parent = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    </div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_network_topology.html#a4d6ee2108e3370fd06f7f9ddd7f64f03">updateTopology</a>(<span class="keyword">const</span> QList&lt;HostInfo&gt; &amp;hosts);</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_network_topology.html#ac04e505570950aaf3251bc8f86ce7a7e">clear</a>();</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    <span class="comment">// 缩放和视图控制方法</span></div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_network_topology.html#a356dddaed6062b0772a9c1c90e130137">scale</a>(qreal factor);</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_network_topology.html#a009c8b59b77e927caf81fabc5749643f">resetView</a>();</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    <span class="comment">// 新增：切换布局方式</span></div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_network_topology.html#a1eb371c4c3061d555f9d2831a32dd62e">setLayoutMode</a>(<span class="keywordtype">int</span> mode);</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    </div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>signals:</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="class_network_topology.html#a8978cf5a440fe01b4d9b1fa1185a5ca6">deviceSelected</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_host_info.html">HostInfo</a> &amp;host);</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    </div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno"><a class="line" href="class_network_topology.html#ad45219ccd78da567c113a2b17ba0c467">  181</a></span>    <a class="code hl_class" href="class_network_topology_view.html">NetworkTopologyView</a> *<a class="code hl_variable" href="class_network_topology.html#ad45219ccd78da567c113a2b17ba0c467">m_topologyView</a>;</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno"><a class="line" href="class_network_topology.html#af9a7e8cd0dace6f3807c493fe7614d56">  182</a></span>    QWidget *<a class="code hl_variable" href="class_network_topology.html#af9a7e8cd0dace6f3807c493fe7614d56">m_controlPanel</a>;</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    </div>
+<div class="foldopen" id="foldopen00184" data-start="{" data-end="};">
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno"><a class="line" href="class_network_topology.html#a91db80df755c9eb7db568b534f34c650">  184</a></span>    <span class="keyword">enum</span> <a class="code hl_enumeration" href="class_network_topology.html#a91db80df755c9eb7db568b534f34c650">LayoutMode</a> {</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno"><a class="line" href="class_network_topology.html#a91db80df755c9eb7db568b534f34c650adc14cce4e1d80d93829e5237edf6b940">  185</a></span>        <a class="code hl_enumvalue" href="class_network_topology.html#a91db80df755c9eb7db568b534f34c650adc14cce4e1d80d93829e5237edf6b940">LAYOUT_AUTO</a>,</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno"><a class="line" href="class_network_topology.html#a91db80df755c9eb7db568b534f34c650a740e1d0728a3585341e19e137f90de86">  186</a></span>        <a class="code hl_enumvalue" href="class_network_topology.html#a91db80df755c9eb7db568b534f34c650a740e1d0728a3585341e19e137f90de86">LAYOUT_HIERARCHICAL</a>,</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno"><a class="line" href="class_network_topology.html#a91db80df755c9eb7db568b534f34c650a523ea91ee9c520a86cfa5acdaf891acf">  187</a></span>        <a class="code hl_enumvalue" href="class_network_topology.html#a91db80df755c9eb7db568b534f34c650a523ea91ee9c520a86cfa5acdaf891acf">LAYOUT_GROUPED</a></div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    };</div>
+</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    </div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno"><a class="line" href="class_network_topology.html#a46c2829a5fe4add78ed38b1af3900d65">  190</a></span>    <a class="code hl_enumeration" href="class_network_topology.html#a91db80df755c9eb7db568b534f34c650">LayoutMode</a> <a class="code hl_variable" href="class_network_topology.html#a46c2829a5fe4add78ed38b1af3900d65">m_layoutMode</a>;</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno"><a class="line" href="class_network_topology.html#aefd217bf41f2475e7d6867df05bbb6b8">  191</a></span>    QList&lt;HostInfo&gt; <a class="code hl_variable" href="class_network_topology.html#aefd217bf41f2475e7d6867df05bbb6b8">m_currentHosts</a>;  <span class="comment">// 缓存当前主机列表，用于布局切换</span></div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>};</div>
+</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span><span class="preprocessor">#endif </span><span class="comment">// NETWORKTOPOLOGY_H </span></div>
+<div class="ttc" id="aclass_connection_line_html_a0218b726097ec9e949be522d08353d7f"><div class="ttname"><a href="class_connection_line.html#a0218b726097ec9e949be522d08353d7f">ConnectionLine::updatePosition</a></div><div class="ttdeci">void updatePosition()</div><div class="ttdef"><b>定义</b> networktopology.cpp:250</div></div>
+<div class="ttc" id="aclass_connection_line_html_a0c7d47271ba7f0e7ec27b2b85fc32f36"><div class="ttname"><a href="class_connection_line.html#a0c7d47271ba7f0e7ec27b2b85fc32f36">ConnectionLine::boundingRect</a></div><div class="ttdeci">QRectF boundingRect() const override</div><div class="ttdef"><b>定义</b> networktopology.cpp:165</div></div>
+<div class="ttc" id="aclass_connection_line_html_a1740cffc2a385a430d8637a1c559e2c6"><div class="ttname"><a href="class_connection_line.html#a1740cffc2a385a430d8637a1c559e2c6">ConnectionLine::paint</a></div><div class="ttdeci">void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override</div><div class="ttdef"><b>定义</b> networktopology.cpp:178</div></div>
+<div class="ttc" id="aclass_connection_line_html_a4298630c2696233ba09bb033057cb0bd"><div class="ttname"><a href="class_connection_line.html#a4298630c2696233ba09bb033057cb0bd">ConnectionLine::m_connectionType</a></div><div class="ttdeci">ConnectionType m_connectionType</div><div class="ttdef"><b>定义</b> networktopology.h:125</div></div>
+<div class="ttc" id="aclass_connection_line_html_a631cf3fbdbf13c1530429016eabb6992"><div class="ttname"><a href="class_connection_line.html#a631cf3fbdbf13c1530429016eabb6992">ConnectionLine::connectionType</a></div><div class="ttdeci">ConnectionType connectionType() const</div><div class="ttdef"><b>定义</b> networktopology.h:120</div></div>
+<div class="ttc" id="aclass_connection_line_html_a693b4ce7bcae3a65cecb9817b5e1dd3d"><div class="ttname"><a href="class_connection_line.html#a693b4ce7bcae3a65cecb9817b5e1dd3d">ConnectionLine::ConnectionLine</a></div><div class="ttdeci">ConnectionLine(DeviceNode *source, DeviceNode *target, ConnectionType type=CONNECTION_DIRECT)</div><div class="ttdef"><b>定义</b> networktopology.cpp:158</div></div>
+<div class="ttc" id="aclass_connection_line_html_a74b7744c136bf84c7dbe323580de01e5"><div class="ttname"><a href="class_connection_line.html#a74b7744c136bf84c7dbe323580de01e5">ConnectionLine::setConnectionType</a></div><div class="ttdeci">void setConnectionType(ConnectionType type)</div><div class="ttdef"><b>定义</b> networktopology.cpp:258</div></div>
+<div class="ttc" id="aclass_connection_line_html_aab5f6fc9b560e5bafb6c1ee9c08a835a"><div class="ttname"><a href="class_connection_line.html#aab5f6fc9b560e5bafb6c1ee9c08a835a">ConnectionLine::m_target</a></div><div class="ttdeci">DeviceNode * m_target</div><div class="ttdef"><b>定义</b> networktopology.h:124</div></div>
+<div class="ttc" id="aclass_connection_line_html_ad404939adbcdd87d86b389e236c2d806"><div class="ttname"><a href="class_connection_line.html#ad404939adbcdd87d86b389e236c2d806">ConnectionLine::m_source</a></div><div class="ttdeci">DeviceNode * m_source</div><div class="ttdef"><b>定义</b> networktopology.h:123</div></div>
+<div class="ttc" id="aclass_device_node_html"><div class="ttname"><a href="class_device_node.html">DeviceNode</a></div><div class="ttdef"><b>定义</b> networktopology.h:68</div></div>
+<div class="ttc" id="aclass_device_node_html_a007391437e3fce24db87c97d8cdf2686"><div class="ttname"><a href="class_device_node.html#a007391437e3fce24db87c97d8cdf2686">DeviceNode::hoverLeaveEvent</a></div><div class="ttdeci">void hoverLeaveEvent(QGraphicsSceneHoverEvent *event) override</div><div class="ttdef"><b>定义</b> networktopology.cpp:150</div></div>
+<div class="ttc" id="aclass_device_node_html_a1c9052a67546060bdf04485d12b2bbb4"><div class="ttname"><a href="class_device_node.html#a1c9052a67546060bdf04485d12b2bbb4">DeviceNode::m_dragStartPosition</a></div><div class="ttdeci">QPointF m_dragStartPosition</div><div class="ttdef"><b>定义</b> networktopology.h:101</div></div>
+<div class="ttc" id="aclass_device_node_html_a2f155857f4146e91d68d2d855ee0d764"><div class="ttname"><a href="class_device_node.html#a2f155857f4146e91d68d2d855ee0d764">DeviceNode::m_networkLayer</a></div><div class="ttdeci">int m_networkLayer</div><div class="ttdef"><b>定义</b> networktopology.h:102</div></div>
+<div class="ttc" id="aclass_device_node_html_a3c1916cf448115bf13debb1ccaecca7f"><div class="ttname"><a href="class_device_node.html#a3c1916cf448115bf13debb1ccaecca7f">DeviceNode::setNetworkLayer</a></div><div class="ttdeci">void setNetworkLayer(int layer)</div><div class="ttdef"><b>定义</b> networktopology.h:83</div></div>
+<div class="ttc" id="aclass_device_node_html_a3c4db426da62437969a9064365ee4756"><div class="ttname"><a href="class_device_node.html#a3c4db426da62437969a9064365ee4756">DeviceNode::m_host</a></div><div class="ttdeci">HostInfo m_host</div><div class="ttdef"><b>定义</b> networktopology.h:98</div></div>
+<div class="ttc" id="aclass_device_node_html_a4944312715c13f9c5b42342944851ab3"><div class="ttname"><a href="class_device_node.html#a4944312715c13f9c5b42342944851ab3">DeviceNode::DeviceNode</a></div><div class="ttdeci">DeviceNode(const HostInfo &amp;host, DeviceType type=DEVICE_UNKNOWN)</div><div class="ttdef"><b>定义</b> networktopology.cpp:22</div></div>
+<div class="ttc" id="aclass_device_node_html_a63cf0e5f0f3e0d5be9bd1bbd11338248"><div class="ttname"><a href="class_device_node.html#a63cf0e5f0f3e0d5be9bd1bbd11338248">DeviceNode::hoverEnterEvent</a></div><div class="ttdeci">void hoverEnterEvent(QGraphicsSceneHoverEvent *event) override</div><div class="ttdef"><b>定义</b> networktopology.cpp:121</div></div>
+<div class="ttc" id="aclass_device_node_html_a66bbeea661e3d2ab8a1c69d9371999e5"><div class="ttname"><a href="class_device_node.html#a66bbeea661e3d2ab8a1c69d9371999e5">DeviceNode::m_highlight</a></div><div class="ttdeci">bool m_highlight</div><div class="ttdef"><b>定义</b> networktopology.h:100</div></div>
+<div class="ttc" id="aclass_device_node_html_a7ee68a7e96c77fa95d71f7a728e6c454"><div class="ttname"><a href="class_device_node.html#a7ee68a7e96c77fa95d71f7a728e6c454">DeviceNode::networkLayer</a></div><div class="ttdeci">int networkLayer() const</div><div class="ttdef"><b>定义</b> networktopology.h:84</div></div>
+<div class="ttc" id="aclass_device_node_html_a8537016aab46cbc8f9c52351c5746b66"><div class="ttname"><a href="class_device_node.html#a8537016aab46cbc8f9c52351c5746b66">DeviceNode::mouseMoveEvent</a></div><div class="ttdeci">void mouseMoveEvent(QGraphicsSceneMouseEvent *event) override</div><div class="ttdef"><b>定义</b> networktopology.cpp:108</div></div>
+<div class="ttc" id="aclass_device_node_html_a8763e7f52f3239f6cd31234a89060dbe"><div class="ttname"><a href="class_device_node.html#a8763e7f52f3239f6cd31234a89060dbe">DeviceNode::setSubnetGroup</a></div><div class="ttdeci">void setSubnetGroup(const QString &amp;subnet)</div><div class="ttdef"><b>定义</b> networktopology.h:87</div></div>
+<div class="ttc" id="aclass_device_node_html_a8e325a01381c951dd58a432f2eda6369"><div class="ttname"><a href="class_device_node.html#a8e325a01381c951dd58a432f2eda6369">DeviceNode::deviceType</a></div><div class="ttdeci">DeviceType deviceType() const</div><div class="ttdef"><b>定义</b> networktopology.h:76</div></div>
+<div class="ttc" id="aclass_device_node_html_a8e6b5f8a328666bdb5f6645d82b1e49c"><div class="ttname"><a href="class_device_node.html#a8e6b5f8a328666bdb5f6645d82b1e49c">DeviceNode::mousePressEvent</a></div><div class="ttdeci">void mousePressEvent(QGraphicsSceneMouseEvent *event) override</div><div class="ttdef"><b>定义</b> networktopology.cpp:102</div></div>
+<div class="ttc" id="aclass_device_node_html_a94ab579715500c27047b6a6636dd0b1c"><div class="ttname"><a href="class_device_node.html#a94ab579715500c27047b6a6636dd0b1c">DeviceNode::ipAddress</a></div><div class="ttdeci">QString ipAddress() const</div><div class="ttdef"><b>定义</b> networktopology.h:78</div></div>
+<div class="ttc" id="aclass_device_node_html_a9a93233328d9a5db24a23daa965f49ad"><div class="ttname"><a href="class_device_node.html#a9a93233328d9a5db24a23daa965f49ad">DeviceNode::subnetGroup</a></div><div class="ttdeci">QString subnetGroup() const</div><div class="ttdef"><b>定义</b> networktopology.h:88</div></div>
+<div class="ttc" id="aclass_device_node_html_aa280521ab40d3bd66235eff06a75ea30"><div class="ttname"><a href="class_device_node.html#aa280521ab40d3bd66235eff06a75ea30">DeviceNode::boundingRect</a></div><div class="ttdeci">QRectF boundingRect() const override</div><div class="ttdef"><b>定义</b> networktopology.cpp:34</div></div>
+<div class="ttc" id="aclass_device_node_html_ac0f6f8035bd7b65c6205ac2878d9ec1d"><div class="ttname"><a href="class_device_node.html#ac0f6f8035bd7b65c6205ac2878d9ec1d">DeviceNode::hostInfo</a></div><div class="ttdeci">HostInfo hostInfo() const</div><div class="ttdef"><b>定义</b> networktopology.h:79</div></div>
+<div class="ttc" id="aclass_device_node_html_ac44d1abd7597f0d28c5d3d6689393412"><div class="ttname"><a href="class_device_node.html#ac44d1abd7597f0d28c5d3d6689393412">DeviceNode::m_subnetGroup</a></div><div class="ttdeci">QString m_subnetGroup</div><div class="ttdef"><b>定义</b> networktopology.h:103</div></div>
+<div class="ttc" id="aclass_device_node_html_ad11a8f575a8d6df6b7545e7071af181e"><div class="ttname"><a href="class_device_node.html#ad11a8f575a8d6df6b7545e7071af181e">DeviceNode::paint</a></div><div class="ttdeci">void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override</div><div class="ttdef"><b>定义</b> networktopology.cpp:39</div></div>
+<div class="ttc" id="aclass_device_node_html_ad57955c067a58853e3cce781ed8ea330"><div class="ttname"><a href="class_device_node.html#ad57955c067a58853e3cce781ed8ea330">DeviceNode::m_type</a></div><div class="ttdeci">DeviceType m_type</div><div class="ttdef"><b>定义</b> networktopology.h:99</div></div>
+<div class="ttc" id="aclass_device_node_html_aef416a5365cf9d935f84a9a0949fdcdc"><div class="ttname"><a href="class_device_node.html#aef416a5365cf9d935f84a9a0949fdcdc">DeviceNode::setPosition</a></div><div class="ttdeci">void setPosition(const QPointF &amp;pos)</div></div>
+<div class="ttc" id="aclass_device_node_html_af113b3eb8c31ece100489938be417ece"><div class="ttname"><a href="class_device_node.html#af113b3eb8c31ece100489938be417ece">DeviceNode::setDeviceType</a></div><div class="ttdeci">void setDeviceType(DeviceType type)</div><div class="ttdef"><b>定义</b> networktopology.cpp:96</div></div>
+<div class="ttc" id="aclass_device_node_html_afce1d9bffed9ff781b7bdf338d71918a"><div class="ttname"><a href="class_device_node.html#afce1d9bffed9ff781b7bdf338d71918a">DeviceNode::mouseReleaseEvent</a></div><div class="ttdeci">void mouseReleaseEvent(QGraphicsSceneMouseEvent *event) override</div><div class="ttdef"><b>定义</b> networktopology.cpp:116</div></div>
+<div class="ttc" id="aclass_network_topology_html_a009c8b59b77e927caf81fabc5749643f"><div class="ttname"><a href="class_network_topology.html#a009c8b59b77e927caf81fabc5749643f">NetworkTopology::resetView</a></div><div class="ttdeci">void resetView()</div><div class="ttdef"><b>定义</b> networktopology.cpp:580</div></div>
+<div class="ttc" id="aclass_network_topology_html_a1eb371c4c3061d555f9d2831a32dd62e"><div class="ttname"><a href="class_network_topology.html#a1eb371c4c3061d555f9d2831a32dd62e">NetworkTopology::setLayoutMode</a></div><div class="ttdeci">void setLayoutMode(int mode)</div><div class="ttdef"><b>定义</b> networktopology.cpp:549</div></div>
+<div class="ttc" id="aclass_network_topology_html_a356dddaed6062b0772a9c1c90e130137"><div class="ttname"><a href="class_network_topology.html#a356dddaed6062b0772a9c1c90e130137">NetworkTopology::scale</a></div><div class="ttdeci">void scale(qreal factor)</div><div class="ttdef"><b>定义</b> networktopology.cpp:573</div></div>
+<div class="ttc" id="aclass_network_topology_html_a46c2829a5fe4add78ed38b1af3900d65"><div class="ttname"><a href="class_network_topology.html#a46c2829a5fe4add78ed38b1af3900d65">NetworkTopology::m_layoutMode</a></div><div class="ttdeci">LayoutMode m_layoutMode</div><div class="ttdef"><b>定义</b> networktopology.h:190</div></div>
+<div class="ttc" id="aclass_network_topology_html_a4d6ee2108e3370fd06f7f9ddd7f64f03"><div class="ttname"><a href="class_network_topology.html#a4d6ee2108e3370fd06f7f9ddd7f64f03">NetworkTopology::updateTopology</a></div><div class="ttdeci">void updateTopology(const QList&lt; HostInfo &gt; &amp;hosts)</div><div class="ttdef"><b>定义</b> networktopology.cpp:559</div></div>
+<div class="ttc" id="aclass_network_topology_html_a7c64308620bf6f3ef5b2eb00a37b3438"><div class="ttname"><a href="class_network_topology.html#a7c64308620bf6f3ef5b2eb00a37b3438">NetworkTopology::NetworkTopology</a></div><div class="ttdeci">NetworkTopology(QWidget *parent=nullptr)</div><div class="ttdef"><b>定义</b> networktopology.cpp:503</div></div>
+<div class="ttc" id="aclass_network_topology_html_a8978cf5a440fe01b4d9b1fa1185a5ca6"><div class="ttname"><a href="class_network_topology.html#a8978cf5a440fe01b4d9b1fa1185a5ca6">NetworkTopology::deviceSelected</a></div><div class="ttdeci">void deviceSelected(const HostInfo &amp;host)</div><div class="ttdef"><b>定义</b> moc_networktopology.cpp:207</div></div>
+<div class="ttc" id="aclass_network_topology_html_a91db80df755c9eb7db568b534f34c650"><div class="ttname"><a href="class_network_topology.html#a91db80df755c9eb7db568b534f34c650">NetworkTopology::LayoutMode</a></div><div class="ttdeci">LayoutMode</div><div class="ttdef"><b>定义</b> networktopology.h:184</div></div>
+<div class="ttc" id="aclass_network_topology_html_a91db80df755c9eb7db568b534f34c650a523ea91ee9c520a86cfa5acdaf891acf"><div class="ttname"><a href="class_network_topology.html#a91db80df755c9eb7db568b534f34c650a523ea91ee9c520a86cfa5acdaf891acf">NetworkTopology::LAYOUT_GROUPED</a></div><div class="ttdeci">@ LAYOUT_GROUPED</div><div class="ttdef"><b>定义</b> networktopology.h:187</div></div>
+<div class="ttc" id="aclass_network_topology_html_a91db80df755c9eb7db568b534f34c650a740e1d0728a3585341e19e137f90de86"><div class="ttname"><a href="class_network_topology.html#a91db80df755c9eb7db568b534f34c650a740e1d0728a3585341e19e137f90de86">NetworkTopology::LAYOUT_HIERARCHICAL</a></div><div class="ttdeci">@ LAYOUT_HIERARCHICAL</div><div class="ttdef"><b>定义</b> networktopology.h:186</div></div>
+<div class="ttc" id="aclass_network_topology_html_a91db80df755c9eb7db568b534f34c650adc14cce4e1d80d93829e5237edf6b940"><div class="ttname"><a href="class_network_topology.html#a91db80df755c9eb7db568b534f34c650adc14cce4e1d80d93829e5237edf6b940">NetworkTopology::LAYOUT_AUTO</a></div><div class="ttdeci">@ LAYOUT_AUTO</div><div class="ttdef"><b>定义</b> networktopology.h:185</div></div>
+<div class="ttc" id="aclass_network_topology_html_ac04e505570950aaf3251bc8f86ce7a7e"><div class="ttname"><a href="class_network_topology.html#ac04e505570950aaf3251bc8f86ce7a7e">NetworkTopology::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdef"><b>定义</b> networktopology.cpp:568</div></div>
+<div class="ttc" id="aclass_network_topology_html_ad45219ccd78da567c113a2b17ba0c467"><div class="ttname"><a href="class_network_topology.html#ad45219ccd78da567c113a2b17ba0c467">NetworkTopology::m_topologyView</a></div><div class="ttdeci">NetworkTopologyView * m_topologyView</div><div class="ttdef"><b>定义</b> networktopology.h:181</div></div>
+<div class="ttc" id="aclass_network_topology_html_aefd217bf41f2475e7d6867df05bbb6b8"><div class="ttname"><a href="class_network_topology.html#aefd217bf41f2475e7d6867df05bbb6b8">NetworkTopology::m_currentHosts</a></div><div class="ttdeci">QList&lt; HostInfo &gt; m_currentHosts</div><div class="ttdef"><b>定义</b> networktopology.h:191</div></div>
+<div class="ttc" id="aclass_network_topology_html_af9a7e8cd0dace6f3807c493fe7614d56"><div class="ttname"><a href="class_network_topology.html#af9a7e8cd0dace6f3807c493fe7614d56">NetworkTopology::m_controlPanel</a></div><div class="ttdeci">QWidget * m_controlPanel</div><div class="ttdef"><b>定义</b> networktopology.h:182</div></div>
+<div class="ttc" id="aclass_network_topology_view_html"><div class="ttname"><a href="class_network_topology_view.html">NetworkTopologyView</a></div><div class="ttdef"><b>定义</b> networktopology.h:130</div></div>
+<div class="ttc" id="aclass_network_topology_view_html_a0990f2f190b7226d4759c9b98de3678a"><div class="ttname"><a href="class_network_topology_view.html#a0990f2f190b7226d4759c9b98de3678a">NetworkTopologyView::m_scene</a></div><div class="ttdeci">QGraphicsScene * m_scene</div><div class="ttdef"><b>定义</b> networktopology.h:148</div></div>
+<div class="ttc" id="aclass_network_topology_view_html_a126996c6425f4947275c79bc42a8c2f8"><div class="ttname"><a href="class_network_topology_view.html#a126996c6425f4947275c79bc42a8c2f8">NetworkTopologyView::nodeSelected</a></div><div class="ttdeci">void nodeSelected(const HostInfo &amp;host)</div><div class="ttdef"><b>定义</b> moc_networktopology.cpp:118</div></div>
+<div class="ttc" id="aclass_network_topology_view_html_a208658d74b982b5213f9f9713ca8c4a9"><div class="ttname"><a href="class_network_topology_view.html#a208658d74b982b5213f9f9713ca8c4a9">NetworkTopologyView::m_analyzer</a></div><div class="ttdeci">TopologyAnalyzer m_analyzer</div><div class="ttdef"><b>定义</b> networktopology.h:152</div></div>
+<div class="ttc" id="aclass_network_topology_view_html_a28f8bd8a7ca94d2bf012df95baa8528f"><div class="ttname"><a href="class_network_topology_view.html#a28f8bd8a7ca94d2bf012df95baa8528f">NetworkTopologyView::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdef"><b>定义</b> networktopology.cpp:351</div></div>
+<div class="ttc" id="aclass_network_topology_view_html_a35a7ee9e7b84f4d268fa4c371a75c803"><div class="ttname"><a href="class_network_topology_view.html#a35a7ee9e7b84f4d268fa4c371a75c803">NetworkTopologyView::createConnection</a></div><div class="ttdeci">void createConnection(DeviceNode *source, DeviceNode *target, ConnectionType type=CONNECTION_DIRECT)</div><div class="ttdef"><b>定义</b> networktopology.cpp:493</div></div>
+<div class="ttc" id="aclass_network_topology_view_html_a484340064517ec22f07682e5807f80de"><div class="ttname"><a href="class_network_topology_view.html#a484340064517ec22f07682e5807f80de">NetworkTopologyView::m_connections</a></div><div class="ttdeci">QList&lt; ConnectionLine * &gt; m_connections</div><div class="ttdef"><b>定义</b> networktopology.h:150</div></div>
+<div class="ttc" id="aclass_network_topology_view_html_a4b6e2ef46c59706a2e75bb262017b37c"><div class="ttname"><a href="class_network_topology_view.html#a4b6e2ef46c59706a2e75bb262017b37c">NetworkTopologyView::m_nodes</a></div><div class="ttdeci">QMap&lt; QString, DeviceNode * &gt; m_nodes</div><div class="ttdef"><b>定义</b> networktopology.h:149</div></div>
+<div class="ttc" id="aclass_network_topology_view_html_a72fef779d6a4e9b35e234f183bf3fdb4"><div class="ttname"><a href="class_network_topology_view.html#a72fef779d6a4e9b35e234f183bf3fdb4">NetworkTopologyView::NetworkTopologyView</a></div><div class="ttdeci">NetworkTopologyView(QWidget *parent=nullptr)</div><div class="ttdef"><b>定义</b> networktopology.cpp:265</div></div>
+<div class="ttc" id="aclass_network_topology_view_html_a8bf0a46be9b0a9443996a0dcc5d4185a"><div class="ttname"><a href="class_network_topology_view.html#a8bf0a46be9b0a9443996a0dcc5d4185a">NetworkTopologyView::autoLayout</a></div><div class="ttdeci">void autoLayout()</div><div class="ttdef"><b>定义</b> networktopology.cpp:994</div></div>
+<div class="ttc" id="aclass_network_topology_view_html_aaf91e8f992d89a55c382815abcb84184"><div class="ttname"><a href="class_network_topology_view.html#aaf91e8f992d89a55c382815abcb84184">NetworkTopologyView::hierarchicalLayout</a></div><div class="ttdeci">void hierarchicalLayout(const QMap&lt; int, QStringList &gt; &amp;layers)</div><div class="ttdef"><b>定义</b> networktopology.cpp:365</div></div>
+<div class="ttc" id="aclass_network_topology_view_html_ab4a6db2c2d7f558ce80a155cc6e960c1"><div class="ttname"><a href="class_network_topology_view.html#ab4a6db2c2d7f558ce80a155cc6e960c1">NetworkTopologyView::determineDeviceType</a></div><div class="ttdeci">DeviceType determineDeviceType(const HostInfo &amp;host)</div><div class="ttdef"><b>定义</b> networktopology.cpp:432</div></div>
+<div class="ttc" id="aclass_network_topology_view_html_abb26033011fdad463562d3cb56df316b"><div class="ttname"><a href="class_network_topology_view.html#abb26033011fdad463562d3cb56df316b">NetworkTopologyView::setHosts</a></div><div class="ttdeci">void setHosts(const QList&lt; HostInfo &gt; &amp;hosts)</div><div class="ttdef"><b>定义</b> networktopology.cpp:288</div></div>
+<div class="ttc" id="aclass_network_topology_view_html_aec7caac1d0446056144e3d994ed3965b"><div class="ttname"><a href="class_network_topology_view.html#aec7caac1d0446056144e3d994ed3965b">NetworkTopologyView::groupedLayout</a></div><div class="ttdeci">void groupedLayout(const QMap&lt; QString, QStringList &gt; &amp;groups)</div><div class="ttdef"><b>定义</b> networktopology.cpp:909</div></div>
+<div class="ttc" id="aclass_topology_analyzer_html"><div class="ttname"><a href="class_topology_analyzer.html">TopologyAnalyzer</a></div><div class="ttdef"><b>定义</b> networktopology.h:34</div></div>
+<div class="ttc" id="aclass_topology_analyzer_html_a021bd84b23c85b54b4d0ca7c1182368d"><div class="ttname"><a href="class_topology_analyzer.html#a021bd84b23c85b54b4d0ca7c1182368d">TopologyAnalyzer::inferDeviceConnections</a></div><div class="ttdeci">QMap&lt; QString, QStringList &gt; inferDeviceConnections(const QList&lt; HostInfo &gt; &amp;hosts)</div><div class="ttdef"><b>定义</b> networktopology.cpp:592</div></div>
+<div class="ttc" id="aclass_topology_analyzer_html_a16c5a69468922b5c355d0f317c221570"><div class="ttname"><a href="class_topology_analyzer.html#a16c5a69468922b5c355d0f317c221570">TopologyAnalyzer::inSameSubnet</a></div><div class="ttdeci">bool inSameSubnet(const QString &amp;ip1, const QString &amp;ip2, int prefixLength=24)</div><div class="ttdef"><b>定义</b> networktopology.cpp:851</div></div>
+<div class="ttc" id="aclass_topology_analyzer_html_a5aaf6e3f9357fde10c889d0958ecba48"><div class="ttname"><a href="class_topology_analyzer.html#a5aaf6e3f9357fde10c889d0958ecba48">TopologyAnalyzer::clusterDevicesByResponseTime</a></div><div class="ttdeci">QList&lt; QStringList &gt; clusterDevicesByResponseTime(const QList&lt; HostInfo &gt; &amp;hosts)</div><div class="ttdef"><b>定义</b> networktopology.cpp:856</div></div>
+<div class="ttc" id="aclass_topology_analyzer_html_a5e0e8a9760cb1f3899e5c25e692edb3c"><div class="ttname"><a href="class_topology_analyzer.html#a5e0e8a9760cb1f3899e5c25e692edb3c">TopologyAnalyzer::performTraceRoute</a></div><div class="ttdeci">QStringList performTraceRoute(const QString &amp;targetIP)</div><div class="ttdef"><b>定义</b> networktopology.cpp:762</div></div>
+<div class="ttc" id="aclass_topology_analyzer_html_a81a27566be573cdc031363af453dc1dc"><div class="ttname"><a href="class_topology_analyzer.html#a81a27566be573cdc031363af453dc1dc">TopologyAnalyzer::analyzeTTLLayers</a></div><div class="ttdeci">QMap&lt; int, QStringList &gt; analyzeTTLLayers(const QList&lt; HostInfo &gt; &amp;hosts)</div><div class="ttdef"><b>定义</b> networktopology.cpp:670</div></div>
+<div class="ttc" id="aclass_topology_analyzer_html_ac4175e160d1d548586f8b4bb3d6c7d92"><div class="ttname"><a href="class_topology_analyzer.html#ac4175e160d1d548586f8b4bb3d6c7d92">TopologyAnalyzer::getTTLValue</a></div><div class="ttdeci">int getTTLValue(const QString &amp;ipAddress)</div><div class="ttdef"><b>定义</b> networktopology.cpp:710</div></div>
+<div class="ttc" id="aclass_topology_analyzer_html_ac47a81690019df3a439fbb519cd2c15f"><div class="ttname"><a href="class_topology_analyzer.html#ac47a81690019df3a439fbb519cd2c15f">TopologyAnalyzer::analyzeSubnets</a></div><div class="ttdeci">QMap&lt; QString, QStringList &gt; analyzeSubnets(const QList&lt; HostInfo &gt; &amp;hosts)</div><div class="ttdef"><b>定义</b> networktopology.cpp:811</div></div>
+<div class="ttc" id="aclass_topology_analyzer_html_ad138e7cbfe33cf0dcf7c2aa39c9e62b3"><div class="ttname"><a href="class_topology_analyzer.html#ad138e7cbfe33cf0dcf7c2aa39c9e62b3">TopologyAnalyzer::calculateSubnet</a></div><div class="ttdeci">QString calculateSubnet(const QString &amp;ip, int prefixLength=24)</div><div class="ttdef"><b>定义</b> networktopology.cpp:824</div></div>
+<div class="ttc" id="aclass_topology_analyzer_html_ad6c85d36fcbf1ab7db558d63e8aa54a2"><div class="ttname"><a href="class_topology_analyzer.html#ad6c85d36fcbf1ab7db558d63e8aa54a2">TopologyAnalyzer::TopologyAnalyzer</a></div><div class="ttdeci">TopologyAnalyzer()</div><div class="ttdef"><b>定义</b> networktopology.cpp:588</div></div>
+<div class="ttc" id="anetworkscanner_8h_html"><div class="ttname"><a href="networkscanner_8h.html">networkscanner.h</a></div><div class="ttdoc">网络扫描器类定义</div></div>
+<div class="ttc" id="anetworktopology_8h_html_aa1f0e2efd52935fd01bfece0fbead81f"><div class="ttname"><a href="networktopology_8h.html#aa1f0e2efd52935fd01bfece0fbead81f">ConnectionType</a></div><div class="ttdeci">ConnectionType</div><div class="ttdef"><b>定义</b> networktopology.h:25</div></div>
+<div class="ttc" id="anetworktopology_8h_html_aa1f0e2efd52935fd01bfece0fbead81fa1170f811f066620fe382b20395e9c31c"><div class="ttname"><a href="networktopology_8h.html#aa1f0e2efd52935fd01bfece0fbead81fa1170f811f066620fe382b20395e9c31c">CONNECTION_DIRECT</a></div><div class="ttdeci">@ CONNECTION_DIRECT</div><div class="ttdef"><b>定义</b> networktopology.h:27</div></div>
+<div class="ttc" id="anetworktopology_8h_html_aa1f0e2efd52935fd01bfece0fbead81faa31a9471f8a05033b3871d6834b656ca"><div class="ttname"><a href="networktopology_8h.html#aa1f0e2efd52935fd01bfece0fbead81faa31a9471f8a05033b3871d6834b656ca">CONNECTION_VPN</a></div><div class="ttdeci">@ CONNECTION_VPN</div><div class="ttdef"><b>定义</b> networktopology.h:29</div></div>
+<div class="ttc" id="anetworktopology_8h_html_aa1f0e2efd52935fd01bfece0fbead81faaa98c30b12cac8536b62c99df201f423"><div class="ttname"><a href="networktopology_8h.html#aa1f0e2efd52935fd01bfece0fbead81faaa98c30b12cac8536b62c99df201f423">CONNECTION_UNKNOWN</a></div><div class="ttdeci">@ CONNECTION_UNKNOWN</div><div class="ttdef"><b>定义</b> networktopology.h:26</div></div>
+<div class="ttc" id="anetworktopology_8h_html_aa1f0e2efd52935fd01bfece0fbead81fabc86d8c960abdc757484b756233d9fb0"><div class="ttname"><a href="networktopology_8h.html#aa1f0e2efd52935fd01bfece0fbead81fabc86d8c960abdc757484b756233d9fb0">CONNECTION_ROUTED</a></div><div class="ttdeci">@ CONNECTION_ROUTED</div><div class="ttdef"><b>定义</b> networktopology.h:30</div></div>
+<div class="ttc" id="anetworktopology_8h_html_aa1f0e2efd52935fd01bfece0fbead81fae7bf041bcdbcd512b79b5df05e2ce98f"><div class="ttname"><a href="networktopology_8h.html#aa1f0e2efd52935fd01bfece0fbead81fae7bf041bcdbcd512b79b5df05e2ce98f">CONNECTION_WIRELESS</a></div><div class="ttdeci">@ CONNECTION_WIRELESS</div><div class="ttdef"><b>定义</b> networktopology.h:28</div></div>
+<div class="ttc" id="anetworktopology_8h_html_ad258d4c51629346fceac4679b3209ad9"><div class="ttname"><a href="networktopology_8h.html#ad258d4c51629346fceac4679b3209ad9">DeviceType</a></div><div class="ttdeci">DeviceType</div><div class="ttdef"><b>定义</b> networktopology.h:14</div></div>
+<div class="ttc" id="anetworktopology_8h_html_ad258d4c51629346fceac4679b3209ad9a54c75bb379d16adfae33363dead54ed8"><div class="ttname"><a href="networktopology_8h.html#ad258d4c51629346fceac4679b3209ad9a54c75bb379d16adfae33363dead54ed8">DEVICE_MOBILE</a></div><div class="ttdeci">@ DEVICE_MOBILE</div><div class="ttdef"><b>定义</b> networktopology.h:19</div></div>
+<div class="ttc" id="anetworktopology_8h_html_ad258d4c51629346fceac4679b3209ad9a54d234e97b2cf460474fe8d12f05b7e8"><div class="ttname"><a href="networktopology_8h.html#ad258d4c51629346fceac4679b3209ad9a54d234e97b2cf460474fe8d12f05b7e8">DEVICE_ROUTER</a></div><div class="ttdeci">@ DEVICE_ROUTER</div><div class="ttdef"><b>定义</b> networktopology.h:16</div></div>
+<div class="ttc" id="anetworktopology_8h_html_ad258d4c51629346fceac4679b3209ad9a8a476e120bc7257c86ff09c74df30666"><div class="ttname"><a href="networktopology_8h.html#ad258d4c51629346fceac4679b3209ad9a8a476e120bc7257c86ff09c74df30666">DEVICE_SERVER</a></div><div class="ttdeci">@ DEVICE_SERVER</div><div class="ttdef"><b>定义</b> networktopology.h:17</div></div>
+<div class="ttc" id="anetworktopology_8h_html_ad258d4c51629346fceac4679b3209ad9ad9ebd12cf0fa401d0a3f1da4243cfd1a"><div class="ttname"><a href="networktopology_8h.html#ad258d4c51629346fceac4679b3209ad9ad9ebd12cf0fa401d0a3f1da4243cfd1a">DEVICE_IOT</a></div><div class="ttdeci">@ DEVICE_IOT</div><div class="ttdef"><b>定义</b> networktopology.h:21</div></div>
+<div class="ttc" id="anetworktopology_8h_html_ad258d4c51629346fceac4679b3209ad9adec14bc8c782d6b0a36d04462c588a08"><div class="ttname"><a href="networktopology_8h.html#ad258d4c51629346fceac4679b3209ad9adec14bc8c782d6b0a36d04462c588a08">DEVICE_PRINTER</a></div><div class="ttdeci">@ DEVICE_PRINTER</div><div class="ttdef"><b>定义</b> networktopology.h:20</div></div>
+<div class="ttc" id="anetworktopology_8h_html_ad258d4c51629346fceac4679b3209ad9ae149fffe078cf15212885a3d4dd0a485"><div class="ttname"><a href="networktopology_8h.html#ad258d4c51629346fceac4679b3209ad9ae149fffe078cf15212885a3d4dd0a485">DEVICE_PC</a></div><div class="ttdeci">@ DEVICE_PC</div><div class="ttdef"><b>定义</b> networktopology.h:18</div></div>
+<div class="ttc" id="anetworktopology_8h_html_ad258d4c51629346fceac4679b3209ad9af6c26de5cb6bbe4e8ff24a92a7a297b6"><div class="ttname"><a href="networktopology_8h.html#ad258d4c51629346fceac4679b3209ad9af6c26de5cb6bbe4e8ff24a92a7a297b6">DEVICE_UNKNOWN</a></div><div class="ttdeci">@ DEVICE_UNKNOWN</div><div class="ttdef"><b>定义</b> networktopology.h:15</div></div>
+<div class="ttc" id="astruct_host_info_html"><div class="ttname"><a href="struct_host_info.html">HostInfo</a></div><div class="ttdoc">存储主机信息的结构体</div><div class="ttdef"><b>定义</b> networkscanner.h:35</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="networktopology_8h.html">networktopology.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

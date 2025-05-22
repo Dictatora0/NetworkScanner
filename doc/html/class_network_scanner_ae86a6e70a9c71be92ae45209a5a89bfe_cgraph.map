@@ -1,0 +1,7 @@
+<map id="NetworkScanner::updateScanProgress" name="NetworkScanner::updateScanProgress">
+<area shape="rect" id="Node000001" title="更新扫描进度" alt="" coords="5,23,201,64"/>
+<area shape="rect" id="Node000002" href="$class_network_scanner.html#a311c4f6158b867640590a03f85879b6b" title="扫描完成信号" alt="" coords="250,5,454,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="201,31,234,27,235,33,202,36"/>
+<area shape="rect" id="Node000003" href="$class_network_scanner.html#a9e780f0ca7e0519b0a7b8ee6db11996e" title="扫描进度更新信号" alt="" coords="249,55,455,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="202,50,234,53,233,59,201,56"/>
+</map>

@@ -1,0 +1,12 @@
+<map id="TopologyAnalyzer::inferDeviceConnections" name="TopologyAnalyzer::inferDeviceConnections">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,63,204,103"/>
+<area shape="rect" id="Node000002" href="$class_topology_analyzer.html#ac47a81690019df3a439fbb519cd2c15f" title=" " alt="" coords="252,5,429,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="190,60,239,48,240,53,191,65"/>
+<area shape="rect" id="Node000003" href="$class_topology_analyzer.html#ad138e7cbfe33cf0dcf7c2aa39c9e62b3" title=" " alt="" coords="488,35,672,75"/>
+<area shape="poly" id="edge5_Node000001_Node000003" title=" " alt="" coords="204,75,472,59,472,64,204,80"/>
+<area shape="rect" id="Node000004" href="$class_topology_analyzer.html#a81a27566be573cdc031363af453dc1dc" title=" " alt="" coords="252,120,429,161"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="191,101,240,113,239,118,190,106"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="430,34,473,39,472,45,429,39"/>
+<area shape="rect" id="Node000005" href="$class_topology_analyzer.html#ac4175e160d1d548586f8b4bb3d6c7d92" title=" " alt="" coords="477,128,682,153"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="429,138,462,138,462,143,429,143"/>
+</map>

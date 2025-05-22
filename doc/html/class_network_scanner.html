@@ -1,0 +1,2106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Network Scanner: NetworkScanner类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Network Scanner
+   </div>
+   <div id="projectbrief">网络扫描和拓扑分析工具</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('class_network_scanner.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-slots">Public 槽</a> &#124;
+<a href="#signals">信号</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-static-methods">静态 Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="class_network_scanner-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">NetworkScanner类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>网络扫描器类  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="networkscanner_8h_source.html">networkscanner.h</a>&gt;</code></p>
+<div class="dynheader">
+类 NetworkScanner 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_network_scanner__inherit__graph.png" border="0" usemap="#a_network_scanner_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_network_scanner_inherit__map" id="a_network_scanner_inherit__map">
+<area shape="rect" title="网络扫描器类" alt="" coords="5,120,222,1343"/>
+<area shape="rect" title=" " alt="" coords="84,5,143,72"/>
+<area shape="poly" title=" " alt="" coords="116,87,116,120,111,120,111,87"/>
+</map>
+</div>
+<div class="dynheader">
+NetworkScanner 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_network_scanner__coll__graph.png" border="0" usemap="#a_network_scanner_coll__map" alt="Collaboration graph"/></div>
+<map name="a_network_scanner_coll__map" id="a_network_scanner_coll__map">
+<area shape="rect" title="网络扫描器类" alt="" coords="5,412,222,1615"/>
+<area shape="rect" title=" " alt="" coords="6,144,64,210"/>
+<area shape="poly" title=" " alt="" coords="42,225,60,412,55,413,37,225"/>
+<area shape="rect" href="class_scan_strategy.html" title="扫描策略类" alt="" coords="89,5,296,349"/>
+<area shape="poly" title=" " alt="" coords="179,349,175,396,169,395,174,348"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-slots" name="pub-slots"></a>
+Public 槽</h2></td></tr>
+<tr class="memitem:ad50732f1a5d713a4229d29a2cec1295c" id="r_ad50732f1a5d713a4229d29a2cec1295c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad50732f1a5d713a4229d29a2cec1295c">onScanTaskFinished</a> (const <a class="el" href="struct_host_info.html">HostInfo</a> &amp;hostInfo)</td></tr>
+<tr class="memdesc:ad50732f1a5d713a4229d29a2cec1295c"><td class="mdescLeft">&#160;</td><td class="mdescRight">处理扫描任务完成  <br /></td></tr>
+<tr class="separator:ad50732f1a5d713a4229d29a2cec1295c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae86a6e70a9c71be92ae45209a5a89bfe" id="r_ae86a6e70a9c71be92ae45209a5a89bfe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae86a6e70a9c71be92ae45209a5a89bfe">updateScanProgress</a> ()</td></tr>
+<tr class="memdesc:ae86a6e70a9c71be92ae45209a5a89bfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新扫描进度  <br /></td></tr>
+<tr class="separator:ae86a6e70a9c71be92ae45209a5a89bfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d6e606c028e6b934e5562254c016710" id="r_a5d6e606c028e6b934e5562254c016710"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d6e606c028e6b934e5562254c016710">onHostNameLookedUp</a> (const QHostInfo &amp;hostInfo)</td></tr>
+<tr class="memdesc:a5d6e606c028e6b934e5562254c016710"><td class="mdescLeft">&#160;</td><td class="mdescRight">主机名查询完成处理  <br /></td></tr>
+<tr class="separator:a5d6e606c028e6b934e5562254c016710"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="signals" name="signals"></a>
+信号</h2></td></tr>
+<tr class="memitem:a941867644d70f3b1c512c9e98f082ed3" id="r_a941867644d70f3b1c512c9e98f082ed3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a941867644d70f3b1c512c9e98f082ed3">hostFound</a> (const <a class="el" href="struct_host_info.html">HostInfo</a> &amp;host)</td></tr>
+<tr class="memdesc:a941867644d70f3b1c512c9e98f082ed3"><td class="mdescLeft">&#160;</td><td class="mdescRight">找到主机信号  <br /></td></tr>
+<tr class="separator:a941867644d70f3b1c512c9e98f082ed3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56499014f2f0ee9a87fcbf19ba034eeb" id="r_a56499014f2f0ee9a87fcbf19ba034eeb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56499014f2f0ee9a87fcbf19ba034eeb">scanStarted</a> ()</td></tr>
+<tr class="memdesc:a56499014f2f0ee9a87fcbf19ba034eeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">扫描开始信号  <br /></td></tr>
+<tr class="separator:a56499014f2f0ee9a87fcbf19ba034eeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a311c4f6158b867640590a03f85879b6b" id="r_a311c4f6158b867640590a03f85879b6b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a311c4f6158b867640590a03f85879b6b">scanFinished</a> ()</td></tr>
+<tr class="memdesc:a311c4f6158b867640590a03f85879b6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">扫描完成信号  <br /></td></tr>
+<tr class="separator:a311c4f6158b867640590a03f85879b6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e780f0ca7e0519b0a7b8ee6db11996e" id="r_a9e780f0ca7e0519b0a7b8ee6db11996e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e780f0ca7e0519b0a7b8ee6db11996e">scanProgress</a> (int progress)</td></tr>
+<tr class="memdesc:a9e780f0ca7e0519b0a7b8ee6db11996e"><td class="mdescLeft">&#160;</td><td class="mdescRight">扫描进度更新信号  <br /></td></tr>
+<tr class="separator:a9e780f0ca7e0519b0a7b8ee6db11996e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d443adacaa45d4babee9c5c8cc3927b" id="r_a7d443adacaa45d4babee9c5c8cc3927b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d443adacaa45d4babee9c5c8cc3927b">scanError</a> (const QString &amp;errorMessage)</td></tr>
+<tr class="memdesc:a7d443adacaa45d4babee9c5c8cc3927b"><td class="mdescLeft">&#160;</td><td class="mdescRight">扫描错误信号  <br /></td></tr>
+<tr class="separator:a7d443adacaa45d4babee9c5c8cc3927b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:aa2dcdd86a95aa5a347d48efc6eb0dcb1" id="r_aa2dcdd86a95aa5a347d48efc6eb0dcb1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa2dcdd86a95aa5a347d48efc6eb0dcb1">NetworkScanner</a> (QObject *parent=nullptr)</td></tr>
+<tr class="memdesc:aa2dcdd86a95aa5a347d48efc6eb0dcb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数  <br /></td></tr>
+<tr class="separator:aa2dcdd86a95aa5a347d48efc6eb0dcb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abeccb1ea9774d7962fac4901f738e692" id="r_abeccb1ea9774d7962fac4901f738e692"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abeccb1ea9774d7962fac4901f738e692">~NetworkScanner</a> ()</td></tr>
+<tr class="memdesc:abeccb1ea9774d7962fac4901f738e692"><td class="mdescLeft">&#160;</td><td class="mdescRight">析构函数  <br /></td></tr>
+<tr class="separator:abeccb1ea9774d7962fac4901f738e692"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea1a793e46ec7cc8e2a75b5bc71366ed" id="r_aea1a793e46ec7cc8e2a75b5bc71366ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea1a793e46ec7cc8e2a75b5bc71366ed">setCustomPortsToScan</a> (const QList&lt; int &gt; &amp;ports)</td></tr>
+<tr class="memdesc:aea1a793e46ec7cc8e2a75b5bc71366ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置自定义端口扫描列表  <br /></td></tr>
+<tr class="separator:aea1a793e46ec7cc8e2a75b5bc71366ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae34823cd436f8345ee7dedda3fe56bf6" id="r_ae34823cd436f8345ee7dedda3fe56bf6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae34823cd436f8345ee7dedda3fe56bf6">setScanTimeout</a> (int msecs)</td></tr>
+<tr class="memdesc:ae34823cd436f8345ee7dedda3fe56bf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置扫描超时时间  <br /></td></tr>
+<tr class="separator:ae34823cd436f8345ee7dedda3fe56bf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae86106ecdb8aab43231f7d48d6840e50" id="r_ae86106ecdb8aab43231f7d48d6840e50"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae86106ecdb8aab43231f7d48d6840e50">setCustomIPRange</a> (const QString &amp;startIP, const QString &amp;endIP)</td></tr>
+<tr class="memdesc:ae86106ecdb8aab43231f7d48d6840e50"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置自定义IP范围  <br /></td></tr>
+<tr class="separator:ae86106ecdb8aab43231f7d48d6840e50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20f31e911444bcc321a733b5015710fb" id="r_a20f31e911444bcc321a733b5015710fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20f31e911444bcc321a733b5015710fb">setScanStrategy</a> (<a class="el" href="class_scan_strategy.html#a0e3c3f47f30a45bd2a1e9f0533d893aa">ScanStrategy::ScanMode</a> mode)</td></tr>
+<tr class="memdesc:a20f31e911444bcc321a733b5015710fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置扫描策略  <br /></td></tr>
+<tr class="separator:a20f31e911444bcc321a733b5015710fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ff09dda96ac397a6700a79651123ae4" id="r_a1ff09dda96ac397a6700a79651123ae4"><td class="memItemLeft" align="right" valign="top">QList&lt; <a class="el" href="struct_host_info.html">HostInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ff09dda96ac397a6700a79651123ae4">getScannedHosts</a> () const</td></tr>
+<tr class="memdesc:a1ff09dda96ac397a6700a79651123ae4"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取扫描结果  <br /></td></tr>
+<tr class="separator:a1ff09dda96ac397a6700a79651123ae4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65c572325e53a912f34394e7beabb867" id="r_a65c572325e53a912f34394e7beabb867"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a65c572325e53a912f34394e7beabb867">saveResultsToFile</a> (const QString &amp;filename) const</td></tr>
+<tr class="memdesc:a65c572325e53a912f34394e7beabb867"><td class="mdescLeft">&#160;</td><td class="mdescRight">保存结果到文件  <br /></td></tr>
+<tr class="separator:a65c572325e53a912f34394e7beabb867"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d1a653bce80d595a1c302fda393e5b9" id="r_a3d1a653bce80d595a1c302fda393e5b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d1a653bce80d595a1c302fda393e5b9">startScan</a> ()</td></tr>
+<tr class="memdesc:a3d1a653bce80d595a1c302fda393e5b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">开始扫描  <br /></td></tr>
+<tr class="separator:a3d1a653bce80d595a1c302fda393e5b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a390dcda3d4cd1d76633e6f4611ae8410" id="r_a390dcda3d4cd1d76633e6f4611ae8410"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a390dcda3d4cd1d76633e6f4611ae8410">stopScan</a> ()</td></tr>
+<tr class="memdesc:a390dcda3d4cd1d76633e6f4611ae8410"><td class="mdescLeft">&#160;</td><td class="mdescRight">停止扫描  <br /></td></tr>
+<tr class="separator:a390dcda3d4cd1d76633e6f4611ae8410"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10e2ee230d5126ea043febd28f0559e3" id="r_a10e2ee230d5126ea043febd28f0559e3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a10e2ee230d5126ea043febd28f0559e3">isScanning</a> () const</td></tr>
+<tr class="memdesc:a10e2ee230d5126ea043febd28f0559e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查是否正在扫描  <br /></td></tr>
+<tr class="separator:a10e2ee230d5126ea043febd28f0559e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1d45fc1180ff72ae369fe0966f67d08" id="r_ac1d45fc1180ff72ae369fe0966f67d08"><td class="memItemLeft" align="right" valign="top">QList&lt; QHostAddress &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac1d45fc1180ff72ae369fe0966f67d08">quickPingScan</a> (const QList&lt; QHostAddress &gt; &amp;addresses)</td></tr>
+<tr class="memdesc:ac1d45fc1180ff72ae369fe0966f67d08"><td class="mdescLeft">&#160;</td><td class="mdescRight">快速Ping扫描方法  <br /></td></tr>
+<tr class="separator:ac1d45fc1180ff72ae369fe0966f67d08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34fbb26df044a6ee3f830f79eb2d1ce6" id="r_a34fbb26df044a6ee3f830f79eb2d1ce6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34fbb26df044a6ee3f830f79eb2d1ce6">isHostReachable</a> (const QHostAddress &amp;address, int timeout)</td></tr>
+<tr class="memdesc:a34fbb26df044a6ee3f830f79eb2d1ce6"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查主机是否可达  <br /></td></tr>
+<tr class="separator:a34fbb26df044a6ee3f830f79eb2d1ce6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27baba5addfba7cdcd71878c6c9e442a" id="r_a27baba5addfba7cdcd71878c6c9e442a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a27baba5addfba7cdcd71878c6c9e442a">isReachableOnPorts</a> (const QHostAddress &amp;address, const QList&lt; int &gt; &amp;ports, int timeout)</td></tr>
+<tr class="memdesc:a27baba5addfba7cdcd71878c6c9e442a"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查主机在多个端口上是否可达  <br /></td></tr>
+<tr class="separator:a27baba5addfba7cdcd71878c6c9e442a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1c58186285b571608eb3e1ef699a1d4" id="r_ae1c58186285b571608eb3e1ef699a1d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae1c58186285b571608eb3e1ef699a1d4">scanHost</a> (const QHostAddress &amp;address)</td></tr>
+<tr class="memdesc:ae1c58186285b571608eb3e1ef699a1d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">扫描单个主机  <br /></td></tr>
+<tr class="separator:ae1c58186285b571608eb3e1ef699a1d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcc19f1f23e444aef7b689e5d64c1422" id="r_afcc19f1f23e444aef7b689e5d64c1422"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afcc19f1f23e444aef7b689e5d64c1422">lookupHostName</a> (const QHostAddress &amp;address)</td></tr>
+<tr class="memdesc:afcc19f1f23e444aef7b689e5d64c1422"><td class="mdescLeft">&#160;</td><td class="mdescRight">查询主机名  <br /></td></tr>
+<tr class="separator:afcc19f1f23e444aef7b689e5d64c1422"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a879abf7e7a058dda14f6f36645d6763b" id="r_a879abf7e7a058dda14f6f36645d6763b"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a879abf7e7a058dda14f6f36645d6763b">lookupMacAddress</a> (const QHostAddress &amp;address)</td></tr>
+<tr class="memdesc:a879abf7e7a058dda14f6f36645d6763b"><td class="mdescLeft">&#160;</td><td class="mdescRight">查询MAC地址  <br /></td></tr>
+<tr class="separator:a879abf7e7a058dda14f6f36645d6763b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86214dd708b98209915b29514cd58296" id="r_a86214dd708b98209915b29514cd58296"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a86214dd708b98209915b29514cd58296">lookupMacVendor</a> (const QString &amp;macAddress)</td></tr>
+<tr class="memdesc:a86214dd708b98209915b29514cd58296"><td class="mdescLeft">&#160;</td><td class="mdescRight">查询MAC地址对应的厂商  <br /></td></tr>
+<tr class="separator:a86214dd708b98209915b29514cd58296"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a618ee5322d0843ad65a341fff40ce43d" id="r_a618ee5322d0843ad65a341fff40ce43d"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a618ee5322d0843ad65a341fff40ce43d">generatePseudoMACFromIP</a> (const QString &amp;ip)</td></tr>
+<tr class="memdesc:a618ee5322d0843ad65a341fff40ce43d"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据IP地址生成伪MAC地址  <br /></td></tr>
+<tr class="separator:a618ee5322d0843ad65a341fff40ce43d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:af088a70b884ccc65b363ecc235af3058" id="r_af088a70b884ccc65b363ecc235af3058"><td class="memItemLeft" align="right" valign="top">QList&lt; QHostAddress &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af088a70b884ccc65b363ecc235af3058">getLocalNetworkAddresses</a> ()</td></tr>
+<tr class="memdesc:af088a70b884ccc65b363ecc235af3058"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取本地网络地址列表  <br /></td></tr>
+<tr class="separator:af088a70b884ccc65b363ecc235af3058"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37b59a466d4daa5a5f89d1eb8f588626" id="r_a37b59a466d4daa5a5f89d1eb8f588626"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37b59a466d4daa5a5f89d1eb8f588626">normalizeMacAddress</a> (const QString &amp;macAddress)</td></tr>
+<tr class="memdesc:a37b59a466d4daa5a5f89d1eb8f588626"><td class="mdescLeft">&#160;</td><td class="mdescRight">MAC地址规范化  <br /></td></tr>
+<tr class="separator:a37b59a466d4daa5a5f89d1eb8f588626"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35e8651f2b899836b25b68f1ee673520" id="r_a35e8651f2b899836b25b68f1ee673520"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a35e8651f2b899836b25b68f1ee673520">pingTargetWithTimeout</a> (const QString &amp;ip, int timeout)</td></tr>
+<tr class="memdesc:a35e8651f2b899836b25b68f1ee673520"><td class="mdescLeft">&#160;</td><td class="mdescRight">使用ping命令检测目标是否可达  <br /></td></tr>
+<tr class="separator:a35e8651f2b899836b25b68f1ee673520"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1499c78a310999b583c7008a106379d7" id="r_a1499c78a310999b583c7008a106379d7"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1499c78a310999b583c7008a106379d7">getMacAddressFromSystemCalls</a> (const QString &amp;ip)</td></tr>
+<tr class="memdesc:a1499c78a310999b583c7008a106379d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">通过系统调用获取MAC地址  <br /></td></tr>
+<tr class="separator:a1499c78a310999b583c7008a106379d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac28925e0859afc5ae1165c98a7e537c4" id="r_ac28925e0859afc5ae1165c98a7e537c4"><td class="memItemLeft" align="right" valign="top">QList&lt; QPair&lt; QHostAddress, QString &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac28925e0859afc5ae1165c98a7e537c4">performARPScan</a> ()</td></tr>
+<tr class="memdesc:ac28925e0859afc5ae1165c98a7e537c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">执行ARP扫描  <br /></td></tr>
+<tr class="separator:ac28925e0859afc5ae1165c98a7e537c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdcb120eceeec289b7feb2f5d8256b2a" id="r_acdcb120eceeec289b7feb2f5d8256b2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acdcb120eceeec289b7feb2f5d8256b2a">scanHostPorts</a> (<a class="el" href="struct_host_info.html">HostInfo</a> &amp;hostInfo)</td></tr>
+<tr class="memdesc:acdcb120eceeec289b7feb2f5d8256b2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">扫描主机端口  <br /></td></tr>
+<tr class="separator:acdcb120eceeec289b7feb2f5d8256b2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca3185ddc77f6f4bcc13279cb290d858" id="r_aca3185ddc77f6f4bcc13279cb290d858"><td class="memItemLeft" align="right" valign="top">QList&lt; QHostAddress &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca3185ddc77f6f4bcc13279cb290d858">getAddressesToScan</a> ()</td></tr>
+<tr class="memdesc:aca3185ddc77f6f4bcc13279cb290d858"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取要扫描的地址列表  <br /></td></tr>
+<tr class="separator:aca3185ddc77f6f4bcc13279cb290d858"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b1ddceb6c092aa96f97cb6aba9321b5" id="r_a3b1ddceb6c092aa96f97cb6aba9321b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3b1ddceb6c092aa96f97cb6aba9321b5">processScanResults</a> ()</td></tr>
+<tr class="memdesc:a3b1ddceb6c092aa96f97cb6aba9321b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">处理扫描结果  <br /></td></tr>
+<tr class="separator:a3b1ddceb6c092aa96f97cb6aba9321b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
+静态 Private 成员函数</h2></td></tr>
+<tr class="memitem:a3d61598311556d7ab706e013005f7c5f" id="r_a3d61598311556d7ab706e013005f7c5f"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d61598311556d7ab706e013005f7c5f">executeProcess</a> (const QString &amp;program, const QStringList &amp;args, QString &amp;stdOutOutput, QString &amp;stdErrOutput, int startTimeout=2000, int finishTimeout=5000)</td></tr>
+<tr class="memdesc:a3d61598311556d7ab706e013005f7c5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">执行外部进程  <br /></td></tr>
+<tr class="separator:a3d61598311556d7ab706e013005f7c5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:ab552ddb02bf45cc7293e68d819b08da6" id="r_ab552ddb02bf45cc7293e68d819b08da6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab552ddb02bf45cc7293e68d819b08da6">m_isScanning</a></td></tr>
+<tr class="memdesc:ab552ddb02bf45cc7293e68d819b08da6"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否正在扫描  <br /></td></tr>
+<tr class="separator:ab552ddb02bf45cc7293e68d819b08da6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1c4f86f0bf57509498127e25bd2dd99" id="r_af1c4f86f0bf57509498127e25bd2dd99"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af1c4f86f0bf57509498127e25bd2dd99">m_scannedHosts</a></td></tr>
+<tr class="memdesc:af1c4f86f0bf57509498127e25bd2dd99"><td class="mdescLeft">&#160;</td><td class="mdescRight">已扫描主机数  <br /></td></tr>
+<tr class="separator:af1c4f86f0bf57509498127e25bd2dd99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf3fa14815d6a3cdec60bbcdb1b9c649" id="r_abf3fa14815d6a3cdec60bbcdb1b9c649"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf3fa14815d6a3cdec60bbcdb1b9c649">m_totalHosts</a></td></tr>
+<tr class="memdesc:abf3fa14815d6a3cdec60bbcdb1b9c649"><td class="mdescLeft">&#160;</td><td class="mdescRight">总主机数  <br /></td></tr>
+<tr class="separator:abf3fa14815d6a3cdec60bbcdb1b9c649"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a423ce8a2179223e48189772f80cebb9c" id="r_a423ce8a2179223e48189772f80cebb9c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a423ce8a2179223e48189772f80cebb9c">m_scanTimeout</a></td></tr>
+<tr class="memdesc:a423ce8a2179223e48189772f80cebb9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">扫描超时时间  <br /></td></tr>
+<tr class="separator:a423ce8a2179223e48189772f80cebb9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1606df18aa388acb9b685d0f72ba2d8f" id="r_a1606df18aa388acb9b685d0f72ba2d8f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1606df18aa388acb9b685d0f72ba2d8f">m_useCustomRange</a></td></tr>
+<tr class="memdesc:a1606df18aa388acb9b685d0f72ba2d8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否使用自定义IP范围  <br /></td></tr>
+<tr class="separator:a1606df18aa388acb9b685d0f72ba2d8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86b547fcfdd0be16c9c689731887e255" id="r_a86b547fcfdd0be16c9c689731887e255"><td class="memItemLeft" align="right" valign="top">QHostAddress&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a86b547fcfdd0be16c9c689731887e255">m_startIPRange</a></td></tr>
+<tr class="memdesc:a86b547fcfdd0be16c9c689731887e255"><td class="mdescLeft">&#160;</td><td class="mdescRight">起始IP地址  <br /></td></tr>
+<tr class="separator:a86b547fcfdd0be16c9c689731887e255"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc7a00ffc172c1dfc141d30240a8ac67" id="r_adc7a00ffc172c1dfc141d30240a8ac67"><td class="memItemLeft" align="right" valign="top">QHostAddress&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adc7a00ffc172c1dfc141d30240a8ac67">m_endIPRange</a></td></tr>
+<tr class="memdesc:adc7a00ffc172c1dfc141d30240a8ac67"><td class="mdescLeft">&#160;</td><td class="mdescRight">结束IP地址  <br /></td></tr>
+<tr class="separator:adc7a00ffc172c1dfc141d30240a8ac67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa8e5c1ecbb18e30b3eaa41ea030aa8b" id="r_aaa8e5c1ecbb18e30b3eaa41ea030aa8b"><td class="memItemLeft" align="right" valign="top">QList&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa8e5c1ecbb18e30b3eaa41ea030aa8b">m_portsToScan</a></td></tr>
+<tr class="memdesc:aaa8e5c1ecbb18e30b3eaa41ea030aa8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">要扫描的端口列表  <br /></td></tr>
+<tr class="separator:aaa8e5c1ecbb18e30b3eaa41ea030aa8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a794bc857be82d6b7b9cc3449df61bc0a" id="r_a794bc857be82d6b7b9cc3449df61bc0a"><td class="memItemLeft" align="right" valign="top">QList&lt; <a class="el" href="struct_host_info.html">HostInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a794bc857be82d6b7b9cc3449df61bc0a">m_scannedHostsList</a></td></tr>
+<tr class="memdesc:a794bc857be82d6b7b9cc3449df61bc0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">扫描结果列表  <br /></td></tr>
+<tr class="separator:a794bc857be82d6b7b9cc3449df61bc0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a519b23696e548ce76d19b0923b1b2e31" id="r_a519b23696e548ce76d19b0923b1b2e31"><td class="memItemLeft" align="right" valign="top">QMutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a519b23696e548ce76d19b0923b1b2e31">m_mutex</a></td></tr>
+<tr class="memdesc:a519b23696e548ce76d19b0923b1b2e31"><td class="mdescLeft">&#160;</td><td class="mdescRight">线程同步互斥锁  <br /></td></tr>
+<tr class="separator:a519b23696e548ce76d19b0923b1b2e31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07591f97b42d5ba072f1dd383ac5aaaf" id="r_a07591f97b42d5ba072f1dd383ac5aaaf"><td class="memItemLeft" align="right" valign="top">QList&lt; QFuture&lt; void &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07591f97b42d5ba072f1dd383ac5aaaf">m_scanFutures</a></td></tr>
+<tr class="memdesc:a07591f97b42d5ba072f1dd383ac5aaaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">并行扫描任务  <br /></td></tr>
+<tr class="separator:a07591f97b42d5ba072f1dd383ac5aaaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95c25f8c2863d81f3c9348d8b90c313f" id="r_a95c25f8c2863d81f3c9348d8b90c313f"><td class="memItemLeft" align="right" valign="top">QThreadPool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95c25f8c2863d81f3c9348d8b90c313f">m_threadPool</a></td></tr>
+<tr class="memdesc:a95c25f8c2863d81f3c9348d8b90c313f"><td class="mdescLeft">&#160;</td><td class="mdescRight">线程池  <br /></td></tr>
+<tr class="separator:a95c25f8c2863d81f3c9348d8b90c313f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6565994e3e77dd1f39ed03f7a31f79fb" id="r_a6565994e3e77dd1f39ed03f7a31f79fb"><td class="memItemLeft" align="right" valign="top">QMap&lt; QString, QString &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6565994e3e77dd1f39ed03f7a31f79fb">m_macAddressCache</a></td></tr>
+<tr class="memdesc:a6565994e3e77dd1f39ed03f7a31f79fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">MAC地址缓存  <br /></td></tr>
+<tr class="separator:a6565994e3e77dd1f39ed03f7a31f79fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfa250375b6ed189a694030f831a441c" id="r_adfa250375b6ed189a694030f831a441c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_scan_strategy.html">ScanStrategy</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adfa250375b6ed189a694030f831a441c">m_scanStrategy</a></td></tr>
+<tr class="memdesc:adfa250375b6ed189a694030f831a441c"><td class="mdescLeft">&#160;</td><td class="mdescRight">扫描策略  <br /></td></tr>
+<tr class="separator:adfa250375b6ed189a694030f831a441c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29d0e3495e8170c1b40420d5e301b8d2" id="r_a29d0e3495e8170c1b40420d5e301b8d2"><td class="memItemLeft" align="right" valign="top">QList&lt; QHostAddress &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29d0e3495e8170c1b40420d5e301b8d2">m_activeHosts</a></td></tr>
+<tr class="memdesc:a29d0e3495e8170c1b40420d5e301b8d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">活跃主机列表  <br /></td></tr>
+<tr class="separator:a29d0e3495e8170c1b40420d5e301b8d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>网络扫描器类 </p>
+<p>提供网络设备发现和端口扫描的核心功能 </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="aa2dcdd86a95aa5a347d48efc6eb0dcb1" name="aa2dcdd86a95aa5a347d48efc6eb0dcb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2dcdd86a95aa5a347d48efc6eb0dcb1">&#9670;&#160;</a></span>NetworkScanner()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">NetworkScanner::NetworkScanner </td>
+          <td>(</td>
+          <td class="paramtype">QObject *</td>          <td class="paramname"><span class="paramname"><em>parent</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>构造函数 </p>
+<p>NetworkScanner类构造函数</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parent</td><td>父对象</td></tr>
+    <tr><td class="paramname">parent</td><td>父对象</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>初始化扫描器参数和线程池 </p>
+
+</div>
+</div>
+<a id="abeccb1ea9774d7962fac4901f738e692" name="abeccb1ea9774d7962fac4901f738e692"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abeccb1ea9774d7962fac4901f738e692">&#9670;&#160;</a></span>~NetworkScanner()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">NetworkScanner::~NetworkScanner </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>析构函数 </p>
+<p>NetworkScanner类析构函数</p>
+<p>停止扫描并清理资源 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_network_scanner_abeccb1ea9774d7962fac4901f738e692_cgraph.png" border="0" usemap="#aclass_network_scanner_abeccb1ea9774d7962fac4901f738e692_cgraph" alt=""/></div>
+<map name="aclass_network_scanner_abeccb1ea9774d7962fac4901f738e692_cgraph" id="aclass_network_scanner_abeccb1ea9774d7962fac4901f738e692_cgraph">
+<area shape="rect" title="析构函数" alt="" coords="5,5,189,46"/>
+<area shape="rect" href="class_network_scanner.html#a390dcda3d4cd1d76633e6f4611ae8410" title="停止扫描" alt="" coords="237,13,418,38"/>
+<area shape="poly" title=" " alt="" coords="189,23,221,23,221,28,189,28"/>
+<area shape="rect" href="class_network_scanner.html#a311c4f6158b867640590a03f85879b6b" title="扫描完成信号" alt="" coords="466,13,669,38"/>
+<area shape="poly" title=" " alt="" coords="419,23,450,23,450,28,419,28"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a3d61598311556d7ab706e013005f7c5f" name="a3d61598311556d7ab706e013005f7c5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d61598311556d7ab706e013005f7c5f">&#9670;&#160;</a></span>executeProcess()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool NetworkScanner::executeProcess </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>program</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QStringList &amp;</td>          <td class="paramname"><span class="paramname"><em>args</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString &amp;</td>          <td class="paramname"><span class="paramname"><em>stdOutOutput</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString &amp;</td>          <td class="paramname"><span class="paramname"><em>stdErrOutput</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>startTimeout</em></span><span class="paramdefsep"> = </span><span class="paramdefval">2000</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>finishTimeout</em></span><span class="paramdefsep"> = </span><span class="paramdefval">5000</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>执行外部进程 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">program</td><td>程序路径 </td></tr>
+    <tr><td class="paramname">args</td><td>参数列表 </td></tr>
+    <tr><td class="paramname">stdOutOutput</td><td>标准输出结果 </td></tr>
+    <tr><td class="paramname">stdErrOutput</td><td>标准错误结果 </td></tr>
+    <tr><td class="paramname">startTimeout</td><td>启动超时(毫秒) </td></tr>
+    <tr><td class="paramname">finishTimeout</td><td>完成超时(毫秒) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否执行成功 </dd></dl>
+
+</div>
+</div>
+<a id="a618ee5322d0843ad65a341fff40ce43d" name="a618ee5322d0843ad65a341fff40ce43d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a618ee5322d0843ad65a341fff40ce43d">&#9670;&#160;</a></span>generatePseudoMACFromIP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString NetworkScanner::generatePseudoMACFromIP </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>ip</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>根据IP地址生成伪MAC地址 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ip</td><td>IP地址 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>生成的伪MAC地址 </dd></dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_network_scanner_a618ee5322d0843ad65a341fff40ce43d_icgraph.png" border="0" usemap="#aclass_network_scanner_a618ee5322d0843ad65a341fff40ce43d_icgraph" alt=""/></div>
+<map name="aclass_network_scanner_a618ee5322d0843ad65a341fff40ce43d_icgraph" id="aclass_network_scanner_a618ee5322d0843ad65a341fff40ce43d_icgraph">
+<area shape="rect" title="根据IP地址生成伪MAC地址" alt="" coords="512,88,688,129"/>
+<area shape="rect" href="class_network_scanner.html#a879abf7e7a058dda14f6f36645d6763b" title="查询MAC地址" alt="" coords="255,5,444,46"/>
+<area shape="poly" title=" " alt="" coords="531,85,463,60,427,49,429,44,465,55,533,80"/>
+<area shape="rect" href="class_network_scanner.html#ac28925e0859afc5ae1165c98a7e537c4" title="执行ARP扫描" alt="" coords="236,70,464,96"/>
+<area shape="poly" title=" " alt="" coords="496,101,464,97,465,92,497,95"/>
+<area shape="rect" href="class_scan_task.html#a7cd062b55f9e5cef3273946219c68483" title="执行扫描任务" alt="" coords="297,120,402,145"/>
+<area shape="poly" title=" " alt="" coords="497,121,403,130,403,125,496,116"/>
+<area shape="rect" href="class_network_scanner.html#ae1c58186285b571608eb3e1ef699a1d4" title="扫描单个主机" alt="" coords="259,169,441,194"/>
+<area shape="poly" title=" " alt="" coords="534,137,465,160,423,171,421,166,463,155,532,132"/>
+<area shape="rect" href="class_network_scanner.html#a3d1a653bce80d595a1c302fda393e5b9" title="开始扫描" alt="" coords="5,169,188,194"/>
+<area shape="poly" title=" " alt="" coords="243,184,188,184,188,179,243,179"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aca3185ddc77f6f4bcc13279cb290d858" name="aca3185ddc77f6f4bcc13279cb290d858"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca3185ddc77f6f4bcc13279cb290d858">&#9670;&#160;</a></span>getAddressesToScan()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QList&lt; QHostAddress &gt; NetworkScanner::getAddressesToScan </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取要扫描的地址列表 </p>
+<dl class="section return"><dt>返回</dt><dd>地址列表 </dd></dl>
+
+</div>
+</div>
+<a id="af088a70b884ccc65b363ecc235af3058" name="af088a70b884ccc65b363ecc235af3058"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af088a70b884ccc65b363ecc235af3058">&#9670;&#160;</a></span>getLocalNetworkAddresses()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QList&lt; QHostAddress &gt; NetworkScanner::getLocalNetworkAddresses </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取本地网络地址列表 </p>
+<dl class="section return"><dt>返回</dt><dd>本地网络地址列表 </dd></dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_network_scanner_af088a70b884ccc65b363ecc235af3058_icgraph.png" border="0" usemap="#aclass_network_scanner_af088a70b884ccc65b363ecc235af3058_icgraph" alt=""/></div>
+<map name="aclass_network_scanner_af088a70b884ccc65b363ecc235af3058_icgraph" id="aclass_network_scanner_af088a70b884ccc65b363ecc235af3058_icgraph">
+<area shape="rect" title="获取本地网络地址列表" alt="" coords="236,5,411,46"/>
+<area shape="rect" href="class_network_scanner.html#a3d1a653bce80d595a1c302fda393e5b9" title="开始扫描" alt="" coords="5,13,188,38"/>
+<area shape="poly" title=" " alt="" coords="220,28,188,28,188,23,220,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1499c78a310999b583c7008a106379d7" name="a1499c78a310999b583c7008a106379d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1499c78a310999b583c7008a106379d7">&#9670;&#160;</a></span>getMacAddressFromSystemCalls()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString NetworkScanner::getMacAddressFromSystemCalls </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>ip</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>通过系统调用获取MAC地址 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ip</td><td>目标IP地址 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>MAC地址 </dd></dl>
+
+</div>
+</div>
+<a id="a1ff09dda96ac397a6700a79651123ae4" name="a1ff09dda96ac397a6700a79651123ae4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ff09dda96ac397a6700a79651123ae4">&#9670;&#160;</a></span>getScannedHosts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QList&lt; <a class="el" href="struct_host_info.html">HostInfo</a> &gt; NetworkScanner::getScannedHosts </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取扫描结果 </p>
+<dl class="section return"><dt>返回</dt><dd>扫描到的主机信息列表 </dd></dl>
+
+</div>
+</div>
+<a id="a941867644d70f3b1c512c9e98f082ed3" name="a941867644d70f3b1c512c9e98f082ed3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a941867644d70f3b1c512c9e98f082ed3">&#9670;&#160;</a></span>hostFound</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NetworkScanner::hostFound </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_host_info.html">HostInfo</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>host</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel signal">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>找到主机信号 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">host</td><td>主机信息 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_network_scanner_a941867644d70f3b1c512c9e98f082ed3_icgraph.png" border="0" usemap="#aclass_network_scanner_a941867644d70f3b1c512c9e98f082ed3_icgraph" alt=""/></div>
+<map name="aclass_network_scanner_a941867644d70f3b1c512c9e98f082ed3_icgraph" id="aclass_network_scanner_a941867644d70f3b1c512c9e98f082ed3_icgraph">
+<area shape="rect" title="找到主机信号" alt="" coords="493,108,680,133"/>
+<area shape="rect" href="class_network_scanner.html#a5d6e606c028e6b934e5562254c016710" title="主机名查询完成处理" alt="" coords="239,5,442,46"/>
+<area shape="poly" title=" " alt="" coords="542,103,444,61,409,49,411,44,446,57,544,98"/>
+<area shape="rect" href="class_network_scanner.html#ad50732f1a5d713a4229d29a2cec1295c" title="处理扫描任务完成" alt="" coords="241,71,440,111"/>
+<area shape="poly" title=" " alt="" coords="477,110,440,105,440,100,478,105"/>
+<area shape="rect" href="class_network_scanner.html#ae1c58186285b571608eb3e1ef699a1d4" title="扫描单个主机" alt="" coords="249,136,432,161"/>
+<area shape="poly" title=" " alt="" coords="478,135,432,141,432,135,477,130"/>
+<area shape="rect" href="class_main_window.html#a95dc085bf70bd0c1ad05bd80f897fd1d" title=" " alt="" coords="236,185,445,210"/>
+<area shape="poly" title=" " alt="" coords="541,142,446,176,406,187,405,182,444,171,539,137"/>
+<area shape="rect" href="class_network_scanner.html#a3d1a653bce80d595a1c302fda393e5b9" title="开始扫描" alt="" coords="5,136,188,161"/>
+<area shape="poly" title=" " alt="" coords="233,151,188,151,188,146,233,146"/>
+<area shape="rect" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="7,185,186,210"/>
+<area shape="poly" title=" " alt="" coords="220,200,187,200,187,195,220,195"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a34fbb26df044a6ee3f830f79eb2d1ce6" name="a34fbb26df044a6ee3f830f79eb2d1ce6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34fbb26df044a6ee3f830f79eb2d1ce6">&#9670;&#160;</a></span>isHostReachable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool NetworkScanner::isHostReachable </td>
+          <td>(</td>
+          <td class="paramtype">const QHostAddress &amp;</td>          <td class="paramname"><span class="paramname"><em>address</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>timeout</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>检查主机是否可达 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">address</td><td>主机地址 </td></tr>
+    <tr><td class="paramname">timeout</td><td>超时时间(毫秒) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>主机是否可达 </dd></dl>
+
+</div>
+</div>
+<a id="a27baba5addfba7cdcd71878c6c9e442a" name="a27baba5addfba7cdcd71878c6c9e442a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27baba5addfba7cdcd71878c6c9e442a">&#9670;&#160;</a></span>isReachableOnPorts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool NetworkScanner::isReachableOnPorts </td>
+          <td>(</td>
+          <td class="paramtype">const QHostAddress &amp;</td>          <td class="paramname"><span class="paramname"><em>address</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QList&lt; int &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>ports</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>timeout</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>检查主机在多个端口上是否可达 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">address</td><td>主机地址 </td></tr>
+    <tr><td class="paramname">ports</td><td>端口列表 </td></tr>
+    <tr><td class="paramname">timeout</td><td>超时时间(毫秒) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否至少有一个端口可达 </dd></dl>
+
+</div>
+</div>
+<a id="a10e2ee230d5126ea043febd28f0559e3" name="a10e2ee230d5126ea043febd28f0559e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10e2ee230d5126ea043febd28f0559e3">&#9670;&#160;</a></span>isScanning()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool NetworkScanner::isScanning </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>检查是否正在扫描 </p>
+<dl class="section return"><dt>返回</dt><dd>是否正在扫描 </dd></dl>
+
+</div>
+</div>
+<a id="afcc19f1f23e444aef7b689e5d64c1422" name="afcc19f1f23e444aef7b689e5d64c1422"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcc19f1f23e444aef7b689e5d64c1422">&#9670;&#160;</a></span>lookupHostName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString NetworkScanner::lookupHostName </td>
+          <td>(</td>
+          <td class="paramtype">const QHostAddress &amp;</td>          <td class="paramname"><span class="paramname"><em>address</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>查询主机名 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">address</td><td>主机地址 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>主机名 </dd></dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_network_scanner_afcc19f1f23e444aef7b689e5d64c1422_icgraph.png" border="0" usemap="#aclass_network_scanner_afcc19f1f23e444aef7b689e5d64c1422_icgraph" alt=""/></div>
+<map name="aclass_network_scanner_afcc19f1f23e444aef7b689e5d64c1422_icgraph" id="aclass_network_scanner_afcc19f1f23e444aef7b689e5d64c1422_icgraph">
+<area shape="rect" title="查询主机名" alt="" coords="159,5,386,31"/>
+<area shape="rect" href="class_scan_task.html#a7cd062b55f9e5cef3273946219c68483" title="执行扫描任务" alt="" coords="5,5,111,31"/>
+<area shape="poly" title=" " alt="" coords="143,21,111,21,111,16,143,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a879abf7e7a058dda14f6f36645d6763b" name="a879abf7e7a058dda14f6f36645d6763b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a879abf7e7a058dda14f6f36645d6763b">&#9670;&#160;</a></span>lookupMacAddress()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString NetworkScanner::lookupMacAddress </td>
+          <td>(</td>
+          <td class="paramtype">const QHostAddress &amp;</td>          <td class="paramname"><span class="paramname"><em>address</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>查询MAC地址 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">address</td><td>主机地址 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>MAC地址 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_network_scanner_a879abf7e7a058dda14f6f36645d6763b_cgraph.png" border="0" usemap="#aclass_network_scanner_a879abf7e7a058dda14f6f36645d6763b_cgraph" alt=""/></div>
+<map name="aclass_network_scanner_a879abf7e7a058dda14f6f36645d6763b_cgraph" id="aclass_network_scanner_a879abf7e7a058dda14f6f36645d6763b_cgraph">
+<area shape="rect" title="查询MAC地址" alt="" coords="5,5,195,46"/>
+<area shape="rect" href="class_network_scanner.html#a618ee5322d0843ad65a341fff40ce43d" title="根据IP地址生成伪MAC地址" alt="" coords="243,5,419,46"/>
+<area shape="poly" title=" " alt="" coords="195,23,227,23,227,28,195,28"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a86214dd708b98209915b29514cd58296" name="a86214dd708b98209915b29514cd58296"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86214dd708b98209915b29514cd58296">&#9670;&#160;</a></span>lookupMacVendor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString NetworkScanner::lookupMacVendor </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>macAddress</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>查询MAC地址对应的厂商 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">macAddress</td><td>MAC地址 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>厂商名称 </dd></dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_network_scanner_a86214dd708b98209915b29514cd58296_icgraph.png" border="0" usemap="#aclass_network_scanner_a86214dd708b98209915b29514cd58296_icgraph" alt=""/></div>
+<map name="aclass_network_scanner_a86214dd708b98209915b29514cd58296_icgraph" id="aclass_network_scanner_a86214dd708b98209915b29514cd58296_icgraph">
+<area shape="rect" title="查询MAC地址对应的厂商" alt="" coords="159,5,348,46"/>
+<area shape="rect" href="class_scan_task.html#a7cd062b55f9e5cef3273946219c68483" title="执行扫描任务" alt="" coords="5,13,111,38"/>
+<area shape="poly" title=" " alt="" coords="143,28,111,28,111,23,143,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a37b59a466d4daa5a5f89d1eb8f588626" name="a37b59a466d4daa5a5f89d1eb8f588626"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37b59a466d4daa5a5f89d1eb8f588626">&#9670;&#160;</a></span>normalizeMacAddress()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString NetworkScanner::normalizeMacAddress </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>macAddress</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>MAC地址规范化 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">macAddress</td><td>原始MAC地址 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>规范化的MAC地址 </dd></dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_network_scanner_a37b59a466d4daa5a5f89d1eb8f588626_icgraph.png" border="0" usemap="#aclass_network_scanner_a37b59a466d4daa5a5f89d1eb8f588626_icgraph" alt=""/></div>
+<map name="aclass_network_scanner_a37b59a466d4daa5a5f89d1eb8f588626_icgraph" id="aclass_network_scanner_a37b59a466d4daa5a5f89d1eb8f588626_icgraph">
+<area shape="rect" title="MAC地址规范化" alt="" coords="282,5,464,46"/>
+<area shape="rect" href="class_network_scanner.html#ac28925e0859afc5ae1165c98a7e537c4" title="执行ARP扫描" alt="" coords="5,13,234,38"/>
+<area shape="poly" title=" " alt="" coords="266,28,234,28,234,23,266,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5d6e606c028e6b934e5562254c016710" name="a5d6e606c028e6b934e5562254c016710"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d6e606c028e6b934e5562254c016710">&#9670;&#160;</a></span>onHostNameLookedUp</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NetworkScanner::onHostNameLookedUp </td>
+          <td>(</td>
+          <td class="paramtype">const QHostInfo &amp;</td>          <td class="paramname"><span class="paramname"><em>hostInfo</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel slot">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>主机名查询完成处理 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hostInfo</td><td>主机信息 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_network_scanner_a5d6e606c028e6b934e5562254c016710_cgraph.png" border="0" usemap="#aclass_network_scanner_a5d6e606c028e6b934e5562254c016710_cgraph" alt=""/></div>
+<map name="aclass_network_scanner_a5d6e606c028e6b934e5562254c016710_cgraph" id="aclass_network_scanner_a5d6e606c028e6b934e5562254c016710_cgraph">
+<area shape="rect" title="主机名查询完成处理" alt="" coords="5,5,209,46"/>
+<area shape="rect" href="class_network_scanner.html#a941867644d70f3b1c512c9e98f082ed3" title="找到主机信号" alt="" coords="257,13,444,38"/>
+<area shape="poly" title=" " alt="" coords="209,23,241,23,241,28,209,28"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad50732f1a5d713a4229d29a2cec1295c" name="ad50732f1a5d713a4229d29a2cec1295c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad50732f1a5d713a4229d29a2cec1295c">&#9670;&#160;</a></span>onScanTaskFinished</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NetworkScanner::onScanTaskFinished </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_host_info.html">HostInfo</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>hostInfo</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel slot">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>处理扫描任务完成 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hostInfo</td><td>扫描到的主机信息 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_network_scanner_ad50732f1a5d713a4229d29a2cec1295c_cgraph.png" border="0" usemap="#aclass_network_scanner_ad50732f1a5d713a4229d29a2cec1295c_cgraph" alt=""/></div>
+<map name="aclass_network_scanner_ad50732f1a5d713a4229d29a2cec1295c_cgraph" id="aclass_network_scanner_ad50732f1a5d713a4229d29a2cec1295c_cgraph">
+<area shape="rect" title="处理扫描任务完成" alt="" coords="5,27,204,68"/>
+<area shape="rect" href="class_network_scanner.html#a941867644d70f3b1c512c9e98f082ed3" title="找到主机信号" alt="" coords="256,5,443,31"/>
+<area shape="poly" title=" " alt="" coords="204,33,240,29,240,34,205,38"/>
+<area shape="rect" href="class_network_scanner.html#ae86a6e70a9c71be92ae45209a5a89bfe" title="更新扫描进度" alt="" coords="252,55,447,96"/>
+<area shape="poly" title=" " alt="" coords="205,56,237,60,236,65,204,62"/>
+<area shape="rect" href="class_network_scanner.html#a311c4f6158b867640590a03f85879b6b" title="扫描完成信号" alt="" coords="496,37,700,63"/>
+<area shape="poly" title=" " alt="" coords="447,63,481,59,481,65,448,68"/>
+<area shape="rect" href="class_network_scanner.html#a9e780f0ca7e0519b0a7b8ee6db11996e" title="扫描进度更新信号" alt="" coords="495,87,701,112"/>
+<area shape="poly" title=" " alt="" coords="448,82,480,85,479,91,447,88"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac28925e0859afc5ae1165c98a7e537c4" name="ac28925e0859afc5ae1165c98a7e537c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac28925e0859afc5ae1165c98a7e537c4">&#9670;&#160;</a></span>performARPScan()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QList&lt; QPair&lt; QHostAddress, QString &gt; &gt; NetworkScanner::performARPScan </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>执行ARP扫描 </p>
+<dl class="section return"><dt>返回</dt><dd>地址和MAC地址对的列表 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_network_scanner_ac28925e0859afc5ae1165c98a7e537c4_cgraph.png" border="0" usemap="#aclass_network_scanner_ac28925e0859afc5ae1165c98a7e537c4_cgraph" alt=""/></div>
+<map name="aclass_network_scanner_ac28925e0859afc5ae1165c98a7e537c4_cgraph" id="aclass_network_scanner_ac28925e0859afc5ae1165c98a7e537c4_cgraph">
+<area shape="rect" title="执行ARP扫描" alt="" coords="5,46,234,72"/>
+<area shape="rect" href="class_network_scanner.html#a618ee5322d0843ad65a341fff40ce43d" title="根据IP地址生成伪MAC地址" alt="" coords="285,5,461,46"/>
+<area shape="poly" title=" " alt="" coords="222,43,269,37,270,42,222,48"/>
+<area shape="rect" href="class_network_scanner.html#a37b59a466d4daa5a5f89d1eb8f588626" title="MAC地址规范化" alt="" coords="282,71,464,111"/>
+<area shape="poly" title=" " alt="" coords="227,70,266,75,266,80,226,75"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a35e8651f2b899836b25b68f1ee673520" name="a35e8651f2b899836b25b68f1ee673520"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35e8651f2b899836b25b68f1ee673520">&#9670;&#160;</a></span>pingTargetWithTimeout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool NetworkScanner::pingTargetWithTimeout </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>ip</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>timeout</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>使用ping命令检测目标是否可达 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ip</td><td>目标IP地址 </td></tr>
+    <tr><td class="paramname">timeout</td><td>超时时间(毫秒) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否可达 </dd></dl>
+
+</div>
+</div>
+<a id="a3b1ddceb6c092aa96f97cb6aba9321b5" name="a3b1ddceb6c092aa96f97cb6aba9321b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b1ddceb6c092aa96f97cb6aba9321b5">&#9670;&#160;</a></span>processScanResults()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NetworkScanner::processScanResults </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>处理扫描结果 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_network_scanner_a3b1ddceb6c092aa96f97cb6aba9321b5_cgraph.png" border="0" usemap="#aclass_network_scanner_a3b1ddceb6c092aa96f97cb6aba9321b5_cgraph" alt=""/></div>
+<map name="aclass_network_scanner_a3b1ddceb6c092aa96f97cb6aba9321b5_cgraph" id="aclass_network_scanner_a3b1ddceb6c092aa96f97cb6aba9321b5_cgraph">
+<area shape="rect" title="处理扫描结果" alt="" coords="5,29,208,70"/>
+<area shape="poly" title=" " alt="" coords="59,29,57,19,65,10,81,5,107,3,133,5,150,11,148,16,132,10,106,8,82,10,68,15,62,21,65,28"/>
+<area shape="rect" href="class_network_scanner.html#a311c4f6158b867640590a03f85879b6b" title="扫描完成信号" alt="" coords="256,37,459,62"/>
+<area shape="poly" title=" " alt="" coords="208,47,240,47,240,52,208,52"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_network_scanner_a3b1ddceb6c092aa96f97cb6aba9321b5_icgraph.png" border="0" usemap="#aclass_network_scanner_a3b1ddceb6c092aa96f97cb6aba9321b5_icgraph" alt=""/></div>
+<map name="aclass_network_scanner_a3b1ddceb6c092aa96f97cb6aba9321b5_icgraph" id="aclass_network_scanner_a3b1ddceb6c092aa96f97cb6aba9321b5_icgraph">
+<area shape="rect" title="处理扫描结果" alt="" coords="236,29,438,70"/>
+<area shape="poly" title=" " alt="" coords="376,16,361,10,337,8,314,10,300,15,295,21,297,28,292,29,289,19,297,10,313,5,337,3,363,5,378,11"/>
+<area shape="rect" href="class_network_scanner.html#a3d1a653bce80d595a1c302fda393e5b9" title="开始扫描" alt="" coords="5,37,188,62"/>
+<area shape="poly" title=" " alt="" coords="220,52,188,52,188,47,220,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac1d45fc1180ff72ae369fe0966f67d08" name="ac1d45fc1180ff72ae369fe0966f67d08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1d45fc1180ff72ae369fe0966f67d08">&#9670;&#160;</a></span>quickPingScan()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QList&lt; QHostAddress &gt; NetworkScanner::quickPingScan </td>
+          <td>(</td>
+          <td class="paramtype">const QList&lt; QHostAddress &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>addresses</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>快速Ping扫描方法 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">addresses</td><td>要扫描的地址列表 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>活跃的主机地址列表 </dd></dl>
+
+</div>
+</div>
+<a id="a65c572325e53a912f34394e7beabb867" name="a65c572325e53a912f34394e7beabb867"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65c572325e53a912f34394e7beabb867">&#9670;&#160;</a></span>saveResultsToFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NetworkScanner::saveResultsToFile </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>filename</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>保存结果到文件 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>文件名 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7d443adacaa45d4babee9c5c8cc3927b" name="a7d443adacaa45d4babee9c5c8cc3927b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d443adacaa45d4babee9c5c8cc3927b">&#9670;&#160;</a></span>scanError</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NetworkScanner::scanError </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>errorMessage</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel signal">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>扫描错误信号 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">errorMessage</td><td>错误信息 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_network_scanner_a7d443adacaa45d4babee9c5c8cc3927b_icgraph.png" border="0" usemap="#aclass_network_scanner_a7d443adacaa45d4babee9c5c8cc3927b_icgraph" alt=""/></div>
+<map name="aclass_network_scanner_a7d443adacaa45d4babee9c5c8cc3927b_icgraph" id="aclass_network_scanner_a7d443adacaa45d4babee9c5c8cc3927b_icgraph">
+<area shape="rect" title="扫描错误信号" alt="" coords="490,70,672,96"/>
+<area shape="rect" href="class_network_scanner.html#ae86106ecdb8aab43231f7d48d6840e50" title="设置自定义IP范围" alt="" coords="242,5,432,46"/>
+<area shape="poly" title=" " alt="" coords="508,69,426,49,428,44,509,63"/>
+<area shape="rect" href="class_main_window.html#a95dc085bf70bd0c1ad05bd80f897fd1d" title=" " alt="" coords="233,70,442,96"/>
+<area shape="poly" title=" " alt="" coords="474,86,443,86,443,80,474,80"/>
+<area shape="rect" href="class_network_scanner.html#a3d1a653bce80d595a1c302fda393e5b9" title="开始扫描" alt="" coords="246,120,428,145"/>
+<area shape="poly" title=" " alt="" coords="500,102,405,121,404,116,499,97"/>
+<area shape="rect" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,70,185,96"/>
+<area shape="poly" title=" " alt="" coords="217,86,185,86,185,80,217,80"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a311c4f6158b867640590a03f85879b6b" name="a311c4f6158b867640590a03f85879b6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a311c4f6158b867640590a03f85879b6b">&#9670;&#160;</a></span>scanFinished</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NetworkScanner::scanFinished </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel signal">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>扫描完成信号 </p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_network_scanner_a311c4f6158b867640590a03f85879b6b_icgraph.png" border="0" usemap="#aclass_network_scanner_a311c4f6158b867640590a03f85879b6b_icgraph" alt=""/></div>
+<map name="aclass_network_scanner_a311c4f6158b867640590a03f85879b6b_icgraph" id="aclass_network_scanner_a311c4f6158b867640590a03f85879b6b_icgraph">
+<area shape="rect" title="扫描完成信号" alt="" coords="740,194,944,220"/>
+<area shape="rect" href="class_network_scanner.html#a3b1ddceb6c092aa96f97cb6aba9321b5" title="处理扫描结果" alt="" coords="490,29,692,70"/>
+<area shape="poly" title=" " alt="" coords="814,185,760,138,691,91,654,73,656,68,694,86,763,134,818,181"/>
+<area shape="rect" href="class_network_scanner.html#a3d1a653bce80d595a1c302fda393e5b9" title="开始扫描" alt="" coords="246,94,428,120"/>
+<area shape="poly" title=" " alt="" coords="806,188,754,159,692,135,624,120,555,112,429,106,429,101,555,106,625,115,693,130,756,154,809,183"/>
+<area shape="rect" href="class_network_scanner.html#ae1c58186285b571608eb3e1ef699a1d4" title="扫描单个主机" alt="" coords="500,145,682,170"/>
+<area shape="poly" title=" " alt="" coords="758,193,660,174,661,169,759,188"/>
+<area shape="rect" href="class_main_window.html#a0dd210d98a9be161fce40284534369f0" title=" " alt="" coords="498,194,684,220"/>
+<area shape="poly" title=" " alt="" coords="725,210,685,210,685,204,725,204"/>
+<area shape="rect" href="class_main_window.html#a95dc085bf70bd0c1ad05bd80f897fd1d" title=" " alt="" coords="233,242,442,268"/>
+<area shape="poly" title=" " alt="" coords="757,226,693,235,563,247,443,254,442,249,562,242,692,230,756,220"/>
+<area shape="rect" href="class_network_scanner.html#a390dcda3d4cd1d76633e6f4611ae8410" title="停止扫描" alt="" coords="500,298,682,324"/>
+<area shape="poly" title=" " alt="" coords="802,229,693,279,635,300,633,295,691,274,800,225"/>
+<area shape="rect" href="class_network_scanner.html#ae86a6e70a9c71be92ae45209a5a89bfe" title="更新扫描进度" alt="" coords="494,352,689,393"/>
+<area shape="poly" title=" " alt="" coords="820,233,766,285,731,314,694,339,662,354,660,349,691,334,728,309,762,281,817,229"/>
+<area shape="poly" title=" " alt="" coords="632,16,617,10,591,8,567,10,552,15,547,21,549,28,544,29,542,19,550,10,566,5,591,3,618,5,634,11"/>
+<area shape="poly" title=" " alt="" coords="484,77,398,96,397,91,483,71"/>
+<area shape="poly" title=" " alt="" coords="508,144,405,123,406,118,509,139"/>
+<area shape="rect" href="class_main_window.html#aa4907b0251d305659e403c62921ef331" title=" " alt="" coords="248,193,427,218"/>
+<area shape="poly" title=" " alt="" coords="482,209,428,209,428,203,482,204"/>
+<area shape="rect" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,218,185,244"/>
+<area shape="poly" title=" " alt="" coords="232,219,185,224,185,219,232,214"/>
+<area shape="poly" title=" " alt="" coords="217,246,185,243,185,237,217,240"/>
+<area shape="rect" href="class_network_scanner.html#abeccb1ea9774d7962fac4901f738e692" title="析构函数" alt="" coords="246,292,429,333"/>
+<area shape="poly" title=" " alt="" coords="485,314,429,315,429,309,485,309"/>
+<area shape="rect" href="class_network_scanner.html#ad50732f1a5d713a4229d29a2cec1295c" title="处理扫描任务完成" alt="" coords="238,357,436,398"/>
+<area shape="poly" title=" " alt="" coords="478,377,437,378,437,373,478,372"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae1c58186285b571608eb3e1ef699a1d4" name="ae1c58186285b571608eb3e1ef699a1d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1c58186285b571608eb3e1ef699a1d4">&#9670;&#160;</a></span>scanHost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NetworkScanner::scanHost </td>
+          <td>(</td>
+          <td class="paramtype">const QHostAddress &amp;</td>          <td class="paramname"><span class="paramname"><em>address</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>扫描单个主机 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">address</td><td>主机地址 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_network_scanner_ae1c58186285b571608eb3e1ef699a1d4_cgraph.png" border="0" usemap="#aclass_network_scanner_ae1c58186285b571608eb3e1ef699a1d4_cgraph" alt=""/></div>
+<map name="aclass_network_scanner_ae1c58186285b571608eb3e1ef699a1d4_cgraph" id="aclass_network_scanner_ae1c58186285b571608eb3e1ef699a1d4_cgraph">
+<area shape="rect" title="扫描单个主机" alt="" coords="5,120,188,145"/>
+<area shape="rect" href="class_network_scanner.html#a618ee5322d0843ad65a341fff40ce43d" title="根据IP地址生成伪MAC地址" alt="" coords="251,5,427,46"/>
+<area shape="poly" title=" " alt="" coords="118,117,170,87,235,55,250,49,252,54,237,60,173,92,120,121"/>
+<area shape="rect" href="class_network_scanner.html#a941867644d70f3b1c512c9e98f082ed3" title="找到主机信号" alt="" coords="245,70,432,96"/>
+<area shape="poly" title=" " alt="" coords="163,116,257,97,258,102,164,121"/>
+<area shape="rect" href="class_network_scanner.html#a311c4f6158b867640590a03f85879b6b" title="扫描完成信号" alt="" coords="237,120,440,145"/>
+<area shape="poly" title=" " alt="" coords="188,130,222,130,222,135,188,135"/>
+<area shape="rect" href="class_network_scanner.html#acdcb120eceeec289b7feb2f5d8256b2a" title="扫描主机端口" alt="" coords="248,169,430,210"/>
+<area shape="poly" title=" " alt="" coords="155,143,236,163,234,168,153,148"/>
+<area shape="rect" href="class_network_scanner.html#a9e780f0ca7e0519b0a7b8ee6db11996e" title="扫描进度更新信号" alt="" coords="236,234,442,260"/>
+<area shape="poly" title=" " alt="" coords="116,143,168,181,237,219,257,227,255,232,235,224,165,185,113,148"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_network_scanner_ae1c58186285b571608eb3e1ef699a1d4_icgraph.png" border="0" usemap="#aclass_network_scanner_ae1c58186285b571608eb3e1ef699a1d4_icgraph" alt=""/></div>
+<map name="aclass_network_scanner_ae1c58186285b571608eb3e1ef699a1d4_icgraph" id="aclass_network_scanner_ae1c58186285b571608eb3e1ef699a1d4_icgraph">
+<area shape="rect" title="扫描单个主机" alt="" coords="236,5,418,31"/>
+<area shape="rect" href="class_network_scanner.html#a3d1a653bce80d595a1c302fda393e5b9" title="开始扫描" alt="" coords="5,5,188,31"/>
+<area shape="poly" title=" " alt="" coords="220,21,188,21,188,16,220,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="acdcb120eceeec289b7feb2f5d8256b2a" name="acdcb120eceeec289b7feb2f5d8256b2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdcb120eceeec289b7feb2f5d8256b2a">&#9670;&#160;</a></span>scanHostPorts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NetworkScanner::scanHostPorts </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_host_info.html">HostInfo</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>hostInfo</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>扫描主机端口 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hostInfo</td><td>要更新的主机信息结构 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_network_scanner_acdcb120eceeec289b7feb2f5d8256b2a_icgraph.png" border="0" usemap="#aclass_network_scanner_acdcb120eceeec289b7feb2f5d8256b2a_icgraph" alt=""/></div>
+<map name="aclass_network_scanner_acdcb120eceeec289b7feb2f5d8256b2a_icgraph" id="aclass_network_scanner_acdcb120eceeec289b7feb2f5d8256b2a_icgraph">
+<area shape="rect" title="扫描主机端口" alt="" coords="466,5,648,46"/>
+<area shape="rect" href="class_network_scanner.html#ae1c58186285b571608eb3e1ef699a1d4" title="扫描单个主机" alt="" coords="236,13,418,38"/>
+<area shape="poly" title=" " alt="" coords="451,28,419,28,419,23,451,23"/>
+<area shape="rect" href="class_network_scanner.html#a3d1a653bce80d595a1c302fda393e5b9" title="开始扫描" alt="" coords="5,13,188,38"/>
+<area shape="poly" title=" " alt="" coords="220,28,188,28,188,23,220,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9e780f0ca7e0519b0a7b8ee6db11996e" name="a9e780f0ca7e0519b0a7b8ee6db11996e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e780f0ca7e0519b0a7b8ee6db11996e">&#9670;&#160;</a></span>scanProgress</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NetworkScanner::scanProgress </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>progress</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel signal">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>扫描进度更新信号 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">progress</td><td>进度百分比(0-100) </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_network_scanner_a9e780f0ca7e0519b0a7b8ee6db11996e_icgraph.png" border="0" usemap="#aclass_network_scanner_a9e780f0ca7e0519b0a7b8ee6db11996e_icgraph" alt=""/></div>
+<map name="aclass_network_scanner_a9e780f0ca7e0519b0a7b8ee6db11996e_icgraph" id="aclass_network_scanner_a9e780f0ca7e0519b0a7b8ee6db11996e_icgraph">
+<area shape="rect" title="扫描进度更新信号" alt="" coords="509,55,715,80"/>
+<area shape="rect" href="class_network_scanner.html#ae1c58186285b571608eb3e1ef699a1d4" title="扫描单个主机" alt="" coords="265,5,448,31"/>
+<area shape="poly" title=" " alt="" coords="526,54,426,34,427,29,527,48"/>
+<area shape="rect" href="class_main_window.html#a95dc085bf70bd0c1ad05bd80f897fd1d" title=" " alt="" coords="252,55,461,80"/>
+<area shape="poly" title=" " alt="" coords="494,70,462,70,462,65,494,65"/>
+<area shape="rect" href="class_network_scanner.html#ae86a6e70a9c71be92ae45209a5a89bfe" title="更新扫描进度" alt="" coords="259,104,454,145"/>
+<area shape="poly" title=" " alt="" coords="537,87,451,106,450,101,536,82"/>
+<area shape="rect" href="class_network_scanner.html#a3d1a653bce80d595a1c302fda393e5b9" title="开始扫描" alt="" coords="13,5,196,31"/>
+<area shape="poly" title=" " alt="" coords="250,21,196,21,196,16,250,16"/>
+<area shape="rect" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="15,55,194,80"/>
+<area shape="poly" title=" " alt="" coords="236,70,194,70,194,65,236,65"/>
+<area shape="rect" href="class_network_scanner.html#ad50732f1a5d713a4229d29a2cec1295c" title="处理扫描任务完成" alt="" coords="5,104,204,145"/>
+<area shape="poly" title=" " alt="" coords="243,128,204,128,204,122,243,122"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a56499014f2f0ee9a87fcbf19ba034eeb" name="a56499014f2f0ee9a87fcbf19ba034eeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56499014f2f0ee9a87fcbf19ba034eeb">&#9670;&#160;</a></span>scanStarted</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NetworkScanner::scanStarted </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel signal">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>扫描开始信号 </p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_network_scanner_a56499014f2f0ee9a87fcbf19ba034eeb_icgraph.png" border="0" usemap="#aclass_network_scanner_a56499014f2f0ee9a87fcbf19ba034eeb_icgraph" alt=""/></div>
+<map name="aclass_network_scanner_a56499014f2f0ee9a87fcbf19ba034eeb_icgraph" id="aclass_network_scanner_a56499014f2f0ee9a87fcbf19ba034eeb_icgraph">
+<area shape="rect" title="扫描开始信号" alt="" coords="490,31,686,56"/>
+<area shape="rect" href="class_main_window.html#a95dc085bf70bd0c1ad05bd80f897fd1d" title=" " alt="" coords="233,5,442,31"/>
+<area shape="poly" title=" " alt="" coords="474,35,442,31,443,26,475,29"/>
+<area shape="rect" href="class_network_scanner.html#a3d1a653bce80d595a1c302fda393e5b9" title="开始扫描" alt="" coords="246,55,428,80"/>
+<area shape="poly" title=" " alt="" coords="475,57,429,61,429,56,474,52"/>
+<area shape="rect" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,5,185,31"/>
+<area shape="poly" title=" " alt="" coords="217,21,185,21,185,16,217,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae86106ecdb8aab43231f7d48d6840e50" name="ae86106ecdb8aab43231f7d48d6840e50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae86106ecdb8aab43231f7d48d6840e50">&#9670;&#160;</a></span>setCustomIPRange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NetworkScanner::setCustomIPRange </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>startIP</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>endIP</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置自定义IP范围 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">startIP</td><td>起始IP地址 </td></tr>
+    <tr><td class="paramname">endIP</td><td>结束IP地址 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_network_scanner_ae86106ecdb8aab43231f7d48d6840e50_cgraph.png" border="0" usemap="#aclass_network_scanner_ae86106ecdb8aab43231f7d48d6840e50_cgraph" alt=""/></div>
+<map name="aclass_network_scanner_ae86106ecdb8aab43231f7d48d6840e50_cgraph" id="aclass_network_scanner_ae86106ecdb8aab43231f7d48d6840e50_cgraph">
+<area shape="rect" title="设置自定义IP范围" alt="" coords="5,5,196,46"/>
+<area shape="rect" href="class_network_scanner.html#a7d443adacaa45d4babee9c5c8cc3927b" title="扫描错误信号" alt="" coords="244,13,426,38"/>
+<area shape="poly" title=" " alt="" coords="196,23,228,23,228,28,196,28"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aea1a793e46ec7cc8e2a75b5bc71366ed" name="aea1a793e46ec7cc8e2a75b5bc71366ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea1a793e46ec7cc8e2a75b5bc71366ed">&#9670;&#160;</a></span>setCustomPortsToScan()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NetworkScanner::setCustomPortsToScan </td>
+          <td>(</td>
+          <td class="paramtype">const QList&lt; int &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>ports</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置自定义端口扫描列表 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ports</td><td>要扫描的端口列表 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a20f31e911444bcc321a733b5015710fb" name="a20f31e911444bcc321a733b5015710fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20f31e911444bcc321a733b5015710fb">&#9670;&#160;</a></span>setScanStrategy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NetworkScanner::setScanStrategy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_scan_strategy.html#a0e3c3f47f30a45bd2a1e9f0533d893aa">ScanStrategy::ScanMode</a></td>          <td class="paramname"><span class="paramname"><em>mode</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置扫描策略 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mode</td><td>扫描模式 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae34823cd436f8345ee7dedda3fe56bf6" name="ae34823cd436f8345ee7dedda3fe56bf6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae34823cd436f8345ee7dedda3fe56bf6">&#9670;&#160;</a></span>setScanTimeout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NetworkScanner::setScanTimeout </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>msecs</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置扫描超时时间 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msecs</td><td>超时时间(毫秒)</td></tr>
+    <tr><td class="paramname">msecs</td><td>超时时间（毫秒） </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3d1a653bce80d595a1c302fda393e5b9" name="a3d1a653bce80d595a1c302fda393e5b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d1a653bce80d595a1c302fda393e5b9">&#9670;&#160;</a></span>startScan()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NetworkScanner::startScan </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>开始扫描 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_network_scanner_a3d1a653bce80d595a1c302fda393e5b9_cgraph.png" border="0" usemap="#aclass_network_scanner_a3d1a653bce80d595a1c302fda393e5b9_cgraph" alt=""/></div>
+<map name="aclass_network_scanner_a3d1a653bce80d595a1c302fda393e5b9_cgraph" id="aclass_network_scanner_a3d1a653bce80d595a1c302fda393e5b9_cgraph">
+<area shape="rect" title="开始扫描" alt="" coords="5,185,188,210"/>
+<area shape="rect" href="class_network_scanner.html#af088a70b884ccc65b363ecc235af3058" title="获取本地网络地址列表" alt="" coords="249,5,424,46"/>
+<area shape="poly" title=" " alt="" coords="105,183,156,123,193,88,234,57,245,51,248,55,237,61,196,92,160,127,109,186"/>
+<area shape="rect" href="class_network_scanner.html#a3b1ddceb6c092aa96f97cb6aba9321b5" title="处理扫描结果" alt="" coords="236,95,438,135"/>
+<area shape="poly" title=" " alt="" coords="136,182,260,138,262,143,137,187"/>
+<area shape="rect" href="class_network_scanner.html#a311c4f6158b867640590a03f85879b6b" title="扫描完成信号" alt="" coords="488,145,691,170"/>
+<area shape="poly" title=" " alt="" coords="188,188,471,164,472,170,188,193"/>
+<area shape="rect" href="class_network_scanner.html#a7d443adacaa45d4babee9c5c8cc3927b" title="扫描错误信号" alt="" coords="246,210,428,236"/>
+<area shape="poly" title=" " alt="" coords="188,205,231,209,230,214,188,210"/>
+<area shape="rect" href="class_network_scanner.html#ae1c58186285b571608eb3e1ef699a1d4" title="扫描单个主机" alt="" coords="246,260,428,285"/>
+<area shape="poly" title=" " alt="" coords="132,209,236,246,261,253,259,258,235,251,130,214"/>
+<area shape="rect" href="class_network_scanner.html#a56499014f2f0ee9a87fcbf19ba034eeb" title="扫描开始信号" alt="" coords="239,309,435,334"/>
+<area shape="poly" title=" " alt="" coords="114,209,166,252,200,275,237,295,251,301,249,306,235,300,197,280,162,256,110,213"/>
+<area shape="poly" title=" " alt="" coords="292,95,289,85,297,76,313,70,337,68,363,70,378,77,376,82,361,76,337,73,314,75,300,80,295,86,297,93"/>
+<area shape="poly" title=" " alt="" coords="439,130,495,139,494,144,438,135"/>
+<area shape="poly" title=" " alt="" coords="416,257,436,246,452,231,460,215,468,197,484,181,495,175,497,179,488,185,472,200,464,217,456,234,440,250,418,261"/>
+<area shape="rect" href="class_network_scanner.html#a618ee5322d0843ad65a341fff40ce43d" title="根据IP地址生成伪MAC地址" alt="" coords="501,195,677,235"/>
+<area shape="poly" title=" " alt="" coords="396,256,485,236,487,241,397,261"/>
+<area shape="rect" href="class_network_scanner.html#a941867644d70f3b1c512c9e98f082ed3" title="找到主机信号" alt="" coords="496,260,683,285"/>
+<area shape="poly" title=" " alt="" coords="429,270,480,270,480,275,429,275"/>
+<area shape="rect" href="class_network_scanner.html#acdcb120eceeec289b7feb2f5d8256b2a" title="扫描主机端口" alt="" coords="498,309,680,350"/>
+<area shape="poly" title=" " alt="" coords="397,283,483,303,482,308,396,288"/>
+<area shape="rect" href="class_network_scanner.html#a9e780f0ca7e0519b0a7b8ee6db11996e" title="扫描进度更新信号" alt="" coords="486,374,692,400"/>
+<area shape="poly" title=" " alt="" coords="418,283,440,294,456,311,464,328,472,344,488,360,497,365,495,370,484,364,468,347,460,330,452,314,436,298,416,288"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a390dcda3d4cd1d76633e6f4611ae8410" name="a390dcda3d4cd1d76633e6f4611ae8410"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a390dcda3d4cd1d76633e6f4611ae8410">&#9670;&#160;</a></span>stopScan()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NetworkScanner::stopScan </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>停止扫描 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_network_scanner_a390dcda3d4cd1d76633e6f4611ae8410_cgraph.png" border="0" usemap="#aclass_network_scanner_a390dcda3d4cd1d76633e6f4611ae8410_cgraph" alt=""/></div>
+<map name="aclass_network_scanner_a390dcda3d4cd1d76633e6f4611ae8410_cgraph" id="aclass_network_scanner_a390dcda3d4cd1d76633e6f4611ae8410_cgraph">
+<area shape="rect" title="停止扫描" alt="" coords="5,5,187,31"/>
+<area shape="rect" href="class_network_scanner.html#a311c4f6158b867640590a03f85879b6b" title="扫描完成信号" alt="" coords="235,5,438,31"/>
+<area shape="poly" title=" " alt="" coords="187,16,219,16,219,21,187,21"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_network_scanner_a390dcda3d4cd1d76633e6f4611ae8410_icgraph.png" border="0" usemap="#aclass_network_scanner_a390dcda3d4cd1d76633e6f4611ae8410_icgraph" alt=""/></div>
+<map name="aclass_network_scanner_a390dcda3d4cd1d76633e6f4611ae8410_icgraph" id="aclass_network_scanner_a390dcda3d4cd1d76633e6f4611ae8410_icgraph">
+<area shape="rect" title="停止扫描" alt="" coords="237,13,418,38"/>
+<area shape="rect" href="class_network_scanner.html#abeccb1ea9774d7962fac4901f738e692" title="析构函数" alt="" coords="5,5,189,46"/>
+<area shape="poly" title=" " alt="" coords="221,28,189,28,189,23,221,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae86a6e70a9c71be92ae45209a5a89bfe" name="ae86a6e70a9c71be92ae45209a5a89bfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae86a6e70a9c71be92ae45209a5a89bfe">&#9670;&#160;</a></span>updateScanProgress</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NetworkScanner::updateScanProgress </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel slot">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>更新扫描进度 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_network_scanner_ae86a6e70a9c71be92ae45209a5a89bfe_cgraph.png" border="0" usemap="#aclass_network_scanner_ae86a6e70a9c71be92ae45209a5a89bfe_cgraph" alt=""/></div>
+<map name="aclass_network_scanner_ae86a6e70a9c71be92ae45209a5a89bfe_cgraph" id="aclass_network_scanner_ae86a6e70a9c71be92ae45209a5a89bfe_cgraph">
+<area shape="rect" title="更新扫描进度" alt="" coords="5,23,201,64"/>
+<area shape="rect" href="class_network_scanner.html#a311c4f6158b867640590a03f85879b6b" title="扫描完成信号" alt="" coords="250,5,454,31"/>
+<area shape="poly" title=" " alt="" coords="201,31,234,27,235,33,202,36"/>
+<area shape="rect" href="class_network_scanner.html#a9e780f0ca7e0519b0a7b8ee6db11996e" title="扫描进度更新信号" alt="" coords="249,55,455,80"/>
+<area shape="poly" title=" " alt="" coords="202,50,234,53,233,59,201,56"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_network_scanner_ae86a6e70a9c71be92ae45209a5a89bfe_icgraph.png" border="0" usemap="#aclass_network_scanner_ae86a6e70a9c71be92ae45209a5a89bfe_icgraph" alt=""/></div>
+<map name="aclass_network_scanner_ae86a6e70a9c71be92ae45209a5a89bfe_icgraph" id="aclass_network_scanner_ae86a6e70a9c71be92ae45209a5a89bfe_icgraph">
+<area shape="rect" title="更新扫描进度" alt="" coords="252,5,447,46"/>
+<area shape="rect" href="class_network_scanner.html#ad50732f1a5d713a4229d29a2cec1295c" title="处理扫描任务完成" alt="" coords="5,5,204,46"/>
+<area shape="poly" title=" " alt="" coords="236,28,204,28,204,23,236,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a29d0e3495e8170c1b40420d5e301b8d2" name="a29d0e3495e8170c1b40420d5e301b8d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29d0e3495e8170c1b40420d5e301b8d2">&#9670;&#160;</a></span>m_activeHosts</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QList&lt;QHostAddress&gt; NetworkScanner::m_activeHosts</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>活跃主机列表 </p>
+
+</div>
+</div>
+<a id="adc7a00ffc172c1dfc141d30240a8ac67" name="adc7a00ffc172c1dfc141d30240a8ac67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc7a00ffc172c1dfc141d30240a8ac67">&#9670;&#160;</a></span>m_endIPRange</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QHostAddress NetworkScanner::m_endIPRange</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>结束IP地址 </p>
+
+</div>
+</div>
+<a id="ab552ddb02bf45cc7293e68d819b08da6" name="ab552ddb02bf45cc7293e68d819b08da6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab552ddb02bf45cc7293e68d819b08da6">&#9670;&#160;</a></span>m_isScanning</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool NetworkScanner::m_isScanning</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>是否正在扫描 </p>
+
+</div>
+</div>
+<a id="a6565994e3e77dd1f39ed03f7a31f79fb" name="a6565994e3e77dd1f39ed03f7a31f79fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6565994e3e77dd1f39ed03f7a31f79fb">&#9670;&#160;</a></span>m_macAddressCache</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QMap&lt;QString, QString&gt; NetworkScanner::m_macAddressCache</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>MAC地址缓存 </p>
+
+</div>
+</div>
+<a id="a519b23696e548ce76d19b0923b1b2e31" name="a519b23696e548ce76d19b0923b1b2e31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a519b23696e548ce76d19b0923b1b2e31">&#9670;&#160;</a></span>m_mutex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QMutex NetworkScanner::m_mutex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>线程同步互斥锁 </p>
+
+</div>
+</div>
+<a id="aaa8e5c1ecbb18e30b3eaa41ea030aa8b" name="aaa8e5c1ecbb18e30b3eaa41ea030aa8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa8e5c1ecbb18e30b3eaa41ea030aa8b">&#9670;&#160;</a></span>m_portsToScan</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QList&lt;int&gt; NetworkScanner::m_portsToScan</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>要扫描的端口列表 </p>
+
+</div>
+</div>
+<a id="a07591f97b42d5ba072f1dd383ac5aaaf" name="a07591f97b42d5ba072f1dd383ac5aaaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07591f97b42d5ba072f1dd383ac5aaaf">&#9670;&#160;</a></span>m_scanFutures</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QList&lt;QFuture&lt;void&gt; &gt; NetworkScanner::m_scanFutures</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>并行扫描任务 </p>
+
+</div>
+</div>
+<a id="af1c4f86f0bf57509498127e25bd2dd99" name="af1c4f86f0bf57509498127e25bd2dd99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1c4f86f0bf57509498127e25bd2dd99">&#9670;&#160;</a></span>m_scannedHosts</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int NetworkScanner::m_scannedHosts</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>已扫描主机数 </p>
+
+</div>
+</div>
+<a id="a794bc857be82d6b7b9cc3449df61bc0a" name="a794bc857be82d6b7b9cc3449df61bc0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a794bc857be82d6b7b9cc3449df61bc0a">&#9670;&#160;</a></span>m_scannedHostsList</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QList&lt;<a class="el" href="struct_host_info.html">HostInfo</a>&gt; NetworkScanner::m_scannedHostsList</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>扫描结果列表 </p>
+
+</div>
+</div>
+<a id="adfa250375b6ed189a694030f831a441c" name="adfa250375b6ed189a694030f831a441c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfa250375b6ed189a694030f831a441c">&#9670;&#160;</a></span>m_scanStrategy</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_scan_strategy.html">ScanStrategy</a> NetworkScanner::m_scanStrategy</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>扫描策略 </p>
+
+</div>
+</div>
+<a id="a423ce8a2179223e48189772f80cebb9c" name="a423ce8a2179223e48189772f80cebb9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a423ce8a2179223e48189772f80cebb9c">&#9670;&#160;</a></span>m_scanTimeout</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int NetworkScanner::m_scanTimeout</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>扫描超时时间 </p>
+
+</div>
+</div>
+<a id="a86b547fcfdd0be16c9c689731887e255" name="a86b547fcfdd0be16c9c689731887e255"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86b547fcfdd0be16c9c689731887e255">&#9670;&#160;</a></span>m_startIPRange</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QHostAddress NetworkScanner::m_startIPRange</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>起始IP地址 </p>
+
+</div>
+</div>
+<a id="a95c25f8c2863d81f3c9348d8b90c313f" name="a95c25f8c2863d81f3c9348d8b90c313f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95c25f8c2863d81f3c9348d8b90c313f">&#9670;&#160;</a></span>m_threadPool</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QThreadPool NetworkScanner::m_threadPool</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>线程池 </p>
+
+</div>
+</div>
+<a id="abf3fa14815d6a3cdec60bbcdb1b9c649" name="abf3fa14815d6a3cdec60bbcdb1b9c649"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf3fa14815d6a3cdec60bbcdb1b9c649">&#9670;&#160;</a></span>m_totalHosts</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int NetworkScanner::m_totalHosts</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>总主机数 </p>
+
+</div>
+</div>
+<a id="a1606df18aa388acb9b685d0f72ba2d8f" name="a1606df18aa388acb9b685d0f72ba2d8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1606df18aa388acb9b685d0f72ba2d8f">&#9670;&#160;</a></span>m_useCustomRange</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool NetworkScanner::m_useCustomRange</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>是否使用自定义IP范围 </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="networkscanner_8h_source.html">networkscanner.h</a></li>
+<li>build/NetScanner_autogen/EWIEGA46WW/<a class="el" href="build_2_net_scanner__autogen_2_e_w_i_e_g_a46_w_w_2moc__networkscanner_8cpp_source.html">moc_networkscanner.cpp</a></li>
+<li>NetScanner_autogen/JRIAJ772TK/<a class="el" href="_net_scanner__autogen_2_j_r_i_a_j772_t_k_2moc__networkscanner_8cpp_source.html">moc_networkscanner.cpp</a></li>
+<li><a class="el" href="networkscanner_8cpp.html">networkscanner.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_network_scanner.html">NetworkScanner</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

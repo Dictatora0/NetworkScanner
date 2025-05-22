@@ -1,0 +1,5 @@
+<map id="NetworkScanner::stopScan" name="NetworkScanner::stopScan">
+<area shape="rect" id="Node000001" title="停止扫描" alt="" coords="237,13,418,38"/>
+<area shape="rect" id="Node000002" href="$class_network_scanner.html#abeccb1ea9774d7962fac4901f738e692" title="析构函数" alt="" coords="5,5,189,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="221,28,189,28,189,23,221,23"/>
+</map>

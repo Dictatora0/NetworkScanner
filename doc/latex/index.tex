@@ -1,0 +1,26 @@
+\chapter{Network Scanner 项目文档}
+\hypertarget{index}{}\label{index}\index{Network Scanner 项目文档@{Network Scanner 项目文档}}
+\hypertarget{index_intro}{}\doxysection{\texorpdfstring{简介}{简介}}\label{index_intro}
+Network Scanner是一个用于网络扫描和拓扑分析的工具。 它可以帮助您发现网络中的设备，分析设备特性，并生成网络拓扑图。\hypertarget{index_features}{}\doxysection{\texorpdfstring{主要功能}{主要功能}}\label{index_features}
+
+\begin{DoxyItemize}
+\item 网络设备扫描
+\item 设备分析
+\item 网络拓扑可视化
+\item 扫描历史记录
+\end{DoxyItemize}\hypertarget{index_arch}{}\doxysection{\texorpdfstring{项目架构}{项目架构}}\label{index_arch}
+该项目主要包含以下模块：
+\begin{DoxyItemize}
+\item 主窗口(\doxylink{class_main_window}{Main\+Window})：用户界面
+\item 网络扫描器(\doxylink{class_network_scanner}{Network\+Scanner})：负责扫描网络设备
+\item 网络拓扑(\doxylink{class_network_topology}{Network\+Topology})：生成和展示网络拓扑图
+\item 设备分析器(\doxylink{class_device_analyzer}{Device\+Analyzer})：分析设备特性
+\item 扫描历史(\doxylink{class_scan_history}{Scan\+History})：管理扫描历史记录
+\end{DoxyItemize}\hypertarget{index_build}{}\doxysection{\texorpdfstring{构建说明}{构建说明}}\label{index_build}
+该项目使用\+CMake构建系统，依赖于\+Qt6库。 构建步骤：
+\begin{DoxyEnumerate}
+\item 确保已安装\+CMake和\+Qt6
+\item 创建构建目录：{\ttfamily mkdir build \&\& cd build}
+\item 配置项目：{\ttfamily cmake ..}
+\item 构建项目：{\ttfamily make} 
+\end{DoxyEnumerate}

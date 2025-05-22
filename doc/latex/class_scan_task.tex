@@ -1,0 +1,148 @@
+\doxysection{Scan\+Task类 参考}
+\hypertarget{class_scan_task}{}\label{class_scan_task}\index{ScanTask@{ScanTask}}
+
+
+扫描任务类  
+
+
+
+
+{\ttfamily \#include $<$networkscanner.\+h$>$}
+
+
+
+类 Scan\+Task 继承关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{class_scan_task__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Scan\+Task 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{class_scan_task__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_scan_task_a1c317cbf241b9a74554f70464880cfb3}{Scan\+Task}} (QObject \texorpdfstring{$\ast$}{*}parent, const QHost\+Address \&address, const QList$<$ int $>$ \&ports, int timeout)
+\begin{DoxyCompactList}\small\item\em 构造函数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scan_task_a7cd062b55f9e5cef3273946219c68483}{run}} () override
+\begin{DoxyCompactList}\small\item\em 执行扫描任务 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+QObject \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_scan_task_a30929a1dd40b1cbd669f12b1baed775b}{m\+\_\+parent}}
+\begin{DoxyCompactList}\small\item\em 父对象指针 \end{DoxyCompactList}\item 
+QHost\+Address \mbox{\hyperlink{class_scan_task_aa1d37c401e097d0ebea70c9104185fd7}{m\+\_\+address}}
+\begin{DoxyCompactList}\small\item\em 扫描地址 \end{DoxyCompactList}\item 
+QList$<$ int $>$ \mbox{\hyperlink{class_scan_task_a0a234d389d4dcb3f74c74eff05132ee8}{m\+\_\+ports}}
+\begin{DoxyCompactList}\small\item\em 扫描端口列表 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_scan_task_a609c1dc70ddfcdab5de7b69de3347582}{m\+\_\+timeout}}
+\begin{DoxyCompactList}\small\item\em 超时时间 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+扫描任务类 
+
+用于并行执行的单个主机扫描任务 
+
+\doxysubsection{构造及析构函数说明}
+\Hypertarget{class_scan_task_a1c317cbf241b9a74554f70464880cfb3}\index{ScanTask@{ScanTask}!ScanTask@{ScanTask}}
+\index{ScanTask@{ScanTask}!ScanTask@{ScanTask}}
+\doxysubsubsection{\texorpdfstring{ScanTask()}{ScanTask()}}
+{\footnotesize\ttfamily \label{class_scan_task_a1c317cbf241b9a74554f70464880cfb3} 
+Scan\+Task\+::\+Scan\+Task (\begin{DoxyParamCaption}\item[{QObject \texorpdfstring{$\ast$}{*}}]{parent}{, }\item[{const QHost\+Address \&}]{address}{, }\item[{const QList$<$ int $>$ \&}]{ports}{, }\item[{int}]{timeout}{}\end{DoxyParamCaption})}
+
+
+
+构造函数 
+
+
+\begin{DoxyParams}{参数}
+{\em parent} & 父对象 \\
+\hline
+{\em address} & 要扫描的地址 \\
+\hline
+{\em ports} & 要扫描的端口列表 \\
+\hline
+{\em timeout} & 连接超时时间（毫秒） \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{成员函数说明}
+\Hypertarget{class_scan_task_a7cd062b55f9e5cef3273946219c68483}\index{ScanTask@{ScanTask}!run@{run}}
+\index{run@{run}!ScanTask@{ScanTask}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily \label{class_scan_task_a7cd062b55f9e5cef3273946219c68483} 
+void Scan\+Task\+::run (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+执行扫描任务 
+
+实现\+QRunnable的抽象方法 函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_scan_task_a7cd062b55f9e5cef3273946219c68483_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\Hypertarget{class_scan_task_aa1d37c401e097d0ebea70c9104185fd7}\index{ScanTask@{ScanTask}!m\_address@{m\_address}}
+\index{m\_address@{m\_address}!ScanTask@{ScanTask}}
+\doxysubsubsection{\texorpdfstring{m\_address}{m\_address}}
+{\footnotesize\ttfamily \label{class_scan_task_aa1d37c401e097d0ebea70c9104185fd7} 
+QHost\+Address Scan\+Task\+::m\+\_\+address}
+
+
+
+扫描地址 
+
+\Hypertarget{class_scan_task_a30929a1dd40b1cbd669f12b1baed775b}\index{ScanTask@{ScanTask}!m\_parent@{m\_parent}}
+\index{m\_parent@{m\_parent}!ScanTask@{ScanTask}}
+\doxysubsubsection{\texorpdfstring{m\_parent}{m\_parent}}
+{\footnotesize\ttfamily \label{class_scan_task_a30929a1dd40b1cbd669f12b1baed775b} 
+QObject\texorpdfstring{$\ast$}{*} Scan\+Task\+::m\+\_\+parent}
+
+
+
+父对象指针 
+
+\Hypertarget{class_scan_task_a0a234d389d4dcb3f74c74eff05132ee8}\index{ScanTask@{ScanTask}!m\_ports@{m\_ports}}
+\index{m\_ports@{m\_ports}!ScanTask@{ScanTask}}
+\doxysubsubsection{\texorpdfstring{m\_ports}{m\_ports}}
+{\footnotesize\ttfamily \label{class_scan_task_a0a234d389d4dcb3f74c74eff05132ee8} 
+QList$<$int$>$ Scan\+Task\+::m\+\_\+ports}
+
+
+
+扫描端口列表 
+
+\Hypertarget{class_scan_task_a609c1dc70ddfcdab5de7b69de3347582}\index{ScanTask@{ScanTask}!m\_timeout@{m\_timeout}}
+\index{m\_timeout@{m\_timeout}!ScanTask@{ScanTask}}
+\doxysubsubsection{\texorpdfstring{m\_timeout}{m\_timeout}}
+{\footnotesize\ttfamily \label{class_scan_task_a609c1dc70ddfcdab5de7b69de3347582} 
+int Scan\+Task\+::m\+\_\+timeout}
+
+
+
+超时时间 
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{networkscanner_8h}{networkscanner.\+h}}\item 
+\mbox{\hyperlink{networkscanner_8cpp}{networkscanner.\+cpp}}\end{DoxyCompactItemize}

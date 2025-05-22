@@ -1,0 +1,9 @@
+<map id="MainWindow::createTopologyTab" name="MainWindow::createTopologyTab">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,63,219,88"/>
+<area shape="rect" id="Node000002" href="$class_network_topology.html#a8978cf5a440fe01b4d9b1fa1185a5ca6" title=" " alt="" coords="267,5,486,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="174,59,298,32,299,37,175,65"/>
+<area shape="rect" id="Node000003" href="$class_main_window.html#a160e765f35717b6304cfdd96b761cbc9" title=" " alt="" coords="284,55,468,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="219,73,269,73,269,78,219,78"/>
+<area shape="rect" id="Node000004" href="$class_main_window.html#a226ae57b71712bebff12904e809280e1" title=" " alt="" coords="274,120,478,146"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="175,86,299,114,298,119,174,92"/>
+</map>

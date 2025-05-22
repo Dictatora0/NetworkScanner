@@ -26,6 +26,7 @@
 #include <QHostInfo>
 #include <QThreadPool>
 #include <QRunnable>
+#include <QElapsedTimer>
 
 /**
  * @struct HostInfo
@@ -40,6 +41,16 @@ struct HostInfo {
     bool isReachable;    ///< 主机是否可达
     QDateTime scanTime;  ///< 扫描时间
     QMap<int, bool> openPorts; ///< 开放的端口及状态 (端口号 -> 是否开放)
+};
+
+/**
+ * @enum ScanMode
+ * @brief 扫描模式枚举
+ */
+enum ScanMode {
+    QUICK,      // 快速扫描
+    STANDARD,   // 标准扫描
+    THOROUGH    // 彻底扫描
 };
 
 /**
@@ -140,7 +151,7 @@ public:
 /**
  * @class NetworkScanner
  * @brief 网络扫描器类
- * @details 提供网络设备发现和端口扫描的核心功能
+ * @details 提供网络设备发现和端口扫描功能
  */
 class NetworkScanner : public QObject
 {
@@ -151,7 +162,7 @@ public:
      * @brief 构造函数
      * @param parent 父对象
      */
-    NetworkScanner(QObject *parent = nullptr);
+    explicit NetworkScanner(QObject *parent = nullptr);
     
     /**
      * @brief 析构函数
@@ -268,6 +279,32 @@ public:
      * @return 生成的伪MAC地址
      */
     QString generatePseudoMACFromIP(const QString &ip);
+    
+    /**
+     * @brief 设置扫描模式
+     * @param mode 要设置的扫描模式
+     */
+    void setScanMode(ScanMode mode) { m_scanMode = mode; }
+    
+    /**
+     * @brief 设置调试模式
+     * @param debug 是否启用调试模式
+     */
+    void setDebugMode(bool debug) { m_debugMode = debug; }
+    
+    /**
+     * @brief 设置随机扫描
+     * @param randomize 是否启用随机扫描
+     */
+    void setRandomizeScan(bool randomize) { m_randomizeScan = randomize; }
+    
+    /**
+     * @brief 检查主机是否可达
+     * @param address 主机地址
+     * @param timeout 超时时间(毫秒)
+     * @return 主机是否可达
+     */
+    bool checkHostReachable(const QHostAddress &address, int timeout);
     
 signals:
     /**
@@ -391,6 +428,13 @@ private:
     ScanStrategy m_scanStrategy;  ///< 扫描策略
     
     QList<QHostAddress> m_activeHosts;  ///< 活跃主机列表
+    
+    ScanMode m_scanMode;  ///< 当前扫描模式
+    bool m_debugMode;    ///< 是否启用调试模式
+    bool m_randomizeScan; ///< 是否启用随机扫描
+    
+    QElapsedTimer m_scanStartTime;  ///< 扫描开始时间
+    QDateTime m_lastProgressUpdate; ///< 上次进度更新时间
     
     /**
      * @brief 执行外部进程

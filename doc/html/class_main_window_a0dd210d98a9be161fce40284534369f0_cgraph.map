@@ -1,0 +1,9 @@
+<map id="MainWindow::scheduleScan" name="MainWindow::scheduleScan">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,192,56"/>
+<area shape="rect" id="Node000002" href="$class_network_scanner.html#a311c4f6158b867640590a03f85879b6b" title="扫描完成信号" alt="" coords="240,5,443,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,31,224,28,224,33,192,36"/>
+<area shape="rect" id="Node000003" href="$class_main_window.html#a092a4ceaf59fa4db7b29d03c66f07623" title=" " alt="" coords="261,55,422,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="192,50,246,55,245,61,192,55"/>
+<area shape="rect" id="Node000004" href="$class_main_window.html#a3e1f77c4a928e74c560e84b67ed4d93d" title=" " alt="" coords="491,55,668,80"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="422,65,476,65,476,70,422,70"/>
+</map>

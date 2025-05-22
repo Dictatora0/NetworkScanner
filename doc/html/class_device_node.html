@@ -1,0 +1,797 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Network Scanner: DeviceNode类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Network Scanner
+   </div>
+   <div id="projectbrief">网络扫描和拓扑分析工具</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('class_device_node.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="class_device_node-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">DeviceNode类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="networktopology_8h_source.html">networktopology.h</a>&gt;</code></p>
+<div class="dynheader">
+类 DeviceNode 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_device_node__inherit__graph.png" border="0" usemap="#a_device_node_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_device_node_inherit__map" id="a_device_node_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,120,210,988"/>
+<area shape="rect" title=" " alt="" coords="58,5,157,72"/>
+<area shape="poly" title=" " alt="" coords="110,87,110,120,105,120,105,87"/>
+</map>
+</div>
+<div class="dynheader">
+DeviceNode 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_device_node__coll__graph.png" border="0" usemap="#a_device_node_coll__map" alt="Collaboration graph"/></div>
+<map name="a_device_node_coll__map" id="a_device_node_coll__map">
+<area shape="rect" title=" " alt="" coords="36,257,241,1105"/>
+<area shape="rect" title=" " alt="" coords="5,66,104,133"/>
+<area shape="poly" title=" " alt="" coords="64,147,80,256,75,257,59,148"/>
+<area shape="rect" href="struct_host_info.html" title="存储主机信息的结构体" alt="" coords="128,5,320,194"/>
+<area shape="poly" title=" " alt="" coords="213,194,206,240,201,240,208,193"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a4944312715c13f9c5b42342944851ab3" id="r_a4944312715c13f9c5b42342944851ab3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4944312715c13f9c5b42342944851ab3">DeviceNode</a> (const <a class="el" href="struct_host_info.html">HostInfo</a> &amp;host, <a class="el" href="networktopology_8h.html#ad258d4c51629346fceac4679b3209ad9">DeviceType</a> type=<a class="el" href="networktopology_8h.html#ad258d4c51629346fceac4679b3209ad9af6c26de5cb6bbe4e8ff24a92a7a297b6">DEVICE_UNKNOWN</a>)</td></tr>
+<tr class="separator:a4944312715c13f9c5b42342944851ab3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa280521ab40d3bd66235eff06a75ea30" id="r_aa280521ab40d3bd66235eff06a75ea30"><td class="memItemLeft" align="right" valign="top">QRectF&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa280521ab40d3bd66235eff06a75ea30">boundingRect</a> () const override</td></tr>
+<tr class="separator:aa280521ab40d3bd66235eff06a75ea30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad11a8f575a8d6df6b7545e7071af181e" id="r_ad11a8f575a8d6df6b7545e7071af181e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad11a8f575a8d6df6b7545e7071af181e">paint</a> (QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override</td></tr>
+<tr class="separator:ad11a8f575a8d6df6b7545e7071af181e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af113b3eb8c31ece100489938be417ece" id="r_af113b3eb8c31ece100489938be417ece"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af113b3eb8c31ece100489938be417ece">setDeviceType</a> (<a class="el" href="networktopology_8h.html#ad258d4c51629346fceac4679b3209ad9">DeviceType</a> type)</td></tr>
+<tr class="separator:af113b3eb8c31ece100489938be417ece"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e325a01381c951dd58a432f2eda6369" id="r_a8e325a01381c951dd58a432f2eda6369"><td class="memItemLeft" align="right" valign="top"><a class="el" href="networktopology_8h.html#ad258d4c51629346fceac4679b3209ad9">DeviceType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e325a01381c951dd58a432f2eda6369">deviceType</a> () const</td></tr>
+<tr class="separator:a8e325a01381c951dd58a432f2eda6369"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94ab579715500c27047b6a6636dd0b1c" id="r_a94ab579715500c27047b6a6636dd0b1c"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a94ab579715500c27047b6a6636dd0b1c">ipAddress</a> () const</td></tr>
+<tr class="separator:a94ab579715500c27047b6a6636dd0b1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0f6f8035bd7b65c6205ac2878d9ec1d" id="r_ac0f6f8035bd7b65c6205ac2878d9ec1d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_host_info.html">HostInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0f6f8035bd7b65c6205ac2878d9ec1d">hostInfo</a> () const</td></tr>
+<tr class="separator:ac0f6f8035bd7b65c6205ac2878d9ec1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef416a5365cf9d935f84a9a0949fdcdc" id="r_aef416a5365cf9d935f84a9a0949fdcdc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aef416a5365cf9d935f84a9a0949fdcdc">setPosition</a> (const QPointF &amp;pos)</td></tr>
+<tr class="separator:aef416a5365cf9d935f84a9a0949fdcdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c1916cf448115bf13debb1ccaecca7f" id="r_a3c1916cf448115bf13debb1ccaecca7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c1916cf448115bf13debb1ccaecca7f">setNetworkLayer</a> (int layer)</td></tr>
+<tr class="separator:a3c1916cf448115bf13debb1ccaecca7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ee68a7e96c77fa95d71f7a728e6c454" id="r_a7ee68a7e96c77fa95d71f7a728e6c454"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ee68a7e96c77fa95d71f7a728e6c454">networkLayer</a> () const</td></tr>
+<tr class="separator:a7ee68a7e96c77fa95d71f7a728e6c454"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8763e7f52f3239f6cd31234a89060dbe" id="r_a8763e7f52f3239f6cd31234a89060dbe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8763e7f52f3239f6cd31234a89060dbe">setSubnetGroup</a> (const QString &amp;subnet)</td></tr>
+<tr class="separator:a8763e7f52f3239f6cd31234a89060dbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a93233328d9a5db24a23daa965f49ad" id="r_a9a93233328d9a5db24a23daa965f49ad"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a93233328d9a5db24a23daa965f49ad">subnetGroup</a> () const</td></tr>
+<tr class="separator:a9a93233328d9a5db24a23daa965f49ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:a8e6b5f8a328666bdb5f6645d82b1e49c" id="r_a8e6b5f8a328666bdb5f6645d82b1e49c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e6b5f8a328666bdb5f6645d82b1e49c">mousePressEvent</a> (QGraphicsSceneMouseEvent *event) override</td></tr>
+<tr class="separator:a8e6b5f8a328666bdb5f6645d82b1e49c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8537016aab46cbc8f9c52351c5746b66" id="r_a8537016aab46cbc8f9c52351c5746b66"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8537016aab46cbc8f9c52351c5746b66">mouseMoveEvent</a> (QGraphicsSceneMouseEvent *event) override</td></tr>
+<tr class="separator:a8537016aab46cbc8f9c52351c5746b66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afce1d9bffed9ff781b7bdf338d71918a" id="r_afce1d9bffed9ff781b7bdf338d71918a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afce1d9bffed9ff781b7bdf338d71918a">mouseReleaseEvent</a> (QGraphicsSceneMouseEvent *event) override</td></tr>
+<tr class="separator:afce1d9bffed9ff781b7bdf338d71918a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63cf0e5f0f3e0d5be9bd1bbd11338248" id="r_a63cf0e5f0f3e0d5be9bd1bbd11338248"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a63cf0e5f0f3e0d5be9bd1bbd11338248">hoverEnterEvent</a> (QGraphicsSceneHoverEvent *event) override</td></tr>
+<tr class="separator:a63cf0e5f0f3e0d5be9bd1bbd11338248"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a007391437e3fce24db87c97d8cdf2686" id="r_a007391437e3fce24db87c97d8cdf2686"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a007391437e3fce24db87c97d8cdf2686">hoverLeaveEvent</a> (QGraphicsSceneHoverEvent *event) override</td></tr>
+<tr class="separator:a007391437e3fce24db87c97d8cdf2686"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a3c4db426da62437969a9064365ee4756" id="r_a3c4db426da62437969a9064365ee4756"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_host_info.html">HostInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c4db426da62437969a9064365ee4756">m_host</a></td></tr>
+<tr class="separator:a3c4db426da62437969a9064365ee4756"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad57955c067a58853e3cce781ed8ea330" id="r_ad57955c067a58853e3cce781ed8ea330"><td class="memItemLeft" align="right" valign="top"><a class="el" href="networktopology_8h.html#ad258d4c51629346fceac4679b3209ad9">DeviceType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad57955c067a58853e3cce781ed8ea330">m_type</a></td></tr>
+<tr class="separator:ad57955c067a58853e3cce781ed8ea330"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66bbeea661e3d2ab8a1c69d9371999e5" id="r_a66bbeea661e3d2ab8a1c69d9371999e5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a66bbeea661e3d2ab8a1c69d9371999e5">m_highlight</a></td></tr>
+<tr class="separator:a66bbeea661e3d2ab8a1c69d9371999e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c9052a67546060bdf04485d12b2bbb4" id="r_a1c9052a67546060bdf04485d12b2bbb4"><td class="memItemLeft" align="right" valign="top">QPointF&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c9052a67546060bdf04485d12b2bbb4">m_dragStartPosition</a></td></tr>
+<tr class="separator:a1c9052a67546060bdf04485d12b2bbb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f155857f4146e91d68d2d855ee0d764" id="r_a2f155857f4146e91d68d2d855ee0d764"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f155857f4146e91d68d2d855ee0d764">m_networkLayer</a></td></tr>
+<tr class="separator:a2f155857f4146e91d68d2d855ee0d764"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac44d1abd7597f0d28c5d3d6689393412" id="r_ac44d1abd7597f0d28c5d3d6689393412"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac44d1abd7597f0d28c5d3d6689393412">m_subnetGroup</a></td></tr>
+<tr class="separator:ac44d1abd7597f0d28c5d3d6689393412"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a4944312715c13f9c5b42342944851ab3" name="a4944312715c13f9c5b42342944851ab3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4944312715c13f9c5b42342944851ab3">&#9670;&#160;</a></span>DeviceNode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DeviceNode::DeviceNode </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_host_info.html">HostInfo</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>host</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="networktopology_8h.html#ad258d4c51629346fceac4679b3209ad9">DeviceType</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="networktopology_8h.html#ad258d4c51629346fceac4679b3209ad9af6c26de5cb6bbe4e8ff24a92a7a297b6">DEVICE_UNKNOWN</a></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="aa280521ab40d3bd66235eff06a75ea30" name="aa280521ab40d3bd66235eff06a75ea30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa280521ab40d3bd66235eff06a75ea30">&#9670;&#160;</a></span>boundingRect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QRectF DeviceNode::boundingRect </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8e325a01381c951dd58a432f2eda6369" name="a8e325a01381c951dd58a432f2eda6369"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e325a01381c951dd58a432f2eda6369">&#9670;&#160;</a></span>deviceType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="networktopology_8h.html#ad258d4c51629346fceac4679b3209ad9">DeviceType</a> DeviceNode::deviceType </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_device_node_a8e325a01381c951dd58a432f2eda6369_icgraph.png" border="0" usemap="#aclass_device_node_a8e325a01381c951dd58a432f2eda6369_icgraph" alt=""/></div>
+<map name="aclass_device_node_a8e325a01381c951dd58a432f2eda6369_icgraph" id="aclass_device_node_a8e325a01381c951dd58a432f2eda6369_icgraph">
+<area shape="rect" title=" " alt="" coords="205,13,372,38"/>
+<area shape="rect" href="class_network_topology_view.html#abb26033011fdad463562d3cb56df316b" title=" " alt="" coords="5,5,157,46"/>
+<area shape="poly" title=" " alt="" coords="189,28,157,28,157,23,189,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac0f6f8035bd7b65c6205ac2878d9ec1d" name="ac0f6f8035bd7b65c6205ac2878d9ec1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0f6f8035bd7b65c6205ac2878d9ec1d">&#9670;&#160;</a></span>hostInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_host_info.html">HostInfo</a> DeviceNode::hostInfo </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a63cf0e5f0f3e0d5be9bd1bbd11338248" name="a63cf0e5f0f3e0d5be9bd1bbd11338248"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63cf0e5f0f3e0d5be9bd1bbd11338248">&#9670;&#160;</a></span>hoverEnterEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DeviceNode::hoverEnterEvent </td>
+          <td>(</td>
+          <td class="paramtype">QGraphicsSceneHoverEvent *</td>          <td class="paramname"><span class="paramname"><em>event</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a007391437e3fce24db87c97d8cdf2686" name="a007391437e3fce24db87c97d8cdf2686"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a007391437e3fce24db87c97d8cdf2686">&#9670;&#160;</a></span>hoverLeaveEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DeviceNode::hoverLeaveEvent </td>
+          <td>(</td>
+          <td class="paramtype">QGraphicsSceneHoverEvent *</td>          <td class="paramname"><span class="paramname"><em>event</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a94ab579715500c27047b6a6636dd0b1c" name="a94ab579715500c27047b6a6636dd0b1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94ab579715500c27047b6a6636dd0b1c">&#9670;&#160;</a></span>ipAddress()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString DeviceNode::ipAddress </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8537016aab46cbc8f9c52351c5746b66" name="a8537016aab46cbc8f9c52351c5746b66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8537016aab46cbc8f9c52351c5746b66">&#9670;&#160;</a></span>mouseMoveEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DeviceNode::mouseMoveEvent </td>
+          <td>(</td>
+          <td class="paramtype">QGraphicsSceneMouseEvent *</td>          <td class="paramname"><span class="paramname"><em>event</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8e6b5f8a328666bdb5f6645d82b1e49c" name="a8e6b5f8a328666bdb5f6645d82b1e49c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e6b5f8a328666bdb5f6645d82b1e49c">&#9670;&#160;</a></span>mousePressEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DeviceNode::mousePressEvent </td>
+          <td>(</td>
+          <td class="paramtype">QGraphicsSceneMouseEvent *</td>          <td class="paramname"><span class="paramname"><em>event</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afce1d9bffed9ff781b7bdf338d71918a" name="afce1d9bffed9ff781b7bdf338d71918a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afce1d9bffed9ff781b7bdf338d71918a">&#9670;&#160;</a></span>mouseReleaseEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DeviceNode::mouseReleaseEvent </td>
+          <td>(</td>
+          <td class="paramtype">QGraphicsSceneMouseEvent *</td>          <td class="paramname"><span class="paramname"><em>event</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7ee68a7e96c77fa95d71f7a728e6c454" name="a7ee68a7e96c77fa95d71f7a728e6c454"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ee68a7e96c77fa95d71f7a728e6c454">&#9670;&#160;</a></span>networkLayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DeviceNode::networkLayer </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_device_node_a7ee68a7e96c77fa95d71f7a728e6c454_icgraph.png" border="0" usemap="#aclass_device_node_a7ee68a7e96c77fa95d71f7a728e6c454_icgraph" alt=""/></div>
+<map name="aclass_device_node_a7ee68a7e96c77fa95d71f7a728e6c454_icgraph" id="aclass_device_node_a7ee68a7e96c77fa95d71f7a728e6c454_icgraph">
+<area shape="rect" title=" " alt="" coords="205,13,384,38"/>
+<area shape="rect" href="class_network_topology_view.html#abb26033011fdad463562d3cb56df316b" title=" " alt="" coords="5,5,157,46"/>
+<area shape="poly" title=" " alt="" coords="189,28,157,28,157,23,189,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad11a8f575a8d6df6b7545e7071af181e" name="ad11a8f575a8d6df6b7545e7071af181e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad11a8f575a8d6df6b7545e7071af181e">&#9670;&#160;</a></span>paint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DeviceNode::paint </td>
+          <td>(</td>
+          <td class="paramtype">QPainter *</td>          <td class="paramname"><span class="paramname"><em>painter</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QStyleOptionGraphicsItem *</td>          <td class="paramname"><span class="paramname"><em>option</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QWidget *</td>          <td class="paramname"><span class="paramname"><em>widget</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af113b3eb8c31ece100489938be417ece" name="af113b3eb8c31ece100489938be417ece"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af113b3eb8c31ece100489938be417ece">&#9670;&#160;</a></span>setDeviceType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DeviceNode::setDeviceType </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="networktopology_8h.html#ad258d4c51629346fceac4679b3209ad9">DeviceType</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3c1916cf448115bf13debb1ccaecca7f" name="a3c1916cf448115bf13debb1ccaecca7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c1916cf448115bf13debb1ccaecca7f">&#9670;&#160;</a></span>setNetworkLayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DeviceNode::setNetworkLayer </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>layer</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_device_node_a3c1916cf448115bf13debb1ccaecca7f_icgraph.png" border="0" usemap="#aclass_device_node_a3c1916cf448115bf13debb1ccaecca7f_icgraph" alt=""/></div>
+<map name="aclass_device_node_a3c1916cf448115bf13debb1ccaecca7f_icgraph" id="aclass_device_node_a3c1916cf448115bf13debb1ccaecca7f_icgraph">
+<area shape="rect" title=" " alt="" coords="205,13,405,38"/>
+<area shape="rect" href="class_network_topology_view.html#abb26033011fdad463562d3cb56df316b" title=" " alt="" coords="5,5,157,46"/>
+<area shape="poly" title=" " alt="" coords="189,28,157,28,157,23,189,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aef416a5365cf9d935f84a9a0949fdcdc" name="aef416a5365cf9d935f84a9a0949fdcdc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef416a5365cf9d935f84a9a0949fdcdc">&#9670;&#160;</a></span>setPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DeviceNode::setPosition </td>
+          <td>(</td>
+          <td class="paramtype">const QPointF &amp;</td>          <td class="paramname"><span class="paramname"><em>pos</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8763e7f52f3239f6cd31234a89060dbe" name="a8763e7f52f3239f6cd31234a89060dbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8763e7f52f3239f6cd31234a89060dbe">&#9670;&#160;</a></span>setSubnetGroup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DeviceNode::setSubnetGroup </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>subnet</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_device_node_a8763e7f52f3239f6cd31234a89060dbe_icgraph.png" border="0" usemap="#aclass_device_node_a8763e7f52f3239f6cd31234a89060dbe_icgraph" alt=""/></div>
+<map name="aclass_device_node_a8763e7f52f3239f6cd31234a89060dbe_icgraph" id="aclass_device_node_a8763e7f52f3239f6cd31234a89060dbe_icgraph">
+<area shape="rect" title=" " alt="" coords="205,13,400,38"/>
+<area shape="rect" href="class_network_topology_view.html#abb26033011fdad463562d3cb56df316b" title=" " alt="" coords="5,5,157,46"/>
+<area shape="poly" title=" " alt="" coords="189,28,157,28,157,23,189,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9a93233328d9a5db24a23daa965f49ad" name="a9a93233328d9a5db24a23daa965f49ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a93233328d9a5db24a23daa965f49ad">&#9670;&#160;</a></span>subnetGroup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString DeviceNode::subnetGroup </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a1c9052a67546060bdf04485d12b2bbb4" name="a1c9052a67546060bdf04485d12b2bbb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c9052a67546060bdf04485d12b2bbb4">&#9670;&#160;</a></span>m_dragStartPosition</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QPointF DeviceNode::m_dragStartPosition</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a66bbeea661e3d2ab8a1c69d9371999e5" name="a66bbeea661e3d2ab8a1c69d9371999e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66bbeea661e3d2ab8a1c69d9371999e5">&#9670;&#160;</a></span>m_highlight</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DeviceNode::m_highlight</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3c4db426da62437969a9064365ee4756" name="a3c4db426da62437969a9064365ee4756"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c4db426da62437969a9064365ee4756">&#9670;&#160;</a></span>m_host</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_host_info.html">HostInfo</a> DeviceNode::m_host</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2f155857f4146e91d68d2d855ee0d764" name="a2f155857f4146e91d68d2d855ee0d764"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f155857f4146e91d68d2d855ee0d764">&#9670;&#160;</a></span>m_networkLayer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DeviceNode::m_networkLayer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac44d1abd7597f0d28c5d3d6689393412" name="ac44d1abd7597f0d28c5d3d6689393412"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac44d1abd7597f0d28c5d3d6689393412">&#9670;&#160;</a></span>m_subnetGroup</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString DeviceNode::m_subnetGroup</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad57955c067a58853e3cce781ed8ea330" name="ad57955c067a58853e3cce781ed8ea330"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad57955c067a58853e3cce781ed8ea330">&#9670;&#160;</a></span>m_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="networktopology_8h.html#ad258d4c51629346fceac4679b3209ad9">DeviceType</a> DeviceNode::m_type</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="networktopology_8h_source.html">networktopology.h</a></li>
+<li><a class="el" href="networktopology_8cpp.html">networktopology.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_device_node.html">DeviceNode</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

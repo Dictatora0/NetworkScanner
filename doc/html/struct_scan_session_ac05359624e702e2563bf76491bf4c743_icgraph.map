@@ -1,0 +1,13 @@
+<map id="ScanSession::totalHosts" name="ScanSession::totalHosts">
+<area shape="rect" id="Node000001" title=" " alt="" coords="964,35,1130,60"/>
+<area shape="rect" id="Node000002" href="$class_main_window.html#a1f0cb31651f8371996d1f8b69429a68b" title=" " alt="" coords="686,5,916,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="948,38,914,34,914,29,948,33"/>
+<area shape="rect" id="Node000006" href="$struct_scan_session.html#a1fa497179de9e557e47f9d9be7ca807a" title=" " alt="" coords="713,55,889,96"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="949,61,890,68,889,63,948,56"/>
+<area shape="rect" id="Node000003" href="$class_main_window.html#a8bf6295611a3bb5282e86895c696c9ac" title=" " alt="" coords="435,5,638,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="671,21,639,21,639,16,671,16"/>
+<area shape="rect" id="Node000004" href="$class_main_window.html#aabd8d480a18455fd70abceb51345d6a6" title=" " alt="" coords="233,5,387,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="419,21,387,21,387,16,419,16"/>
+<area shape="rect" id="Node000005" href="$class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,5,185,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="217,21,185,21,185,16,217,16"/>
+</map>

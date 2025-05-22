@@ -1,0 +1,29 @@
+/**
+ * @mainpage Network Scanner 项目文档
+ * 
+ * @section intro 简介
+ * Network Scanner是一个用于网络扫描和拓扑分析的工具。
+ * 它可以帮助您发现网络中的设备，分析设备特性，并生成网络拓扑图。
+ * 
+ * @section features 主要功能
+ * - 网络设备扫描
+ * - 设备分析
+ * - 网络拓扑可视化
+ * - 扫描历史记录
+ * 
+ * @section arch 项目架构
+ * 该项目主要包含以下模块：
+ * - 主窗口(@ref MainWindow)：用户界面
+ * - 网络扫描器(@ref NetworkScanner)：负责扫描网络设备
+ * - 网络拓扑(@ref NetworkTopology)：生成和展示网络拓扑图
+ * - 设备分析器(@ref DeviceAnalyzer)：分析设备特性
+ * - 扫描历史(@ref ScanHistory)：管理扫描历史记录
+ * 
+ * @section build 构建说明
+ * 该项目使用CMake构建系统，依赖于Qt6库。
+ * 构建步骤：
+ * 1. 确保已安装CMake和Qt6
+ * 2. 创建构建目录：`mkdir build && cd build`
+ * 3. 配置项目：`cmake ..`
+ * 4. 构建项目：`make`
+ */ 

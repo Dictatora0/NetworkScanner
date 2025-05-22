@@ -1,0 +1,19 @@
+<map id="NetworkTopologyView::setHosts" name="NetworkTopologyView::setHosts">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,223,157,263"/>
+<area shape="rect" id="Node000002" href="$class_network_topology_view.html#a28f8bd8a7ca94d2bf012df95baa8528f" title=" " alt="" coords="229,5,380,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="88,221,105,186,130,142,163,96,203,57,214,49,217,54,206,61,167,100,134,144,110,188,93,223"/>
+<area shape="rect" id="Node000003" href="$class_network_topology_view.html#a35a7ee9e7b84f4d268fa4c371a75c803" title=" " alt="" coords="229,71,380,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="97,220,142,171,171,145,203,122,214,116,217,121,206,127,174,149,145,175,101,224"/>
+<area shape="rect" id="Node000004" href="$class_network_topology_view.html#ab4a6db2c2d7f558ce80a155cc6e960c1" title=" " alt="" coords="227,136,382,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="125,220,204,186,221,180,222,185,206,191,127,225"/>
+<area shape="rect" id="Node000005" href="$class_device_node.html#a8e325a01381c951dd58a432f2eda6369" title=" " alt="" coords="221,201,388,226"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="157,230,206,224,206,229,158,236"/>
+<area shape="rect" id="Node000006" href="$class_network_topology_view.html#aaf91e8f992d89a55c382815abcb84184" title=" " alt="" coords="229,251,380,291"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="158,250,214,257,214,262,157,255"/>
+<area shape="rect" id="Node000007" href="$class_device_node.html#a7ee68a7e96c77fa95d71f7a728e6c454" title=" " alt="" coords="215,316,394,341"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="121,262,206,301,229,308,227,313,204,305,119,266"/>
+<area shape="rect" id="Node000008" href="$class_device_node.html#a3c1916cf448115bf13debb1ccaecca7f" title=" " alt="" coords="205,365,405,390"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="101,262,146,308,175,331,206,351,217,357,215,361,203,356,171,336,142,312,98,266"/>
+<area shape="rect" id="Node000009" href="$class_device_node.html#a8763e7f52f3239f6cd31234a89060dbe" title=" " alt="" coords="207,414,402,440"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="95,263,112,294,137,331,168,369,206,401,214,405,211,410,203,405,165,373,132,335,107,296,90,265"/>
+</map>

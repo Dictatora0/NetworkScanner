@@ -1,0 +1,1381 @@
+\doxysection{Main\+Window类 参考}
+\hypertarget{class_main_window}{}\label{class_main_window}\index{MainWindow@{MainWindow}}
+
+
+{\ttfamily \#include $<$mainwindow.\+h$>$}
+
+
+
+类 Main\+Window 继承关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_main_window__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Main\+Window 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_main_window__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_main_window_a996c5a2b6f77944776856f08ec30858d}{Main\+Window}} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\item 
+\mbox{\hyperlink{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{\texorpdfstring{$\sim$}{\string~}\+Main\+Window}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 槽}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_main_window_a092a4ceaf59fa4db7b29d03c66f07623}{start\+Scan}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_a61696f5c0f521ce980e509b91e8d0fce}{stop\+Scan}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_afdbbca312bcf06606c0ab0ce8d58e307}{on\+Host\+Found}} (const \mbox{\hyperlink{struct_host_info}{Host\+Info}} \&host)
+\item 
+void \mbox{\hyperlink{class_main_window_a9d1d85dd212a356122115bde5db8bf3a}{on\+Scan\+Started}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_a5bac6a75bb80dd8a8501547562878a50}{on\+Scan\+Finished}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_a11e2be8668e70859d34898e5dfa87732}{on\+Scan\+Progress}} (int progress)
+\item 
+void \mbox{\hyperlink{class_main_window_aff96eaa326f306cc983e72f5b2bd073c}{on\+Scan\+Error}} (const QString \&error\+Message)
+\item 
+void \mbox{\hyperlink{class_main_window_a4cb868f898400955a1035571326591cf}{save\+Results}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_a3e1f77c4a928e74c560e84b67ed4d93d}{clear\+Results}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_aabfa36b35a25cafc7832c489f5bd30f2}{show\+Settings}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_a5d35402881e369e364eab5c647478f5d}{apply\+Settings}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_aa3aa0f3ce42e748b931d6211921ea197}{show\+About}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_a226ae57b71712bebff12904e809280e1}{show\+Host\+Details}} (int row, int column)
+\item 
+void \mbox{\hyperlink{class_main_window_a3166c6f9d50bec289812365751cabe07}{export\+To\+CSV}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_a063df8fc929132d9c78afc70e376523e}{toggle\+Port\+Scan\+Options}} (bool checked)
+\item 
+void \mbox{\hyperlink{class_main_window_a441682ebf3b1a226f5e8f7599a74c722}{toggle\+Range\+Options}} (bool checked)
+\item 
+void \mbox{\hyperlink{class_main_window_a2db0996ad54247e897b90de18cfbeb5d}{show\+Topology\+View}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_a92a83e9e4d4f9d5373f89c7d112d2b00}{show\+Statistics\+View}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_ad146c08dc16c52491f5ff953339e975b}{show\+History\+View}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_a01e00e8c12707eb3d08859f98b1c6612}{generate\+Security\+Report}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_a160e765f35717b6304cfdd96b761cbc9}{save\+Topology\+Image}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_a16bd0ccae935c03c93906bcee7e7c314}{toggle\+Dark\+Mode}} (bool enable)
+\item 
+void \mbox{\hyperlink{class_main_window_a1f0cb31651f8371996d1f8b69429a68b}{compare\+Scan\+Results}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_a0dd210d98a9be161fce40284534369f0}{schedule\+Scan}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_a4242ff1e7fd5df4fafdc4329ad466acf}{save\+History\+To\+File}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_a8e6264dacd417a196d1e8690e2bee82f}{load\+History\+From\+File}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_a540aa8c9d27c827db079fdacd75b5aac}{update\+Network\+Topology}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_a4cfaca8251ce7ad3ac0b49d483c14b48}{refresh\+Topology}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_a02a66a16cd39489f10ce96440ba16a93}{filter\+Results}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_a5cdb762482ab2ffe8eb26aed5065c492}{clear\+Filters}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_ad02df47bb9e6e540bd658f4eec792009}{on\+Theme\+Changed}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_main_window_aabd8d480a18455fd70abceb51345d6a6}{create\+UI}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_aa4907b0251d305659e403c62921ef331}{create\+Menus}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_aac5a030c2bb05022b9ba2e84d9aebbce}{create\+Settings\+Dialog}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_aee6c67086bb42a78185847b603f3566e}{create\+Topology\+Tab}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_ace493b349f7c672189294b8d065cd708}{create\+Statistics\+Tab}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_a8bf6295611a3bb5282e86895c696c9ac}{create\+History\+Tab}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_a16cd72b1f4e32851cb8c57a3da1aad7f}{create\+Details\+Tab}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_a2d3368ed4e2adcc0c9da18bd57da5fb4}{create\+Security\+Tab}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_a95dc085bf70bd0c1ad05bd80f897fd1d}{setup\+Connections}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_ae88824a309842c91bcb751650907a7ab}{update\+Ports\+List}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_a9bb1f3b7f6b5360abfd2dc01fc1c8930}{load\+Settings}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_abb30531afee763d0586ee6323fd332e2}{save\+Settings}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_af9258c03a301bb07d66fa02d28e15706}{update\+Statistics}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_ae3116070947b6636dcfc2a72b2a54cc0}{apply\+Theme}} (bool dark\+Mode)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+QWidget \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_ac3e02f178aa7d38fe0d754f0ec8a711e}{m\+\_\+central\+Widget}}
+\item 
+QTab\+Widget \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_af312eeff9342ea9edfb5f34e0aa1c332}{m\+\_\+tab\+Widget}}
+\item 
+QWidget \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_a5b0cdf71bbbfa349a514868e90ee32ae}{m\+\_\+scan\+Tab}}
+\item 
+QVBox\+Layout \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_a038d03f63acfa7f735641a88a3e24ce8}{m\+\_\+main\+Layout}}
+\item 
+QHBox\+Layout \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_a29d6df52e48bb25f8c61f689b33e4eb6}{m\+\_\+control\+Layout}}
+\item 
+QTable\+Widget \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_a1fd3a18d5cb22b3ae0d87e1d298e385c}{m\+\_\+results\+Table}}
+\item 
+QPush\+Button \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_ae63606834e1a8cfa06f32e66c6df5dfb}{m\+\_\+scan\+Button}}
+\item 
+QPush\+Button \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_aa25aef2c0667650b7b28291f0ca583ae}{m\+\_\+stop\+Button}}
+\item 
+QPush\+Button \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_af7d5ecbab513a416062b8c9a7d5be3ed}{m\+\_\+clear\+Button}}
+\item 
+QPush\+Button \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_ae5e5c1ddc0fbf52e5ef7f0cb73cbfca6}{m\+\_\+save\+Button}}
+\item 
+QProgress\+Bar \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_abf92ec91ba0ea6d6265ec74075e5c50d}{m\+\_\+progress\+Bar}}
+\item 
+QLabel \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_ab9c6492b81f3117ca8fed55c7b97da44}{m\+\_\+status\+Label}}
+\item 
+QStatus\+Bar \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_a9b6351507b5ce0cf250e536433c686e4}{m\+\_\+status\+Bar}}
+\item 
+QWidget \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_a0ad7ee813905c0bb28c864c52bcc8530}{m\+\_\+settings\+Tab}}
+\item 
+QVBox\+Layout \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_a93290c7b84dafa7c3abe179c4227659f}{m\+\_\+settings\+Layout}}
+\item 
+QGroup\+Box \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_a83a96d668e3d24b853d99a74c51c3f57}{m\+\_\+ports\+Group\+Box}}
+\item 
+QCheck\+Box \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_aacbd2803a584f86685b5f58afbdf57b6}{m\+\_\+custom\+Ports\+Check\+Box}}
+\item 
+QLine\+Edit \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_a9efc5a0bc3943a315b228f62353e102a}{m\+\_\+ports\+Line\+Edit}}
+\item 
+QSpin\+Box \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_a573b9f461d2fe6514b5deedeb6095d41}{m\+\_\+timeout\+Spin\+Box}}
+\item 
+QGroup\+Box \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_a1ddfaccfa9a0652a5468b4af05c8606d}{m\+\_\+range\+Group\+Box}}
+\item 
+QCheck\+Box \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_a95393326363a86caee0fc3510c6f2ad0}{m\+\_\+custom\+Range\+Check\+Box}}
+\item 
+QLine\+Edit \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_a31dfa3be7235c663d71d851db72d8c42}{m\+\_\+start\+IPLine\+Edit}}
+\item 
+QLine\+Edit \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_a476b04c5841b66c6ace44b5332a2edff}{m\+\_\+end\+IPLine\+Edit}}
+\item 
+QWidget \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_af32587da7d4f739dbfe86fbadbc7f897}{m\+\_\+details\+Tab}}
+\item 
+QVBox\+Layout \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_aaf0fdb6b0b3bc971f00fc922aa93dfb3}{m\+\_\+details\+Layout}}
+\item 
+QText\+Edit \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_aabd224bf9307a91a0531ce54b886a1d7}{m\+\_\+details\+Text\+Edit}}
+\item 
+QWidget \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_a872a2dd22f557555f5c960cc3bb87e21}{m\+\_\+topology\+Tab}}
+\item 
+\mbox{\hyperlink{class_network_topology}{Network\+Topology}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_a3ef751f40d803879a0a9fa5043afdf30}{m\+\_\+network\+Topology}}
+\item 
+QWidget \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_ac9557ba0a655b1b88ac28fbf17ebedda}{m\+\_\+statistics\+Tab}}
+\item 
+\mbox{\hyperlink{class_device_analyzer}{Device\+Analyzer}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_a1e492c9a6cf8cf0345ed043b97c37065}{m\+\_\+device\+Analyzer}}
+\item 
+QChart\+View \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_aab5c27a89df8705ccc16b1b55c56dde0}{m\+\_\+device\+Type\+Chart\+View}}
+\item 
+QChart\+View \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_a2ae79443f7d47cc8ae46e8f78ae94b55}{m\+\_\+vendor\+Chart\+View}}
+\item 
+QChart\+View \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_a4dc30c7d07b7d94b93051bdf9a0d1e64}{m\+\_\+port\+Distribution\+Chart\+View}}
+\item 
+QText\+Edit \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_a0ee7722c34e72433cd64b171cdf982c0}{m\+\_\+security\+Report\+Text}}
+\item 
+QWidget \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_a1971cf2b6b5ebdf34a9552f66d716a71}{m\+\_\+history\+Tab}}
+\item 
+\mbox{\hyperlink{class_scan_history}{Scan\+History}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_af5450d28fa59136d591227fd90596d15}{m\+\_\+scan\+History}}
+\item 
+QCombo\+Box \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_a85b80c3e6dcefacd4a5a0ef17077c658}{m\+\_\+session\+Combo\+Box}}
+\item 
+QTable\+Widget \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_aaefdba77910ab598c153dfdc8d976f55}{m\+\_\+history\+Table}}
+\item 
+QMenu \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_adec8f01e467bf8d23726b996881fb2e7}{m\+\_\+file\+Menu}}
+\item 
+QMenu \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_aea015210dfb510096531b0d4b74a0560}{m\+\_\+view\+Menu}}
+\item 
+QMenu \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_abeabed45473d9238dbff21a927cde690}{m\+\_\+tools\+Menu}}
+\item 
+QMenu \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_aad8c15f252b869d1003c3a82566ac1b4}{m\+\_\+help\+Menu}}
+\item 
+QAction \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_a75a23135f1ee52c5b91803406ee57fbf}{m\+\_\+export\+Action}}
+\item 
+QAction \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_a8bb4a8dea70f2c7dbff9590a07dc915a}{m\+\_\+save\+History\+Action}}
+\item 
+QAction \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_ab94930f0e47a8abd2137e31374402764}{m\+\_\+load\+History\+Action}}
+\item 
+QAction \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_adb177ce59ee76518f015b12c5b56f17e}{m\+\_\+save\+Topology\+Action}}
+\item 
+QAction \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_a96d76acf03c4b8af4828931fc4411eba}{m\+\_\+exit\+Action}}
+\item 
+QAction \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_a0480b4ed9b2a198781c64a2bca488149}{m\+\_\+settings\+Action}}
+\item 
+QAction \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_ad67ac377df3fc8c750fe8990d3b21cf9}{m\+\_\+dark\+Mode\+Action}}
+\item 
+QAction \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_a4ddad3934e8a9171518414b20ce39a91}{m\+\_\+schedule\+Scan\+Action}}
+\item 
+QAction \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_a23de3541f59aa30aca5eb2af14548d1d}{m\+\_\+about\+Action}}
+\item 
+QWidget \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_ae1e85d1e8982b6553d098d92bbf9f6d4}{m\+\_\+filter\+Widget}}
+\item 
+QLine\+Edit \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_a828111ee401a70fda2d26736d674df9f}{m\+\_\+filter\+IPLine\+Edit}}
+\item 
+QCombo\+Box \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_a058e5ff94ea9d7bd11b6325b46c31208}{m\+\_\+filter\+Vendor\+Combo\+Box}}
+\item 
+QCombo\+Box \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_a5379fea6d42de983e755645318c44954}{m\+\_\+filter\+Type\+Combo\+Box}}
+\item 
+QPush\+Button \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_a7e060d75e62f570186e6f04e4d74f16c}{m\+\_\+filter\+Button}}
+\item 
+QPush\+Button \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_a6dc4c3cc9a03aa99a9e005f9cdbb3faa}{m\+\_\+clear\+Filter\+Button}}
+\item 
+\mbox{\hyperlink{class_network_scanner}{Network\+Scanner}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_abb22ddcde79991f45509c764db7fb9ba}{m\+\_\+scanner}}
+\item 
+int \mbox{\hyperlink{class_main_window_a1f688c173065551bc877292999dd9671}{m\+\_\+hosts\+Found}}
+\item 
+int \mbox{\hyperlink{class_main_window_aec413ec818a9839fac7b6f8411e52a40}{m\+\_\+current\+Host\+Index}}
+\item 
+bool \mbox{\hyperlink{class_main_window_a631c3bcc94648a3692ed237931aaed8b}{m\+\_\+dark\+Mode\+Enabled}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{构造及析构函数说明}
+\Hypertarget{class_main_window_a996c5a2b6f77944776856f08ec30858d}\index{MainWindow@{MainWindow}!MainWindow@{MainWindow}}
+\index{MainWindow@{MainWindow}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{MainWindow()}{MainWindow()}}
+{\footnotesize\ttfamily \label{class_main_window_a996c5a2b6f77944776856f08ec30858d} 
+Main\+Window\+::\+Main\+Window (\begin{DoxyParamCaption}\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a996c5a2b6f77944776856f08ec30858d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}\index{MainWindow@{MainWindow}!````~MainWindow@{\texorpdfstring{$\sim$}{\string~}MainWindow}}
+\index{````~MainWindow@{\texorpdfstring{$\sim$}{\string~}MainWindow}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}MainWindow()}{\string~MainWindow()}}
+{\footnotesize\ttfamily \label{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7} 
+Main\+Window\+::\texorpdfstring{$\sim$}{\string~}\+Main\+Window (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{成员函数说明}
+\Hypertarget{class_main_window_a5d35402881e369e364eab5c647478f5d}\index{MainWindow@{MainWindow}!applySettings@{applySettings}}
+\index{applySettings@{applySettings}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{applySettings}{applySettings}}
+{\footnotesize\ttfamily \label{class_main_window_a5d35402881e369e364eab5c647478f5d} 
+void Main\+Window\+::apply\+Settings (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a5d35402881e369e364eab5c647478f5d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_main_window_ae3116070947b6636dcfc2a72b2a54cc0}\index{MainWindow@{MainWindow}!applyTheme@{applyTheme}}
+\index{applyTheme@{applyTheme}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{applyTheme()}{applyTheme()}}
+{\footnotesize\ttfamily \label{class_main_window_ae3116070947b6636dcfc2a72b2a54cc0} 
+void Main\+Window\+::apply\+Theme (\begin{DoxyParamCaption}\item[{bool}]{dark\+Mode}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_ae3116070947b6636dcfc2a72b2a54cc0_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_ae3116070947b6636dcfc2a72b2a54cc0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_main_window_a5cdb762482ab2ffe8eb26aed5065c492}\index{MainWindow@{MainWindow}!clearFilters@{clearFilters}}
+\index{clearFilters@{clearFilters}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{clearFilters}{clearFilters}}
+{\footnotesize\ttfamily \label{class_main_window_a5cdb762482ab2ffe8eb26aed5065c492} 
+void Main\+Window\+::clear\+Filters (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a5cdb762482ab2ffe8eb26aed5065c492_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_main_window_a3e1f77c4a928e74c560e84b67ed4d93d}\index{MainWindow@{MainWindow}!clearResults@{clearResults}}
+\index{clearResults@{clearResults}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{clearResults}{clearResults}}
+{\footnotesize\ttfamily \label{class_main_window_a3e1f77c4a928e74c560e84b67ed4d93d} 
+void Main\+Window\+::clear\+Results (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a3e1f77c4a928e74c560e84b67ed4d93d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_main_window_a1f0cb31651f8371996d1f8b69429a68b}\index{MainWindow@{MainWindow}!compareScanResults@{compareScanResults}}
+\index{compareScanResults@{compareScanResults}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{compareScanResults}{compareScanResults}}
+{\footnotesize\ttfamily \label{class_main_window_a1f0cb31651f8371996d1f8b69429a68b} 
+void Main\+Window\+::compare\+Scan\+Results (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a1f0cb31651f8371996d1f8b69429a68b_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a1f0cb31651f8371996d1f8b69429a68b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_main_window_a16cd72b1f4e32851cb8c57a3da1aad7f}\index{MainWindow@{MainWindow}!createDetailsTab@{createDetailsTab}}
+\index{createDetailsTab@{createDetailsTab}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{createDetailsTab()}{createDetailsTab()}}
+{\footnotesize\ttfamily \label{class_main_window_a16cd72b1f4e32851cb8c57a3da1aad7f} 
+void Main\+Window\+::create\+Details\+Tab (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a16cd72b1f4e32851cb8c57a3da1aad7f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_main_window_a8bf6295611a3bb5282e86895c696c9ac}\index{MainWindow@{MainWindow}!createHistoryTab@{createHistoryTab}}
+\index{createHistoryTab@{createHistoryTab}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{createHistoryTab()}{createHistoryTab()}}
+{\footnotesize\ttfamily \label{class_main_window_a8bf6295611a3bb5282e86895c696c9ac} 
+void Main\+Window\+::create\+History\+Tab (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a8bf6295611a3bb5282e86895c696c9ac_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a8bf6295611a3bb5282e86895c696c9ac_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_main_window_aa4907b0251d305659e403c62921ef331}\index{MainWindow@{MainWindow}!createMenus@{createMenus}}
+\index{createMenus@{createMenus}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{createMenus()}{createMenus()}}
+{\footnotesize\ttfamily \label{class_main_window_aa4907b0251d305659e403c62921ef331} 
+void Main\+Window\+::create\+Menus (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_aa4907b0251d305659e403c62921ef331_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_aa4907b0251d305659e403c62921ef331_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_main_window_a2d3368ed4e2adcc0c9da18bd57da5fb4}\index{MainWindow@{MainWindow}!createSecurityTab@{createSecurityTab}}
+\index{createSecurityTab@{createSecurityTab}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{createSecurityTab()}{createSecurityTab()}}
+{\footnotesize\ttfamily \label{class_main_window_a2d3368ed4e2adcc0c9da18bd57da5fb4} 
+void Main\+Window\+::create\+Security\+Tab (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_aac5a030c2bb05022b9ba2e84d9aebbce}\index{MainWindow@{MainWindow}!createSettingsDialog@{createSettingsDialog}}
+\index{createSettingsDialog@{createSettingsDialog}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{createSettingsDialog()}{createSettingsDialog()}}
+{\footnotesize\ttfamily \label{class_main_window_aac5a030c2bb05022b9ba2e84d9aebbce} 
+void Main\+Window\+::create\+Settings\+Dialog (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_aac5a030c2bb05022b9ba2e84d9aebbce_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_aac5a030c2bb05022b9ba2e84d9aebbce_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_main_window_ace493b349f7c672189294b8d065cd708}\index{MainWindow@{MainWindow}!createStatisticsTab@{createStatisticsTab}}
+\index{createStatisticsTab@{createStatisticsTab}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{createStatisticsTab()}{createStatisticsTab()}}
+{\footnotesize\ttfamily \label{class_main_window_ace493b349f7c672189294b8d065cd708} 
+void Main\+Window\+::create\+Statistics\+Tab (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_ace493b349f7c672189294b8d065cd708_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_ace493b349f7c672189294b8d065cd708_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_main_window_aee6c67086bb42a78185847b603f3566e}\index{MainWindow@{MainWindow}!createTopologyTab@{createTopologyTab}}
+\index{createTopologyTab@{createTopologyTab}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{createTopologyTab()}{createTopologyTab()}}
+{\footnotesize\ttfamily \label{class_main_window_aee6c67086bb42a78185847b603f3566e} 
+void Main\+Window\+::create\+Topology\+Tab (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_aee6c67086bb42a78185847b603f3566e_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_aee6c67086bb42a78185847b603f3566e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_main_window_aabd8d480a18455fd70abceb51345d6a6}\index{MainWindow@{MainWindow}!createUI@{createUI}}
+\index{createUI@{createUI}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{createUI()}{createUI()}}
+{\footnotesize\ttfamily \label{class_main_window_aabd8d480a18455fd70abceb51345d6a6} 
+void Main\+Window\+::create\+UI (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_aabd8d480a18455fd70abceb51345d6a6_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_aabd8d480a18455fd70abceb51345d6a6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_main_window_a3166c6f9d50bec289812365751cabe07}\index{MainWindow@{MainWindow}!exportToCSV@{exportToCSV}}
+\index{exportToCSV@{exportToCSV}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{exportToCSV}{exportToCSV}}
+{\footnotesize\ttfamily \label{class_main_window_a3166c6f9d50bec289812365751cabe07} 
+void Main\+Window\+::export\+To\+CSV (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a3166c6f9d50bec289812365751cabe07_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_main_window_a02a66a16cd39489f10ce96440ba16a93}\index{MainWindow@{MainWindow}!filterResults@{filterResults}}
+\index{filterResults@{filterResults}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{filterResults}{filterResults}}
+{\footnotesize\ttfamily \label{class_main_window_a02a66a16cd39489f10ce96440ba16a93} 
+void Main\+Window\+::filter\+Results (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a02a66a16cd39489f10ce96440ba16a93_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a02a66a16cd39489f10ce96440ba16a93_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_main_window_a01e00e8c12707eb3d08859f98b1c6612}\index{MainWindow@{MainWindow}!generateSecurityReport@{generateSecurityReport}}
+\index{generateSecurityReport@{generateSecurityReport}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{generateSecurityReport}{generateSecurityReport}}
+{\footnotesize\ttfamily \label{class_main_window_a01e00e8c12707eb3d08859f98b1c6612} 
+void Main\+Window\+::generate\+Security\+Report (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a01e00e8c12707eb3d08859f98b1c6612_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_main_window_a8e6264dacd417a196d1e8690e2bee82f}\index{MainWindow@{MainWindow}!loadHistoryFromFile@{loadHistoryFromFile}}
+\index{loadHistoryFromFile@{loadHistoryFromFile}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{loadHistoryFromFile}{loadHistoryFromFile}}
+{\footnotesize\ttfamily \label{class_main_window_a8e6264dacd417a196d1e8690e2bee82f} 
+void Main\+Window\+::load\+History\+From\+File (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a8e6264dacd417a196d1e8690e2bee82f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_main_window_a9bb1f3b7f6b5360abfd2dc01fc1c8930}\index{MainWindow@{MainWindow}!loadSettings@{loadSettings}}
+\index{loadSettings@{loadSettings}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{loadSettings()}{loadSettings()}}
+{\footnotesize\ttfamily \label{class_main_window_a9bb1f3b7f6b5360abfd2dc01fc1c8930} 
+void Main\+Window\+::load\+Settings (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a9bb1f3b7f6b5360abfd2dc01fc1c8930_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a9bb1f3b7f6b5360abfd2dc01fc1c8930_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_main_window_afdbbca312bcf06606c0ab0ce8d58e307}\index{MainWindow@{MainWindow}!onHostFound@{onHostFound}}
+\index{onHostFound@{onHostFound}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{onHostFound}{onHostFound}}
+{\footnotesize\ttfamily \label{class_main_window_afdbbca312bcf06606c0ab0ce8d58e307} 
+void Main\+Window\+::on\+Host\+Found (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_host_info}{Host\+Info}} \&}]{host}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_afdbbca312bcf06606c0ab0ce8d58e307_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_main_window_aff96eaa326f306cc983e72f5b2bd073c}\index{MainWindow@{MainWindow}!onScanError@{onScanError}}
+\index{onScanError@{onScanError}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{onScanError}{onScanError}}
+{\footnotesize\ttfamily \label{class_main_window_aff96eaa326f306cc983e72f5b2bd073c} 
+void Main\+Window\+::on\+Scan\+Error (\begin{DoxyParamCaption}\item[{const QString \&}]{error\+Message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_aff96eaa326f306cc983e72f5b2bd073c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_main_window_a5bac6a75bb80dd8a8501547562878a50}\index{MainWindow@{MainWindow}!onScanFinished@{onScanFinished}}
+\index{onScanFinished@{onScanFinished}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{onScanFinished}{onScanFinished}}
+{\footnotesize\ttfamily \label{class_main_window_a5bac6a75bb80dd8a8501547562878a50} 
+void Main\+Window\+::on\+Scan\+Finished (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a5bac6a75bb80dd8a8501547562878a50_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a5bac6a75bb80dd8a8501547562878a50_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_main_window_a11e2be8668e70859d34898e5dfa87732}\index{MainWindow@{MainWindow}!onScanProgress@{onScanProgress}}
+\index{onScanProgress@{onScanProgress}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{onScanProgress}{onScanProgress}}
+{\footnotesize\ttfamily \label{class_main_window_a11e2be8668e70859d34898e5dfa87732} 
+void Main\+Window\+::on\+Scan\+Progress (\begin{DoxyParamCaption}\item[{int}]{progress}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a11e2be8668e70859d34898e5dfa87732_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_main_window_a9d1d85dd212a356122115bde5db8bf3a}\index{MainWindow@{MainWindow}!onScanStarted@{onScanStarted}}
+\index{onScanStarted@{onScanStarted}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{onScanStarted}{onScanStarted}}
+{\footnotesize\ttfamily \label{class_main_window_a9d1d85dd212a356122115bde5db8bf3a} 
+void Main\+Window\+::on\+Scan\+Started (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a9d1d85dd212a356122115bde5db8bf3a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_main_window_ad02df47bb9e6e540bd658f4eec792009}\index{MainWindow@{MainWindow}!onThemeChanged@{onThemeChanged}}
+\index{onThemeChanged@{onThemeChanged}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{onThemeChanged}{onThemeChanged}}
+{\footnotesize\ttfamily \label{class_main_window_ad02df47bb9e6e540bd658f4eec792009} 
+void Main\+Window\+::on\+Theme\+Changed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_ad02df47bb9e6e540bd658f4eec792009_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_main_window_a4cfaca8251ce7ad3ac0b49d483c14b48}\index{MainWindow@{MainWindow}!refreshTopology@{refreshTopology}}
+\index{refreshTopology@{refreshTopology}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{refreshTopology}{refreshTopology}}
+{\footnotesize\ttfamily \label{class_main_window_a4cfaca8251ce7ad3ac0b49d483c14b48} 
+void Main\+Window\+::refresh\+Topology (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a4cfaca8251ce7ad3ac0b49d483c14b48_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_main_window_a4242ff1e7fd5df4fafdc4329ad466acf}\index{MainWindow@{MainWindow}!saveHistoryToFile@{saveHistoryToFile}}
+\index{saveHistoryToFile@{saveHistoryToFile}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{saveHistoryToFile}{saveHistoryToFile}}
+{\footnotesize\ttfamily \label{class_main_window_a4242ff1e7fd5df4fafdc4329ad466acf} 
+void Main\+Window\+::save\+History\+To\+File (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a4242ff1e7fd5df4fafdc4329ad466acf_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_main_window_a4cb868f898400955a1035571326591cf}\index{MainWindow@{MainWindow}!saveResults@{saveResults}}
+\index{saveResults@{saveResults}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{saveResults}{saveResults}}
+{\footnotesize\ttfamily \label{class_main_window_a4cb868f898400955a1035571326591cf} 
+void Main\+Window\+::save\+Results (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a4cb868f898400955a1035571326591cf_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a4cb868f898400955a1035571326591cf_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_main_window_abb30531afee763d0586ee6323fd332e2}\index{MainWindow@{MainWindow}!saveSettings@{saveSettings}}
+\index{saveSettings@{saveSettings}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{saveSettings()}{saveSettings()}}
+{\footnotesize\ttfamily \label{class_main_window_abb30531afee763d0586ee6323fd332e2} 
+void Main\+Window\+::save\+Settings (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_abb30531afee763d0586ee6323fd332e2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_main_window_a160e765f35717b6304cfdd96b761cbc9}\index{MainWindow@{MainWindow}!saveTopologyImage@{saveTopologyImage}}
+\index{saveTopologyImage@{saveTopologyImage}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{saveTopologyImage}{saveTopologyImage}}
+{\footnotesize\ttfamily \label{class_main_window_a160e765f35717b6304cfdd96b761cbc9} 
+void Main\+Window\+::save\+Topology\+Image (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a160e765f35717b6304cfdd96b761cbc9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_main_window_a0dd210d98a9be161fce40284534369f0}\index{MainWindow@{MainWindow}!scheduleScan@{scheduleScan}}
+\index{scheduleScan@{scheduleScan}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{scheduleScan}{scheduleScan}}
+{\footnotesize\ttfamily \label{class_main_window_a0dd210d98a9be161fce40284534369f0} 
+void Main\+Window\+::schedule\+Scan (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a0dd210d98a9be161fce40284534369f0_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a0dd210d98a9be161fce40284534369f0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_main_window_a95dc085bf70bd0c1ad05bd80f897fd1d}\index{MainWindow@{MainWindow}!setupConnections@{setupConnections}}
+\index{setupConnections@{setupConnections}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{setupConnections()}{setupConnections()}}
+{\footnotesize\ttfamily \label{class_main_window_a95dc085bf70bd0c1ad05bd80f897fd1d} 
+void Main\+Window\+::setup\+Connections (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a95dc085bf70bd0c1ad05bd80f897fd1d_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a95dc085bf70bd0c1ad05bd80f897fd1d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_main_window_aa3aa0f3ce42e748b931d6211921ea197}\index{MainWindow@{MainWindow}!showAbout@{showAbout}}
+\index{showAbout@{showAbout}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{showAbout}{showAbout}}
+{\footnotesize\ttfamily \label{class_main_window_aa3aa0f3ce42e748b931d6211921ea197} 
+void Main\+Window\+::show\+About (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_aa3aa0f3ce42e748b931d6211921ea197_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_main_window_ad146c08dc16c52491f5ff953339e975b}\index{MainWindow@{MainWindow}!showHistoryView@{showHistoryView}}
+\index{showHistoryView@{showHistoryView}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{showHistoryView}{showHistoryView}}
+{\footnotesize\ttfamily \label{class_main_window_ad146c08dc16c52491f5ff953339e975b} 
+void Main\+Window\+::show\+History\+View (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+\Hypertarget{class_main_window_a226ae57b71712bebff12904e809280e1}\index{MainWindow@{MainWindow}!showHostDetails@{showHostDetails}}
+\index{showHostDetails@{showHostDetails}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{showHostDetails}{showHostDetails}}
+{\footnotesize\ttfamily \label{class_main_window_a226ae57b71712bebff12904e809280e1} 
+void Main\+Window\+::show\+Host\+Details (\begin{DoxyParamCaption}\item[{int}]{row}{, }\item[{int}]{column}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a226ae57b71712bebff12904e809280e1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_main_window_aabfa36b35a25cafc7832c489f5bd30f2}\index{MainWindow@{MainWindow}!showSettings@{showSettings}}
+\index{showSettings@{showSettings}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{showSettings}{showSettings}}
+{\footnotesize\ttfamily \label{class_main_window_aabfa36b35a25cafc7832c489f5bd30f2} 
+void Main\+Window\+::show\+Settings (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_aabfa36b35a25cafc7832c489f5bd30f2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_main_window_a92a83e9e4d4f9d5373f89c7d112d2b00}\index{MainWindow@{MainWindow}!showStatisticsView@{showStatisticsView}}
+\index{showStatisticsView@{showStatisticsView}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{showStatisticsView}{showStatisticsView}}
+{\footnotesize\ttfamily \label{class_main_window_a92a83e9e4d4f9d5373f89c7d112d2b00} 
+void Main\+Window\+::show\+Statistics\+View (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+\Hypertarget{class_main_window_a2db0996ad54247e897b90de18cfbeb5d}\index{MainWindow@{MainWindow}!showTopologyView@{showTopologyView}}
+\index{showTopologyView@{showTopologyView}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{showTopologyView}{showTopologyView}}
+{\footnotesize\ttfamily \label{class_main_window_a2db0996ad54247e897b90de18cfbeb5d} 
+void Main\+Window\+::show\+Topology\+View (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+\Hypertarget{class_main_window_a092a4ceaf59fa4db7b29d03c66f07623}\index{MainWindow@{MainWindow}!startScan@{startScan}}
+\index{startScan@{startScan}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{startScan}{startScan}}
+{\footnotesize\ttfamily \label{class_main_window_a092a4ceaf59fa4db7b29d03c66f07623} 
+void Main\+Window\+::start\+Scan (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a092a4ceaf59fa4db7b29d03c66f07623_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a092a4ceaf59fa4db7b29d03c66f07623_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_main_window_a61696f5c0f521ce980e509b91e8d0fce}\index{MainWindow@{MainWindow}!stopScan@{stopScan}}
+\index{stopScan@{stopScan}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{stopScan}{stopScan}}
+{\footnotesize\ttfamily \label{class_main_window_a61696f5c0f521ce980e509b91e8d0fce} 
+void Main\+Window\+::stop\+Scan (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a61696f5c0f521ce980e509b91e8d0fce_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_main_window_a16bd0ccae935c03c93906bcee7e7c314}\index{MainWindow@{MainWindow}!toggleDarkMode@{toggleDarkMode}}
+\index{toggleDarkMode@{toggleDarkMode}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{toggleDarkMode}{toggleDarkMode}}
+{\footnotesize\ttfamily \label{class_main_window_a16bd0ccae935c03c93906bcee7e7c314} 
+void Main\+Window\+::toggle\+Dark\+Mode (\begin{DoxyParamCaption}\item[{bool}]{enable}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a16bd0ccae935c03c93906bcee7e7c314_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a16bd0ccae935c03c93906bcee7e7c314_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_main_window_a063df8fc929132d9c78afc70e376523e}\index{MainWindow@{MainWindow}!togglePortScanOptions@{togglePortScanOptions}}
+\index{togglePortScanOptions@{togglePortScanOptions}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{togglePortScanOptions}{togglePortScanOptions}}
+{\footnotesize\ttfamily \label{class_main_window_a063df8fc929132d9c78afc70e376523e} 
+void Main\+Window\+::toggle\+Port\+Scan\+Options (\begin{DoxyParamCaption}\item[{bool}]{checked}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a063df8fc929132d9c78afc70e376523e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_main_window_a441682ebf3b1a226f5e8f7599a74c722}\index{MainWindow@{MainWindow}!toggleRangeOptions@{toggleRangeOptions}}
+\index{toggleRangeOptions@{toggleRangeOptions}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{toggleRangeOptions}{toggleRangeOptions}}
+{\footnotesize\ttfamily \label{class_main_window_a441682ebf3b1a226f5e8f7599a74c722} 
+void Main\+Window\+::toggle\+Range\+Options (\begin{DoxyParamCaption}\item[{bool}]{checked}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a441682ebf3b1a226f5e8f7599a74c722_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_main_window_a540aa8c9d27c827db079fdacd75b5aac}\index{MainWindow@{MainWindow}!updateNetworkTopology@{updateNetworkTopology}}
+\index{updateNetworkTopology@{updateNetworkTopology}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{updateNetworkTopology}{updateNetworkTopology}}
+{\footnotesize\ttfamily \label{class_main_window_a540aa8c9d27c827db079fdacd75b5aac} 
+void Main\+Window\+::update\+Network\+Topology (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_a540aa8c9d27c827db079fdacd75b5aac_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_main_window_ae88824a309842c91bcb751650907a7ab}\index{MainWindow@{MainWindow}!updatePortsList@{updatePortsList}}
+\index{updatePortsList@{updatePortsList}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{updatePortsList()}{updatePortsList()}}
+{\footnotesize\ttfamily \label{class_main_window_ae88824a309842c91bcb751650907a7ab} 
+void Main\+Window\+::update\+Ports\+List (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_af9258c03a301bb07d66fa02d28e15706}\index{MainWindow@{MainWindow}!updateStatistics@{updateStatistics}}
+\index{updateStatistics@{updateStatistics}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{updateStatistics()}{updateStatistics()}}
+{\footnotesize\ttfamily \label{class_main_window_af9258c03a301bb07d66fa02d28e15706} 
+void Main\+Window\+::update\+Statistics (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_window_af9258c03a301bb07d66fa02d28e15706_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\Hypertarget{class_main_window_a23de3541f59aa30aca5eb2af14548d1d}\index{MainWindow@{MainWindow}!m\_aboutAction@{m\_aboutAction}}
+\index{m\_aboutAction@{m\_aboutAction}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_aboutAction}{m\_aboutAction}}
+{\footnotesize\ttfamily \label{class_main_window_a23de3541f59aa30aca5eb2af14548d1d} 
+QAction\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+about\+Action\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_ac3e02f178aa7d38fe0d754f0ec8a711e}\index{MainWindow@{MainWindow}!m\_centralWidget@{m\_centralWidget}}
+\index{m\_centralWidget@{m\_centralWidget}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_centralWidget}{m\_centralWidget}}
+{\footnotesize\ttfamily \label{class_main_window_ac3e02f178aa7d38fe0d754f0ec8a711e} 
+QWidget\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+central\+Widget\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_af7d5ecbab513a416062b8c9a7d5be3ed}\index{MainWindow@{MainWindow}!m\_clearButton@{m\_clearButton}}
+\index{m\_clearButton@{m\_clearButton}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_clearButton}{m\_clearButton}}
+{\footnotesize\ttfamily \label{class_main_window_af7d5ecbab513a416062b8c9a7d5be3ed} 
+QPush\+Button\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+clear\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_a6dc4c3cc9a03aa99a9e005f9cdbb3faa}\index{MainWindow@{MainWindow}!m\_clearFilterButton@{m\_clearFilterButton}}
+\index{m\_clearFilterButton@{m\_clearFilterButton}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_clearFilterButton}{m\_clearFilterButton}}
+{\footnotesize\ttfamily \label{class_main_window_a6dc4c3cc9a03aa99a9e005f9cdbb3faa} 
+QPush\+Button\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+clear\+Filter\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_a29d6df52e48bb25f8c61f689b33e4eb6}\index{MainWindow@{MainWindow}!m\_controlLayout@{m\_controlLayout}}
+\index{m\_controlLayout@{m\_controlLayout}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_controlLayout}{m\_controlLayout}}
+{\footnotesize\ttfamily \label{class_main_window_a29d6df52e48bb25f8c61f689b33e4eb6} 
+QHBox\+Layout\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+control\+Layout\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_aec413ec818a9839fac7b6f8411e52a40}\index{MainWindow@{MainWindow}!m\_currentHostIndex@{m\_currentHostIndex}}
+\index{m\_currentHostIndex@{m\_currentHostIndex}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_currentHostIndex}{m\_currentHostIndex}}
+{\footnotesize\ttfamily \label{class_main_window_aec413ec818a9839fac7b6f8411e52a40} 
+int Main\+Window\+::m\+\_\+current\+Host\+Index\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_aacbd2803a584f86685b5f58afbdf57b6}\index{MainWindow@{MainWindow}!m\_customPortsCheckBox@{m\_customPortsCheckBox}}
+\index{m\_customPortsCheckBox@{m\_customPortsCheckBox}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_customPortsCheckBox}{m\_customPortsCheckBox}}
+{\footnotesize\ttfamily \label{class_main_window_aacbd2803a584f86685b5f58afbdf57b6} 
+QCheck\+Box\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+custom\+Ports\+Check\+Box\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_a95393326363a86caee0fc3510c6f2ad0}\index{MainWindow@{MainWindow}!m\_customRangeCheckBox@{m\_customRangeCheckBox}}
+\index{m\_customRangeCheckBox@{m\_customRangeCheckBox}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_customRangeCheckBox}{m\_customRangeCheckBox}}
+{\footnotesize\ttfamily \label{class_main_window_a95393326363a86caee0fc3510c6f2ad0} 
+QCheck\+Box\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+custom\+Range\+Check\+Box\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_ad67ac377df3fc8c750fe8990d3b21cf9}\index{MainWindow@{MainWindow}!m\_darkModeAction@{m\_darkModeAction}}
+\index{m\_darkModeAction@{m\_darkModeAction}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_darkModeAction}{m\_darkModeAction}}
+{\footnotesize\ttfamily \label{class_main_window_ad67ac377df3fc8c750fe8990d3b21cf9} 
+QAction\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+dark\+Mode\+Action\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_a631c3bcc94648a3692ed237931aaed8b}\index{MainWindow@{MainWindow}!m\_darkModeEnabled@{m\_darkModeEnabled}}
+\index{m\_darkModeEnabled@{m\_darkModeEnabled}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_darkModeEnabled}{m\_darkModeEnabled}}
+{\footnotesize\ttfamily \label{class_main_window_a631c3bcc94648a3692ed237931aaed8b} 
+bool Main\+Window\+::m\+\_\+dark\+Mode\+Enabled\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_aaf0fdb6b0b3bc971f00fc922aa93dfb3}\index{MainWindow@{MainWindow}!m\_detailsLayout@{m\_detailsLayout}}
+\index{m\_detailsLayout@{m\_detailsLayout}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_detailsLayout}{m\_detailsLayout}}
+{\footnotesize\ttfamily \label{class_main_window_aaf0fdb6b0b3bc971f00fc922aa93dfb3} 
+QVBox\+Layout\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+details\+Layout\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_af32587da7d4f739dbfe86fbadbc7f897}\index{MainWindow@{MainWindow}!m\_detailsTab@{m\_detailsTab}}
+\index{m\_detailsTab@{m\_detailsTab}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_detailsTab}{m\_detailsTab}}
+{\footnotesize\ttfamily \label{class_main_window_af32587da7d4f739dbfe86fbadbc7f897} 
+QWidget\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+details\+Tab\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_aabd224bf9307a91a0531ce54b886a1d7}\index{MainWindow@{MainWindow}!m\_detailsTextEdit@{m\_detailsTextEdit}}
+\index{m\_detailsTextEdit@{m\_detailsTextEdit}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_detailsTextEdit}{m\_detailsTextEdit}}
+{\footnotesize\ttfamily \label{class_main_window_aabd224bf9307a91a0531ce54b886a1d7} 
+QText\+Edit\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+details\+Text\+Edit\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_a1e492c9a6cf8cf0345ed043b97c37065}\index{MainWindow@{MainWindow}!m\_deviceAnalyzer@{m\_deviceAnalyzer}}
+\index{m\_deviceAnalyzer@{m\_deviceAnalyzer}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_deviceAnalyzer}{m\_deviceAnalyzer}}
+{\footnotesize\ttfamily \label{class_main_window_a1e492c9a6cf8cf0345ed043b97c37065} 
+\mbox{\hyperlink{class_device_analyzer}{Device\+Analyzer}}\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+device\+Analyzer\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_aab5c27a89df8705ccc16b1b55c56dde0}\index{MainWindow@{MainWindow}!m\_deviceTypeChartView@{m\_deviceTypeChartView}}
+\index{m\_deviceTypeChartView@{m\_deviceTypeChartView}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_deviceTypeChartView}{m\_deviceTypeChartView}}
+{\footnotesize\ttfamily \label{class_main_window_aab5c27a89df8705ccc16b1b55c56dde0} 
+QChart\+View\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+device\+Type\+Chart\+View\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_a476b04c5841b66c6ace44b5332a2edff}\index{MainWindow@{MainWindow}!m\_endIPLineEdit@{m\_endIPLineEdit}}
+\index{m\_endIPLineEdit@{m\_endIPLineEdit}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_endIPLineEdit}{m\_endIPLineEdit}}
+{\footnotesize\ttfamily \label{class_main_window_a476b04c5841b66c6ace44b5332a2edff} 
+QLine\+Edit\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+end\+IPLine\+Edit\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_a96d76acf03c4b8af4828931fc4411eba}\index{MainWindow@{MainWindow}!m\_exitAction@{m\_exitAction}}
+\index{m\_exitAction@{m\_exitAction}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_exitAction}{m\_exitAction}}
+{\footnotesize\ttfamily \label{class_main_window_a96d76acf03c4b8af4828931fc4411eba} 
+QAction\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+exit\+Action\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_a75a23135f1ee52c5b91803406ee57fbf}\index{MainWindow@{MainWindow}!m\_exportAction@{m\_exportAction}}
+\index{m\_exportAction@{m\_exportAction}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_exportAction}{m\_exportAction}}
+{\footnotesize\ttfamily \label{class_main_window_a75a23135f1ee52c5b91803406ee57fbf} 
+QAction\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+export\+Action\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_adec8f01e467bf8d23726b996881fb2e7}\index{MainWindow@{MainWindow}!m\_fileMenu@{m\_fileMenu}}
+\index{m\_fileMenu@{m\_fileMenu}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_fileMenu}{m\_fileMenu}}
+{\footnotesize\ttfamily \label{class_main_window_adec8f01e467bf8d23726b996881fb2e7} 
+QMenu\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+file\+Menu\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_a7e060d75e62f570186e6f04e4d74f16c}\index{MainWindow@{MainWindow}!m\_filterButton@{m\_filterButton}}
+\index{m\_filterButton@{m\_filterButton}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_filterButton}{m\_filterButton}}
+{\footnotesize\ttfamily \label{class_main_window_a7e060d75e62f570186e6f04e4d74f16c} 
+QPush\+Button\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+filter\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_a828111ee401a70fda2d26736d674df9f}\index{MainWindow@{MainWindow}!m\_filterIPLineEdit@{m\_filterIPLineEdit}}
+\index{m\_filterIPLineEdit@{m\_filterIPLineEdit}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_filterIPLineEdit}{m\_filterIPLineEdit}}
+{\footnotesize\ttfamily \label{class_main_window_a828111ee401a70fda2d26736d674df9f} 
+QLine\+Edit\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+filter\+IPLine\+Edit\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_a5379fea6d42de983e755645318c44954}\index{MainWindow@{MainWindow}!m\_filterTypeComboBox@{m\_filterTypeComboBox}}
+\index{m\_filterTypeComboBox@{m\_filterTypeComboBox}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_filterTypeComboBox}{m\_filterTypeComboBox}}
+{\footnotesize\ttfamily \label{class_main_window_a5379fea6d42de983e755645318c44954} 
+QCombo\+Box\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+filter\+Type\+Combo\+Box\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_a058e5ff94ea9d7bd11b6325b46c31208}\index{MainWindow@{MainWindow}!m\_filterVendorComboBox@{m\_filterVendorComboBox}}
+\index{m\_filterVendorComboBox@{m\_filterVendorComboBox}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_filterVendorComboBox}{m\_filterVendorComboBox}}
+{\footnotesize\ttfamily \label{class_main_window_a058e5ff94ea9d7bd11b6325b46c31208} 
+QCombo\+Box\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+filter\+Vendor\+Combo\+Box\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_ae1e85d1e8982b6553d098d92bbf9f6d4}\index{MainWindow@{MainWindow}!m\_filterWidget@{m\_filterWidget}}
+\index{m\_filterWidget@{m\_filterWidget}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_filterWidget}{m\_filterWidget}}
+{\footnotesize\ttfamily \label{class_main_window_ae1e85d1e8982b6553d098d92bbf9f6d4} 
+QWidget\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+filter\+Widget\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_aad8c15f252b869d1003c3a82566ac1b4}\index{MainWindow@{MainWindow}!m\_helpMenu@{m\_helpMenu}}
+\index{m\_helpMenu@{m\_helpMenu}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_helpMenu}{m\_helpMenu}}
+{\footnotesize\ttfamily \label{class_main_window_aad8c15f252b869d1003c3a82566ac1b4} 
+QMenu\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+help\+Menu\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_a1971cf2b6b5ebdf34a9552f66d716a71}\index{MainWindow@{MainWindow}!m\_historyTab@{m\_historyTab}}
+\index{m\_historyTab@{m\_historyTab}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_historyTab}{m\_historyTab}}
+{\footnotesize\ttfamily \label{class_main_window_a1971cf2b6b5ebdf34a9552f66d716a71} 
+QWidget\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+history\+Tab\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_aaefdba77910ab598c153dfdc8d976f55}\index{MainWindow@{MainWindow}!m\_historyTable@{m\_historyTable}}
+\index{m\_historyTable@{m\_historyTable}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_historyTable}{m\_historyTable}}
+{\footnotesize\ttfamily \label{class_main_window_aaefdba77910ab598c153dfdc8d976f55} 
+QTable\+Widget\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+history\+Table\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_a1f688c173065551bc877292999dd9671}\index{MainWindow@{MainWindow}!m\_hostsFound@{m\_hostsFound}}
+\index{m\_hostsFound@{m\_hostsFound}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_hostsFound}{m\_hostsFound}}
+{\footnotesize\ttfamily \label{class_main_window_a1f688c173065551bc877292999dd9671} 
+int Main\+Window\+::m\+\_\+hosts\+Found\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_ab94930f0e47a8abd2137e31374402764}\index{MainWindow@{MainWindow}!m\_loadHistoryAction@{m\_loadHistoryAction}}
+\index{m\_loadHistoryAction@{m\_loadHistoryAction}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_loadHistoryAction}{m\_loadHistoryAction}}
+{\footnotesize\ttfamily \label{class_main_window_ab94930f0e47a8abd2137e31374402764} 
+QAction\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+load\+History\+Action\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_a038d03f63acfa7f735641a88a3e24ce8}\index{MainWindow@{MainWindow}!m\_mainLayout@{m\_mainLayout}}
+\index{m\_mainLayout@{m\_mainLayout}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_mainLayout}{m\_mainLayout}}
+{\footnotesize\ttfamily \label{class_main_window_a038d03f63acfa7f735641a88a3e24ce8} 
+QVBox\+Layout\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+main\+Layout\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_a3ef751f40d803879a0a9fa5043afdf30}\index{MainWindow@{MainWindow}!m\_networkTopology@{m\_networkTopology}}
+\index{m\_networkTopology@{m\_networkTopology}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_networkTopology}{m\_networkTopology}}
+{\footnotesize\ttfamily \label{class_main_window_a3ef751f40d803879a0a9fa5043afdf30} 
+\mbox{\hyperlink{class_network_topology}{Network\+Topology}}\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+network\+Topology\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_a4dc30c7d07b7d94b93051bdf9a0d1e64}\index{MainWindow@{MainWindow}!m\_portDistributionChartView@{m\_portDistributionChartView}}
+\index{m\_portDistributionChartView@{m\_portDistributionChartView}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_portDistributionChartView}{m\_portDistributionChartView}}
+{\footnotesize\ttfamily \label{class_main_window_a4dc30c7d07b7d94b93051bdf9a0d1e64} 
+QChart\+View\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+port\+Distribution\+Chart\+View\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_a83a96d668e3d24b853d99a74c51c3f57}\index{MainWindow@{MainWindow}!m\_portsGroupBox@{m\_portsGroupBox}}
+\index{m\_portsGroupBox@{m\_portsGroupBox}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_portsGroupBox}{m\_portsGroupBox}}
+{\footnotesize\ttfamily \label{class_main_window_a83a96d668e3d24b853d99a74c51c3f57} 
+QGroup\+Box\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+ports\+Group\+Box\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_a9efc5a0bc3943a315b228f62353e102a}\index{MainWindow@{MainWindow}!m\_portsLineEdit@{m\_portsLineEdit}}
+\index{m\_portsLineEdit@{m\_portsLineEdit}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_portsLineEdit}{m\_portsLineEdit}}
+{\footnotesize\ttfamily \label{class_main_window_a9efc5a0bc3943a315b228f62353e102a} 
+QLine\+Edit\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+ports\+Line\+Edit\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_abf92ec91ba0ea6d6265ec74075e5c50d}\index{MainWindow@{MainWindow}!m\_progressBar@{m\_progressBar}}
+\index{m\_progressBar@{m\_progressBar}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_progressBar}{m\_progressBar}}
+{\footnotesize\ttfamily \label{class_main_window_abf92ec91ba0ea6d6265ec74075e5c50d} 
+QProgress\+Bar\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+progress\+Bar\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_a1ddfaccfa9a0652a5468b4af05c8606d}\index{MainWindow@{MainWindow}!m\_rangeGroupBox@{m\_rangeGroupBox}}
+\index{m\_rangeGroupBox@{m\_rangeGroupBox}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_rangeGroupBox}{m\_rangeGroupBox}}
+{\footnotesize\ttfamily \label{class_main_window_a1ddfaccfa9a0652a5468b4af05c8606d} 
+QGroup\+Box\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+range\+Group\+Box\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_a1fd3a18d5cb22b3ae0d87e1d298e385c}\index{MainWindow@{MainWindow}!m\_resultsTable@{m\_resultsTable}}
+\index{m\_resultsTable@{m\_resultsTable}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_resultsTable}{m\_resultsTable}}
+{\footnotesize\ttfamily \label{class_main_window_a1fd3a18d5cb22b3ae0d87e1d298e385c} 
+QTable\+Widget\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+results\+Table\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_ae5e5c1ddc0fbf52e5ef7f0cb73cbfca6}\index{MainWindow@{MainWindow}!m\_saveButton@{m\_saveButton}}
+\index{m\_saveButton@{m\_saveButton}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_saveButton}{m\_saveButton}}
+{\footnotesize\ttfamily \label{class_main_window_ae5e5c1ddc0fbf52e5ef7f0cb73cbfca6} 
+QPush\+Button\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+save\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_a8bb4a8dea70f2c7dbff9590a07dc915a}\index{MainWindow@{MainWindow}!m\_saveHistoryAction@{m\_saveHistoryAction}}
+\index{m\_saveHistoryAction@{m\_saveHistoryAction}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_saveHistoryAction}{m\_saveHistoryAction}}
+{\footnotesize\ttfamily \label{class_main_window_a8bb4a8dea70f2c7dbff9590a07dc915a} 
+QAction\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+save\+History\+Action\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_adb177ce59ee76518f015b12c5b56f17e}\index{MainWindow@{MainWindow}!m\_saveTopologyAction@{m\_saveTopologyAction}}
+\index{m\_saveTopologyAction@{m\_saveTopologyAction}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_saveTopologyAction}{m\_saveTopologyAction}}
+{\footnotesize\ttfamily \label{class_main_window_adb177ce59ee76518f015b12c5b56f17e} 
+QAction\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+save\+Topology\+Action\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_ae63606834e1a8cfa06f32e66c6df5dfb}\index{MainWindow@{MainWindow}!m\_scanButton@{m\_scanButton}}
+\index{m\_scanButton@{m\_scanButton}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_scanButton}{m\_scanButton}}
+{\footnotesize\ttfamily \label{class_main_window_ae63606834e1a8cfa06f32e66c6df5dfb} 
+QPush\+Button\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+scan\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_af5450d28fa59136d591227fd90596d15}\index{MainWindow@{MainWindow}!m\_scanHistory@{m\_scanHistory}}
+\index{m\_scanHistory@{m\_scanHistory}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_scanHistory}{m\_scanHistory}}
+{\footnotesize\ttfamily \label{class_main_window_af5450d28fa59136d591227fd90596d15} 
+\mbox{\hyperlink{class_scan_history}{Scan\+History}}\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+scan\+History\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_abb22ddcde79991f45509c764db7fb9ba}\index{MainWindow@{MainWindow}!m\_scanner@{m\_scanner}}
+\index{m\_scanner@{m\_scanner}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_scanner}{m\_scanner}}
+{\footnotesize\ttfamily \label{class_main_window_abb22ddcde79991f45509c764db7fb9ba} 
+\mbox{\hyperlink{class_network_scanner}{Network\+Scanner}}\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+scanner\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_a5b0cdf71bbbfa349a514868e90ee32ae}\index{MainWindow@{MainWindow}!m\_scanTab@{m\_scanTab}}
+\index{m\_scanTab@{m\_scanTab}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_scanTab}{m\_scanTab}}
+{\footnotesize\ttfamily \label{class_main_window_a5b0cdf71bbbfa349a514868e90ee32ae} 
+QWidget\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+scan\+Tab\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_a4ddad3934e8a9171518414b20ce39a91}\index{MainWindow@{MainWindow}!m\_scheduleScanAction@{m\_scheduleScanAction}}
+\index{m\_scheduleScanAction@{m\_scheduleScanAction}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_scheduleScanAction}{m\_scheduleScanAction}}
+{\footnotesize\ttfamily \label{class_main_window_a4ddad3934e8a9171518414b20ce39a91} 
+QAction\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+schedule\+Scan\+Action\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_a0ee7722c34e72433cd64b171cdf982c0}\index{MainWindow@{MainWindow}!m\_securityReportText@{m\_securityReportText}}
+\index{m\_securityReportText@{m\_securityReportText}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_securityReportText}{m\_securityReportText}}
+{\footnotesize\ttfamily \label{class_main_window_a0ee7722c34e72433cd64b171cdf982c0} 
+QText\+Edit\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+security\+Report\+Text\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_a85b80c3e6dcefacd4a5a0ef17077c658}\index{MainWindow@{MainWindow}!m\_sessionComboBox@{m\_sessionComboBox}}
+\index{m\_sessionComboBox@{m\_sessionComboBox}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_sessionComboBox}{m\_sessionComboBox}}
+{\footnotesize\ttfamily \label{class_main_window_a85b80c3e6dcefacd4a5a0ef17077c658} 
+QCombo\+Box\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+session\+Combo\+Box\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_a0480b4ed9b2a198781c64a2bca488149}\index{MainWindow@{MainWindow}!m\_settingsAction@{m\_settingsAction}}
+\index{m\_settingsAction@{m\_settingsAction}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_settingsAction}{m\_settingsAction}}
+{\footnotesize\ttfamily \label{class_main_window_a0480b4ed9b2a198781c64a2bca488149} 
+QAction\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+settings\+Action\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_a93290c7b84dafa7c3abe179c4227659f}\index{MainWindow@{MainWindow}!m\_settingsLayout@{m\_settingsLayout}}
+\index{m\_settingsLayout@{m\_settingsLayout}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_settingsLayout}{m\_settingsLayout}}
+{\footnotesize\ttfamily \label{class_main_window_a93290c7b84dafa7c3abe179c4227659f} 
+QVBox\+Layout\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+settings\+Layout\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_a0ad7ee813905c0bb28c864c52bcc8530}\index{MainWindow@{MainWindow}!m\_settingsTab@{m\_settingsTab}}
+\index{m\_settingsTab@{m\_settingsTab}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_settingsTab}{m\_settingsTab}}
+{\footnotesize\ttfamily \label{class_main_window_a0ad7ee813905c0bb28c864c52bcc8530} 
+QWidget\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+settings\+Tab\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_a31dfa3be7235c663d71d851db72d8c42}\index{MainWindow@{MainWindow}!m\_startIPLineEdit@{m\_startIPLineEdit}}
+\index{m\_startIPLineEdit@{m\_startIPLineEdit}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_startIPLineEdit}{m\_startIPLineEdit}}
+{\footnotesize\ttfamily \label{class_main_window_a31dfa3be7235c663d71d851db72d8c42} 
+QLine\+Edit\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+start\+IPLine\+Edit\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_ac9557ba0a655b1b88ac28fbf17ebedda}\index{MainWindow@{MainWindow}!m\_statisticsTab@{m\_statisticsTab}}
+\index{m\_statisticsTab@{m\_statisticsTab}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_statisticsTab}{m\_statisticsTab}}
+{\footnotesize\ttfamily \label{class_main_window_ac9557ba0a655b1b88ac28fbf17ebedda} 
+QWidget\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+statistics\+Tab\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_a9b6351507b5ce0cf250e536433c686e4}\index{MainWindow@{MainWindow}!m\_statusBar@{m\_statusBar}}
+\index{m\_statusBar@{m\_statusBar}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_statusBar}{m\_statusBar}}
+{\footnotesize\ttfamily \label{class_main_window_a9b6351507b5ce0cf250e536433c686e4} 
+QStatus\+Bar\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+status\+Bar\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_ab9c6492b81f3117ca8fed55c7b97da44}\index{MainWindow@{MainWindow}!m\_statusLabel@{m\_statusLabel}}
+\index{m\_statusLabel@{m\_statusLabel}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_statusLabel}{m\_statusLabel}}
+{\footnotesize\ttfamily \label{class_main_window_ab9c6492b81f3117ca8fed55c7b97da44} 
+QLabel\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+status\+Label\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_aa25aef2c0667650b7b28291f0ca583ae}\index{MainWindow@{MainWindow}!m\_stopButton@{m\_stopButton}}
+\index{m\_stopButton@{m\_stopButton}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_stopButton}{m\_stopButton}}
+{\footnotesize\ttfamily \label{class_main_window_aa25aef2c0667650b7b28291f0ca583ae} 
+QPush\+Button\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+stop\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_af312eeff9342ea9edfb5f34e0aa1c332}\index{MainWindow@{MainWindow}!m\_tabWidget@{m\_tabWidget}}
+\index{m\_tabWidget@{m\_tabWidget}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_tabWidget}{m\_tabWidget}}
+{\footnotesize\ttfamily \label{class_main_window_af312eeff9342ea9edfb5f34e0aa1c332} 
+QTab\+Widget\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+tab\+Widget\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_a573b9f461d2fe6514b5deedeb6095d41}\index{MainWindow@{MainWindow}!m\_timeoutSpinBox@{m\_timeoutSpinBox}}
+\index{m\_timeoutSpinBox@{m\_timeoutSpinBox}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_timeoutSpinBox}{m\_timeoutSpinBox}}
+{\footnotesize\ttfamily \label{class_main_window_a573b9f461d2fe6514b5deedeb6095d41} 
+QSpin\+Box\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+timeout\+Spin\+Box\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_abeabed45473d9238dbff21a927cde690}\index{MainWindow@{MainWindow}!m\_toolsMenu@{m\_toolsMenu}}
+\index{m\_toolsMenu@{m\_toolsMenu}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_toolsMenu}{m\_toolsMenu}}
+{\footnotesize\ttfamily \label{class_main_window_abeabed45473d9238dbff21a927cde690} 
+QMenu\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+tools\+Menu\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_a872a2dd22f557555f5c960cc3bb87e21}\index{MainWindow@{MainWindow}!m\_topologyTab@{m\_topologyTab}}
+\index{m\_topologyTab@{m\_topologyTab}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_topologyTab}{m\_topologyTab}}
+{\footnotesize\ttfamily \label{class_main_window_a872a2dd22f557555f5c960cc3bb87e21} 
+QWidget\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+topology\+Tab\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_a2ae79443f7d47cc8ae46e8f78ae94b55}\index{MainWindow@{MainWindow}!m\_vendorChartView@{m\_vendorChartView}}
+\index{m\_vendorChartView@{m\_vendorChartView}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_vendorChartView}{m\_vendorChartView}}
+{\footnotesize\ttfamily \label{class_main_window_a2ae79443f7d47cc8ae46e8f78ae94b55} 
+QChart\+View\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+vendor\+Chart\+View\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_window_aea015210dfb510096531b0d4b74a0560}\index{MainWindow@{MainWindow}!m\_viewMenu@{m\_viewMenu}}
+\index{m\_viewMenu@{m\_viewMenu}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_viewMenu}{m\_viewMenu}}
+{\footnotesize\ttfamily \label{class_main_window_aea015210dfb510096531b0d4b74a0560} 
+QMenu\texorpdfstring{$\ast$}{*} Main\+Window\+::m\+\_\+view\+Menu\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{mainwindow_8h}{mainwindow.\+h}}\item 
+\mbox{\hyperlink{mainwindow_8cpp}{mainwindow.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,11 @@
+<map id="NetworkScanner::onScanTaskFinished" name="NetworkScanner::onScanTaskFinished">
+<area shape="rect" id="Node000001" title="处理扫描任务完成" alt="" coords="5,27,204,68"/>
+<area shape="rect" id="Node000002" href="$class_network_scanner.html#a941867644d70f3b1c512c9e98f082ed3" title="找到主机信号" alt="" coords="256,5,443,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="204,33,240,29,240,34,205,38"/>
+<area shape="rect" id="Node000003" href="$class_network_scanner.html#ae86a6e70a9c71be92ae45209a5a89bfe" title="更新扫描进度" alt="" coords="252,55,447,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="205,56,237,60,236,65,204,62"/>
+<area shape="rect" id="Node000004" href="$class_network_scanner.html#a311c4f6158b867640590a03f85879b6b" title="扫描完成信号" alt="" coords="496,37,700,63"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="447,63,481,59,481,65,448,68"/>
+<area shape="rect" id="Node000005" href="$class_network_scanner.html#a9e780f0ca7e0519b0a7b8ee6db11996e" title="扫描进度更新信号" alt="" coords="495,87,701,112"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="448,82,480,85,479,91,447,88"/>
+</map>

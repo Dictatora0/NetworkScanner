@@ -1,0 +1,312 @@
+\doxysection{Device\+Analyzer类 参考}
+\hypertarget{class_device_analyzer}{}\label{class_device_analyzer}\index{DeviceAnalyzer@{DeviceAnalyzer}}
+
+
+{\ttfamily \#include $<$deviceanalyzer.\+h$>$}
+
+
+
+类 Device\+Analyzer 继承关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_device_analyzer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Device\+Analyzer 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_device_analyzer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{信号}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_device_analyzer_a43106c31b5650719f2021a888a33eb0e}{analysis\+Completed}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_device_analyzer_a95f05b6ca9338dcd3057c6f8ba45e29f}{Device\+Analyzer}} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\item 
+void \mbox{\hyperlink{class_device_analyzer_a19be8ebf49dc7bca1bf30b65f223bfaa}{analyze\+Hosts}} (const QList$<$ \mbox{\hyperlink{struct_host_info}{Host\+Info}} $>$ \&hosts)
+\item 
+void \mbox{\hyperlink{class_device_analyzer_afce9b8c3e1c86f649573a86a479b36b4}{clear}} ()
+\item 
+int \mbox{\hyperlink{class_device_analyzer_ab7f467d41bcd65318fca93f013557d74}{get\+Total\+Hosts\+Count}} () const
+\item 
+int \mbox{\hyperlink{class_device_analyzer_a0c4a840a69de561a48d5104334a863eb}{get\+Reachable\+Hosts\+Count}} () const
+\item 
+int \mbox{\hyperlink{class_device_analyzer_a3c0135082a28d35305d7ac6f404c7b41}{get\+Unreachable\+Hosts\+Count}} () const
+\item 
+QChart \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_device_analyzer_ac7e2e841da029673df14b2bee3a68223}{get\+Device\+Type\+Chart}} () const
+\item 
+QChart \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_device_analyzer_a8b55877833dbc9de3e4f96c9d9a075f8}{get\+Port\+Distribution\+Chart}} () const
+\item 
+QChart \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_device_analyzer_a06ac4b0aa36fc58d192e4591d25e8bc4}{get\+Vendor\+Distribution\+Chart}} () const
+\item 
+QString \mbox{\hyperlink{class_device_analyzer_af9e9ff2343814056bad22fa12e79a5a4}{generate\+Security\+Report}} (const QList$<$ \mbox{\hyperlink{struct_host_info}{Host\+Info}} $>$ \&hosts)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_device_analyzer_a04ee4061971ab92cb07142b81d164f5f}{create\+Device\+Type\+Chart}} ()
+\item 
+void \mbox{\hyperlink{class_device_analyzer_a596302fbac6f657d1bf2705b66466d3e}{create\+Port\+Distribution\+Chart}} ()
+\item 
+void \mbox{\hyperlink{class_device_analyzer_a769e2dec72b2b674d2da0ef2232a2f2d}{create\+Vendor\+Distribution\+Chart}} ()
+\item 
+QString \mbox{\hyperlink{class_device_analyzer_a603a6ce4ef60afc7c88a33a259834152}{determine\+Device\+Type}} (const \mbox{\hyperlink{struct_host_info}{Host\+Info}} \&host)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_device_analyzer_a7d0c5bf299955eb2b5b5989f502cddb9}{m\+\_\+total\+Hosts}}
+\item 
+int \mbox{\hyperlink{class_device_analyzer_a17e59e962534a6e52394574f8b4a2127}{m\+\_\+reachable\+Hosts}}
+\item 
+QChart \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_device_analyzer_afe97f524a3f4be45e747755f0190cc92}{m\+\_\+device\+Type\+Chart}}
+\item 
+QPie\+Series \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_device_analyzer_aafd3c366544d437cc0cf20e8bc1bcd07}{m\+\_\+device\+Type\+Series}}
+\item 
+QChart \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_device_analyzer_a8a3bb2942a47d12c383274e4fbbdf1a8}{m\+\_\+port\+Distribution\+Chart}}
+\item 
+QBar\+Series \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_device_analyzer_a84825b7c44b36081233b8efec34297c5}{m\+\_\+port\+Series}}
+\item 
+QChart \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_device_analyzer_ac742bcabdf7da5708db1c5068e10da3a}{m\+\_\+vendor\+Distribution\+Chart}}
+\item 
+QPie\+Series \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_device_analyzer_a0d52f009ee62d2e8bff9ae2f42ebac4b}{m\+\_\+vendor\+Series}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{构造及析构函数说明}
+\Hypertarget{class_device_analyzer_a95f05b6ca9338dcd3057c6f8ba45e29f}\index{DeviceAnalyzer@{DeviceAnalyzer}!DeviceAnalyzer@{DeviceAnalyzer}}
+\index{DeviceAnalyzer@{DeviceAnalyzer}!DeviceAnalyzer@{DeviceAnalyzer}}
+\doxysubsubsection{\texorpdfstring{DeviceAnalyzer()}{DeviceAnalyzer()}}
+{\footnotesize\ttfamily \label{class_device_analyzer_a95f05b6ca9338dcd3057c6f8ba45e29f} 
+Device\+Analyzer\+::\+Device\+Analyzer (\begin{DoxyParamCaption}\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_device_analyzer_a95f05b6ca9338dcd3057c6f8ba45e29f_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{成员函数说明}
+\Hypertarget{class_device_analyzer_a43106c31b5650719f2021a888a33eb0e}\index{DeviceAnalyzer@{DeviceAnalyzer}!analysisCompleted@{analysisCompleted}}
+\index{analysisCompleted@{analysisCompleted}!DeviceAnalyzer@{DeviceAnalyzer}}
+\doxysubsubsection{\texorpdfstring{analysisCompleted}{analysisCompleted}}
+{\footnotesize\ttfamily \label{class_device_analyzer_a43106c31b5650719f2021a888a33eb0e} 
+void Device\+Analyzer\+::analysis\+Completed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_device_analyzer_a43106c31b5650719f2021a888a33eb0e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_device_analyzer_a19be8ebf49dc7bca1bf30b65f223bfaa}\index{DeviceAnalyzer@{DeviceAnalyzer}!analyzeHosts@{analyzeHosts}}
+\index{analyzeHosts@{analyzeHosts}!DeviceAnalyzer@{DeviceAnalyzer}}
+\doxysubsubsection{\texorpdfstring{analyzeHosts()}{analyzeHosts()}}
+{\footnotesize\ttfamily \label{class_device_analyzer_a19be8ebf49dc7bca1bf30b65f223bfaa} 
+void Device\+Analyzer\+::analyze\+Hosts (\begin{DoxyParamCaption}\item[{const QList$<$ \mbox{\hyperlink{struct_host_info}{Host\+Info}} $>$ \&}]{hosts}{}\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_device_analyzer_a19be8ebf49dc7bca1bf30b65f223bfaa_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_device_analyzer_afce9b8c3e1c86f649573a86a479b36b4}\index{DeviceAnalyzer@{DeviceAnalyzer}!clear@{clear}}
+\index{clear@{clear}!DeviceAnalyzer@{DeviceAnalyzer}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily \label{class_device_analyzer_afce9b8c3e1c86f649573a86a479b36b4} 
+void Device\+Analyzer\+::clear (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_device_analyzer_afce9b8c3e1c86f649573a86a479b36b4_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_device_analyzer_afce9b8c3e1c86f649573a86a479b36b4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_device_analyzer_a04ee4061971ab92cb07142b81d164f5f}\index{DeviceAnalyzer@{DeviceAnalyzer}!createDeviceTypeChart@{createDeviceTypeChart}}
+\index{createDeviceTypeChart@{createDeviceTypeChart}!DeviceAnalyzer@{DeviceAnalyzer}}
+\doxysubsubsection{\texorpdfstring{createDeviceTypeChart()}{createDeviceTypeChart()}}
+{\footnotesize\ttfamily \label{class_device_analyzer_a04ee4061971ab92cb07142b81d164f5f} 
+void Device\+Analyzer\+::create\+Device\+Type\+Chart (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_device_analyzer_a04ee4061971ab92cb07142b81d164f5f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_device_analyzer_a596302fbac6f657d1bf2705b66466d3e}\index{DeviceAnalyzer@{DeviceAnalyzer}!createPortDistributionChart@{createPortDistributionChart}}
+\index{createPortDistributionChart@{createPortDistributionChart}!DeviceAnalyzer@{DeviceAnalyzer}}
+\doxysubsubsection{\texorpdfstring{createPortDistributionChart()}{createPortDistributionChart()}}
+{\footnotesize\ttfamily \label{class_device_analyzer_a596302fbac6f657d1bf2705b66466d3e} 
+void Device\+Analyzer\+::create\+Port\+Distribution\+Chart (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_device_analyzer_a596302fbac6f657d1bf2705b66466d3e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_device_analyzer_a769e2dec72b2b674d2da0ef2232a2f2d}\index{DeviceAnalyzer@{DeviceAnalyzer}!createVendorDistributionChart@{createVendorDistributionChart}}
+\index{createVendorDistributionChart@{createVendorDistributionChart}!DeviceAnalyzer@{DeviceAnalyzer}}
+\doxysubsubsection{\texorpdfstring{createVendorDistributionChart()}{createVendorDistributionChart()}}
+{\footnotesize\ttfamily \label{class_device_analyzer_a769e2dec72b2b674d2da0ef2232a2f2d} 
+void Device\+Analyzer\+::create\+Vendor\+Distribution\+Chart (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_device_analyzer_a769e2dec72b2b674d2da0ef2232a2f2d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_device_analyzer_a603a6ce4ef60afc7c88a33a259834152}\index{DeviceAnalyzer@{DeviceAnalyzer}!determineDeviceType@{determineDeviceType}}
+\index{determineDeviceType@{determineDeviceType}!DeviceAnalyzer@{DeviceAnalyzer}}
+\doxysubsubsection{\texorpdfstring{determineDeviceType()}{determineDeviceType()}}
+{\footnotesize\ttfamily \label{class_device_analyzer_a603a6ce4ef60afc7c88a33a259834152} 
+QString Device\+Analyzer\+::determine\+Device\+Type (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_host_info}{Host\+Info}} \&}]{host}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_device_analyzer_a603a6ce4ef60afc7c88a33a259834152_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_device_analyzer_af9e9ff2343814056bad22fa12e79a5a4}\index{DeviceAnalyzer@{DeviceAnalyzer}!generateSecurityReport@{generateSecurityReport}}
+\index{generateSecurityReport@{generateSecurityReport}!DeviceAnalyzer@{DeviceAnalyzer}}
+\doxysubsubsection{\texorpdfstring{generateSecurityReport()}{generateSecurityReport()}}
+{\footnotesize\ttfamily \label{class_device_analyzer_af9e9ff2343814056bad22fa12e79a5a4} 
+QString Device\+Analyzer\+::generate\+Security\+Report (\begin{DoxyParamCaption}\item[{const QList$<$ \mbox{\hyperlink{struct_host_info}{Host\+Info}} $>$ \&}]{hosts}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_device_analyzer_ac7e2e841da029673df14b2bee3a68223}\index{DeviceAnalyzer@{DeviceAnalyzer}!getDeviceTypeChart@{getDeviceTypeChart}}
+\index{getDeviceTypeChart@{getDeviceTypeChart}!DeviceAnalyzer@{DeviceAnalyzer}}
+\doxysubsubsection{\texorpdfstring{getDeviceTypeChart()}{getDeviceTypeChart()}}
+{\footnotesize\ttfamily \label{class_device_analyzer_ac7e2e841da029673df14b2bee3a68223} 
+QChart \texorpdfstring{$\ast$}{*} Device\+Analyzer\+::get\+Device\+Type\+Chart (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_device_analyzer_a8b55877833dbc9de3e4f96c9d9a075f8}\index{DeviceAnalyzer@{DeviceAnalyzer}!getPortDistributionChart@{getPortDistributionChart}}
+\index{getPortDistributionChart@{getPortDistributionChart}!DeviceAnalyzer@{DeviceAnalyzer}}
+\doxysubsubsection{\texorpdfstring{getPortDistributionChart()}{getPortDistributionChart()}}
+{\footnotesize\ttfamily \label{class_device_analyzer_a8b55877833dbc9de3e4f96c9d9a075f8} 
+QChart \texorpdfstring{$\ast$}{*} Device\+Analyzer\+::get\+Port\+Distribution\+Chart (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_device_analyzer_a0c4a840a69de561a48d5104334a863eb}\index{DeviceAnalyzer@{DeviceAnalyzer}!getReachableHostsCount@{getReachableHostsCount}}
+\index{getReachableHostsCount@{getReachableHostsCount}!DeviceAnalyzer@{DeviceAnalyzer}}
+\doxysubsubsection{\texorpdfstring{getReachableHostsCount()}{getReachableHostsCount()}}
+{\footnotesize\ttfamily \label{class_device_analyzer_a0c4a840a69de561a48d5104334a863eb} 
+int Device\+Analyzer\+::get\+Reachable\+Hosts\+Count (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_device_analyzer_ab7f467d41bcd65318fca93f013557d74}\index{DeviceAnalyzer@{DeviceAnalyzer}!getTotalHostsCount@{getTotalHostsCount}}
+\index{getTotalHostsCount@{getTotalHostsCount}!DeviceAnalyzer@{DeviceAnalyzer}}
+\doxysubsubsection{\texorpdfstring{getTotalHostsCount()}{getTotalHostsCount()}}
+{\footnotesize\ttfamily \label{class_device_analyzer_ab7f467d41bcd65318fca93f013557d74} 
+int Device\+Analyzer\+::get\+Total\+Hosts\+Count (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_device_analyzer_a3c0135082a28d35305d7ac6f404c7b41}\index{DeviceAnalyzer@{DeviceAnalyzer}!getUnreachableHostsCount@{getUnreachableHostsCount}}
+\index{getUnreachableHostsCount@{getUnreachableHostsCount}!DeviceAnalyzer@{DeviceAnalyzer}}
+\doxysubsubsection{\texorpdfstring{getUnreachableHostsCount()}{getUnreachableHostsCount()}}
+{\footnotesize\ttfamily \label{class_device_analyzer_a3c0135082a28d35305d7ac6f404c7b41} 
+int Device\+Analyzer\+::get\+Unreachable\+Hosts\+Count (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_device_analyzer_a06ac4b0aa36fc58d192e4591d25e8bc4}\index{DeviceAnalyzer@{DeviceAnalyzer}!getVendorDistributionChart@{getVendorDistributionChart}}
+\index{getVendorDistributionChart@{getVendorDistributionChart}!DeviceAnalyzer@{DeviceAnalyzer}}
+\doxysubsubsection{\texorpdfstring{getVendorDistributionChart()}{getVendorDistributionChart()}}
+{\footnotesize\ttfamily \label{class_device_analyzer_a06ac4b0aa36fc58d192e4591d25e8bc4} 
+QChart \texorpdfstring{$\ast$}{*} Device\+Analyzer\+::get\+Vendor\+Distribution\+Chart (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{类成员变量说明}
+\Hypertarget{class_device_analyzer_afe97f524a3f4be45e747755f0190cc92}\index{DeviceAnalyzer@{DeviceAnalyzer}!m\_deviceTypeChart@{m\_deviceTypeChart}}
+\index{m\_deviceTypeChart@{m\_deviceTypeChart}!DeviceAnalyzer@{DeviceAnalyzer}}
+\doxysubsubsection{\texorpdfstring{m\_deviceTypeChart}{m\_deviceTypeChart}}
+{\footnotesize\ttfamily \label{class_device_analyzer_afe97f524a3f4be45e747755f0190cc92} 
+QChart\texorpdfstring{$\ast$}{*} Device\+Analyzer\+::m\+\_\+device\+Type\+Chart\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_device_analyzer_aafd3c366544d437cc0cf20e8bc1bcd07}\index{DeviceAnalyzer@{DeviceAnalyzer}!m\_deviceTypeSeries@{m\_deviceTypeSeries}}
+\index{m\_deviceTypeSeries@{m\_deviceTypeSeries}!DeviceAnalyzer@{DeviceAnalyzer}}
+\doxysubsubsection{\texorpdfstring{m\_deviceTypeSeries}{m\_deviceTypeSeries}}
+{\footnotesize\ttfamily \label{class_device_analyzer_aafd3c366544d437cc0cf20e8bc1bcd07} 
+QPie\+Series\texorpdfstring{$\ast$}{*} Device\+Analyzer\+::m\+\_\+device\+Type\+Series\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_device_analyzer_a8a3bb2942a47d12c383274e4fbbdf1a8}\index{DeviceAnalyzer@{DeviceAnalyzer}!m\_portDistributionChart@{m\_portDistributionChart}}
+\index{m\_portDistributionChart@{m\_portDistributionChart}!DeviceAnalyzer@{DeviceAnalyzer}}
+\doxysubsubsection{\texorpdfstring{m\_portDistributionChart}{m\_portDistributionChart}}
+{\footnotesize\ttfamily \label{class_device_analyzer_a8a3bb2942a47d12c383274e4fbbdf1a8} 
+QChart\texorpdfstring{$\ast$}{*} Device\+Analyzer\+::m\+\_\+port\+Distribution\+Chart\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_device_analyzer_a84825b7c44b36081233b8efec34297c5}\index{DeviceAnalyzer@{DeviceAnalyzer}!m\_portSeries@{m\_portSeries}}
+\index{m\_portSeries@{m\_portSeries}!DeviceAnalyzer@{DeviceAnalyzer}}
+\doxysubsubsection{\texorpdfstring{m\_portSeries}{m\_portSeries}}
+{\footnotesize\ttfamily \label{class_device_analyzer_a84825b7c44b36081233b8efec34297c5} 
+QBar\+Series\texorpdfstring{$\ast$}{*} Device\+Analyzer\+::m\+\_\+port\+Series\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_device_analyzer_a17e59e962534a6e52394574f8b4a2127}\index{DeviceAnalyzer@{DeviceAnalyzer}!m\_reachableHosts@{m\_reachableHosts}}
+\index{m\_reachableHosts@{m\_reachableHosts}!DeviceAnalyzer@{DeviceAnalyzer}}
+\doxysubsubsection{\texorpdfstring{m\_reachableHosts}{m\_reachableHosts}}
+{\footnotesize\ttfamily \label{class_device_analyzer_a17e59e962534a6e52394574f8b4a2127} 
+int Device\+Analyzer\+::m\+\_\+reachable\+Hosts\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_device_analyzer_a7d0c5bf299955eb2b5b5989f502cddb9}\index{DeviceAnalyzer@{DeviceAnalyzer}!m\_totalHosts@{m\_totalHosts}}
+\index{m\_totalHosts@{m\_totalHosts}!DeviceAnalyzer@{DeviceAnalyzer}}
+\doxysubsubsection{\texorpdfstring{m\_totalHosts}{m\_totalHosts}}
+{\footnotesize\ttfamily \label{class_device_analyzer_a7d0c5bf299955eb2b5b5989f502cddb9} 
+int Device\+Analyzer\+::m\+\_\+total\+Hosts\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_device_analyzer_ac742bcabdf7da5708db1c5068e10da3a}\index{DeviceAnalyzer@{DeviceAnalyzer}!m\_vendorDistributionChart@{m\_vendorDistributionChart}}
+\index{m\_vendorDistributionChart@{m\_vendorDistributionChart}!DeviceAnalyzer@{DeviceAnalyzer}}
+\doxysubsubsection{\texorpdfstring{m\_vendorDistributionChart}{m\_vendorDistributionChart}}
+{\footnotesize\ttfamily \label{class_device_analyzer_ac742bcabdf7da5708db1c5068e10da3a} 
+QChart\texorpdfstring{$\ast$}{*} Device\+Analyzer\+::m\+\_\+vendor\+Distribution\+Chart\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_device_analyzer_a0d52f009ee62d2e8bff9ae2f42ebac4b}\index{DeviceAnalyzer@{DeviceAnalyzer}!m\_vendorSeries@{m\_vendorSeries}}
+\index{m\_vendorSeries@{m\_vendorSeries}!DeviceAnalyzer@{DeviceAnalyzer}}
+\doxysubsubsection{\texorpdfstring{m\_vendorSeries}{m\_vendorSeries}}
+{\footnotesize\ttfamily \label{class_device_analyzer_a0d52f009ee62d2e8bff9ae2f42ebac4b} 
+QPie\+Series\texorpdfstring{$\ast$}{*} Device\+Analyzer\+::m\+\_\+vendor\+Series\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{deviceanalyzer_8h}{deviceanalyzer.\+h}}\item 
+build/\+Net\+Scanner\+\_\+autogen/\+EWIEGA46\+WW/\mbox{\hyperlink{build_2_net_scanner__autogen_2_e_w_i_e_g_a46_w_w_2moc__deviceanalyzer_8cpp}{moc\+\_\+deviceanalyzer.\+cpp}}\item 
+\mbox{\hyperlink{deviceanalyzer_8cpp}{deviceanalyzer.\+cpp}}\item 
+Net\+Scanner\+\_\+autogen/\+EWIEGA46\+WW/\mbox{\hyperlink{_net_scanner__autogen_2_e_w_i_e_g_a46_w_w_2moc__deviceanalyzer_8cpp}{moc\+\_\+deviceanalyzer.\+cpp}}\item 
+Net\+Scanner\+\_\+autogen/\+JRIAJ772\+TK/\mbox{\hyperlink{_net_scanner__autogen_2_j_r_i_a_j772_t_k_2moc__deviceanalyzer_8cpp}{moc\+\_\+deviceanalyzer.\+cpp}}\end{DoxyCompactItemize}

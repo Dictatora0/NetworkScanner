@@ -1,0 +1,419 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Network Scanner: 网络扫描器</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Network Scanner
+   </div>
+   <div id="projectbrief">网络扫描和拓扑分析工具</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('md__r_e_a_d_m_e.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">网络扫描器</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md0"></a></p>
+<p>一个基于Qt的综合性网络扫描工具，用于扫描局域网中的计算机，以可视化方式展示网络拓扑结构，并提供详细的设备分析。</p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+主要功能</h1>
+<ul>
+<li>自动检测本地网络接口</li>
+<li>扫描局域网内所有可达的计算机</li>
+<li>显示主机IP地址、主机名、MAC地址和可连接状态</li>
+<li>识别并显示设备的MAC地址厂商信息</li>
+<li><b>直观的网络拓扑图可视化，显示网络设备之间的关系</b></li>
+<li><b>智能设备类型识别（路由器、服务器、PC、移动设备等）</b></li>
+<li><b>设备统计分析和图表展示（设备类型分布、厂商分布）</b></li>
+<li><b>开放端口分布统计和图表展示</b></li>
+<li><b>安全风险分析和安全报告生成</b></li>
+<li><b>扫描历史记录和会话比较功能</b></li>
+<li><b>支持明暗两种主题模式切换</b></li>
+<li>实时显示扫描进度和结果</li>
+<li>支持多线程并行扫描，提高扫描速度</li>
+<li>可配置自定义端口扫描列表</li>
+<li>可设置扫描超时时间</li>
+<li>可指定自定义IP地址范围</li>
+<li>可保存和导出扫描结果</li>
+<li>可查看主机的详细信息和开放端口</li>
+<li>支持设置保存和加载</li>
+<li><b>支持计划任务扫描</b></li>
+<li><b>过滤和搜索扫描结果</b></li>
+</ul>
+<h1><a class="anchor" id="autotoc_md2"></a>
+最新改进</h1>
+<ul>
+<li>**扫描性能优化**：减少每个子网的扫描IP数量，更快完成扫描</li>
+<li>**超时控制**：添加全局扫描超时机制，防止扫描过程卡住</li>
+<li>**稳定性提升**：改进了错误处理，提高了应用在不同网络环境下的稳定性</li>
+<li>**资源管理**：优化线程和内存使用，减少资源占用</li>
+<li>**代码文档**：添加了完整的Doxygen风格注释，便于维护和开发</li>
+<li>**UI响应性**：改进了UI反馈机制，提供更好的用户体验</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md3"></a>
+构建要求</h1>
+<ul>
+<li>Qt 6.0或更高版本（也兼容Qt 5）</li>
+<li>C++17标准支持</li>
+<li>CMake 3.16或更高版本</li>
+<li>需要包含QtCharts模块（Qt5需要单独安装，Qt6已包含）</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md4"></a>
+构建步骤</h1>
+<ol type="1">
+<li>确保已安装Qt和CMake</li>
+<li>克隆或下载此项目</li>
+<li>创建构建目录：<code>mkdir build &amp;&amp; cd build</code></li>
+<li>运行CMake生成构建文件：<code>cmake ..</code></li>
+<li>编译项目：<code>make</code> 或 <code>cmake --build .</code></li>
+<li>运行程序：<code>./NetScanner</code></li>
+</ol>
+<div class="fragment"><div class="line">cd /Users/lifulin/Desktop/NetworkScanner</div>
+<div class="line">rm -rf build</div>
+<div class="line">mkdir build</div>
+<div class="line">cd build</div>
+<div class="line">cmake ..</div>
+<div class="line">make -j8</div>
+<div class="line">./NetScanner</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md5"></a>
+详细使用指南</h1>
+<h2><a class="anchor" id="autotoc_md6"></a>
+基本扫描</h2>
+<ol type="1">
+<li>启动应用程序</li>
+<li>可选：在"扫描设置"标签页配置扫描参数<ul>
+<li>可以设置自定义端口列表，格式为逗号分隔的端口号，例如：<code>21,22,23,80,443</code></li>
+<li>可以设置连接超时时间（100-10000毫秒之间），默认为500毫秒</li>
+<li>可以设置自定义IP地址范围，例如从<code>192.168.1.1</code>到<code>192.168.1.254</code></li>
+</ul>
+</li>
+<li>返回"扫描结果"标签页，点击"开始扫描"按钮</li>
+<li>等待扫描完成（进度条显示当前扫描进度）</li>
+<li>查看结果表格中显示的主机信息，包括IP地址、主机名、MAC地址和厂商信息</li>
+<li>双击任一主机查看其详细信息，包括所有开放端口</li>
+</ol>
+<h2><a class="anchor" id="autotoc_md7"></a>
+网络拓扑</h2>
+<ol type="1">
+<li>完成扫描后，切换到"网络拓扑"标签页</li>
+<li>查看自动生成的网络拓扑图：<ul>
+<li>中心节点通常是网关或路由器（红色图标）</li>
+<li>服务器显示为蓝色图标</li>
+<li>个人电脑显示为绿色图标</li>
+<li>移动设备显示为橙色图标</li>
+<li>打印机显示为紫色图标</li>
+<li>智能设备显示为青色图标</li>
+</ul>
+</li>
+<li>使用"自动布局"按钮重新排列设备位置</li>
+<li>使用"+"和"-"按钮放大或缩小视图</li>
+<li>使用"重置视图"按钮恢复默认视图</li>
+<li>鼠标悬停在设备节点上可查看设备详细信息</li>
+<li>点击设备节点可选中该设备，并自动在"扫描结果"中突出显示</li>
+<li>通过"保存网络拓扑图"功能可导出当前拓扑图为PNG或JPG图像文件</li>
+</ol>
+<h2><a class="anchor" id="autotoc_md8"></a>
+设备分析</h2>
+<ol type="1">
+<li>完成扫描后，切换到"统计分析"标签页</li>
+<li>查看三种图表：<ul>
+<li>**设备类型分布**：饼图显示不同类型设备（路由器、服务器、PC、移动设备等）的数量和百分比</li>
+<li>**厂商分布**：饼图显示不同厂商设备的数量和百分比，展示前5大厂商，其余归为"其他"</li>
+<li>**端口分布**：柱状图显示常见端口（如21、22、80、443等）的开放情况</li>
+</ul>
+</li>
+<li>点击"生成安全报告"按钮获取网络安全分析和建议，报告将包含：<ul>
+<li>设备数量统计</li>
+<li>高风险开放端口清单（如21/FTP、22/SSH、23/Telnet等）</li>
+<li>每台设备的安全风险评估</li>
+<li>具体的安全加固建议</li>
+</ul>
+</li>
+</ol>
+<h2><a class="anchor" id="autotoc_md9"></a>
+扫描历史</h2>
+<ol type="1">
+<li>每次完成扫描后，结果会自动保存到扫描历史</li>
+<li>在"扫描历史"标签页查看历史记录：<ul>
+<li>从下拉列表中选择历史会话查看具体结果</li>
+<li>点击"加载会话"按钮可将历史结果加载到当前视图</li>
+<li>点击"删除会话"按钮可删除不需要的历史记录</li>
+</ul>
+</li>
+<li>使用"比较会话"功能对比两次扫描结果：<ul>
+<li>选择两个不同的扫描会话进行比较</li>
+<li>查看"新增主机"和"消失主机"两个标签页了解网络变化</li>
+<li>识别网络中的新设备或已移除设备</li>
+</ul>
+</li>
+<li>通过"文件→保存扫描历史"菜单将历史记录保存到JSON文件中</li>
+<li>通过"文件→加载扫描历史"菜单从JSON文件加载历史记录</li>
+</ol>
+<h2><a class="anchor" id="autotoc_md10"></a>
+计划任务</h2>
+<ol type="1">
+<li>通过"工具→计划扫描"菜单设置定时扫描任务</li>
+<li>在弹出的对话框中：<ul>
+<li>选择扫描的日期和时间</li>
+<li>设置是否使用当前扫描设置</li>
+<li>配置是否自动保存结果</li>
+<li>设置是否在扫描完成后显示通知</li>
+</ul>
+</li>
+<li>点击确定后，系统将在指定时间自动执行扫描</li>
+<li>扫描结果将按照设置保存，并可选择性地显示通知</li>
+</ol>
+<h2><a class="anchor" id="autotoc_md11"></a>
+结果过滤</h2>
+<ol type="1">
+<li>使用扫描结果页面顶部的过滤工具栏筛选结果：<ul>
+<li>按IP地址过滤（支持部分匹配）</li>
+<li>按厂商过滤（从下拉列表选择）</li>
+<li>按设备类型过滤（路由器、服务器、PC等）</li>
+</ul>
+</li>
+<li>点击"应用过滤"按钮应用筛选条件</li>
+<li>点击"清除过滤"恢复显示所有结果</li>
+</ol>
+<h2><a class="anchor" id="autotoc_md12"></a>
+暗色模式</h2>
+<ul>
+<li>通过"视图→暗色模式"菜单项切换明暗主题</li>
+<li>暗色模式下所有UI元素（包括图表）将采用深色背景，更适合夜间使用</li>
+<li>设置将自动保存，下次启动时恢复上次的主题设置</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md13"></a>
+MAC地址厂商识别</h1>
+<p>应用程序内置了常见设备制造商的MAC地址前缀数据库，可以识别出许多设备的厂商，例如：</p><ul>
+<li>苹果 (Apple)</li>
+<li>微软 (Microsoft)</li>
+<li>华为 (Huawei)</li>
+<li>思科 (Cisco)</li>
+<li>小米 (Xiaomi)</li>
+<li>TP-Link</li>
+<li>联想 (Lenovo)</li>
+<li>华硕 (ASUS)</li>
+<li>VMware虚拟机 等多种设备。</li>
+</ul>
+<p>程序支持多种格式的MAC地址解析，包括：</p><ul>
+<li>标准冒号分隔格式：<code>00:1A:2B:3C:4D:5E</code></li>
+<li>连字符分隔格式：<code>00-1A-2B-3C-4D-5E</code></li>
+<li>不规则格式：例如某些系统输出的单个字符格式，如<code>0:1A:2B:3:4D:5E</code></li>
+</ul>
+<h1><a class="anchor" id="autotoc_md14"></a>
+技术细节</h1>
+<ul>
+<li>**网络发现机制**：使用优化的算法探测局域网设备，包括自适应超时设置和智能重试机制</li>
+<li>**多线程扫描**：根据系统CPU核心数自动调整并行扫描线程数</li>
+<li>**伪MAC地址生成**：当无法通过系统ARP表获取真实MAC地址时，使用基于IP的一致性伪MAC地址生成</li>
+<li>**超时控制**：全局扫描超时保护机制，防止在网络环境较差时应用程序卡住</li>
+<li>**代码文档**：完整的Doxygen格式代码注释，便于开发和维护</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md15"></a>
+故障排除</h1>
+<h2><a class="anchor" id="autotoc_md16"></a>
+常见问题</h2>
+<ol type="1">
+<li><b>无法检测到网络接口</b><ul>
+<li>确保用户有足够的权限访问网络接口</li>
+<li>在某些系统上，可能需要管理员/root权限运行程序</li>
+</ul>
+</li>
+<li><b>扫描卡在99不动</b><ul>
+<li>已修复此问题，现在添加了120秒的全局超时限制</li>
+<li>如果仍然出现此问题，尝试减少自定义IP范围或使用"快速扫描"模式</li>
+</ul>
+</li>
+<li><b>扫描速度慢</b><ul>
+<li>尝试减少要扫描的端口数量</li>
+<li>减小超时设置值（默认为500毫秒）</li>
+<li>请注意，设置过小的超时值可能导致漏检主机</li>
+</ul>
+</li>
+<li><b>某些设备没有被检测到</b><ul>
+<li>某些设备可能配置了防火墙阻止ICMP和常见端口</li>
+<li>尝试增加超时设置值</li>
+<li>考虑在扫描设置中添加设备可能开放的特定端口</li>
+</ul>
+</li>
+<li><b>拓扑图不显示某些设备之间的连接</b><ul>
+<li>当前版本使用简化的拓扑推断算法</li>
+<li>所有设备默认连接到检测到的路由器/网关</li>
+</ul>
+</li>
+</ol>
+<h2><a class="anchor" id="autotoc_md17"></a>
+性能优化</h2>
+<ul>
+<li>扫描大型网络（超过254个地址）时，建议使用自定义IP范围，分段扫描</li>
+<li>在配置较低的计算机上，可以减少扫描的端口数量以提高速度</li>
+<li>禁用"自动保存结果"可减少内存占用</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md18"></a>
+开发注意事项</h1>
+<h2><a class="anchor" id="autotoc_md19"></a>
+QtCharts命名空间</h2>
+<p>此项目使用QtCharts库进行数据可视化，需要注意：</p>
+<ol type="1">
+<li>在CMakeLists.txt中，我们使用 <code>-DQT_CHARTS_USE_NAMESPACE</code> 宏定义来简化命名空间的使用</li>
+<li>如果您直接在代码中使用 <code>using namespace QtCharts;</code>，在某些Qt版本中可能导致编译错误</li>
+<li>当使用QtCharts类时，推荐以下两种方式之一：<ul>
+<li>使用完整命名空间：<code>QtCharts::QChart</code></li>
+<li>在CMakeLists.txt中添加全局宏定义：<code>add_definitions(-DQT_CHARTS_USE_NAMESPACE)</code></li>
+</ul>
+</li>
+</ol>
+<h2><a class="anchor" id="autotoc_md20"></a>
+内存管理和界面初始化</h2>
+<p>为确保程序稳定性：</p>
+<ol type="1">
+<li>确保所有QWidget对象都有正确的父子关系，避免浮动窗口</li>
+<li>在MainWindow构造函数中，先创建UI组件，再创建功能对象（如扫描器、分析器等）</li>
+<li>信号槽连接前，确保对应的对象已正确初始化</li>
+<li>图表组件的创建和使用需要特别注意其生命周期管理</li>
+</ol>
+<h1><a class="anchor" id="autotoc_md21"></a>
+版本历史</h1>
+<h2><a class="anchor" id="autotoc_md22"></a>
+v2.2.0</h2>
+<ul>
+<li>增加了扫描超时控制，防止在部分网络环境下卡在99%</li>
+<li>优化扫描性能，减少扫描IP数量，更快完成扫描</li>
+<li>提高了应用程序稳定性，改进了错误处理机制</li>
+<li>添加了完整的Doxygen格式代码注释</li>
+<li>优化了MAC地址处理算法，增强了多种格式MAC地址的兼容性</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md23"></a>
+v2.1.0</h2>
+<ul>
+<li>修复了MAC地址解析问题，增强了对不规则MAC地址格式的支持</li>
+<li>实现了网络拓扑图的缩放和重置功能</li>
+<li>优化了设备类型识别算法</li>
+<li>改进了主窗口组件初始化顺序，提高程序稳定性</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md24"></a>
+v2.0.0</h2>
+<ul>
+<li>添加了网络拓扑可视化功能</li>
+<li>添加了设备类型识别功能</li>
+<li>添加了扫描历史和会话比较功能</li>
+<li>添加了统计分析和图表展示功能</li>
+<li>添加了安全报告生成功能</li>
+<li>添加了计划任务扫描功能</li>
+<li>添加了结果过滤功能</li>
+<li>添加了暗色模式</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md25"></a>
+v1.0.0</h2>
+<ul>
+<li>初始版本</li>
+<li>基本网络扫描功能</li>
+<li>显示主机IP、主机名和MAC地址</li>
+<li>支持端口扫描</li>
+<li>支持MAC厂商识别</li>
+</ul>
+<p>项目GitHub：https://github.com/example/networkscanner </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<map id="MainWindow::clearFilters" name="MainWindow::clearFilters">
+<area shape="rect" id="Node000001" title=" " alt="" coords="712,31,881,56"/>
+<area shape="rect" id="Node000002" href="$class_main_window.html#a02a66a16cd39489f10ce96440ba16a93" title=" " alt="" coords="490,5,664,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="697,35,664,31,665,26,697,29"/>
+<area shape="rect" id="Node000003" href="$class_main_window.html#a95dc085bf70bd0c1ad05bd80f897fd1d" title=" " alt="" coords="233,31,442,56"/>
+<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="697,46,443,46,443,41,697,41"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="475,32,443,35,442,30,474,26"/>
+<area shape="rect" id="Node000004" href="$class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,31,185,56"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="217,46,185,46,185,41,217,41"/>
+</map>

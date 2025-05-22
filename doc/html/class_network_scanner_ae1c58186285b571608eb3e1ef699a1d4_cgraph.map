@@ -1,0 +1,13 @@
+<map id="NetworkScanner::scanHost" name="NetworkScanner::scanHost">
+<area shape="rect" id="Node000001" title="扫描单个主机" alt="" coords="5,120,188,145"/>
+<area shape="rect" id="Node000002" href="$class_network_scanner.html#a618ee5322d0843ad65a341fff40ce43d" title="根据IP地址生成伪MAC地址" alt="" coords="251,5,427,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="118,117,170,87,235,55,250,49,252,54,237,60,173,92,120,121"/>
+<area shape="rect" id="Node000003" href="$class_network_scanner.html#a941867644d70f3b1c512c9e98f082ed3" title="找到主机信号" alt="" coords="245,70,432,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="163,116,257,97,258,102,164,121"/>
+<area shape="rect" id="Node000004" href="$class_network_scanner.html#a311c4f6158b867640590a03f85879b6b" title="扫描完成信号" alt="" coords="237,120,440,145"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="188,130,222,130,222,135,188,135"/>
+<area shape="rect" id="Node000005" href="$class_network_scanner.html#acdcb120eceeec289b7feb2f5d8256b2a" title="扫描主机端口" alt="" coords="248,169,430,210"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="155,143,236,163,234,168,153,148"/>
+<area shape="rect" id="Node000006" href="$class_network_scanner.html#a9e780f0ca7e0519b0a7b8ee6db11996e" title="扫描进度更新信号" alt="" coords="236,234,442,260"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="116,143,168,181,237,219,257,227,255,232,235,224,165,185,113,148"/>
+</map>

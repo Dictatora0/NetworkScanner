@@ -1,0 +1,291 @@
+\chapter{网络扫描器}
+\hypertarget{md__r_e_a_d_m_e}{}\label{md__r_e_a_d_m_e}\index{网络扫描器@{网络扫描器}}
+\label{md__r_e_a_d_m_e_autotoc_md0}%
+\Hypertarget{md__r_e_a_d_m_e_autotoc_md0}%
+
+
+一个基于\+Qt的综合性网络扫描工具，用于扫描局域网中的计算机，以可视化方式展示网络拓扑结构，并提供详细的设备分析。\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{\texorpdfstring{主要功能}{主要功能}}\label{md__r_e_a_d_m_e_autotoc_md1}
+
+\begin{DoxyItemize}
+\item 自动检测本地网络接口
+\item 扫描局域网内所有可达的计算机
+\item 显示主机\+IP地址、主机名、\+MAC地址和可连接状态
+\item 识别并显示设备的\+MAC地址厂商信息
+\item {\bfseries{直观的网络拓扑图可视化，显示网络设备之间的关系}}
+\item {\bfseries{智能设备类型识别（路由器、服务器、\+PC、移动设备等）}}
+\item {\bfseries{设备统计分析和图表展示（设备类型分布、厂商分布）}}
+\item {\bfseries{开放端口分布统计和图表展示}}
+\item {\bfseries{安全风险分析和安全报告生成}}
+\item {\bfseries{扫描历史记录和会话比较功能}}
+\item {\bfseries{支持明暗两种主题模式切换}}
+\item 实时显示扫描进度和结果
+\item 支持多线程并行扫描，提高扫描速度
+\item 可配置自定义端口扫描列表
+\item 可设置扫描超时时间
+\item 可指定自定义\+IP地址范围
+\item 可保存和导出扫描结果
+\item 可查看主机的详细信息和开放端口
+\item 支持设置保存和加载
+\item {\bfseries{支持计划任务扫描}}
+\item {\bfseries{过滤和搜索扫描结果}}
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md2}{}\doxysection{\texorpdfstring{最新改进}{最新改进}}\label{md__r_e_a_d_m_e_autotoc_md2}
+
+\begin{DoxyItemize}
+\item \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}扫描性能优化\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}：减少每个子网的扫描\+IP数量，更快完成扫描
+\item \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}超时控制\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}：添加全局扫描超时机制，防止扫描过程卡住
+\item \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}稳定性提升\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}：改进了错误处理，提高了应用在不同网络环境下的稳定性
+\item \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}资源管理\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}：优化线程和内存使用，减少资源占用
+\item \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}代码文档\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}：添加了完整的\+Doxygen风格注释，便于维护和开发
+\item \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\+UI响应性\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}：改进了\+UI反馈机制，提供更好的用户体验
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysection{\texorpdfstring{构建要求}{构建要求}}\label{md__r_e_a_d_m_e_autotoc_md3}
+
+\begin{DoxyItemize}
+\item Qt 6.\+0或更高版本（也兼容\+Qt 5）
+\item C++17标准支持
+\item CMake 3.\+16或更高版本
+\item 需要包含\+Qt\+Charts模块（\+Qt5需要单独安装，\+Qt6已包含）
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysection{\texorpdfstring{构建步骤}{构建步骤}}\label{md__r_e_a_d_m_e_autotoc_md4}
+
+\begin{DoxyEnumerate}
+\item 确保已安装\+Qt和\+CMake
+\item 克隆或下载此项目
+\item 创建构建目录：{\ttfamily mkdir build \&\& cd build}
+\item 运行\+CMake生成构建文件：{\ttfamily cmake ..}
+\item 编译项目：{\ttfamily make} 或 {\ttfamily cmake -\/-\/build .}
+\item 运行程序：{\ttfamily ./\+Net\+Scanner}
+\end{DoxyEnumerate}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd\ /Users/lifulin/Desktop/NetworkScanner}
+\DoxyCodeLine{rm\ -\/rf\ build}
+\DoxyCodeLine{mkdir\ build}
+\DoxyCodeLine{cd\ build}
+\DoxyCodeLine{cmake\ ..}
+\DoxyCodeLine{make\ -\/j8}
+\DoxyCodeLine{./NetScanner}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxysection{\texorpdfstring{详细使用指南}{详细使用指南}}\label{md__r_e_a_d_m_e_autotoc_md5}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md6}{}\doxysubsection{\texorpdfstring{基本扫描}{基本扫描}}\label{md__r_e_a_d_m_e_autotoc_md6}
+
+\begin{DoxyEnumerate}
+\item 启动应用程序
+\item 可选：在"{}扫描设置"{}标签页配置扫描参数
+\begin{DoxyItemize}
+\item 可以设置自定义端口列表，格式为逗号分隔的端口号，例如：{\ttfamily 21,22,23,80,443}
+\item 可以设置连接超时时间（100-\/10000毫秒之间），默认为500毫秒
+\item 可以设置自定义\+IP地址范围，例如从{\ttfamily 192.\+168.\+1.\+1}到{\ttfamily 192.\+168.\+1.\+254}
+\end{DoxyItemize}
+\item 返回"{}扫描结果"{}标签页，点击"{}开始扫描"{}按钮
+\item 等待扫描完成（进度条显示当前扫描进度）
+\item 查看结果表格中显示的主机信息，包括\+IP地址、主机名、\+MAC地址和厂商信息
+\item 双击任一主机查看其详细信息，包括所有开放端口
+\end{DoxyEnumerate}\hypertarget{md__r_e_a_d_m_e_autotoc_md7}{}\doxysubsection{\texorpdfstring{网络拓扑}{网络拓扑}}\label{md__r_e_a_d_m_e_autotoc_md7}
+
+\begin{DoxyEnumerate}
+\item 完成扫描后，切换到"{}网络拓扑"{}标签页
+\item 查看自动生成的网络拓扑图：
+\begin{DoxyItemize}
+\item 中心节点通常是网关或路由器（红色图标）
+\item 服务器显示为蓝色图标
+\item 个人电脑显示为绿色图标
+\item 移动设备显示为橙色图标
+\item 打印机显示为紫色图标
+\item 智能设备显示为青色图标
+\end{DoxyItemize}
+\item 使用"{}自动布局"{}按钮重新排列设备位置
+\item 使用"{}+"{}和"{}-\/"{}按钮放大或缩小视图
+\item 使用"{}重置视图"{}按钮恢复默认视图
+\item 鼠标悬停在设备节点上可查看设备详细信息
+\item 点击设备节点可选中该设备，并自动在"{}扫描结果"{}中突出显示
+\item 通过"{}保存网络拓扑图"{}功能可导出当前拓扑图为\+PNG或\+JPG图像文件
+\end{DoxyEnumerate}\hypertarget{md__r_e_a_d_m_e_autotoc_md8}{}\doxysubsection{\texorpdfstring{设备分析}{设备分析}}\label{md__r_e_a_d_m_e_autotoc_md8}
+
+\begin{DoxyEnumerate}
+\item 完成扫描后，切换到"{}统计分析"{}标签页
+\item 查看三种图表：
+\begin{DoxyItemize}
+\item \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}设备类型分布\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}：饼图显示不同类型设备（路由器、服务器、\+PC、移动设备等）的数量和百分比
+\item \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}厂商分布\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}：饼图显示不同厂商设备的数量和百分比，展示前5大厂商，其余归为"{}其他"{}
+\item \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}端口分布\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}：柱状图显示常见端口（如21、22、80、443等）的开放情况
+\end{DoxyItemize}
+\item 点击"{}生成安全报告"{}按钮获取网络安全分析和建议，报告将包含：
+\begin{DoxyItemize}
+\item 设备数量统计
+\item 高风险开放端口清单（如21/\+FTP、22/\+SSH、23/\+Telnet等）
+\item 每台设备的安全风险评估
+\item 具体的安全加固建议
+\end{DoxyItemize}
+\end{DoxyEnumerate}\hypertarget{md__r_e_a_d_m_e_autotoc_md9}{}\doxysubsection{\texorpdfstring{扫描历史}{扫描历史}}\label{md__r_e_a_d_m_e_autotoc_md9}
+
+\begin{DoxyEnumerate}
+\item 每次完成扫描后，结果会自动保存到扫描历史
+\item 在"{}扫描历史"{}标签页查看历史记录：
+\begin{DoxyItemize}
+\item 从下拉列表中选择历史会话查看具体结果
+\item 点击"{}加载会话"{}按钮可将历史结果加载到当前视图
+\item 点击"{}删除会话"{}按钮可删除不需要的历史记录
+\end{DoxyItemize}
+\item 使用"{}比较会话"{}功能对比两次扫描结果：
+\begin{DoxyItemize}
+\item 选择两个不同的扫描会话进行比较
+\item 查看"{}新增主机"{}和"{}消失主机"{}两个标签页了解网络变化
+\item 识别网络中的新设备或已移除设备
+\end{DoxyItemize}
+\item 通过"{}文件→保存扫描历史"{}菜单将历史记录保存到\+JSON文件中
+\item 通过"{}文件→加载扫描历史"{}菜单从\+JSON文件加载历史记录
+\end{DoxyEnumerate}\hypertarget{md__r_e_a_d_m_e_autotoc_md10}{}\doxysubsection{\texorpdfstring{计划任务}{计划任务}}\label{md__r_e_a_d_m_e_autotoc_md10}
+
+\begin{DoxyEnumerate}
+\item 通过"{}工具→计划扫描"{}菜单设置定时扫描任务
+\item 在弹出的对话框中：
+\begin{DoxyItemize}
+\item 选择扫描的日期和时间
+\item 设置是否使用当前扫描设置
+\item 配置是否自动保存结果
+\item 设置是否在扫描完成后显示通知
+\end{DoxyItemize}
+\item 点击确定后，系统将在指定时间自动执行扫描
+\item 扫描结果将按照设置保存，并可选择性地显示通知
+\end{DoxyEnumerate}\hypertarget{md__r_e_a_d_m_e_autotoc_md11}{}\doxysubsection{\texorpdfstring{结果过滤}{结果过滤}}\label{md__r_e_a_d_m_e_autotoc_md11}
+
+\begin{DoxyEnumerate}
+\item 使用扫描结果页面顶部的过滤工具栏筛选结果：
+\begin{DoxyItemize}
+\item 按\+IP地址过滤（支持部分匹配）
+\item 按厂商过滤（从下拉列表选择）
+\item 按设备类型过滤（路由器、服务器、\+PC等）
+\end{DoxyItemize}
+\item 点击"{}应用过滤"{}按钮应用筛选条件
+\item 点击"{}清除过滤"{}恢复显示所有结果
+\end{DoxyEnumerate}\hypertarget{md__r_e_a_d_m_e_autotoc_md12}{}\doxysubsection{\texorpdfstring{暗色模式}{暗色模式}}\label{md__r_e_a_d_m_e_autotoc_md12}
+
+\begin{DoxyItemize}
+\item 通过"{}视图→暗色模式"{}菜单项切换明暗主题
+\item 暗色模式下所有\+UI元素（包括图表）将采用深色背景，更适合夜间使用
+\item 设置将自动保存，下次启动时恢复上次的主题设置
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md13}{}\doxysection{\texorpdfstring{MAC地址厂商识别}{MAC地址厂商识别}}\label{md__r_e_a_d_m_e_autotoc_md13}
+应用程序内置了常见设备制造商的\+MAC地址前缀数据库，可以识别出许多设备的厂商，例如：
+\begin{DoxyItemize}
+\item 苹果 (Apple)
+\item 微软 (Microsoft)
+\item 华为 (Huawei)
+\item 思科 (Cisco)
+\item 小米 (Xiaomi)
+\item TP-\/\+Link
+\item 联想 (Lenovo)
+\item 华硕 (ASUS)
+\item VMware虚拟机 等多种设备。
+\end{DoxyItemize}
+
+程序支持多种格式的\+MAC地址解析，包括：
+\begin{DoxyItemize}
+\item 标准冒号分隔格式：{\ttfamily 00\+:1A\+:2B\+:3C\+:4D\+:5E}
+\item 连字符分隔格式：{\ttfamily 00-\/1A-\/2\+B-\/3\+C-\/4\+D-\/5E}
+\item 不规则格式：例如某些系统输出的单个字符格式，如{\ttfamily 0\+:1A\+:2B\+:3\+:4D\+:5E}
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md14}{}\doxysection{\texorpdfstring{技术细节}{技术细节}}\label{md__r_e_a_d_m_e_autotoc_md14}
+
+\begin{DoxyItemize}
+\item \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}网络发现机制\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}：使用优化的算法探测局域网设备，包括自适应超时设置和智能重试机制
+\item \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}多线程扫描\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}：根据系统\+CPU核心数自动调整并行扫描线程数
+\item \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}伪\+MAC地址生成\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}：当无法通过系统\+ARP表获取真实\+MAC地址时，使用基于\+IP的一致性伪\+MAC地址生成
+\item \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}超时控制\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}：全局扫描超时保护机制，防止在网络环境较差时应用程序卡住
+\item \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}代码文档\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}：完整的\+Doxygen格式代码注释，便于开发和维护
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md15}{}\doxysection{\texorpdfstring{故障排除}{故障排除}}\label{md__r_e_a_d_m_e_autotoc_md15}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md16}{}\doxysubsection{\texorpdfstring{常见问题}{常见问题}}\label{md__r_e_a_d_m_e_autotoc_md16}
+
+\begin{DoxyEnumerate}
+\item {\bfseries{无法检测到网络接口}}
+\begin{DoxyItemize}
+\item 确保用户有足够的权限访问网络接口
+\item 在某些系统上，可能需要管理员/root权限运行程序
+\end{DoxyItemize}
+\item {\bfseries{扫描卡在99不动}}
+\begin{DoxyItemize}
+\item 已修复此问题，现在添加了120秒的全局超时限制
+\item 如果仍然出现此问题，尝试减少自定义\+IP范围或使用"{}快速扫描"{}模式
+\end{DoxyItemize}
+\item {\bfseries{扫描速度慢}}
+\begin{DoxyItemize}
+\item 尝试减少要扫描的端口数量
+\item 减小超时设置值（默认为500毫秒）
+\item 请注意，设置过小的超时值可能导致漏检主机
+\end{DoxyItemize}
+\item {\bfseries{某些设备没有被检测到}}
+\begin{DoxyItemize}
+\item 某些设备可能配置了防火墙阻止\+ICMP和常见端口
+\item 尝试增加超时设置值
+\item 考虑在扫描设置中添加设备可能开放的特定端口
+\end{DoxyItemize}
+\item {\bfseries{拓扑图不显示某些设备之间的连接}}
+\begin{DoxyItemize}
+\item 当前版本使用简化的拓扑推断算法
+\item 所有设备默认连接到检测到的路由器/网关
+\end{DoxyItemize}
+\end{DoxyEnumerate}\hypertarget{md__r_e_a_d_m_e_autotoc_md17}{}\doxysubsection{\texorpdfstring{性能优化}{性能优化}}\label{md__r_e_a_d_m_e_autotoc_md17}
+
+\begin{DoxyItemize}
+\item 扫描大型网络（超过254个地址）时，建议使用自定义\+IP范围，分段扫描
+\item 在配置较低的计算机上，可以减少扫描的端口数量以提高速度
+\item 禁用"{}自动保存结果"{}可减少内存占用
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md18}{}\doxysection{\texorpdfstring{开发注意事项}{开发注意事项}}\label{md__r_e_a_d_m_e_autotoc_md18}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md19}{}\doxysubsection{\texorpdfstring{Qt\+Charts命名空间}{Qt\+Charts命名空间}}\label{md__r_e_a_d_m_e_autotoc_md19}
+此项目使用\+Qt\+Charts库进行数据可视化，需要注意：
+
+
+\begin{DoxyEnumerate}
+\item 在\+CMake\+Lists.\+txt中，我们使用 {\ttfamily -\/DQT\+\_\+\+CHARTS\+\_\+\+USE\+\_\+\+NAMESPACE} 宏定义来简化命名空间的使用
+\item 如果您直接在代码中使用 {\ttfamily using namespace Qt\+Charts;}，在某些\+Qt版本中可能导致编译错误
+\item 当使用\+Qt\+Charts类时，推荐以下两种方式之一：
+\begin{DoxyItemize}
+\item 使用完整命名空间：{\ttfamily Qt\+Charts\+::\+QChart}
+\item 在\+CMake\+Lists.\+txt中添加全局宏定义：{\ttfamily add\+\_\+definitions(-\/DQT\+\_\+\+CHARTS\+\_\+\+USE\+\_\+\+NAMESPACE)}
+\end{DoxyItemize}
+\end{DoxyEnumerate}\hypertarget{md__r_e_a_d_m_e_autotoc_md20}{}\doxysubsection{\texorpdfstring{内存管理和界面初始化}{内存管理和界面初始化}}\label{md__r_e_a_d_m_e_autotoc_md20}
+为确保程序稳定性：
+
+
+\begin{DoxyEnumerate}
+\item 确保所有\+QWidget对象都有正确的父子关系，避免浮动窗口
+\item 在\+Main\+Window构造函数中，先创建\+UI组件，再创建功能对象（如扫描器、分析器等）
+\item 信号槽连接前，确保对应的对象已正确初始化
+\item 图表组件的创建和使用需要特别注意其生命周期管理
+\end{DoxyEnumerate}\hypertarget{md__r_e_a_d_m_e_autotoc_md21}{}\doxysection{\texorpdfstring{版本历史}{版本历史}}\label{md__r_e_a_d_m_e_autotoc_md21}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md22}{}\doxysubsection{\texorpdfstring{v2.\+2.\+0}{v2.\+2.\+0}}\label{md__r_e_a_d_m_e_autotoc_md22}
+
+\begin{DoxyItemize}
+\item 增加了扫描超时控制，防止在部分网络环境下卡在99\%
+\item 优化扫描性能，减少扫描\+IP数量，更快完成扫描
+\item 提高了应用程序稳定性，改进了错误处理机制
+\item 添加了完整的\+Doxygen格式代码注释
+\item 优化了\+MAC地址处理算法，增强了多种格式\+MAC地址的兼容性
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md23}{}\doxysubsection{\texorpdfstring{v2.\+1.\+0}{v2.\+1.\+0}}\label{md__r_e_a_d_m_e_autotoc_md23}
+
+\begin{DoxyItemize}
+\item 修复了\+MAC地址解析问题，增强了对不规则\+MAC地址格式的支持
+\item 实现了网络拓扑图的缩放和重置功能
+\item 优化了设备类型识别算法
+\item 改进了主窗口组件初始化顺序，提高程序稳定性
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md24}{}\doxysubsection{\texorpdfstring{v2.\+0.\+0}{v2.\+0.\+0}}\label{md__r_e_a_d_m_e_autotoc_md24}
+
+\begin{DoxyItemize}
+\item 添加了网络拓扑可视化功能
+\item 添加了设备类型识别功能
+\item 添加了扫描历史和会话比较功能
+\item 添加了统计分析和图表展示功能
+\item 添加了安全报告生成功能
+\item 添加了计划任务扫描功能
+\item 添加了结果过滤功能
+\item 添加了暗色模式
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md25}{}\doxysubsection{\texorpdfstring{v1.\+0.\+0}{v1.\+0.\+0}}\label{md__r_e_a_d_m_e_autotoc_md25}
+
+\begin{DoxyItemize}
+\item 初始版本
+\item 基本网络扫描功能
+\item 显示主机\+IP、主机名和\+MAC地址
+\item 支持端口扫描
+\item 支持\+MAC厂商识别
+\end{DoxyItemize}
+
+项目\+Git\+Hub：https\+://github.com/example/networkscanner 

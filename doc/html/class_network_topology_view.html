@@ -1,0 +1,569 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Network Scanner: NetworkTopologyView类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Network Scanner
+   </div>
+   <div id="projectbrief">网络扫描和拓扑分析工具</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('class_network_topology_view.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#signals">信号</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="class_network_topology_view-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">NetworkTopologyView类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="networktopology_8h_source.html">networktopology.h</a>&gt;</code></p>
+<div class="dynheader">
+类 NetworkTopologyView 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_network_topology_view__inherit__graph.png" border="0" usemap="#a_network_topology_view_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_network_topology_view_inherit__map" id="a_network_topology_view_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,120,247,599"/>
+<area shape="rect" title=" " alt="" coords="76,5,177,72"/>
+<area shape="poly" title=" " alt="" coords="129,87,129,120,124,120,124,87"/>
+</map>
+</div>
+<div class="dynheader">
+NetworkTopologyView 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_network_topology_view__coll__graph.png" border="0" usemap="#a_network_topology_view_coll__map" alt="Collaboration graph"/></div>
+<map name="a_network_topology_view_coll__map" id="a_network_topology_view_coll__map">
+<area shape="rect" title=" " alt="" coords="27,522,269,967"/>
+<area shape="rect" title=" " alt="" coords="5,199,107,266"/>
+<area shape="poly" title=" " alt="" coords="67,279,111,522,106,523,62,280"/>
+<area shape="rect" href="class_topology_analyzer.html" title=" " alt="" coords="131,5,349,459"/>
+<area shape="poly" title=" " alt="" coords="202,459,194,506,188,505,197,459"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="signals" name="signals"></a>
+信号</h2></td></tr>
+<tr class="memitem:a126996c6425f4947275c79bc42a8c2f8" id="r_a126996c6425f4947275c79bc42a8c2f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a126996c6425f4947275c79bc42a8c2f8">nodeSelected</a> (const <a class="el" href="struct_host_info.html">HostInfo</a> &amp;host)</td></tr>
+<tr class="separator:a126996c6425f4947275c79bc42a8c2f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a72fef779d6a4e9b35e234f183bf3fdb4" id="r_a72fef779d6a4e9b35e234f183bf3fdb4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72fef779d6a4e9b35e234f183bf3fdb4">NetworkTopologyView</a> (QWidget *parent=nullptr)</td></tr>
+<tr class="separator:a72fef779d6a4e9b35e234f183bf3fdb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb26033011fdad463562d3cb56df316b" id="r_abb26033011fdad463562d3cb56df316b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb26033011fdad463562d3cb56df316b">setHosts</a> (const QList&lt; <a class="el" href="struct_host_info.html">HostInfo</a> &gt; &amp;hosts)</td></tr>
+<tr class="separator:abb26033011fdad463562d3cb56df316b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28f8bd8a7ca94d2bf012df95baa8528f" id="r_a28f8bd8a7ca94d2bf012df95baa8528f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28f8bd8a7ca94d2bf012df95baa8528f">clear</a> ()</td></tr>
+<tr class="separator:a28f8bd8a7ca94d2bf012df95baa8528f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bf0a46be9b0a9443996a0dcc5d4185a" id="r_a8bf0a46be9b0a9443996a0dcc5d4185a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8bf0a46be9b0a9443996a0dcc5d4185a">autoLayout</a> ()</td></tr>
+<tr class="separator:a8bf0a46be9b0a9443996a0dcc5d4185a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf91e8f992d89a55c382815abcb84184" id="r_aaf91e8f992d89a55c382815abcb84184"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf91e8f992d89a55c382815abcb84184">hierarchicalLayout</a> (const QMap&lt; int, QStringList &gt; &amp;layers)</td></tr>
+<tr class="separator:aaf91e8f992d89a55c382815abcb84184"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec7caac1d0446056144e3d994ed3965b" id="r_aec7caac1d0446056144e3d994ed3965b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec7caac1d0446056144e3d994ed3965b">groupedLayout</a> (const QMap&lt; QString, QStringList &gt; &amp;groups)</td></tr>
+<tr class="separator:aec7caac1d0446056144e3d994ed3965b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:ab4a6db2c2d7f558ce80a155cc6e960c1" id="r_ab4a6db2c2d7f558ce80a155cc6e960c1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="networktopology_8h.html#ad258d4c51629346fceac4679b3209ad9">DeviceType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab4a6db2c2d7f558ce80a155cc6e960c1">determineDeviceType</a> (const <a class="el" href="struct_host_info.html">HostInfo</a> &amp;host)</td></tr>
+<tr class="separator:ab4a6db2c2d7f558ce80a155cc6e960c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35a7ee9e7b84f4d268fa4c371a75c803" id="r_a35a7ee9e7b84f4d268fa4c371a75c803"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a35a7ee9e7b84f4d268fa4c371a75c803">createConnection</a> (<a class="el" href="class_device_node.html">DeviceNode</a> *source, <a class="el" href="class_device_node.html">DeviceNode</a> *target, <a class="el" href="networktopology_8h.html#aa1f0e2efd52935fd01bfece0fbead81f">ConnectionType</a> type=<a class="el" href="networktopology_8h.html#aa1f0e2efd52935fd01bfece0fbead81fa1170f811f066620fe382b20395e9c31c">CONNECTION_DIRECT</a>)</td></tr>
+<tr class="separator:a35a7ee9e7b84f4d268fa4c371a75c803"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a0990f2f190b7226d4759c9b98de3678a" id="r_a0990f2f190b7226d4759c9b98de3678a"><td class="memItemLeft" align="right" valign="top">QGraphicsScene *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0990f2f190b7226d4759c9b98de3678a">m_scene</a></td></tr>
+<tr class="separator:a0990f2f190b7226d4759c9b98de3678a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b6e2ef46c59706a2e75bb262017b37c" id="r_a4b6e2ef46c59706a2e75bb262017b37c"><td class="memItemLeft" align="right" valign="top">QMap&lt; QString, <a class="el" href="class_device_node.html">DeviceNode</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b6e2ef46c59706a2e75bb262017b37c">m_nodes</a></td></tr>
+<tr class="separator:a4b6e2ef46c59706a2e75bb262017b37c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a484340064517ec22f07682e5807f80de" id="r_a484340064517ec22f07682e5807f80de"><td class="memItemLeft" align="right" valign="top">QList&lt; <a class="el" href="class_connection_line.html">ConnectionLine</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a484340064517ec22f07682e5807f80de">m_connections</a></td></tr>
+<tr class="separator:a484340064517ec22f07682e5807f80de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a208658d74b982b5213f9f9713ca8c4a9" id="r_a208658d74b982b5213f9f9713ca8c4a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_topology_analyzer.html">TopologyAnalyzer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a208658d74b982b5213f9f9713ca8c4a9">m_analyzer</a></td></tr>
+<tr class="separator:a208658d74b982b5213f9f9713ca8c4a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a72fef779d6a4e9b35e234f183bf3fdb4" name="a72fef779d6a4e9b35e234f183bf3fdb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72fef779d6a4e9b35e234f183bf3fdb4">&#9670;&#160;</a></span>NetworkTopologyView()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">NetworkTopologyView::NetworkTopologyView </td>
+          <td>(</td>
+          <td class="paramtype">QWidget *</td>          <td class="paramname"><span class="paramname"><em>parent</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a8bf0a46be9b0a9443996a0dcc5d4185a" name="a8bf0a46be9b0a9443996a0dcc5d4185a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bf0a46be9b0a9443996a0dcc5d4185a">&#9670;&#160;</a></span>autoLayout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NetworkTopologyView::autoLayout </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_network_topology_view_a8bf0a46be9b0a9443996a0dcc5d4185a_cgraph.png" border="0" usemap="#aclass_network_topology_view_a8bf0a46be9b0a9443996a0dcc5d4185a_cgraph" alt=""/></div>
+<map name="aclass_network_topology_view_a8bf0a46be9b0a9443996a0dcc5d4185a_cgraph" id="aclass_network_topology_view_a8bf0a46be9b0a9443996a0dcc5d4185a_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,157,46"/>
+<area shape="rect" href="class_network_topology_view.html#aaf91e8f992d89a55c382815abcb84184" title=" " alt="" coords="205,5,356,46"/>
+<area shape="poly" title=" " alt="" coords="157,23,189,23,189,28,157,28"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_network_topology_view_a8bf0a46be9b0a9443996a0dcc5d4185a_icgraph.png" border="0" usemap="#aclass_network_topology_view_a8bf0a46be9b0a9443996a0dcc5d4185a_icgraph" alt=""/></div>
+<map name="aclass_network_topology_view_a8bf0a46be9b0a9443996a0dcc5d4185a_icgraph" id="aclass_network_topology_view_a8bf0a46be9b0a9443996a0dcc5d4185a_icgraph">
+<area shape="rect" title=" " alt="" coords="233,5,384,46"/>
+<area shape="rect" href="class_network_topology.html#a7c64308620bf6f3ef5b2eb00a37b3438" title=" " alt="" coords="5,5,185,46"/>
+<area shape="poly" title=" " alt="" coords="217,28,185,28,185,23,217,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a28f8bd8a7ca94d2bf012df95baa8528f" name="a28f8bd8a7ca94d2bf012df95baa8528f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28f8bd8a7ca94d2bf012df95baa8528f">&#9670;&#160;</a></span>clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NetworkTopologyView::clear </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_network_topology_view_a28f8bd8a7ca94d2bf012df95baa8528f_icgraph.png" border="0" usemap="#aclass_network_topology_view_a28f8bd8a7ca94d2bf012df95baa8528f_icgraph" alt=""/></div>
+<map name="aclass_network_topology_view_a28f8bd8a7ca94d2bf012df95baa8528f_icgraph" id="aclass_network_topology_view_a28f8bd8a7ca94d2bf012df95baa8528f_icgraph">
+<area shape="rect" title=" " alt="" coords="205,5,356,46"/>
+<area shape="rect" href="class_network_topology_view.html#abb26033011fdad463562d3cb56df316b" title=" " alt="" coords="5,5,157,46"/>
+<area shape="poly" title=" " alt="" coords="189,28,157,28,157,23,189,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a35a7ee9e7b84f4d268fa4c371a75c803" name="a35a7ee9e7b84f4d268fa4c371a75c803"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35a7ee9e7b84f4d268fa4c371a75c803">&#9670;&#160;</a></span>createConnection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NetworkTopologyView::createConnection </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_device_node.html">DeviceNode</a> *</td>          <td class="paramname"><span class="paramname"><em>source</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_device_node.html">DeviceNode</a> *</td>          <td class="paramname"><span class="paramname"><em>target</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="networktopology_8h.html#aa1f0e2efd52935fd01bfece0fbead81f">ConnectionType</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="networktopology_8h.html#aa1f0e2efd52935fd01bfece0fbead81fa1170f811f066620fe382b20395e9c31c">CONNECTION_DIRECT</a></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_network_topology_view_a35a7ee9e7b84f4d268fa4c371a75c803_icgraph.png" border="0" usemap="#aclass_network_topology_view_a35a7ee9e7b84f4d268fa4c371a75c803_icgraph" alt=""/></div>
+<map name="aclass_network_topology_view_a35a7ee9e7b84f4d268fa4c371a75c803_icgraph" id="aclass_network_topology_view_a35a7ee9e7b84f4d268fa4c371a75c803_icgraph">
+<area shape="rect" title=" " alt="" coords="205,5,356,46"/>
+<area shape="rect" href="class_network_topology_view.html#abb26033011fdad463562d3cb56df316b" title=" " alt="" coords="5,5,157,46"/>
+<area shape="poly" title=" " alt="" coords="189,28,157,28,157,23,189,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab4a6db2c2d7f558ce80a155cc6e960c1" name="ab4a6db2c2d7f558ce80a155cc6e960c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4a6db2c2d7f558ce80a155cc6e960c1">&#9670;&#160;</a></span>determineDeviceType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="networktopology_8h.html#ad258d4c51629346fceac4679b3209ad9">DeviceType</a> NetworkTopologyView::determineDeviceType </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_host_info.html">HostInfo</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>host</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_network_topology_view_ab4a6db2c2d7f558ce80a155cc6e960c1_icgraph.png" border="0" usemap="#aclass_network_topology_view_ab4a6db2c2d7f558ce80a155cc6e960c1_icgraph" alt=""/></div>
+<map name="aclass_network_topology_view_ab4a6db2c2d7f558ce80a155cc6e960c1_icgraph" id="aclass_network_topology_view_ab4a6db2c2d7f558ce80a155cc6e960c1_icgraph">
+<area shape="rect" title=" " alt="" coords="205,5,360,46"/>
+<area shape="rect" href="class_network_topology_view.html#abb26033011fdad463562d3cb56df316b" title=" " alt="" coords="5,5,157,46"/>
+<area shape="poly" title=" " alt="" coords="189,28,157,28,157,23,189,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aec7caac1d0446056144e3d994ed3965b" name="aec7caac1d0446056144e3d994ed3965b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec7caac1d0446056144e3d994ed3965b">&#9670;&#160;</a></span>groupedLayout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NetworkTopologyView::groupedLayout </td>
+          <td>(</td>
+          <td class="paramtype">const QMap&lt; QString, QStringList &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>groups</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaf91e8f992d89a55c382815abcb84184" name="aaf91e8f992d89a55c382815abcb84184"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf91e8f992d89a55c382815abcb84184">&#9670;&#160;</a></span>hierarchicalLayout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NetworkTopologyView::hierarchicalLayout </td>
+          <td>(</td>
+          <td class="paramtype">const QMap&lt; int, QStringList &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>layers</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_network_topology_view_aaf91e8f992d89a55c382815abcb84184_icgraph.png" border="0" usemap="#aclass_network_topology_view_aaf91e8f992d89a55c382815abcb84184_icgraph" alt=""/></div>
+<map name="aclass_network_topology_view_aaf91e8f992d89a55c382815abcb84184_icgraph" id="aclass_network_topology_view_aaf91e8f992d89a55c382815abcb84184_icgraph">
+<area shape="rect" title=" " alt="" coords="432,39,583,79"/>
+<area shape="rect" href="class_network_topology_view.html#a8bf0a46be9b0a9443996a0dcc5d4185a" title=" " alt="" coords="233,5,384,46"/>
+<area shape="poly" title=" " alt="" coords="416,46,384,41,385,36,417,41"/>
+<area shape="rect" href="class_network_topology_view.html#abb26033011fdad463562d3cb56df316b" title=" " alt="" coords="233,71,384,111"/>
+<area shape="poly" title=" " alt="" coords="417,76,385,81,384,76,416,71"/>
+<area shape="rect" href="class_network_topology.html#a7c64308620bf6f3ef5b2eb00a37b3438" title=" " alt="" coords="5,5,185,46"/>
+<area shape="poly" title=" " alt="" coords="217,28,185,28,185,23,217,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a126996c6425f4947275c79bc42a8c2f8" name="a126996c6425f4947275c79bc42a8c2f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a126996c6425f4947275c79bc42a8c2f8">&#9670;&#160;</a></span>nodeSelected</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NetworkTopologyView::nodeSelected </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_host_info.html">HostInfo</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>host</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel signal">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_network_topology_view_a126996c6425f4947275c79bc42a8c2f8_icgraph.png" border="0" usemap="#aclass_network_topology_view_a126996c6425f4947275c79bc42a8c2f8_icgraph" alt=""/></div>
+<map name="aclass_network_topology_view_a126996c6425f4947275c79bc42a8c2f8_icgraph" id="aclass_network_topology_view_a126996c6425f4947275c79bc42a8c2f8_icgraph">
+<area shape="rect" title=" " alt="" coords="233,5,384,46"/>
+<area shape="rect" href="class_network_topology.html#a7c64308620bf6f3ef5b2eb00a37b3438" title=" " alt="" coords="5,5,185,46"/>
+<area shape="poly" title=" " alt="" coords="217,28,185,28,185,23,217,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="abb26033011fdad463562d3cb56df316b" name="abb26033011fdad463562d3cb56df316b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb26033011fdad463562d3cb56df316b">&#9670;&#160;</a></span>setHosts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NetworkTopologyView::setHosts </td>
+          <td>(</td>
+          <td class="paramtype">const QList&lt; <a class="el" href="struct_host_info.html">HostInfo</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>hosts</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_network_topology_view_abb26033011fdad463562d3cb56df316b_cgraph.png" border="0" usemap="#aclass_network_topology_view_abb26033011fdad463562d3cb56df316b_cgraph" alt=""/></div>
+<map name="aclass_network_topology_view_abb26033011fdad463562d3cb56df316b_cgraph" id="aclass_network_topology_view_abb26033011fdad463562d3cb56df316b_cgraph">
+<area shape="rect" title=" " alt="" coords="5,223,157,263"/>
+<area shape="rect" href="class_network_topology_view.html#a28f8bd8a7ca94d2bf012df95baa8528f" title=" " alt="" coords="229,5,380,46"/>
+<area shape="poly" title=" " alt="" coords="88,221,105,186,130,142,163,96,203,57,214,49,217,54,206,61,167,100,134,144,110,188,93,223"/>
+<area shape="rect" href="class_network_topology_view.html#a35a7ee9e7b84f4d268fa4c371a75c803" title=" " alt="" coords="229,71,380,111"/>
+<area shape="poly" title=" " alt="" coords="97,220,142,171,171,145,203,122,214,116,217,121,206,127,174,149,145,175,101,224"/>
+<area shape="rect" href="class_network_topology_view.html#ab4a6db2c2d7f558ce80a155cc6e960c1" title=" " alt="" coords="227,136,382,177"/>
+<area shape="poly" title=" " alt="" coords="125,220,204,186,221,180,222,185,206,191,127,225"/>
+<area shape="rect" href="class_device_node.html#a8e325a01381c951dd58a432f2eda6369" title=" " alt="" coords="221,201,388,226"/>
+<area shape="poly" title=" " alt="" coords="157,230,206,224,206,229,158,236"/>
+<area shape="rect" href="class_network_topology_view.html#aaf91e8f992d89a55c382815abcb84184" title=" " alt="" coords="229,251,380,291"/>
+<area shape="poly" title=" " alt="" coords="158,250,214,257,214,262,157,255"/>
+<area shape="rect" href="class_device_node.html#a7ee68a7e96c77fa95d71f7a728e6c454" title=" " alt="" coords="215,316,394,341"/>
+<area shape="poly" title=" " alt="" coords="121,262,206,301,229,308,227,313,204,305,119,266"/>
+<area shape="rect" href="class_device_node.html#a3c1916cf448115bf13debb1ccaecca7f" title=" " alt="" coords="205,365,405,390"/>
+<area shape="poly" title=" " alt="" coords="101,262,146,308,175,331,206,351,217,357,215,361,203,356,171,336,142,312,98,266"/>
+<area shape="rect" href="class_device_node.html#a8763e7f52f3239f6cd31234a89060dbe" title=" " alt="" coords="207,414,402,440"/>
+<area shape="poly" title=" " alt="" coords="95,263,112,294,137,331,168,369,206,401,214,405,211,410,203,405,165,373,132,335,107,296,90,265"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a208658d74b982b5213f9f9713ca8c4a9" name="a208658d74b982b5213f9f9713ca8c4a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a208658d74b982b5213f9f9713ca8c4a9">&#9670;&#160;</a></span>m_analyzer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_topology_analyzer.html">TopologyAnalyzer</a> NetworkTopologyView::m_analyzer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a484340064517ec22f07682e5807f80de" name="a484340064517ec22f07682e5807f80de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a484340064517ec22f07682e5807f80de">&#9670;&#160;</a></span>m_connections</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QList&lt;<a class="el" href="class_connection_line.html">ConnectionLine</a>*&gt; NetworkTopologyView::m_connections</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4b6e2ef46c59706a2e75bb262017b37c" name="a4b6e2ef46c59706a2e75bb262017b37c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b6e2ef46c59706a2e75bb262017b37c">&#9670;&#160;</a></span>m_nodes</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QMap&lt;QString, <a class="el" href="class_device_node.html">DeviceNode</a>*&gt; NetworkTopologyView::m_nodes</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0990f2f190b7226d4759c9b98de3678a" name="a0990f2f190b7226d4759c9b98de3678a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0990f2f190b7226d4759c9b98de3678a">&#9670;&#160;</a></span>m_scene</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QGraphicsScene* NetworkTopologyView::m_scene</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="networktopology_8h_source.html">networktopology.h</a></li>
+<li>build/NetScanner_autogen/EWIEGA46WW/<a class="el" href="build_2_net_scanner__autogen_2_e_w_i_e_g_a46_w_w_2moc__networktopology_8cpp_source.html">moc_networktopology.cpp</a></li>
+<li>NetScanner_autogen/JRIAJ772TK/<a class="el" href="_net_scanner__autogen_2_j_r_i_a_j772_t_k_2moc__networktopology_8cpp_source.html">moc_networktopology.cpp</a></li>
+<li><a class="el" href="networktopology_8cpp.html">networktopology.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_network_topology_view.html">NetworkTopologyView</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

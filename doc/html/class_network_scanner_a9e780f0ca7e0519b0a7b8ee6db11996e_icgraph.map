@@ -1,0 +1,15 @@
+<map id="NetworkScanner::scanProgress" name="NetworkScanner::scanProgress">
+<area shape="rect" id="Node000001" title="扫描进度更新信号" alt="" coords="509,55,715,80"/>
+<area shape="rect" id="Node000002" href="$class_network_scanner.html#ae1c58186285b571608eb3e1ef699a1d4" title="扫描单个主机" alt="" coords="265,5,448,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="526,54,426,34,427,29,527,48"/>
+<area shape="rect" id="Node000004" href="$class_main_window.html#a95dc085bf70bd0c1ad05bd80f897fd1d" title=" " alt="" coords="252,55,461,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="494,70,462,70,462,65,494,65"/>
+<area shape="rect" id="Node000006" href="$class_network_scanner.html#ae86a6e70a9c71be92ae45209a5a89bfe" title="更新扫描进度" alt="" coords="259,104,454,145"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="537,87,451,106,450,101,536,82"/>
+<area shape="rect" id="Node000003" href="$class_network_scanner.html#a3d1a653bce80d595a1c302fda393e5b9" title="开始扫描" alt="" coords="13,5,196,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="250,21,196,21,196,16,250,16"/>
+<area shape="rect" id="Node000005" href="$class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="15,55,194,80"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="236,70,194,70,194,65,236,65"/>
+<area shape="rect" id="Node000007" href="$class_network_scanner.html#ad50732f1a5d713a4229d29a2cec1295c" title="处理扫描任务完成" alt="" coords="5,104,204,145"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="243,128,204,128,204,122,243,122"/>
+</map>

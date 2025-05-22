@@ -1,0 +1,5 @@
+<map id="DeviceAnalyzer::createPortDistributionChart" name="DeviceAnalyzer::createPortDistributionChart">
+<area shape="rect" id="Node000001" title=" " alt="" coords="267,5,448,46"/>
+<area shape="rect" id="Node000002" href="$class_device_analyzer.html#a95f05b6ca9338dcd3057c6f8ba45e29f" title=" " alt="" coords="5,13,219,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="251,28,219,28,219,23,251,23"/>
+</map>

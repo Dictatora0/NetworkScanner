@@ -1,0 +1,121 @@
+\doxysection{Host\+Info结构体 参考}
+\hypertarget{struct_host_info}{}\label{struct_host_info}\index{HostInfo@{HostInfo}}
+
+
+存储主机信息的结构体  
+
+
+
+
+{\ttfamily \#include $<$networkscanner.\+h$>$}
+
+
+
+Host\+Info 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{struct_host_info__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+QString \mbox{\hyperlink{struct_host_info_adb270c7d65c45949804bda482899adc7}{ip\+Address}}
+\begin{DoxyCompactList}\small\item\em 主机\+IP地址 \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{struct_host_info_a3ab938742358fff31e219e7f06cfe328}{host\+Name}}
+\begin{DoxyCompactList}\small\item\em 主机名称 \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{struct_host_info_ada851d6f94fb0540fedfe9d731662f41}{mac\+Address}}
+\begin{DoxyCompactList}\small\item\em MAC物理地址 \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{struct_host_info_a31770b83b034ab5b4c224714418dc4ee}{mac\+Vendor}}
+\begin{DoxyCompactList}\small\item\em MAC地址对应的厂商 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_host_info_acccff6374bda31a33dfc065ece37131c}{is\+Reachable}}
+\begin{DoxyCompactList}\small\item\em 主机是否可达 \end{DoxyCompactList}\item 
+QDate\+Time \mbox{\hyperlink{struct_host_info_ac15e8da2ca6b09a6e04c59cee5534a76}{scan\+Time}}
+\begin{DoxyCompactList}\small\item\em 扫描时间 \end{DoxyCompactList}\item 
+QMap$<$ int, bool $>$ \mbox{\hyperlink{struct_host_info_acfdc7912247d3855e2ed5e810ac1f4d1}{open\+Ports}}
+\begin{DoxyCompactList}\small\item\em 开放的端口及状态 (端口号 -\/\texorpdfstring{$>$}{>} 是否开放) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+存储主机信息的结构体 
+
+包含\+IP地址、主机名、\+MAC地址、厂商信息等扫描结果 
+
+\doxysubsection{类成员变量说明}
+\Hypertarget{struct_host_info_a3ab938742358fff31e219e7f06cfe328}\index{HostInfo@{HostInfo}!hostName@{hostName}}
+\index{hostName@{hostName}!HostInfo@{HostInfo}}
+\doxysubsubsection{\texorpdfstring{hostName}{hostName}}
+{\footnotesize\ttfamily \label{struct_host_info_a3ab938742358fff31e219e7f06cfe328} 
+QString Host\+Info\+::host\+Name}
+
+
+
+主机名称 
+
+\Hypertarget{struct_host_info_adb270c7d65c45949804bda482899adc7}\index{HostInfo@{HostInfo}!ipAddress@{ipAddress}}
+\index{ipAddress@{ipAddress}!HostInfo@{HostInfo}}
+\doxysubsubsection{\texorpdfstring{ipAddress}{ipAddress}}
+{\footnotesize\ttfamily \label{struct_host_info_adb270c7d65c45949804bda482899adc7} 
+QString Host\+Info\+::ip\+Address}
+
+
+
+主机\+IP地址 
+
+\Hypertarget{struct_host_info_acccff6374bda31a33dfc065ece37131c}\index{HostInfo@{HostInfo}!isReachable@{isReachable}}
+\index{isReachable@{isReachable}!HostInfo@{HostInfo}}
+\doxysubsubsection{\texorpdfstring{isReachable}{isReachable}}
+{\footnotesize\ttfamily \label{struct_host_info_acccff6374bda31a33dfc065ece37131c} 
+bool Host\+Info\+::is\+Reachable}
+
+
+
+主机是否可达 
+
+\Hypertarget{struct_host_info_ada851d6f94fb0540fedfe9d731662f41}\index{HostInfo@{HostInfo}!macAddress@{macAddress}}
+\index{macAddress@{macAddress}!HostInfo@{HostInfo}}
+\doxysubsubsection{\texorpdfstring{macAddress}{macAddress}}
+{\footnotesize\ttfamily \label{struct_host_info_ada851d6f94fb0540fedfe9d731662f41} 
+QString Host\+Info\+::mac\+Address}
+
+
+
+MAC物理地址 
+
+\Hypertarget{struct_host_info_a31770b83b034ab5b4c224714418dc4ee}\index{HostInfo@{HostInfo}!macVendor@{macVendor}}
+\index{macVendor@{macVendor}!HostInfo@{HostInfo}}
+\doxysubsubsection{\texorpdfstring{macVendor}{macVendor}}
+{\footnotesize\ttfamily \label{struct_host_info_a31770b83b034ab5b4c224714418dc4ee} 
+QString Host\+Info\+::mac\+Vendor}
+
+
+
+MAC地址对应的厂商 
+
+\Hypertarget{struct_host_info_acfdc7912247d3855e2ed5e810ac1f4d1}\index{HostInfo@{HostInfo}!openPorts@{openPorts}}
+\index{openPorts@{openPorts}!HostInfo@{HostInfo}}
+\doxysubsubsection{\texorpdfstring{openPorts}{openPorts}}
+{\footnotesize\ttfamily \label{struct_host_info_acfdc7912247d3855e2ed5e810ac1f4d1} 
+QMap$<$int, bool$>$ Host\+Info\+::open\+Ports}
+
+
+
+开放的端口及状态 (端口号 -\/\texorpdfstring{$>$}{>} 是否开放) 
+
+\Hypertarget{struct_host_info_ac15e8da2ca6b09a6e04c59cee5534a76}\index{HostInfo@{HostInfo}!scanTime@{scanTime}}
+\index{scanTime@{scanTime}!HostInfo@{HostInfo}}
+\doxysubsubsection{\texorpdfstring{scanTime}{scanTime}}
+{\footnotesize\ttfamily \label{struct_host_info_ac15e8da2ca6b09a6e04c59cee5534a76} 
+QDate\+Time Host\+Info\+::scan\+Time}
+
+
+
+扫描时间 
+
+
+
+该结构体的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{networkscanner_8h}{networkscanner.\+h}}\end{DoxyCompactItemize}

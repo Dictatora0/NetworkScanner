@@ -1,0 +1,13 @@
+<map id="NetworkScanner::generatePseudoMACFromIP" name="NetworkScanner::generatePseudoMACFromIP">
+<area shape="rect" id="Node000001" title="根据IP地址生成伪MAC地址" alt="" coords="512,88,688,129"/>
+<area shape="rect" id="Node000002" href="$class_network_scanner.html#a879abf7e7a058dda14f6f36645d6763b" title="查询MAC地址" alt="" coords="255,5,444,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="531,85,463,60,427,49,429,44,465,55,533,80"/>
+<area shape="rect" id="Node000003" href="$class_network_scanner.html#ac28925e0859afc5ae1165c98a7e537c4" title="执行ARP扫描" alt="" coords="236,70,464,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="496,101,464,97,465,92,497,95"/>
+<area shape="rect" id="Node000004" href="$class_scan_task.html#a7cd062b55f9e5cef3273946219c68483" title="执行扫描任务" alt="" coords="297,120,402,145"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="497,121,403,130,403,125,496,116"/>
+<area shape="rect" id="Node000005" href="$class_network_scanner.html#ae1c58186285b571608eb3e1ef699a1d4" title="扫描单个主机" alt="" coords="259,169,441,194"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="534,137,465,160,423,171,421,166,463,155,532,132"/>
+<area shape="rect" id="Node000006" href="$class_network_scanner.html#a3d1a653bce80d595a1c302fda393e5b9" title="开始扫描" alt="" coords="5,169,188,194"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="243,184,188,184,188,179,243,179"/>
+</map>

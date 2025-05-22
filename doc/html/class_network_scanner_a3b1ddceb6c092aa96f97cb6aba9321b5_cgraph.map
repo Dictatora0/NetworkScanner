@@ -1,0 +1,6 @@
+<map id="NetworkScanner::processScanResults" name="NetworkScanner::processScanResults">
+<area shape="rect" id="Node000001" title="处理扫描结果" alt="" coords="5,29,208,70"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="59,29,57,19,65,10,81,5,107,3,133,5,150,11,148,16,132,10,106,8,82,10,68,15,62,21,65,28"/>
+<area shape="rect" id="Node000002" href="$class_network_scanner.html#a311c4f6158b867640590a03f85879b6b" title="扫描完成信号" alt="" coords="256,37,459,62"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="208,47,240,47,240,52,208,52"/>
+</map>

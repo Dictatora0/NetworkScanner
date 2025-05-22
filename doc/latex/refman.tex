@@ -1,0 +1,344 @@
+  % Handle batch mode
+  \batchmode
+  % to overcome problems with too many open files
+  \let\mypdfximage\pdfximage\def\pdfximage{\immediate\mypdfximage}
+  \RequirePackage{iftex}
+  \ifLuaTeX
+    \directlua{pdf.setminorversion(7)}
+  \fi
+  \ifXeTeX
+    \special{pdf:minorversion 7}
+  \fi
+  \ifPDFTeX
+    \pdfminorversion=7
+  \fi
+  % Set document class depending on configuration
+  \documentclass[twoside]{book}
+  %% moved from doxygen.sty due to workaround for LaTex 2019 version and unmaintained tabu package
+  \usepackage{ifthen}
+  \ifx\requestedLaTeXdate\undefined
+    \usepackage{array}
+  \else
+    \usepackage{array}[=2016-10-06]
+  \fi
+  %%
+  % Packages required by doxygen
+  \makeatletter
+  \providecommand\IfFormatAtLeastTF{\@ifl@t@r\fmtversion}
+  % suppress package identification of infwarerr as it contains the word "warning"
+  \let\@@protected@wlog\protected@wlog
+  \def\protected@wlog#1{\wlog{package info suppressed}}
+  \RequirePackage{infwarerr}
+  \let\protected@wlog\@@protected@wlog
+  \makeatother
+  \IfFormatAtLeastTF{2016/01/01}{}{\usepackage{fixltx2e}} % for \textsubscript
+  \ifPDFTeX
+    \IfFormatAtLeastTF{2015/01/01}{\pdfsuppresswarningpagegroup=1}{}
+  \fi
+  \usepackage{doxygen}
+  \usepackage{graphicx}
+  \iftutex
+    \usepackage{fontspec}
+    \defaultfontfeatures{Ligatures={TeX}}
+    \usepackage{unicode-math}
+  \else
+    \usepackage[utf8]{inputenc}
+  \fi
+  \usepackage{makeidx}
+  \PassOptionsToPackage{warn}{textcomp}
+  \usepackage{textcomp}
+  \usepackage[nointegrals]{wasysym}
+  \usepackage{ifxetex}
+  % NLS support packages
+  \usepackage{CJKutf8}
+  % Define default fonts
+  % Font selection
+  % set main and monospaced font
+  \usepackage[scaled=.90]{helvet}
+\usepackage{courier}
+\renewcommand{\familydefault}{\sfdefault}
+  \doxyallsectionsfont{%
+    \fontseries{bc}\selectfont%
+    \color{darkgray}%
+  }
+  \renewcommand{\DoxyLabelFont}{%
+    \fontseries{bc}\selectfont%
+    \color{darkgray}%
+  }
+  \newcommand{\+}{\discretionary{\mbox{\scriptsize$\hookleftarrow$}}{}{}}
+   % Arguments of doxygenemoji:
+   % 1) ':<text>:' form of the emoji, already LaTeX-escaped
+   % 2) file with the name of the emoji without the .png extension
+   % in case image exist use this otherwise use the ':<text>:' form
+   \newcommand{\doxygenemoji}[2]{%
+     \IfFileExists{./#2.png}{\raisebox{-0.1em}{\includegraphics[height=0.9em]{./#2.png}}}{#1}%
+   }
+  % Page & text layout
+  \usepackage{geometry}
+  \geometry{%
+    a4paper,%
+    top=2.5cm,%
+    bottom=2.5cm,%
+    left=2.5cm,%
+    right=2.5cm%
+  }
+  \usepackage{changepage}
+  % Allow a bit of overflow to go unnoticed by other means
+  \tolerance=750
+  \hfuzz=15pt
+  \hbadness=750
+  \setlength{\emergencystretch}{15pt}
+  \setlength{\parindent}{0cm}
+  \newcommand{\doxynormalparskip}{\setlength{\parskip}{3ex plus 2ex minus 2ex}}
+  \newcommand{\doxytocparskip}{\setlength{\parskip}{1ex plus 0ex minus 0ex}}
+  \doxynormalparskip
+  % Redefine paragraph/subparagraph environments, using sectsty fonts
+  \makeatletter
+  \renewcommand{\paragraph}{%
+    \@startsection{paragraph}{4}{0ex}{-1.0ex}{1.0ex}{%
+      \normalfont\normalsize\bfseries\SS@parafont%
+    }%
+  }
+  \renewcommand{\subparagraph}{%
+    \@startsection{subparagraph}{5}{0ex}{-1.0ex}{1.0ex}{%
+      \normalfont\normalsize\bfseries\SS@subparafont%
+    }%
+  }
+  \makeatother
+  \makeatletter
+  \newcommand\hrulefilll{\leavevmode\leaders\hrule\hskip 0pt plus 1filll\kern\z@}
+  \makeatother
+  % Headers & footers
+  \usepackage{fancyhdr}
+  \pagestyle{fancyplain}
+  \renewcommand{\footrulewidth}{0.4pt}
+  \fancypagestyle{fancyplain}{
+    \fancyhf{}
+    \fancyhead[LE, RO]{\bfseries\thepage}
+    \fancyhead[LO]{\bfseries\rightmark}
+    \fancyhead[RE]{\bfseries\leftmark}
+    \fancyfoot[LO, RE]{\bfseries\scriptsize 制作者 Doxygen }
+  }
+  \fancypagestyle{plain}{
+    \fancyhf{}
+    \fancyfoot[LO, RE]{\bfseries\scriptsize 制作者 Doxygen }
+    \renewcommand{\headrulewidth}{0pt}
+  }
+  \pagestyle{fancyplain}
+  \renewcommand{\chaptermark}[1]{%
+    \markboth{#1}{}%
+  }
+  \renewcommand{\sectionmark}[1]{%
+    \markright{\thesection\ #1}%
+  }
+  % ToC, LoF, LoT, bibliography, and index
+  % Indices & bibliography
+  \usepackage[numbers]{natbib}
+  \usepackage[titles]{tocloft}
+  \setcounter{tocdepth}{3}
+  \setcounter{secnumdepth}{5}
+  % creating indexes
+  \makeindex
+  \ifPDFTeX
+\usepackage{newunicodechar}
+  \makeatletter
+    \def\doxynewunicodechar#1#2{%
+    \@tempswafalse
+    \edef\nuc@tempa{\detokenize{#1}}%
+    \if\relax\nuc@tempa\relax
+      \nuc@emptyargerr
+    \else
+      \edef\@tempb{\expandafter\@car\nuc@tempa\@nil}%
+      \nuc@check
+      \if@tempswa
+        \@namedef{u8:\nuc@tempa}{#2}%
+      \fi
+    \fi
+  }
+  \makeatother
+  \doxynewunicodechar{⁻}{${}^{-}$}% Superscript minus
+  \doxynewunicodechar{²}{${}^{2}$}% Superscript two
+  \doxynewunicodechar{³}{${}^{3}$}% Superscript three
+\fi
+  % Hyperlinks
+    % Hyperlinks (required, but should be loaded last)
+    \ifPDFTeX
+      \usepackage[pdftex,pagebackref=true]{hyperref}
+    \else
+      \ifXeTeX
+        \usepackage[xetex,pagebackref=true]{hyperref}
+      \else
+        \ifLuaTeX
+          \usepackage[luatex,pagebackref=true]{hyperref}
+        \else
+          \usepackage[ps2pdf,pagebackref=true]{hyperref}
+        \fi
+      \fi
+    \fi
+    \hypersetup{%
+      colorlinks=true,%
+      linkcolor=blue,%
+      citecolor=blue,%
+      unicode,%
+      pdftitle={Network Scanner},%
+      pdfsubject={网络扫描和拓扑分析工具}%
+    }
+  % Custom commands used by the header
+  % Custom commands
+  \newcommand{\clearemptydoublepage}{%
+    \newpage{\pagestyle{empty}\cleardoublepage}%
+  }
+  % caption style definition
+  \usepackage{caption}
+  \captionsetup{labelsep=space,justification=centering,font={bf},singlelinecheck=off,skip=4pt,position=top}
+  % in page table of contents
+  \IfFormatAtLeastTF{2023/05/01}{\usepackage[deeplevels]{etoc}}{\usepackage[deeplevels]{etoc_doxygen}}
+  \etocsettocstyle{\doxytocparskip}{\doxynormalparskip}
+  \etocsetlevel{subsubsubsection}{4}
+  \etocsetlevel{subsubsubsubsection}{5}
+  \etocsetlevel{subsubsubsubsubsection}{6}
+  \etocsetlevel{subsubsubsubsubsubsection}{7}
+  \etocsetlevel{paragraph}{8}
+  \etocsetlevel{subparagraph}{9}
+  % prevent numbers overlap the titles in toc
+  \renewcommand{\numberline}[1]{#1~}
+% End of preamble, now comes the document contents
+%===== C O N T E N T S =====
+\begin{document}
+  \raggedbottom
+  \begin{CJK}{UTF8}{gbsn}
+  % Titlepage & ToC
+    % To avoid duplicate page anchors due to reuse of same numbers for
+    % the index (be it as roman numbers)
+    \hypersetup{pageanchor=false,
+                bookmarksnumbered=true,
+                pdfencoding=unicode
+               }
+  \pagenumbering{alph}
+  \begin{titlepage}
+  \vspace*{7cm}
+  \begin{center}%
+  {\Large Network Scanner}\\
+  \vspace*{1cm}
+  {\large 制作者 Doxygen 1.13.2}\\
+  \end{center}
+  \end{titlepage}
+  \clearemptydoublepage
+  \pagenumbering{roman}
+  \tableofcontents
+  \clearemptydoublepage
+  \pagenumbering{arabic}
+  % re-enable anchors again
+  \hypersetup{pageanchor=true}
+%--- Begin generated contents ---
+\input{index}
+\input{md__r_e_a_d_m_e}
+\chapter{命名空间索引}
+\input{namespaces}
+\chapter{继承关系索引}
+\input{hierarchy}
+\chapter{类索引}
+\input{annotated}
+\chapter{文件索引}
+\input{files}
+\chapter{命名空间文档}
+\input{namespace_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d}
+\chapter{类说明}
+\input{class_connection_line}
+\input{class_device_analyzer}
+\input{class_device_node}
+\input{struct_host_info}
+\input{class_main_window}
+\input{class_network_scanner}
+\input{class_network_topology}
+\input{class_network_topology_view}
+\input{struct_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n10_main_window_e__t}
+\input{struct_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n11_scan_history_e__t}
+\input{struct_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n14_device_analyzer_e__t}
+\input{struct_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n14_network_scanner_e__t}
+\input{struct_q_t___w_a_r_n_i_n_g___d_i_s_a_b_l_e___d_e_p_r_e_c_a_t_e_d_1_1qt__meta__tag___z_n19_network_topology_view_e__t}
+\input{class_scan_history}
+\input{struct_scan_session}
+\input{class_scan_strategy}
+\input{class_scan_task}
+\input{class_topology_analyzer}
+\chapter{文件说明}
+\input{_c_make_c_x_x_compiler_id_8cpp}
+\input{deviceanalyzer_8cpp_8o_8d}
+\input{main_8cpp_8o_8d}
+\input{mainwindow_8cpp_8o_8d}
+\input{mocs__compilation_8cpp_8o_8d}
+\input{networkscanner_8cpp_8o_8d}
+\input{networktopology_8cpp_8o_8d}
+\input{scanhistory_8cpp_8o_8d}
+\input{build_2_net_scanner__autogen_2_e_w_i_e_g_a46_w_w_2moc__deviceanalyzer_8cpp}
+\input{build_2_net_scanner__autogen_2_e_w_i_e_g_a46_w_w_2moc__deviceanalyzer_8cpp_source}
+\input{_net_scanner__autogen_2_e_w_i_e_g_a46_w_w_2moc__deviceanalyzer_8cpp}
+\input{_net_scanner__autogen_2_e_w_i_e_g_a46_w_w_2moc__deviceanalyzer_8cpp_source}
+\input{_net_scanner__autogen_2_j_r_i_a_j772_t_k_2moc__deviceanalyzer_8cpp}
+\input{_net_scanner__autogen_2_j_r_i_a_j772_t_k_2moc__deviceanalyzer_8cpp_source}
+\input{build_2_net_scanner__autogen_2_e_w_i_e_g_a46_w_w_2moc__deviceanalyzer_8cpp_8d}
+\input{_net_scanner__autogen_2_e_w_i_e_g_a46_w_w_2moc__deviceanalyzer_8cpp_8d}
+\input{_net_scanner__autogen_2_j_r_i_a_j772_t_k_2moc__deviceanalyzer_8cpp_8d}
+\input{build_2_net_scanner__autogen_2_e_w_i_e_g_a46_w_w_2moc__mainwindow_8cpp}
+\input{build_2_net_scanner__autogen_2_e_w_i_e_g_a46_w_w_2moc__mainwindow_8cpp_source}
+\input{_net_scanner__autogen_2_e_w_i_e_g_a46_w_w_2moc__mainwindow_8cpp}
+\input{_net_scanner__autogen_2_e_w_i_e_g_a46_w_w_2moc__mainwindow_8cpp_source}
+\input{_net_scanner__autogen_2_j_r_i_a_j772_t_k_2moc__mainwindow_8cpp}
+\input{_net_scanner__autogen_2_j_r_i_a_j772_t_k_2moc__mainwindow_8cpp_source}
+\input{build_2_net_scanner__autogen_2_e_w_i_e_g_a46_w_w_2moc__mainwindow_8cpp_8d}
+\input{_net_scanner__autogen_2_e_w_i_e_g_a46_w_w_2moc__mainwindow_8cpp_8d}
+\input{_net_scanner__autogen_2_j_r_i_a_j772_t_k_2moc__mainwindow_8cpp_8d}
+\input{build_2_net_scanner__autogen_2_e_w_i_e_g_a46_w_w_2moc__networkscanner_8cpp}
+\input{build_2_net_scanner__autogen_2_e_w_i_e_g_a46_w_w_2moc__networkscanner_8cpp_source}
+\input{_net_scanner__autogen_2_j_r_i_a_j772_t_k_2moc__networkscanner_8cpp}
+\input{_net_scanner__autogen_2_j_r_i_a_j772_t_k_2moc__networkscanner_8cpp_source}
+\input{build_2_net_scanner__autogen_2_e_w_i_e_g_a46_w_w_2moc__networkscanner_8cpp_8d}
+\input{_net_scanner__autogen_2_j_r_i_a_j772_t_k_2moc__networkscanner_8cpp_8d}
+\input{build_2_net_scanner__autogen_2_e_w_i_e_g_a46_w_w_2moc__networktopology_8cpp}
+\input{build_2_net_scanner__autogen_2_e_w_i_e_g_a46_w_w_2moc__networktopology_8cpp_source}
+\input{_net_scanner__autogen_2_j_r_i_a_j772_t_k_2moc__networktopology_8cpp}
+\input{_net_scanner__autogen_2_j_r_i_a_j772_t_k_2moc__networktopology_8cpp_source}
+\input{build_2_net_scanner__autogen_2_e_w_i_e_g_a46_w_w_2moc__networktopology_8cpp_8d}
+\input{_net_scanner__autogen_2_j_r_i_a_j772_t_k_2moc__networktopology_8cpp_8d}
+\input{build_2_net_scanner__autogen_2_e_w_i_e_g_a46_w_w_2moc__scanhistory_8cpp}
+\input{build_2_net_scanner__autogen_2_e_w_i_e_g_a46_w_w_2moc__scanhistory_8cpp_source}
+\input{_net_scanner__autogen_2_j_r_i_a_j772_t_k_2moc__scanhistory_8cpp}
+\input{_net_scanner__autogen_2_j_r_i_a_j772_t_k_2moc__scanhistory_8cpp_source}
+\input{build_2_net_scanner__autogen_2_e_w_i_e_g_a46_w_w_2moc__scanhistory_8cpp_8d}
+\input{_net_scanner__autogen_2_j_r_i_a_j772_t_k_2moc__scanhistory_8cpp_8d}
+\input{build_2_net_scanner__autogen_2moc__predefs_8h}
+\input{build_2_net_scanner__autogen_2moc__predefs_8h_source}
+\input{_net_scanner__autogen_2moc__predefs_8h}
+\input{_net_scanner__autogen_2moc__predefs_8h_source}
+\input{build_2_net_scanner__autogen_2mocs__compilation_8cpp}
+\input{_net_scanner__autogen_2mocs__compilation_8cpp}
+\input{deviceanalyzer_8cpp}
+\input{deviceanalyzer_8h}
+\input{deviceanalyzer_8h_source}
+\input{main_8cpp}
+\input{mainwindow_8cpp}
+\input{mainwindow_8h}
+\input{mainwindow_8h_source}
+\input{networkscanner_8cpp}
+\input{networkscanner_8h}
+\input{networkscanner_8h_source}
+\input{networktopology_8cpp}
+\input{networktopology_8h}
+\input{networktopology_8h_source}
+\input{_r_e_a_d_m_e_8dox}
+\input{_r_e_a_d_m_e_8md}
+\input{scanhistory_8cpp}
+\input{scanhistory_8h}
+\input{scanhistory_8h_source}
+%--- End generated contents ---
+% Index
+  \backmatter
+  \newpage
+  \phantomsection
+  \clearemptydoublepage
+  \addcontentsline{toc}{chapter}{\indexname}
+  \printindex
+% Required for some languages (in combination with latexdocumentpre from the header)
+\end{CJK}
+\end{document}

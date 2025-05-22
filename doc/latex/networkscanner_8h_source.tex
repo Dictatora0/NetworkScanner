@@ -1,0 +1,183 @@
+\doxysection{networkscanner.\+h}
+\hypertarget{networkscanner_8h_source}{}\label{networkscanner_8h_source}\mbox{\hyperlink{networkscanner_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ networkscanner.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#ifndef\ NETWORKSCANNER\_H}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ NETWORKSCANNER\_H}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <QHostAddress>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <QList>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <QMap>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <QMutex>}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <QTcpSocket>}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <QDateTime>}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <QNetworkInterface>}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ <QFuture>}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <QtConcurrent/QtConcurrent>}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <QHostInfo>}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ <QThreadPool>}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ <QRunnable>}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_host_info}{HostInfo}}\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ QString\ \mbox{\hyperlink{struct_host_info_adb270c7d65c45949804bda482899adc7}{ipAddress}};\ \ \ }
+\DoxyCodeLine{00037\ \ \ \ \ QString\ \mbox{\hyperlink{struct_host_info_a3ab938742358fff31e219e7f06cfe328}{hostName}};\ \ \ \ }
+\DoxyCodeLine{00038\ \ \ \ \ QString\ \mbox{\hyperlink{struct_host_info_ada851d6f94fb0540fedfe9d731662f41}{macAddress}};\ \ }
+\DoxyCodeLine{00039\ \ \ \ \ QString\ \mbox{\hyperlink{struct_host_info_a31770b83b034ab5b4c224714418dc4ee}{macVendor}};\ \ \ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_host_info_acccff6374bda31a33dfc065ece37131c}{isReachable}};\ \ \ \ }
+\DoxyCodeLine{00041\ \ \ \ \ QDateTime\ \mbox{\hyperlink{struct_host_info_ac15e8da2ca6b09a6e04c59cee5534a76}{scanTime}};\ \ }
+\DoxyCodeLine{00042\ \ \ \ \ QMap<int,\ bool>\ \mbox{\hyperlink{struct_host_info_acfdc7912247d3855e2ed5e810ac1f4d1}{openPorts}};\ }
+\DoxyCodeLine{00043\ \};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00050\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_scan_strategy_a76ab981f4500728e20b1c63bfc44ff01}{ScanStrategy}}\ \{}
+\DoxyCodeLine{00051\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{class_scan_strategy_a0e3c3f47f30a45bd2a1e9f0533d893aa}{ScanMode}}\ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_scan_strategy_a0e3c3f47f30a45bd2a1e9f0533d893aaa12f5f00989512bdcac4b50b6317dd39a}{QUICK\_SCAN}},\ \ \ \ \ \ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_scan_strategy_a0e3c3f47f30a45bd2a1e9f0533d893aaa91a37fa685743f83714c4d40d0200c90}{STANDARD\_SCAN}},\ \ \ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_scan_strategy_a0e3c3f47f30a45bd2a1e9f0533d893aaac99476d88991212074d9b25f37ef3f32}{DEEP\_SCAN}}\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00060\ \ \ \ \ \};}
+\DoxyCodeLine{00061\ \ \ \ \ }
+\DoxyCodeLine{00066\ \ \ \ \ \mbox{\hyperlink{class_scan_strategy_a76ab981f4500728e20b1c63bfc44ff01}{ScanStrategy}}(\mbox{\hyperlink{class_scan_strategy_a0e3c3f47f30a45bd2a1e9f0533d893aa}{ScanMode}}\ mode\ =\ \mbox{\hyperlink{class_scan_strategy_a0e3c3f47f30a45bd2a1e9f0533d893aaa91a37fa685743f83714c4d40d0200c90}{STANDARD\_SCAN}});}
+\DoxyCodeLine{00067\ \ \ \ \ }
+\DoxyCodeLine{00072\ \ \ \ \ QList<int>\ \mbox{\hyperlink{class_scan_strategy_a241232a2d2d446d56970be5cbce6380e}{getPortsToScan}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00073\ \ \ \ \ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_scan_strategy_a332364d3bec278a0bc52b5673571167e}{getScanTimeout}}(\textcolor{keyword}{const}\ QString\ \&ip)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00080\ \ \ \ \ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_scan_strategy_af1dd90fe689b039c15a47f95ca30f9a9}{getMaxParallelTasks}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00086\ \ \ \ \ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_scan_strategy_a200cc390646b7699a0c0e97edc83350e}{updateHostResponseTime}}(\textcolor{keyword}{const}\ QString\ \&ip,\ \textcolor{keywordtype}{int}\ responseTime);}
+\DoxyCodeLine{00093\ \ \ \ \ }
+\DoxyCodeLine{00098\ \ \ \ \ \mbox{\hyperlink{class_scan_strategy_a0e3c3f47f30a45bd2a1e9f0533d893aa}{ScanMode}}\ \mbox{\hyperlink{class_scan_strategy_a35d27b67331e023b1e5917dae36822de}{getMode}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_scan_strategy_add8cd73d31e5146283413d44ba2805ec}{m\_mode}};\ \}}
+\DoxyCodeLine{00099\ \ \ \ \ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_scan_strategy_a69c75a9a4bb267c649a0bc784e884256}{setMode}}(\mbox{\hyperlink{class_scan_strategy_a0e3c3f47f30a45bd2a1e9f0533d893aa}{ScanMode}}\ mode)\ \{\ \mbox{\hyperlink{class_scan_strategy_add8cd73d31e5146283413d44ba2805ec}{m\_mode}}\ =\ mode;\ \}}
+\DoxyCodeLine{00105\ \ \ \ \ }
+\DoxyCodeLine{00106\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00107\ \ \ \ \ \mbox{\hyperlink{class_scan_strategy_a0e3c3f47f30a45bd2a1e9f0533d893aa}{ScanMode}}\ \mbox{\hyperlink{class_scan_strategy_add8cd73d31e5146283413d44ba2805ec}{m\_mode}};\ \ }
+\DoxyCodeLine{00108\ \ \ \ \ QMap<QString,\ int>\ \mbox{\hyperlink{class_scan_strategy_a5110a9e267f184295696c2c14cc0e42f}{m\_hostResponseTimes}};\ \ }
+\DoxyCodeLine{00109\ \};}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00116\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_scan_task_a1c317cbf241b9a74554f70464880cfb3}{ScanTask}}\ :\ \textcolor{keyword}{public}\ QRunnable\ \{}
+\DoxyCodeLine{00117\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00125\ \ \ \ \ \mbox{\hyperlink{class_scan_task_a1c317cbf241b9a74554f70464880cfb3}{ScanTask}}(QObject*\ parent,\ \textcolor{keyword}{const}\ QHostAddress\ \&address,\ }
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ QList<int>\ \&ports,\ \textcolor{keywordtype}{int}\ timeout);}
+\DoxyCodeLine{00127\ \ \ \ \ }
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_scan_task_a7cd062b55f9e5cef3273946219c68483}{run}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00133\ \ \ \ \ }
+\DoxyCodeLine{00134\ \ \ \ \ QObject*\ \mbox{\hyperlink{class_scan_task_a30929a1dd40b1cbd669f12b1baed775b}{m\_parent}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00135\ \ \ \ \ QHostAddress\ \mbox{\hyperlink{class_scan_task_aa1d37c401e097d0ebea70c9104185fd7}{m\_address}};\ \ \ \ \ }
+\DoxyCodeLine{00136\ \ \ \ \ QList<int>\ \mbox{\hyperlink{class_scan_task_a0a234d389d4dcb3f74c74eff05132ee8}{m\_ports}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_scan_task_a609c1dc70ddfcdab5de7b69de3347582}{m\_timeout}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00138\ \};}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00145\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_network_scanner_aa2dcdd86a95aa5a347d48efc6eb0dcb1}{NetworkScanner}}\ :\ \textcolor{keyword}{public}\ QObject}
+\DoxyCodeLine{00146\ \{}
+\DoxyCodeLine{00147\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00148\ \ \ \ \ }
+\DoxyCodeLine{00149\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00154\ \ \ \ \ \mbox{\hyperlink{class_network_scanner_aa2dcdd86a95aa5a347d48efc6eb0dcb1}{NetworkScanner}}(QObject\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00155\ \ \ \ \ }
+\DoxyCodeLine{00159\ \ \ \ \ \mbox{\hyperlink{class_network_scanner_abeccb1ea9774d7962fac4901f738e692}{\string~NetworkScanner}}();}
+\DoxyCodeLine{00160\ \ \ \ \ }
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_network_scanner_aea1a793e46ec7cc8e2a75b5bc71366ed}{setCustomPortsToScan}}(\textcolor{keyword}{const}\ QList<int>\ \&ports);}
+\DoxyCodeLine{00166\ \ \ \ \ }
+\DoxyCodeLine{00171\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_network_scanner_ae34823cd436f8345ee7dedda3fe56bf6}{setScanTimeout}}(\textcolor{keywordtype}{int}\ msecs);}
+\DoxyCodeLine{00172\ \ \ \ \ }
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_network_scanner_ae86106ecdb8aab43231f7d48d6840e50}{setCustomIPRange}}(\textcolor{keyword}{const}\ QString\ \&startIP,\ \textcolor{keyword}{const}\ QString\ \&endIP);}
+\DoxyCodeLine{00179\ \ \ \ \ }
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_network_scanner_a20f31e911444bcc321a733b5015710fb}{setScanStrategy}}(\mbox{\hyperlink{class_scan_strategy_a0e3c3f47f30a45bd2a1e9f0533d893aa}{ScanStrategy::ScanMode}}\ mode);}
+\DoxyCodeLine{00185\ \ \ \ \ }
+\DoxyCodeLine{00190\ \ \ \ \ QList<HostInfo>\ \mbox{\hyperlink{class_network_scanner_a1ff09dda96ac397a6700a79651123ae4}{getScannedHosts}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00191\ \ \ \ \ }
+\DoxyCodeLine{00196\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_network_scanner_a65c572325e53a912f34394e7beabb867}{saveResultsToFile}}(\textcolor{keyword}{const}\ QString\ \&filename)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00197\ \ \ \ \ }
+\DoxyCodeLine{00201\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_network_scanner_a3d1a653bce80d595a1c302fda393e5b9}{startScan}}();}
+\DoxyCodeLine{00202\ \ \ \ \ }
+\DoxyCodeLine{00206\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_network_scanner_a390dcda3d4cd1d76633e6f4611ae8410}{stopScan}}();}
+\DoxyCodeLine{00207\ \ \ \ \ }
+\DoxyCodeLine{00212\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_network_scanner_a10e2ee230d5126ea043febd28f0559e3}{isScanning}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00213\ \ \ \ \ }
+\DoxyCodeLine{00219\ \ \ \ \ QList<QHostAddress>\ \mbox{\hyperlink{class_network_scanner_ac1d45fc1180ff72ae369fe0966f67d08}{quickPingScan}}(\textcolor{keyword}{const}\ QList<QHostAddress>\ \&addresses);}
+\DoxyCodeLine{00220\ \ \ \ \ }
+\DoxyCodeLine{00227\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_network_scanner_a34fbb26df044a6ee3f830f79eb2d1ce6}{isHostReachable}}(\textcolor{keyword}{const}\ QHostAddress\ \&address,\ \textcolor{keywordtype}{int}\ timeout);}
+\DoxyCodeLine{00228\ \ \ \ \ }
+\DoxyCodeLine{00236\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_network_scanner_a27baba5addfba7cdcd71878c6c9e442a}{isReachableOnPorts}}(\textcolor{keyword}{const}\ QHostAddress\ \&address,\ \textcolor{keyword}{const}\ QList<int>\ \&ports,\ \textcolor{keywordtype}{int}\ timeout);}
+\DoxyCodeLine{00237\ \ \ \ \ }
+\DoxyCodeLine{00242\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_network_scanner_ae1c58186285b571608eb3e1ef699a1d4}{scanHost}}(\textcolor{keyword}{const}\ QHostAddress\ \&address);}
+\DoxyCodeLine{00243\ \ \ \ \ }
+\DoxyCodeLine{00249\ \ \ \ \ QString\ \mbox{\hyperlink{class_network_scanner_afcc19f1f23e444aef7b689e5d64c1422}{lookupHostName}}(\textcolor{keyword}{const}\ QHostAddress\ \&address);}
+\DoxyCodeLine{00250\ \ \ \ \ }
+\DoxyCodeLine{00256\ \ \ \ \ QString\ \mbox{\hyperlink{class_network_scanner_a879abf7e7a058dda14f6f36645d6763b}{lookupMacAddress}}(\textcolor{keyword}{const}\ QHostAddress\ \&address);}
+\DoxyCodeLine{00257\ \ \ \ \ }
+\DoxyCodeLine{00263\ \ \ \ \ QString\ \mbox{\hyperlink{class_network_scanner_a86214dd708b98209915b29514cd58296}{lookupMacVendor}}(\textcolor{keyword}{const}\ QString\ \&macAddress);}
+\DoxyCodeLine{00264\ \ \ \ \ }
+\DoxyCodeLine{00270\ \ \ \ \ QString\ \mbox{\hyperlink{class_network_scanner_a618ee5322d0843ad65a341fff40ce43d}{generatePseudoMACFromIP}}(\textcolor{keyword}{const}\ QString\ \&ip);}
+\DoxyCodeLine{00271\ \ \ \ \ }
+\DoxyCodeLine{00272\ signals:}
+\DoxyCodeLine{00277\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_network_scanner_a941867644d70f3b1c512c9e98f082ed3}{hostFound}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_host_info}{HostInfo}}\ \&host);}
+\DoxyCodeLine{00278\ \ \ \ \ }
+\DoxyCodeLine{00282\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_network_scanner_a56499014f2f0ee9a87fcbf19ba034eeb}{scanStarted}}();}
+\DoxyCodeLine{00283\ \ \ \ \ }
+\DoxyCodeLine{00287\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_network_scanner_a311c4f6158b867640590a03f85879b6b}{scanFinished}}();}
+\DoxyCodeLine{00288\ \ \ \ \ }
+\DoxyCodeLine{00293\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_network_scanner_a9e780f0ca7e0519b0a7b8ee6db11996e}{scanProgress}}(\textcolor{keywordtype}{int}\ progress);}
+\DoxyCodeLine{00294\ \ \ \ \ }
+\DoxyCodeLine{00299\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_network_scanner_a7d443adacaa45d4babee9c5c8cc3927b}{scanError}}(\textcolor{keyword}{const}\ QString\ \&errorMessage);}
+\DoxyCodeLine{00300\ \ \ \ \ }
+\DoxyCodeLine{00301\ \textcolor{keyword}{public}\ slots:}
+\DoxyCodeLine{00306\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_network_scanner_ad50732f1a5d713a4229d29a2cec1295c}{onScanTaskFinished}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_host_info}{HostInfo}}\ \&hostInfo);}
+\DoxyCodeLine{00307\ \ \ \ \ }
+\DoxyCodeLine{00311\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_network_scanner_ae86a6e70a9c71be92ae45209a5a89bfe}{updateScanProgress}}();}
+\DoxyCodeLine{00312\ \ \ \ \ }
+\DoxyCodeLine{00317\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_network_scanner_a5d6e606c028e6b934e5562254c016710}{onHostNameLookedUp}}(\textcolor{keyword}{const}\ QHostInfo\ \&hostInfo);}
+\DoxyCodeLine{00318\ \ \ \ \ }
+\DoxyCodeLine{00319\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00324\ \ \ \ \ QList<QHostAddress>\ \mbox{\hyperlink{class_network_scanner_af088a70b884ccc65b363ecc235af3058}{getLocalNetworkAddresses}}();}
+\DoxyCodeLine{00325\ \ \ \ \ }
+\DoxyCodeLine{00331\ \ \ \ \ QString\ \mbox{\hyperlink{class_network_scanner_a37b59a466d4daa5a5f89d1eb8f588626}{normalizeMacAddress}}(\textcolor{keyword}{const}\ QString\ \&macAddress);}
+\DoxyCodeLine{00332\ \ \ \ \ }
+\DoxyCodeLine{00339\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_network_scanner_a35e8651f2b899836b25b68f1ee673520}{pingTargetWithTimeout}}(\textcolor{keyword}{const}\ QString\ \&ip,\ \textcolor{keywordtype}{int}\ timeout);}
+\DoxyCodeLine{00340\ \ \ \ \ }
+\DoxyCodeLine{00346\ \ \ \ \ QString\ \mbox{\hyperlink{class_network_scanner_a1499c78a310999b583c7008a106379d7}{getMacAddressFromSystemCalls}}(\textcolor{keyword}{const}\ QString\ \&ip);}
+\DoxyCodeLine{00347\ \ \ \ \ }
+\DoxyCodeLine{00352\ \ \ \ \ QList<QPair<QHostAddress,\ QString>>\ \mbox{\hyperlink{class_network_scanner_ac28925e0859afc5ae1165c98a7e537c4}{performARPScan}}();}
+\DoxyCodeLine{00353\ \ \ \ \ }
+\DoxyCodeLine{00358\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_network_scanner_acdcb120eceeec289b7feb2f5d8256b2a}{scanHostPorts}}(\mbox{\hyperlink{struct_host_info}{HostInfo}}\ \&hostInfo);}
+\DoxyCodeLine{00359\ \ \ \ \ }
+\DoxyCodeLine{00364\ \ \ \ \ QList<QHostAddress>\ \mbox{\hyperlink{class_network_scanner_aca3185ddc77f6f4bcc13279cb290d858}{getAddressesToScan}}();}
+\DoxyCodeLine{00365\ \ \ \ \ }
+\DoxyCodeLine{00369\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_network_scanner_a3b1ddceb6c092aa96f97cb6aba9321b5}{processScanResults}}();}
+\DoxyCodeLine{00370\ \ \ \ \ }
+\DoxyCodeLine{00371\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_network_scanner_ab552ddb02bf45cc7293e68d819b08da6}{m\_isScanning}};\ \ }
+\DoxyCodeLine{00372\ \ \ \ \ }
+\DoxyCodeLine{00373\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_network_scanner_af1c4f86f0bf57509498127e25bd2dd99}{m\_scannedHosts}};\ \ }
+\DoxyCodeLine{00374\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_network_scanner_abf3fa14815d6a3cdec60bbcdb1b9c649}{m\_totalHosts}};\ \ \ \ }
+\DoxyCodeLine{00375\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_network_scanner_a423ce8a2179223e48189772f80cebb9c}{m\_scanTimeout}};\ \ \ }
+\DoxyCodeLine{00376\ \ \ \ \ }
+\DoxyCodeLine{00377\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_network_scanner_a1606df18aa388acb9b685d0f72ba2d8f}{m\_useCustomRange}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00378\ \ \ \ \ QHostAddress\ \mbox{\hyperlink{class_network_scanner_a86b547fcfdd0be16c9c689731887e255}{m\_startIPRange}};\ }
+\DoxyCodeLine{00379\ \ \ \ \ QHostAddress\ \mbox{\hyperlink{class_network_scanner_adc7a00ffc172c1dfc141d30240a8ac67}{m\_endIPRange}};\ \ \ }
+\DoxyCodeLine{00380\ \ \ \ \ }
+\DoxyCodeLine{00381\ \ \ \ \ QList<int>\ \mbox{\hyperlink{class_network_scanner_aaa8e5c1ecbb18e30b3eaa41ea030aa8b}{m\_portsToScan}};\ \ }
+\DoxyCodeLine{00382\ \ \ \ \ }
+\DoxyCodeLine{00383\ \ \ \ \ QList<HostInfo>\ \mbox{\hyperlink{class_network_scanner_a794bc857be82d6b7b9cc3449df61bc0a}{m\_scannedHostsList}};\ \ }
+\DoxyCodeLine{00384\ \ \ \ \ QMutex\ \mbox{\hyperlink{class_network_scanner_a519b23696e548ce76d19b0923b1b2e31}{m\_mutex}};\ \ }
+\DoxyCodeLine{00385\ \ \ \ \ }
+\DoxyCodeLine{00386\ \ \ \ \ QList<QFuture<void>>\ \mbox{\hyperlink{class_network_scanner_a07591f97b42d5ba072f1dd383ac5aaaf}{m\_scanFutures}};\ \ }
+\DoxyCodeLine{00387\ \ \ \ \ QThreadPool\ \mbox{\hyperlink{class_network_scanner_a95c25f8c2863d81f3c9348d8b90c313f}{m\_threadPool}};\ \ }
+\DoxyCodeLine{00388\ \ \ \ \ }
+\DoxyCodeLine{00389\ \ \ \ \ QMap<QString,\ QString>\ \mbox{\hyperlink{class_network_scanner_a6565994e3e77dd1f39ed03f7a31f79fb}{m\_macAddressCache}};\ \ }
+\DoxyCodeLine{00390\ \ \ \ \ }
+\DoxyCodeLine{00391\ \ \ \ \ \mbox{\hyperlink{class_scan_strategy}{ScanStrategy}}\ \mbox{\hyperlink{class_network_scanner_adfa250375b6ed189a694030f831a441c}{m\_scanStrategy}};\ \ }
+\DoxyCodeLine{00392\ \ \ \ \ }
+\DoxyCodeLine{00393\ \ \ \ \ QList<QHostAddress>\ \mbox{\hyperlink{class_network_scanner_a29d0e3495e8170c1b40420d5e301b8d2}{m\_activeHosts}};\ \ }
+\DoxyCodeLine{00394\ \ \ \ \ }
+\DoxyCodeLine{00405\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_network_scanner_a3d61598311556d7ab706e013005f7c5f}{executeProcess}}(\textcolor{keyword}{const}\ QString\ \&program,\ \textcolor{keyword}{const}\ QStringList\ \&args,\ QString\ \&stdOutOutput,\ QString\ \&stdErrOutput,\ \textcolor{keywordtype}{int}\ startTimeout\ =\ 2000,\ \textcolor{keywordtype}{int}\ finishTimeout\ =\ 5000);}
+\DoxyCodeLine{00406\ \};}
+\DoxyCodeLine{00407\ }
+\DoxyCodeLine{00408\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ NETWORKSCANNER\_H\ }}
+
+\end{DoxyCode}

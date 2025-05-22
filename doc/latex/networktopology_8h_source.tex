@@ -1,0 +1,199 @@
+\doxysection{networktopology.\+h}
+\hypertarget{networktopology_8h_source}{}\label{networktopology_8h_source}\mbox{\hyperlink{networktopology_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ NETWORKTOPOLOGY\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ NETWORKTOPOLOGY\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QWidget>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QGraphicsView>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QGraphicsScene>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QGraphicsItem>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QMap>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QPair>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QProcess>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{networkscanner_8h}{networkscanner.h}}"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ 定义设备类型枚举}}
+\DoxyCodeLine{00014\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{networktopology_8h_ad258d4c51629346fceac4679b3209ad9}{DeviceType}}\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{networktopology_8h_ad258d4c51629346fceac4679b3209ad9af6c26de5cb6bbe4e8ff24a92a7a297b6}{DEVICE\_UNKNOWN}},}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{networktopology_8h_ad258d4c51629346fceac4679b3209ad9a54d234e97b2cf460474fe8d12f05b7e8}{DEVICE\_ROUTER}},}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{networktopology_8h_ad258d4c51629346fceac4679b3209ad9a8a476e120bc7257c86ff09c74df30666}{DEVICE\_SERVER}},}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{networktopology_8h_ad258d4c51629346fceac4679b3209ad9ae149fffe078cf15212885a3d4dd0a485}{DEVICE\_PC}},}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{networktopology_8h_ad258d4c51629346fceac4679b3209ad9a54c75bb379d16adfae33363dead54ed8}{DEVICE\_MOBILE}},}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{networktopology_8h_ad258d4c51629346fceac4679b3209ad9adec14bc8c782d6b0a36d04462c588a08}{DEVICE\_PRINTER}},}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{networktopology_8h_ad258d4c51629346fceac4679b3209ad9ad9ebd12cf0fa401d0a3f1da4243cfd1a}{DEVICE\_IOT}}}
+\DoxyCodeLine{00022\ \};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ 设备连接类型}}
+\DoxyCodeLine{00025\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{networktopology_8h_aa1f0e2efd52935fd01bfece0fbead81f}{ConnectionType}}\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{networktopology_8h_aa1f0e2efd52935fd01bfece0fbead81faaa98c30b12cac8536b62c99df201f423}{CONNECTION\_UNKNOWN}},}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{networktopology_8h_aa1f0e2efd52935fd01bfece0fbead81fa1170f811f066620fe382b20395e9c31c}{CONNECTION\_DIRECT}},\ \ \ \ \ \textcolor{comment}{//\ 直接连接}}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{networktopology_8h_aa1f0e2efd52935fd01bfece0fbead81fae7bf041bcdbcd512b79b5df05e2ce98f}{CONNECTION\_WIRELESS}},\ \ \ \textcolor{comment}{//\ 无线连接}}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{networktopology_8h_aa1f0e2efd52935fd01bfece0fbead81faa31a9471f8a05033b3871d6834b656ca}{CONNECTION\_VPN}},\ \ \ \ \ \ \ \ \textcolor{comment}{//\ VPN连接}}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{networktopology_8h_aa1f0e2efd52935fd01bfece0fbead81fabc86d8c960abdc757484b756233d9fb0}{CONNECTION\_ROUTED}}\ \ \ \ \ \ \textcolor{comment}{//\ 通过路由器连接}}
+\DoxyCodeLine{00031\ \};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{comment}{//\ 拓扑分析器类}}
+\DoxyCodeLine{00034\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_topology_analyzer_ad6c85d36fcbf1ab7db558d63e8aa54a2}{TopologyAnalyzer}}\ \{}
+\DoxyCodeLine{00035\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{class_topology_analyzer_ad6c85d36fcbf1ab7db558d63e8aa54a2}{TopologyAnalyzer}}();}
+\DoxyCodeLine{00037\ \ \ \ \ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{comment}{//\ 推断设备连接关系}}
+\DoxyCodeLine{00039\ \ \ \ \ QMap<QString,\ QStringList>\ \mbox{\hyperlink{class_topology_analyzer_a021bd84b23c85b54b4d0ca7c1182368d}{inferDeviceConnections}}(\textcolor{keyword}{const}\ QList<HostInfo>\ \&hosts);}
+\DoxyCodeLine{00040\ \ \ \ \ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{comment}{//\ 分析网络层次结构}}
+\DoxyCodeLine{00042\ \ \ \ \ QMap<int,\ QStringList>\ \mbox{\hyperlink{class_topology_analyzer_a81a27566be573cdc031363af453dc1dc}{analyzeTTLLayers}}(\textcolor{keyword}{const}\ QList<HostInfo>\ \&hosts);}
+\DoxyCodeLine{00043\ \ \ \ \ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{comment}{//\ 分析子网结构}}
+\DoxyCodeLine{00045\ \ \ \ \ QMap<QString,\ QStringList>\ \mbox{\hyperlink{class_topology_analyzer_ac47a81690019df3a439fbb519cd2c15f}{analyzeSubnets}}(\textcolor{keyword}{const}\ QList<HostInfo>\ \&hosts);}
+\DoxyCodeLine{00046\ \ \ \ \ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{comment}{//\ 基于响应时间的设备聚类}}
+\DoxyCodeLine{00048\ \ \ \ \ QList<QStringList>\ \mbox{\hyperlink{class_topology_analyzer_a5aaf6e3f9357fde10c889d0958ecba48}{clusterDevicesByResponseTime}}(\textcolor{keyword}{const}\ QList<HostInfo>\ \&hosts);}
+\DoxyCodeLine{00049\ \ \ \ \ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{comment}{//\ 获取特定IP的TTL值}}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_topology_analyzer_ac4175e160d1d548586f8b4bb3d6c7d92}{getTTLValue}}(\textcolor{keyword}{const}\ QString\ \&ipAddress);}
+\DoxyCodeLine{00052\ \ \ \ \ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{comment}{//\ 执行traceroute命令获取路径信息}}
+\DoxyCodeLine{00054\ \ \ \ \ QStringList\ \mbox{\hyperlink{class_topology_analyzer_a5e0e8a9760cb1f3899e5c25e692edb3c}{performTraceRoute}}(\textcolor{keyword}{const}\ QString\ \&targetIP);}
+\DoxyCodeLine{00055\ \ \ \ \ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{comment}{//\ 计算子网掩码\ -\/\ 改为公共方法}}
+\DoxyCodeLine{00057\ \ \ \ \ QString\ \mbox{\hyperlink{class_topology_analyzer_ad138e7cbfe33cf0dcf7c2aa39c9e62b3}{calculateSubnet}}(\textcolor{keyword}{const}\ QString\ \&ip,\ \textcolor{keywordtype}{int}\ prefixLength\ =\ 24);}
+\DoxyCodeLine{00058\ \ \ \ \ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{comment}{//\ 判断两个IP是否在同一子网}}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_topology_analyzer_a16c5a69468922b5c355d0f317c221570}{inSameSubnet}}(\textcolor{keyword}{const}\ QString\ \&ip1,\ \textcolor{keyword}{const}\ QString\ \&ip2,\ \textcolor{keywordtype}{int}\ prefixLength\ =\ 24);}
+\DoxyCodeLine{00061\ \ \ \ \ }
+\DoxyCodeLine{00062\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{comment}{//\ 已移除private中的calculateSubnet声明}}
+\DoxyCodeLine{00064\ \};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{comment}{//\ 设备节点}}
+\DoxyCodeLine{00067\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_device_node_a4944312715c13f9c5b42342944851ab3}{DeviceNode}}\ :\ \textcolor{keyword}{public}\ QGraphicsItem}
+\DoxyCodeLine{00068\ \{}
+\DoxyCodeLine{00069\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00070\ \ \ \ \ \mbox{\hyperlink{class_device_node_a4944312715c13f9c5b42342944851ab3}{DeviceNode}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_host_info}{HostInfo}}\ \&host,\ \mbox{\hyperlink{networktopology_8h_ad258d4c51629346fceac4679b3209ad9}{DeviceType}}\ type\ =\ \mbox{\hyperlink{networktopology_8h_ad258d4c51629346fceac4679b3209ad9af6c26de5cb6bbe4e8ff24a92a7a297b6}{DEVICE\_UNKNOWN}});}
+\DoxyCodeLine{00071\ \ \ \ \ }
+\DoxyCodeLine{00072\ \ \ \ \ QRectF\ \mbox{\hyperlink{class_device_node_aa280521ab40d3bd66235eff06a75ea30}{boundingRect}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_device_node_ad11a8f575a8d6df6b7545e7071af181e}{paint}}(QPainter\ *painter,\ \textcolor{keyword}{const}\ QStyleOptionGraphicsItem\ *option,\ QWidget\ *widget)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00074\ \ \ \ \ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_device_node_af113b3eb8c31ece100489938be417ece}{setDeviceType}}(\mbox{\hyperlink{networktopology_8h_ad258d4c51629346fceac4679b3209ad9}{DeviceType}}\ type);}
+\DoxyCodeLine{00076\ \ \ \ \ \mbox{\hyperlink{networktopology_8h_ad258d4c51629346fceac4679b3209ad9}{DeviceType}}\ \mbox{\hyperlink{class_device_node_a8e325a01381c951dd58a432f2eda6369}{deviceType}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_device_node_ad57955c067a58853e3cce781ed8ea330}{m\_type}};\ \}}
+\DoxyCodeLine{00077\ \ \ \ \ }
+\DoxyCodeLine{00078\ \ \ \ \ QString\ \mbox{\hyperlink{class_device_node_a94ab579715500c27047b6a6636dd0b1c}{ipAddress}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_device_node_a3c4db426da62437969a9064365ee4756}{m\_host}}.ipAddress;\ \}}
+\DoxyCodeLine{00079\ \ \ \ \ \mbox{\hyperlink{struct_host_info}{HostInfo}}\ \mbox{\hyperlink{class_device_node_ac0f6f8035bd7b65c6205ac2878d9ec1d}{hostInfo}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_device_node_a3c4db426da62437969a9064365ee4756}{m\_host}};\ \}}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_device_node_aef416a5365cf9d935f84a9a0949fdcdc}{setPosition}}(\textcolor{keyword}{const}\ QPointF\ \&pos);}
+\DoxyCodeLine{00081\ \ \ \ \ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{comment}{//\ 新增：设置网络层级}}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_device_node_a3c1916cf448115bf13debb1ccaecca7f}{setNetworkLayer}}(\textcolor{keywordtype}{int}\ layer)\ \{\ \mbox{\hyperlink{class_device_node_a2f155857f4146e91d68d2d855ee0d764}{m\_networkLayer}}\ =\ layer;\ \}}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_device_node_a7ee68a7e96c77fa95d71f7a728e6c454}{networkLayer}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_device_node_a2f155857f4146e91d68d2d855ee0d764}{m\_networkLayer}};\ \}}
+\DoxyCodeLine{00085\ \ \ \ \ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{comment}{//\ 新增：设置子网组}}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_device_node_a8763e7f52f3239f6cd31234a89060dbe}{setSubnetGroup}}(\textcolor{keyword}{const}\ QString\ \&subnet)\ \{\ \mbox{\hyperlink{class_device_node_ac44d1abd7597f0d28c5d3d6689393412}{m\_subnetGroup}}\ =\ subnet;\ \}}
+\DoxyCodeLine{00088\ \ \ \ \ QString\ \mbox{\hyperlink{class_device_node_a9a93233328d9a5db24a23daa965f49ad}{subnetGroup}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_device_node_ac44d1abd7597f0d28c5d3d6689393412}{m\_subnetGroup}};\ \}}
+\DoxyCodeLine{00089\ \ \ \ \ }
+\DoxyCodeLine{00090\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_device_node_a8e6b5f8a328666bdb5f6645d82b1e49c}{mousePressEvent}}(QGraphicsSceneMouseEvent\ *event)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_device_node_a8537016aab46cbc8f9c52351c5746b66}{mouseMoveEvent}}(QGraphicsSceneMouseEvent\ *event)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_device_node_afce1d9bffed9ff781b7bdf338d71918a}{mouseReleaseEvent}}(QGraphicsSceneMouseEvent\ *event)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_device_node_a63cf0e5f0f3e0d5be9bd1bbd11338248}{hoverEnterEvent}}(QGraphicsSceneHoverEvent\ *event)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_device_node_a007391437e3fce24db87c97d8cdf2686}{hoverLeaveEvent}}(QGraphicsSceneHoverEvent\ *event)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00096\ \ \ \ \ }
+\DoxyCodeLine{00097\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00098\ \ \ \ \ \mbox{\hyperlink{struct_host_info}{HostInfo}}\ \mbox{\hyperlink{class_device_node_a3c4db426da62437969a9064365ee4756}{m\_host}};}
+\DoxyCodeLine{00099\ \ \ \ \ \mbox{\hyperlink{networktopology_8h_ad258d4c51629346fceac4679b3209ad9}{DeviceType}}\ \mbox{\hyperlink{class_device_node_ad57955c067a58853e3cce781ed8ea330}{m\_type}};}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_device_node_a66bbeea661e3d2ab8a1c69d9371999e5}{m\_highlight}};}
+\DoxyCodeLine{00101\ \ \ \ \ QPointF\ \mbox{\hyperlink{class_device_node_a1c9052a67546060bdf04485d12b2bbb4}{m\_dragStartPosition}};}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_device_node_a2f155857f4146e91d68d2d855ee0d764}{m\_networkLayer}};\ \ \ \ \ \ \ \textcolor{comment}{//\ 网络层级}}
+\DoxyCodeLine{00103\ \ \ \ \ QString\ \mbox{\hyperlink{class_device_node_ac44d1abd7597f0d28c5d3d6689393412}{m\_subnetGroup}};\ \ \ \ \textcolor{comment}{//\ 子网组}}
+\DoxyCodeLine{00104\ \};}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \textcolor{comment}{//\ 连接线}}
+\DoxyCodeLine{00107\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_connection_line_a693b4ce7bcae3a65cecb9817b5e1dd3d}{ConnectionLine}}\ :\ \textcolor{keyword}{public}\ QGraphicsItem}
+\DoxyCodeLine{00108\ \{}
+\DoxyCodeLine{00109\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00110\ \ \ \ \ \mbox{\hyperlink{class_connection_line_a693b4ce7bcae3a65cecb9817b5e1dd3d}{ConnectionLine}}(\mbox{\hyperlink{class_device_node}{DeviceNode}}\ *source,\ \mbox{\hyperlink{class_device_node}{DeviceNode}}\ *target,\ }
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{networktopology_8h_aa1f0e2efd52935fd01bfece0fbead81f}{ConnectionType}}\ type\ =\ \mbox{\hyperlink{networktopology_8h_aa1f0e2efd52935fd01bfece0fbead81fa1170f811f066620fe382b20395e9c31c}{CONNECTION\_DIRECT}});}
+\DoxyCodeLine{00112\ \ \ \ \ }
+\DoxyCodeLine{00113\ \ \ \ \ QRectF\ \mbox{\hyperlink{class_connection_line_a0c7d47271ba7f0e7ec27b2b85fc32f36}{boundingRect}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_connection_line_a1740cffc2a385a430d8637a1c559e2c6}{paint}}(QPainter\ *painter,\ \textcolor{keyword}{const}\ QStyleOptionGraphicsItem\ *option,\ QWidget\ *widget)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00115\ \ \ \ \ }
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_connection_line_a0218b726097ec9e949be522d08353d7f}{updatePosition}}();}
+\DoxyCodeLine{00117\ \ \ \ \ }
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{comment}{//\ 设置连接类型}}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_connection_line_a74b7744c136bf84c7dbe323580de01e5}{setConnectionType}}(\mbox{\hyperlink{networktopology_8h_aa1f0e2efd52935fd01bfece0fbead81f}{ConnectionType}}\ type);}
+\DoxyCodeLine{00120\ \ \ \ \ \mbox{\hyperlink{networktopology_8h_aa1f0e2efd52935fd01bfece0fbead81f}{ConnectionType}}\ \mbox{\hyperlink{class_connection_line_a631cf3fbdbf13c1530429016eabb6992}{connectionType}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_connection_line_a4298630c2696233ba09bb033057cb0bd}{m\_connectionType}};\ \}}
+\DoxyCodeLine{00121\ \ \ \ \ }
+\DoxyCodeLine{00122\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00123\ \ \ \ \ \mbox{\hyperlink{class_device_node}{DeviceNode}}\ *\mbox{\hyperlink{class_connection_line_ad404939adbcdd87d86b389e236c2d806}{m\_source}};}
+\DoxyCodeLine{00124\ \ \ \ \ \mbox{\hyperlink{class_device_node}{DeviceNode}}\ *\mbox{\hyperlink{class_connection_line_aab5f6fc9b560e5bafb6c1ee9c08a835a}{m\_target}};}
+\DoxyCodeLine{00125\ \ \ \ \ \mbox{\hyperlink{networktopology_8h_aa1f0e2efd52935fd01bfece0fbead81f}{ConnectionType}}\ \mbox{\hyperlink{class_connection_line_a4298630c2696233ba09bb033057cb0bd}{m\_connectionType}};}
+\DoxyCodeLine{00126\ \};}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \textcolor{comment}{//\ 拓扑图视图}}
+\DoxyCodeLine{00129\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_network_topology_view_a72fef779d6a4e9b35e234f183bf3fdb4}{NetworkTopologyView}}\ :\ \textcolor{keyword}{public}\ QGraphicsView}
+\DoxyCodeLine{00130\ \{}
+\DoxyCodeLine{00131\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00132\ \ \ \ \ }
+\DoxyCodeLine{00133\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00134\ \ \ \ \ \mbox{\hyperlink{class_network_topology_view_a72fef779d6a4e9b35e234f183bf3fdb4}{NetworkTopologyView}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00135\ \ \ \ \ }
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_network_topology_view_abb26033011fdad463562d3cb56df316b}{setHosts}}(\textcolor{keyword}{const}\ QList<HostInfo>\ \&hosts);}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_network_topology_view_a28f8bd8a7ca94d2bf012df95baa8528f}{clear}}();}
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_network_topology_view_a8bf0a46be9b0a9443996a0dcc5d4185a}{autoLayout}}();}
+\DoxyCodeLine{00139\ \ \ \ \ }
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{comment}{//\ 新增布局方法}}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_network_topology_view_aaf91e8f992d89a55c382815abcb84184}{hierarchicalLayout}}(\textcolor{keyword}{const}\ QMap<int,\ QStringList>\ \&layers);}
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_network_topology_view_aec7caac1d0446056144e3d994ed3965b}{groupedLayout}}(\textcolor{keyword}{const}\ QMap<QString,\ QStringList>\ \&groups);}
+\DoxyCodeLine{00143\ \ \ \ \ }
+\DoxyCodeLine{00144\ signals:}
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_network_topology_view_a126996c6425f4947275c79bc42a8c2f8}{nodeSelected}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_host_info}{HostInfo}}\ \&host);}
+\DoxyCodeLine{00146\ \ \ \ \ }
+\DoxyCodeLine{00147\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00148\ \ \ \ \ QGraphicsScene\ *\mbox{\hyperlink{class_network_topology_view_a0990f2f190b7226d4759c9b98de3678a}{m\_scene}};}
+\DoxyCodeLine{00149\ \ \ \ \ QMap<QString,\ DeviceNode*>\ \mbox{\hyperlink{class_network_topology_view_a4b6e2ef46c59706a2e75bb262017b37c}{m\_nodes}};}
+\DoxyCodeLine{00150\ \ \ \ \ QList<ConnectionLine*>\ \mbox{\hyperlink{class_network_topology_view_a484340064517ec22f07682e5807f80de}{m\_connections}};}
+\DoxyCodeLine{00151\ \ \ \ \ }
+\DoxyCodeLine{00152\ \ \ \ \ \mbox{\hyperlink{class_topology_analyzer}{TopologyAnalyzer}}\ \mbox{\hyperlink{class_network_topology_view_a208658d74b982b5213f9f9713ca8c4a9}{m\_analyzer}};}
+\DoxyCodeLine{00153\ \ \ \ \ }
+\DoxyCodeLine{00154\ \ \ \ \ \mbox{\hyperlink{networktopology_8h_ad258d4c51629346fceac4679b3209ad9}{DeviceType}}\ \mbox{\hyperlink{class_network_topology_view_ab4a6db2c2d7f558ce80a155cc6e960c1}{determineDeviceType}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_host_info}{HostInfo}}\ \&host);}
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_network_topology_view_a35a7ee9e7b84f4d268fa4c371a75c803}{createConnection}}(\mbox{\hyperlink{class_device_node}{DeviceNode}}\ *source,\ \mbox{\hyperlink{class_device_node}{DeviceNode}}\ *target,\ }
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{networktopology_8h_aa1f0e2efd52935fd01bfece0fbead81f}{ConnectionType}}\ type\ =\ \mbox{\hyperlink{networktopology_8h_aa1f0e2efd52935fd01bfece0fbead81fa1170f811f066620fe382b20395e9c31c}{CONNECTION\_DIRECT}});}
+\DoxyCodeLine{00157\ \};}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ \textcolor{comment}{//\ 网络拓扑组件（包含拓扑图和控制面板）}}
+\DoxyCodeLine{00160\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_network_topology_a7c64308620bf6f3ef5b2eb00a37b3438}{NetworkTopology}}\ :\ \textcolor{keyword}{public}\ QWidget}
+\DoxyCodeLine{00161\ \{}
+\DoxyCodeLine{00162\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00163\ \ \ \ \ }
+\DoxyCodeLine{00164\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00165\ \ \ \ \ \mbox{\hyperlink{class_network_topology_a7c64308620bf6f3ef5b2eb00a37b3438}{NetworkTopology}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00166\ \ \ \ \ }
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_network_topology_a4d6ee2108e3370fd06f7f9ddd7f64f03}{updateTopology}}(\textcolor{keyword}{const}\ QList<HostInfo>\ \&hosts);}
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_network_topology_ac04e505570950aaf3251bc8f86ce7a7e}{clear}}();}
+\DoxyCodeLine{00169\ \ \ \ \ }
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{comment}{//\ 缩放和视图控制方法}}
+\DoxyCodeLine{00171\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_network_topology_a356dddaed6062b0772a9c1c90e130137}{scale}}(qreal\ factor);}
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_network_topology_a009c8b59b77e927caf81fabc5749643f}{resetView}}();}
+\DoxyCodeLine{00173\ \ \ \ \ }
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{comment}{//\ 新增：切换布局方式}}
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_network_topology_a1eb371c4c3061d555f9d2831a32dd62e}{setLayoutMode}}(\textcolor{keywordtype}{int}\ mode);}
+\DoxyCodeLine{00176\ \ \ \ \ }
+\DoxyCodeLine{00177\ signals:}
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_network_topology_a8978cf5a440fe01b4d9b1fa1185a5ca6}{deviceSelected}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_host_info}{HostInfo}}\ \&host);}
+\DoxyCodeLine{00179\ \ \ \ \ }
+\DoxyCodeLine{00180\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00181\ \ \ \ \ \mbox{\hyperlink{class_network_topology_view}{NetworkTopologyView}}\ *\mbox{\hyperlink{class_network_topology_ad45219ccd78da567c113a2b17ba0c467}{m\_topologyView}};}
+\DoxyCodeLine{00182\ \ \ \ \ QWidget\ *\mbox{\hyperlink{class_network_topology_af9a7e8cd0dace6f3807c493fe7614d56}{m\_controlPanel}};}
+\DoxyCodeLine{00183\ \ \ \ \ }
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{class_network_topology_a91db80df755c9eb7db568b534f34c650}{LayoutMode}}\ \{}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_network_topology_a91db80df755c9eb7db568b534f34c650adc14cce4e1d80d93829e5237edf6b940}{LAYOUT\_AUTO}},}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_network_topology_a91db80df755c9eb7db568b534f34c650a740e1d0728a3585341e19e137f90de86}{LAYOUT\_HIERARCHICAL}},}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_network_topology_a91db80df755c9eb7db568b534f34c650a523ea91ee9c520a86cfa5acdaf891acf}{LAYOUT\_GROUPED}}}
+\DoxyCodeLine{00188\ \ \ \ \ \};}
+\DoxyCodeLine{00189\ \ \ \ \ }
+\DoxyCodeLine{00190\ \ \ \ \ \mbox{\hyperlink{class_network_topology_a91db80df755c9eb7db568b534f34c650}{LayoutMode}}\ \mbox{\hyperlink{class_network_topology_a46c2829a5fe4add78ed38b1af3900d65}{m\_layoutMode}};}
+\DoxyCodeLine{00191\ \ \ \ \ QList<HostInfo>\ \mbox{\hyperlink{class_network_topology_aefd217bf41f2475e7d6867df05bbb6b8}{m\_currentHosts}};\ \ \textcolor{comment}{//\ 缓存当前主机列表，用于布局切换}}
+\DoxyCodeLine{00192\ \};}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00194\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ NETWORKTOPOLOGY\_H\ }}
+
+\end{DoxyCode}

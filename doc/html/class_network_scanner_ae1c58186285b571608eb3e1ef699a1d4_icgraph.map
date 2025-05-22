@@ -1,0 +1,5 @@
+<map id="NetworkScanner::scanHost" name="NetworkScanner::scanHost">
+<area shape="rect" id="Node000001" title="扫描单个主机" alt="" coords="236,5,418,31"/>
+<area shape="rect" id="Node000002" href="$class_network_scanner.html#a3d1a653bce80d595a1c302fda393e5b9" title="开始扫描" alt="" coords="5,5,188,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="220,21,188,21,188,16,220,16"/>
+</map>

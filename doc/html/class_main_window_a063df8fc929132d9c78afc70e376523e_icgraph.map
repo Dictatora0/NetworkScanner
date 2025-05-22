@@ -1,0 +1,10 @@
+<map id="MainWindow::togglePortScanOptions" name="MainWindow::togglePortScanOptions">
+<area shape="rect" id="Node000001" title=" " alt="" coords="490,23,683,64"/>
+<area shape="rect" id="Node000002" href="$class_main_window.html#a9bb1f3b7f6b5360abfd2dc01fc1c8930" title=" " alt="" coords="249,5,426,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="474,35,426,30,426,24,475,29"/>
+<area shape="rect" id="Node000004" href="$class_main_window.html#a95dc085bf70bd0c1ad05bd80f897fd1d" title=" " alt="" coords="233,55,442,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="475,57,443,60,442,55,474,52"/>
+<area shape="rect" id="Node000003" href="$class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,31,185,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="234,32,185,37,185,31,234,26"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="217,58,185,55,185,50,217,53"/>
+</map>

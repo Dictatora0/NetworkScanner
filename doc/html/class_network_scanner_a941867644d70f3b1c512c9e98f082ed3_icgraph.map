@@ -1,0 +1,15 @@
+<map id="NetworkScanner::hostFound" name="NetworkScanner::hostFound">
+<area shape="rect" id="Node000001" title="找到主机信号" alt="" coords="493,108,680,133"/>
+<area shape="rect" id="Node000002" href="$class_network_scanner.html#a5d6e606c028e6b934e5562254c016710" title="主机名查询完成处理" alt="" coords="239,5,442,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="542,103,444,61,409,49,411,44,446,57,544,98"/>
+<area shape="rect" id="Node000003" href="$class_network_scanner.html#ad50732f1a5d713a4229d29a2cec1295c" title="处理扫描任务完成" alt="" coords="241,71,440,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="477,110,440,105,440,100,478,105"/>
+<area shape="rect" id="Node000004" href="$class_network_scanner.html#ae1c58186285b571608eb3e1ef699a1d4" title="扫描单个主机" alt="" coords="249,136,432,161"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="478,135,432,141,432,135,477,130"/>
+<area shape="rect" id="Node000006" href="$class_main_window.html#a95dc085bf70bd0c1ad05bd80f897fd1d" title=" " alt="" coords="236,185,445,210"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="541,142,446,176,406,187,405,182,444,171,539,137"/>
+<area shape="rect" id="Node000005" href="$class_network_scanner.html#a3d1a653bce80d595a1c302fda393e5b9" title="开始扫描" alt="" coords="5,136,188,161"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="233,151,188,151,188,146,233,146"/>
+<area shape="rect" id="Node000007" href="$class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="7,185,186,210"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="220,200,187,200,187,195,220,195"/>
+</map>

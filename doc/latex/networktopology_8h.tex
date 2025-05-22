@@ -1,0 +1,129 @@
+\doxysection{networktopology.\+h 文件参考}
+\hypertarget{networktopology_8h}{}\label{networktopology_8h}\index{networktopology.h@{networktopology.h}}
+{\ttfamily \#include $<$QWidget$>$}\newline
+{\ttfamily \#include $<$QGraphics\+View$>$}\newline
+{\ttfamily \#include $<$QGraphics\+Scene$>$}\newline
+{\ttfamily \#include $<$QGraphics\+Item$>$}\newline
+{\ttfamily \#include $<$QMap$>$}\newline
+{\ttfamily \#include $<$QPair$>$}\newline
+{\ttfamily \#include $<$QProcess$>$}\newline
+{\ttfamily \#include "{}networkscanner.\+h"{}}\newline
+networktopology.\+h 的引用(Include)关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{networktopology_8h__incl}
+\end{center}
+\end{figure}
+此图展示该文件被哪些文件直接或间接地引用了\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{networktopology_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_topology_analyzer}{Topology\+Analyzer}}
+\item 
+class \mbox{\hyperlink{class_device_node}{Device\+Node}}
+\item 
+class \mbox{\hyperlink{class_connection_line}{Connection\+Line}}
+\item 
+class \mbox{\hyperlink{class_network_topology_view}{Network\+Topology\+View}}
+\item 
+class \mbox{\hyperlink{class_network_topology}{Network\+Topology}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{枚举}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{networktopology_8h_ad258d4c51629346fceac4679b3209ad9}{Device\+Type}} \{ \newline
+\mbox{\hyperlink{networktopology_8h_ad258d4c51629346fceac4679b3209ad9af6c26de5cb6bbe4e8ff24a92a7a297b6}{DEVICE\+\_\+\+UNKNOWN}}
+, \mbox{\hyperlink{networktopology_8h_ad258d4c51629346fceac4679b3209ad9a54d234e97b2cf460474fe8d12f05b7e8}{DEVICE\+\_\+\+ROUTER}}
+, \mbox{\hyperlink{networktopology_8h_ad258d4c51629346fceac4679b3209ad9a8a476e120bc7257c86ff09c74df30666}{DEVICE\+\_\+\+SERVER}}
+, \mbox{\hyperlink{networktopology_8h_ad258d4c51629346fceac4679b3209ad9ae149fffe078cf15212885a3d4dd0a485}{DEVICE\+\_\+\+PC}}
+, \newline
+\mbox{\hyperlink{networktopology_8h_ad258d4c51629346fceac4679b3209ad9a54c75bb379d16adfae33363dead54ed8}{DEVICE\+\_\+\+MOBILE}}
+, \mbox{\hyperlink{networktopology_8h_ad258d4c51629346fceac4679b3209ad9adec14bc8c782d6b0a36d04462c588a08}{DEVICE\+\_\+\+PRINTER}}
+, \mbox{\hyperlink{networktopology_8h_ad258d4c51629346fceac4679b3209ad9ad9ebd12cf0fa401d0a3f1da4243cfd1a}{DEVICE\+\_\+\+IOT}}
+ \}
+\item 
+enum \mbox{\hyperlink{networktopology_8h_aa1f0e2efd52935fd01bfece0fbead81f}{Connection\+Type}} \{ \newline
+\mbox{\hyperlink{networktopology_8h_aa1f0e2efd52935fd01bfece0fbead81faaa98c30b12cac8536b62c99df201f423}{CONNECTION\+\_\+\+UNKNOWN}}
+, \mbox{\hyperlink{networktopology_8h_aa1f0e2efd52935fd01bfece0fbead81fa1170f811f066620fe382b20395e9c31c}{CONNECTION\+\_\+\+DIRECT}}
+, \mbox{\hyperlink{networktopology_8h_aa1f0e2efd52935fd01bfece0fbead81fae7bf041bcdbcd512b79b5df05e2ce98f}{CONNECTION\+\_\+\+WIRELESS}}
+, \mbox{\hyperlink{networktopology_8h_aa1f0e2efd52935fd01bfece0fbead81faa31a9471f8a05033b3871d6834b656ca}{CONNECTION\+\_\+\+VPN}}
+, \newline
+\mbox{\hyperlink{networktopology_8h_aa1f0e2efd52935fd01bfece0fbead81fabc86d8c960abdc757484b756233d9fb0}{CONNECTION\+\_\+\+ROUTED}}
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{枚举类型说明}
+\Hypertarget{networktopology_8h_aa1f0e2efd52935fd01bfece0fbead81f}\index{networktopology.h@{networktopology.h}!ConnectionType@{ConnectionType}}
+\index{ConnectionType@{ConnectionType}!networktopology.h@{networktopology.h}}
+\doxysubsubsection{\texorpdfstring{ConnectionType}{ConnectionType}}
+{\footnotesize\ttfamily \label{networktopology_8h_aa1f0e2efd52935fd01bfece0fbead81f} 
+enum \mbox{\hyperlink{networktopology_8h_aa1f0e2efd52935fd01bfece0fbead81f}{Connection\+Type}}}
+
+\begin{DoxyEnumFields}[2]{枚举值}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CONNECTION\_UNKNOWN@{CONNECTION\_UNKNOWN}!networktopology.h@{networktopology.h}}\index{networktopology.h@{networktopology.h}!CONNECTION\_UNKNOWN@{CONNECTION\_UNKNOWN}}}\Hypertarget{networktopology_8h_aa1f0e2efd52935fd01bfece0fbead81faaa98c30b12cac8536b62c99df201f423}\label{networktopology_8h_aa1f0e2efd52935fd01bfece0fbead81faaa98c30b12cac8536b62c99df201f423} 
+CONNECTION\+\_\+\+UNKNOWN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CONNECTION\_DIRECT@{CONNECTION\_DIRECT}!networktopology.h@{networktopology.h}}\index{networktopology.h@{networktopology.h}!CONNECTION\_DIRECT@{CONNECTION\_DIRECT}}}\Hypertarget{networktopology_8h_aa1f0e2efd52935fd01bfece0fbead81fa1170f811f066620fe382b20395e9c31c}\label{networktopology_8h_aa1f0e2efd52935fd01bfece0fbead81fa1170f811f066620fe382b20395e9c31c} 
+CONNECTION\+\_\+\+DIRECT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CONNECTION\_WIRELESS@{CONNECTION\_WIRELESS}!networktopology.h@{networktopology.h}}\index{networktopology.h@{networktopology.h}!CONNECTION\_WIRELESS@{CONNECTION\_WIRELESS}}}\Hypertarget{networktopology_8h_aa1f0e2efd52935fd01bfece0fbead81fae7bf041bcdbcd512b79b5df05e2ce98f}\label{networktopology_8h_aa1f0e2efd52935fd01bfece0fbead81fae7bf041bcdbcd512b79b5df05e2ce98f} 
+CONNECTION\+\_\+\+WIRELESS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CONNECTION\_VPN@{CONNECTION\_VPN}!networktopology.h@{networktopology.h}}\index{networktopology.h@{networktopology.h}!CONNECTION\_VPN@{CONNECTION\_VPN}}}\Hypertarget{networktopology_8h_aa1f0e2efd52935fd01bfece0fbead81faa31a9471f8a05033b3871d6834b656ca}\label{networktopology_8h_aa1f0e2efd52935fd01bfece0fbead81faa31a9471f8a05033b3871d6834b656ca} 
+CONNECTION\+\_\+\+VPN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CONNECTION\_ROUTED@{CONNECTION\_ROUTED}!networktopology.h@{networktopology.h}}\index{networktopology.h@{networktopology.h}!CONNECTION\_ROUTED@{CONNECTION\_ROUTED}}}\Hypertarget{networktopology_8h_aa1f0e2efd52935fd01bfece0fbead81fabc86d8c960abdc757484b756233d9fb0}\label{networktopology_8h_aa1f0e2efd52935fd01bfece0fbead81fabc86d8c960abdc757484b756233d9fb0} 
+CONNECTION\+\_\+\+ROUTED&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{networktopology_8h_ad258d4c51629346fceac4679b3209ad9}\index{networktopology.h@{networktopology.h}!DeviceType@{DeviceType}}
+\index{DeviceType@{DeviceType}!networktopology.h@{networktopology.h}}
+\doxysubsubsection{\texorpdfstring{DeviceType}{DeviceType}}
+{\footnotesize\ttfamily \label{networktopology_8h_ad258d4c51629346fceac4679b3209ad9} 
+enum \mbox{\hyperlink{networktopology_8h_ad258d4c51629346fceac4679b3209ad9}{Device\+Type}}}
+
+\begin{DoxyEnumFields}[2]{枚举值}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEVICE\_UNKNOWN@{DEVICE\_UNKNOWN}!networktopology.h@{networktopology.h}}\index{networktopology.h@{networktopology.h}!DEVICE\_UNKNOWN@{DEVICE\_UNKNOWN}}}\Hypertarget{networktopology_8h_ad258d4c51629346fceac4679b3209ad9af6c26de5cb6bbe4e8ff24a92a7a297b6}\label{networktopology_8h_ad258d4c51629346fceac4679b3209ad9af6c26de5cb6bbe4e8ff24a92a7a297b6} 
+DEVICE\+\_\+\+UNKNOWN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEVICE\_ROUTER@{DEVICE\_ROUTER}!networktopology.h@{networktopology.h}}\index{networktopology.h@{networktopology.h}!DEVICE\_ROUTER@{DEVICE\_ROUTER}}}\Hypertarget{networktopology_8h_ad258d4c51629346fceac4679b3209ad9a54d234e97b2cf460474fe8d12f05b7e8}\label{networktopology_8h_ad258d4c51629346fceac4679b3209ad9a54d234e97b2cf460474fe8d12f05b7e8} 
+DEVICE\+\_\+\+ROUTER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEVICE\_SERVER@{DEVICE\_SERVER}!networktopology.h@{networktopology.h}}\index{networktopology.h@{networktopology.h}!DEVICE\_SERVER@{DEVICE\_SERVER}}}\Hypertarget{networktopology_8h_ad258d4c51629346fceac4679b3209ad9a8a476e120bc7257c86ff09c74df30666}\label{networktopology_8h_ad258d4c51629346fceac4679b3209ad9a8a476e120bc7257c86ff09c74df30666} 
+DEVICE\+\_\+\+SERVER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEVICE\_PC@{DEVICE\_PC}!networktopology.h@{networktopology.h}}\index{networktopology.h@{networktopology.h}!DEVICE\_PC@{DEVICE\_PC}}}\Hypertarget{networktopology_8h_ad258d4c51629346fceac4679b3209ad9ae149fffe078cf15212885a3d4dd0a485}\label{networktopology_8h_ad258d4c51629346fceac4679b3209ad9ae149fffe078cf15212885a3d4dd0a485} 
+DEVICE\+\_\+\+PC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEVICE\_MOBILE@{DEVICE\_MOBILE}!networktopology.h@{networktopology.h}}\index{networktopology.h@{networktopology.h}!DEVICE\_MOBILE@{DEVICE\_MOBILE}}}\Hypertarget{networktopology_8h_ad258d4c51629346fceac4679b3209ad9a54c75bb379d16adfae33363dead54ed8}\label{networktopology_8h_ad258d4c51629346fceac4679b3209ad9a54c75bb379d16adfae33363dead54ed8} 
+DEVICE\+\_\+\+MOBILE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEVICE\_PRINTER@{DEVICE\_PRINTER}!networktopology.h@{networktopology.h}}\index{networktopology.h@{networktopology.h}!DEVICE\_PRINTER@{DEVICE\_PRINTER}}}\Hypertarget{networktopology_8h_ad258d4c51629346fceac4679b3209ad9adec14bc8c782d6b0a36d04462c588a08}\label{networktopology_8h_ad258d4c51629346fceac4679b3209ad9adec14bc8c782d6b0a36d04462c588a08} 
+DEVICE\+\_\+\+PRINTER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEVICE\_IOT@{DEVICE\_IOT}!networktopology.h@{networktopology.h}}\index{networktopology.h@{networktopology.h}!DEVICE\_IOT@{DEVICE\_IOT}}}\Hypertarget{networktopology_8h_ad258d4c51629346fceac4679b3209ad9ad9ebd12cf0fa401d0a3f1da4243cfd1a}\label{networktopology_8h_ad258d4c51629346fceac4679b3209ad9ad9ebd12cf0fa401d0a3f1da4243cfd1a} 
+DEVICE\+\_\+\+IOT&\\
+\hline
+
+\end{DoxyEnumFields}

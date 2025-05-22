@@ -1,0 +1,9 @@
+<map id="NetworkScanner::scanStarted" name="NetworkScanner::scanStarted">
+<area shape="rect" id="Node000001" title="扫描开始信号" alt="" coords="490,31,686,56"/>
+<area shape="rect" id="Node000002" href="$class_main_window.html#a95dc085bf70bd0c1ad05bd80f897fd1d" title=" " alt="" coords="233,5,442,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="474,35,442,31,443,26,475,29"/>
+<area shape="rect" id="Node000004" href="$class_network_scanner.html#a3d1a653bce80d595a1c302fda393e5b9" title="开始扫描" alt="" coords="246,55,428,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="475,57,429,61,429,56,474,52"/>
+<area shape="rect" id="Node000003" href="$class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,5,185,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="217,21,185,21,185,16,217,16"/>
+</map>

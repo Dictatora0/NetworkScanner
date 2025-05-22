@@ -1,0 +1,224 @@
+\doxysection{Scan\+Strategy类 参考}
+\hypertarget{class_scan_strategy}{}\label{class_scan_strategy}\index{ScanStrategy@{ScanStrategy}}
+
+
+扫描策略类  
+
+
+
+
+{\ttfamily \#include $<$networkscanner.\+h$>$}
+
+
+
+Scan\+Strategy 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{class_scan_strategy__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 类型}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_scan_strategy_a0e3c3f47f30a45bd2a1e9f0533d893aa}{Scan\+Mode}} \{ \mbox{\hyperlink{class_scan_strategy_a0e3c3f47f30a45bd2a1e9f0533d893aaa12f5f00989512bdcac4b50b6317dd39a}{QUICK\+\_\+\+SCAN}}
+, \mbox{\hyperlink{class_scan_strategy_a0e3c3f47f30a45bd2a1e9f0533d893aaa91a37fa685743f83714c4d40d0200c90}{STANDARD\+\_\+\+SCAN}}
+, \mbox{\hyperlink{class_scan_strategy_a0e3c3f47f30a45bd2a1e9f0533d893aaac99476d88991212074d9b25f37ef3f32}{DEEP\+\_\+\+SCAN}}
+ \}
+\begin{DoxyCompactList}\small\item\em 扫描模式枚举 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_scan_strategy_a76ab981f4500728e20b1c63bfc44ff01}{Scan\+Strategy}} (\mbox{\hyperlink{class_scan_strategy_a0e3c3f47f30a45bd2a1e9f0533d893aa}{Scan\+Mode}} mode=\mbox{\hyperlink{class_scan_strategy_a0e3c3f47f30a45bd2a1e9f0533d893aaa91a37fa685743f83714c4d40d0200c90}{STANDARD\+\_\+\+SCAN}})
+\begin{DoxyCompactList}\small\item\em 构造函数 \end{DoxyCompactList}\item 
+QList$<$ int $>$ \mbox{\hyperlink{class_scan_strategy_a241232a2d2d446d56970be5cbce6380e}{get\+Ports\+To\+Scan}} () const
+\begin{DoxyCompactList}\small\item\em 获取要扫描的端口列表 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_scan_strategy_a332364d3bec278a0bc52b5673571167e}{get\+Scan\+Timeout}} (const QString \&ip) const
+\begin{DoxyCompactList}\small\item\em 获取扫描超时时间 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_scan_strategy_af1dd90fe689b039c15a47f95ca30f9a9}{get\+Max\+Parallel\+Tasks}} () const
+\begin{DoxyCompactList}\small\item\em 获取最大并行任务数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scan_strategy_a200cc390646b7699a0c0e97edc83350e}{update\+Host\+Response\+Time}} (const QString \&ip, int response\+Time)
+\begin{DoxyCompactList}\small\item\em 更新主机响应时间记录 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_scan_strategy_a0e3c3f47f30a45bd2a1e9f0533d893aa}{Scan\+Mode}} \mbox{\hyperlink{class_scan_strategy_a35d27b67331e023b1e5917dae36822de}{get\+Mode}} () const
+\begin{DoxyCompactList}\small\item\em 获取当前扫描模式 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scan_strategy_a69c75a9a4bb267c649a0bc784e884256}{set\+Mode}} (\mbox{\hyperlink{class_scan_strategy_a0e3c3f47f30a45bd2a1e9f0533d893aa}{Scan\+Mode}} mode)
+\begin{DoxyCompactList}\small\item\em 设置扫描模式 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_scan_strategy_a0e3c3f47f30a45bd2a1e9f0533d893aa}{Scan\+Mode}} \mbox{\hyperlink{class_scan_strategy_add8cd73d31e5146283413d44ba2805ec}{m\+\_\+mode}}
+\begin{DoxyCompactList}\small\item\em 当前扫描模式 \end{DoxyCompactList}\item 
+QMap$<$ QString, int $>$ \mbox{\hyperlink{class_scan_strategy_a5110a9e267f184295696c2c14cc0e42f}{m\+\_\+host\+Response\+Times}}
+\begin{DoxyCompactList}\small\item\em IP地址 -\/\texorpdfstring{$>$}{>} 响应时间映射 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+扫描策略类 
+
+定义不同的扫描模式和参数，如快速扫描、标准扫描和深度扫描 
+
+\doxysubsection{成员枚举类型说明}
+\Hypertarget{class_scan_strategy_a0e3c3f47f30a45bd2a1e9f0533d893aa}\index{ScanStrategy@{ScanStrategy}!ScanMode@{ScanMode}}
+\index{ScanMode@{ScanMode}!ScanStrategy@{ScanStrategy}}
+\doxysubsubsection{\texorpdfstring{ScanMode}{ScanMode}}
+{\footnotesize\ttfamily \label{class_scan_strategy_a0e3c3f47f30a45bd2a1e9f0533d893aa} 
+enum \mbox{\hyperlink{class_scan_strategy_a0e3c3f47f30a45bd2a1e9f0533d893aa}{Scan\+Strategy\+::\+Scan\+Mode}}}
+
+
+
+扫描模式枚举 
+
+\begin{DoxyEnumFields}[2]{枚举值}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QUICK\_SCAN@{QUICK\_SCAN}!ScanStrategy@{ScanStrategy}}\index{ScanStrategy@{ScanStrategy}!QUICK\_SCAN@{QUICK\_SCAN}}}\Hypertarget{class_scan_strategy_a0e3c3f47f30a45bd2a1e9f0533d893aaa12f5f00989512bdcac4b50b6317dd39a}\label{class_scan_strategy_a0e3c3f47f30a45bd2a1e9f0533d893aaa12f5f00989512bdcac4b50b6317dd39a} 
+QUICK\+\_\+\+SCAN&仅检测主机存活 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{STANDARD\_SCAN@{STANDARD\_SCAN}!ScanStrategy@{ScanStrategy}}\index{ScanStrategy@{ScanStrategy}!STANDARD\_SCAN@{STANDARD\_SCAN}}}\Hypertarget{class_scan_strategy_a0e3c3f47f30a45bd2a1e9f0533d893aaa91a37fa685743f83714c4d40d0200c90}\label{class_scan_strategy_a0e3c3f47f30a45bd2a1e9f0533d893aaa91a37fa685743f83714c4d40d0200c90} 
+STANDARD\+\_\+\+SCAN&扫描常用端口 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEEP\_SCAN@{DEEP\_SCAN}!ScanStrategy@{ScanStrategy}}\index{ScanStrategy@{ScanStrategy}!DEEP\_SCAN@{DEEP\_SCAN}}}\Hypertarget{class_scan_strategy_a0e3c3f47f30a45bd2a1e9f0533d893aaac99476d88991212074d9b25f37ef3f32}\label{class_scan_strategy_a0e3c3f47f30a45bd2a1e9f0533d893aaac99476d88991212074d9b25f37ef3f32} 
+DEEP\+\_\+\+SCAN&全面端口扫描 \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{构造及析构函数说明}
+\Hypertarget{class_scan_strategy_a76ab981f4500728e20b1c63bfc44ff01}\index{ScanStrategy@{ScanStrategy}!ScanStrategy@{ScanStrategy}}
+\index{ScanStrategy@{ScanStrategy}!ScanStrategy@{ScanStrategy}}
+\doxysubsubsection{\texorpdfstring{ScanStrategy()}{ScanStrategy()}}
+{\footnotesize\ttfamily \label{class_scan_strategy_a76ab981f4500728e20b1c63bfc44ff01} 
+Scan\+Strategy\+::\+Scan\+Strategy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_scan_strategy_a0e3c3f47f30a45bd2a1e9f0533d893aa}{Scan\+Mode}}}]{mode}{ = {\ttfamily \mbox{\hyperlink{class_scan_strategy_a0e3c3f47f30a45bd2a1e9f0533d893aaa91a37fa685743f83714c4d40d0200c90}{STANDARD\+\_\+\+SCAN}}}}\end{DoxyParamCaption})}
+
+
+
+构造函数 
+
+
+\begin{DoxyParams}{参数}
+{\em mode} & 扫描模式，默认为标准扫描 \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{成员函数说明}
+\Hypertarget{class_scan_strategy_af1dd90fe689b039c15a47f95ca30f9a9}\index{ScanStrategy@{ScanStrategy}!getMaxParallelTasks@{getMaxParallelTasks}}
+\index{getMaxParallelTasks@{getMaxParallelTasks}!ScanStrategy@{ScanStrategy}}
+\doxysubsubsection{\texorpdfstring{getMaxParallelTasks()}{getMaxParallelTasks()}}
+{\footnotesize\ttfamily \label{class_scan_strategy_af1dd90fe689b039c15a47f95ca30f9a9} 
+int Scan\+Strategy\+::get\+Max\+Parallel\+Tasks (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+获取最大并行任务数 
+
+\begin{DoxyReturn}{返回}
+并行任务数量 
+\end{DoxyReturn}
+\Hypertarget{class_scan_strategy_a35d27b67331e023b1e5917dae36822de}\index{ScanStrategy@{ScanStrategy}!getMode@{getMode}}
+\index{getMode@{getMode}!ScanStrategy@{ScanStrategy}}
+\doxysubsubsection{\texorpdfstring{getMode()}{getMode()}}
+{\footnotesize\ttfamily \label{class_scan_strategy_a35d27b67331e023b1e5917dae36822de} 
+\mbox{\hyperlink{class_scan_strategy_a0e3c3f47f30a45bd2a1e9f0533d893aa}{Scan\+Mode}} Scan\+Strategy\+::get\+Mode (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+获取当前扫描模式 
+
+\begin{DoxyReturn}{返回}
+扫描模式 
+\end{DoxyReturn}
+\Hypertarget{class_scan_strategy_a241232a2d2d446d56970be5cbce6380e}\index{ScanStrategy@{ScanStrategy}!getPortsToScan@{getPortsToScan}}
+\index{getPortsToScan@{getPortsToScan}!ScanStrategy@{ScanStrategy}}
+\doxysubsubsection{\texorpdfstring{getPortsToScan()}{getPortsToScan()}}
+{\footnotesize\ttfamily \label{class_scan_strategy_a241232a2d2d446d56970be5cbce6380e} 
+QList$<$ int $>$ Scan\+Strategy\+::get\+Ports\+To\+Scan (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+获取要扫描的端口列表 
+
+\begin{DoxyReturn}{返回}
+端口号列表 
+\end{DoxyReturn}
+\Hypertarget{class_scan_strategy_a332364d3bec278a0bc52b5673571167e}\index{ScanStrategy@{ScanStrategy}!getScanTimeout@{getScanTimeout}}
+\index{getScanTimeout@{getScanTimeout}!ScanStrategy@{ScanStrategy}}
+\doxysubsubsection{\texorpdfstring{getScanTimeout()}{getScanTimeout()}}
+{\footnotesize\ttfamily \label{class_scan_strategy_a332364d3bec278a0bc52b5673571167e} 
+int Scan\+Strategy\+::get\+Scan\+Timeout (\begin{DoxyParamCaption}\item[{const QString \&}]{ip}{}\end{DoxyParamCaption}) const}
+
+
+
+获取扫描超时时间 
+
+
+\begin{DoxyParams}{参数}
+{\em ip} & 目标\+IP地址 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+超时时间（毫秒） 
+\end{DoxyReturn}
+\Hypertarget{class_scan_strategy_a69c75a9a4bb267c649a0bc784e884256}\index{ScanStrategy@{ScanStrategy}!setMode@{setMode}}
+\index{setMode@{setMode}!ScanStrategy@{ScanStrategy}}
+\doxysubsubsection{\texorpdfstring{setMode()}{setMode()}}
+{\footnotesize\ttfamily \label{class_scan_strategy_a69c75a9a4bb267c649a0bc784e884256} 
+void Scan\+Strategy\+::set\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_scan_strategy_a0e3c3f47f30a45bd2a1e9f0533d893aa}{Scan\+Mode}}}]{mode}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+设置扫描模式 
+
+
+\begin{DoxyParams}{参数}
+{\em mode} & 要设置的扫描模式 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_scan_strategy_a200cc390646b7699a0c0e97edc83350e}\index{ScanStrategy@{ScanStrategy}!updateHostResponseTime@{updateHostResponseTime}}
+\index{updateHostResponseTime@{updateHostResponseTime}!ScanStrategy@{ScanStrategy}}
+\doxysubsubsection{\texorpdfstring{updateHostResponseTime()}{updateHostResponseTime()}}
+{\footnotesize\ttfamily \label{class_scan_strategy_a200cc390646b7699a0c0e97edc83350e} 
+void Scan\+Strategy\+::update\+Host\+Response\+Time (\begin{DoxyParamCaption}\item[{const QString \&}]{ip}{, }\item[{int}]{response\+Time}{}\end{DoxyParamCaption})}
+
+
+
+更新主机响应时间记录 
+
+
+\begin{DoxyParams}{参数}
+{\em ip} & 主机\+IP地址 \\
+\hline
+{\em response\+Time} & 响应时间（毫秒） \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{类成员变量说明}
+\Hypertarget{class_scan_strategy_a5110a9e267f184295696c2c14cc0e42f}\index{ScanStrategy@{ScanStrategy}!m\_hostResponseTimes@{m\_hostResponseTimes}}
+\index{m\_hostResponseTimes@{m\_hostResponseTimes}!ScanStrategy@{ScanStrategy}}
+\doxysubsubsection{\texorpdfstring{m\_hostResponseTimes}{m\_hostResponseTimes}}
+{\footnotesize\ttfamily \label{class_scan_strategy_a5110a9e267f184295696c2c14cc0e42f} 
+QMap$<$QString, int$>$ Scan\+Strategy\+::m\+\_\+host\+Response\+Times\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+IP地址 -\/\texorpdfstring{$>$}{>} 响应时间映射 
+
+\Hypertarget{class_scan_strategy_add8cd73d31e5146283413d44ba2805ec}\index{ScanStrategy@{ScanStrategy}!m\_mode@{m\_mode}}
+\index{m\_mode@{m\_mode}!ScanStrategy@{ScanStrategy}}
+\doxysubsubsection{\texorpdfstring{m\_mode}{m\_mode}}
+{\footnotesize\ttfamily \label{class_scan_strategy_add8cd73d31e5146283413d44ba2805ec} 
+\mbox{\hyperlink{class_scan_strategy_a0e3c3f47f30a45bd2a1e9f0533d893aa}{Scan\+Mode}} Scan\+Strategy\+::m\+\_\+mode\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+当前扫描模式 
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{networkscanner_8h}{networkscanner.\+h}}\item 
+\mbox{\hyperlink{networkscanner_8cpp}{networkscanner.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,200 @@
+\doxysection{mainwindow.\+h}
+\hypertarget{mainwindow_8h_source}{}\label{mainwindow_8h_source}\mbox{\hyperlink{mainwindow_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MAINWINDOW\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MAINWINDOW\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QMainWindow>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QTableWidget>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QPushButton>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QProgressBar>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QLabel>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QVBoxLayout>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QHBoxLayout>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <QStatusBar>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <QHeaderView>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <QMessageBox>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <QLineEdit>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <QComboBox>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <QSpinBox>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <QCheckBox>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <QGroupBox>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <QFileDialog>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <QAction>}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <QMenu>}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <QMenuBar>}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <QTabWidget>}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ <QTextEdit>}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <QSettings>}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <QSplitter>}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ <QStyledItemDelegate>}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ <QApplication>}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <QtCharts/QChartView>}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ <QtCharts/QChart>}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <QGraphicsView>}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ <QGraphicsScene>}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{networkscanner_8h}{networkscanner.h}}"{}}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{networktopology_8h}{networktopology.h}}"{}}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{deviceanalyzer_8h}{deviceanalyzer.h}}"{}}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{scanhistory_8h}{scanhistory.h}}"{}}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{comment}{//\ QtCharts命名空间已经在deviceanalyzer.h中引入}}
+\DoxyCodeLine{00040\ \textcolor{comment}{//\ using\ namespace\ QtCharts;}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_main_window_a996c5a2b6f77944776856f08ec30858d}{MainWindow}}\ :\ \textcolor{keyword}{public}\ QMainWindow}
+\DoxyCodeLine{00043\ \{}
+\DoxyCodeLine{00044\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00047\ \ \ \ \ \mbox{\hyperlink{class_main_window_a996c5a2b6f77944776856f08ec30858d}{MainWindow}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{\string~MainWindow}}();}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a092a4ceaf59fa4db7b29d03c66f07623}{startScan}}();}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a61696f5c0f521ce980e509b91e8d0fce}{stopScan}}();}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_afdbbca312bcf06606c0ab0ce8d58e307}{onHostFound}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_host_info}{HostInfo}}\ \&host);}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a9d1d85dd212a356122115bde5db8bf3a}{onScanStarted}}();}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a5bac6a75bb80dd8a8501547562878a50}{onScanFinished}}();}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a11e2be8668e70859d34898e5dfa87732}{onScanProgress}}(\textcolor{keywordtype}{int}\ progress);}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_aff96eaa326f306cc983e72f5b2bd073c}{onScanError}}(\textcolor{keyword}{const}\ QString\ \&errorMessage);}
+\DoxyCodeLine{00058\ \ \ \ \ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{comment}{//\ 现有功能槽}}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a4cb868f898400955a1035571326591cf}{saveResults}}();}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a3e1f77c4a928e74c560e84b67ed4d93d}{clearResults}}();}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_aabfa36b35a25cafc7832c489f5bd30f2}{showSettings}}();}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a5d35402881e369e364eab5c647478f5d}{applySettings}}();}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_aa3aa0f3ce42e748b931d6211921ea197}{showAbout}}();}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a226ae57b71712bebff12904e809280e1}{showHostDetails}}(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ column);}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a3166c6f9d50bec289812365751cabe07}{exportToCSV}}();}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a063df8fc929132d9c78afc70e376523e}{togglePortScanOptions}}(\textcolor{keywordtype}{bool}\ checked);}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a441682ebf3b1a226f5e8f7599a74c722}{toggleRangeOptions}}(\textcolor{keywordtype}{bool}\ checked);}
+\DoxyCodeLine{00069\ \ \ \ \ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{comment}{//\ 新增功能槽}}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a2db0996ad54247e897b90de18cfbeb5d}{showTopologyView}}();}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a92a83e9e4d4f9d5373f89c7d112d2b00}{showStatisticsView}}();}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_ad146c08dc16c52491f5ff953339e975b}{showHistoryView}}();}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a01e00e8c12707eb3d08859f98b1c6612}{generateSecurityReport}}();}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a160e765f35717b6304cfdd96b761cbc9}{saveTopologyImage}}();}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a16bd0ccae935c03c93906bcee7e7c314}{toggleDarkMode}}(\textcolor{keywordtype}{bool}\ enable);}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a1f0cb31651f8371996d1f8b69429a68b}{compareScanResults}}();}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a0dd210d98a9be161fce40284534369f0}{scheduleScan}}();}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a4242ff1e7fd5df4fafdc4329ad466acf}{saveHistoryToFile}}();}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a8e6264dacd417a196d1e8690e2bee82f}{loadHistoryFromFile}}();}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a540aa8c9d27c827db079fdacd75b5aac}{updateNetworkTopology}}();}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a4cfaca8251ce7ad3ac0b49d483c14b48}{refreshTopology}}();}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a02a66a16cd39489f10ce96440ba16a93}{filterResults}}();}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a5cdb762482ab2ffe8eb26aed5065c492}{clearFilters}}();}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_ad02df47bb9e6e540bd658f4eec792009}{onThemeChanged}}();}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_aabd8d480a18455fd70abceb51345d6a6}{createUI}}();}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_aa4907b0251d305659e403c62921ef331}{createMenus}}();}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_aac5a030c2bb05022b9ba2e84d9aebbce}{createSettingsDialog}}();}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_aee6c67086bb42a78185847b603f3566e}{createTopologyTab}}();}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_ace493b349f7c672189294b8d065cd708}{createStatisticsTab}}();}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a8bf6295611a3bb5282e86895c696c9ac}{createHistoryTab}}();}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a16cd72b1f4e32851cb8c57a3da1aad7f}{createDetailsTab}}();}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a2d3368ed4e2adcc0c9da18bd57da5fb4}{createSecurityTab}}();}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a95dc085bf70bd0c1ad05bd80f897fd1d}{setupConnections}}();}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_ae88824a309842c91bcb751650907a7ab}{updatePortsList}}();}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a9bb1f3b7f6b5360abfd2dc01fc1c8930}{loadSettings}}();}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_abb30531afee763d0586ee6323fd332e2}{saveSettings}}();}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_af9258c03a301bb07d66fa02d28e15706}{updateStatistics}}();}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_ae3116070947b6636dcfc2a72b2a54cc0}{applyTheme}}(\textcolor{keywordtype}{bool}\ darkMode);}
+\DoxyCodeLine{00102\ \ \ \ \ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{comment}{//\ UI元素}}
+\DoxyCodeLine{00104\ \ \ \ \ QWidget\ *\mbox{\hyperlink{class_main_window_ac3e02f178aa7d38fe0d754f0ec8a711e}{m\_centralWidget}};}
+\DoxyCodeLine{00105\ \ \ \ \ QTabWidget\ *\mbox{\hyperlink{class_main_window_af312eeff9342ea9edfb5f34e0aa1c332}{m\_tabWidget}};}
+\DoxyCodeLine{00106\ \ \ \ \ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{comment}{//\ 扫描结果标签页}}
+\DoxyCodeLine{00108\ \ \ \ \ QWidget\ *\mbox{\hyperlink{class_main_window_a5b0cdf71bbbfa349a514868e90ee32ae}{m\_scanTab}};}
+\DoxyCodeLine{00109\ \ \ \ \ QVBoxLayout\ *\mbox{\hyperlink{class_main_window_a038d03f63acfa7f735641a88a3e24ce8}{m\_mainLayout}};}
+\DoxyCodeLine{00110\ \ \ \ \ QHBoxLayout\ *\mbox{\hyperlink{class_main_window_a29d6df52e48bb25f8c61f689b33e4eb6}{m\_controlLayout}};}
+\DoxyCodeLine{00111\ \ \ \ \ QTableWidget\ *\mbox{\hyperlink{class_main_window_a1fd3a18d5cb22b3ae0d87e1d298e385c}{m\_resultsTable}};}
+\DoxyCodeLine{00112\ \ \ \ \ QPushButton\ *\mbox{\hyperlink{class_main_window_ae63606834e1a8cfa06f32e66c6df5dfb}{m\_scanButton}};}
+\DoxyCodeLine{00113\ \ \ \ \ QPushButton\ *\mbox{\hyperlink{class_main_window_aa25aef2c0667650b7b28291f0ca583ae}{m\_stopButton}};}
+\DoxyCodeLine{00114\ \ \ \ \ QPushButton\ *\mbox{\hyperlink{class_main_window_af7d5ecbab513a416062b8c9a7d5be3ed}{m\_clearButton}};}
+\DoxyCodeLine{00115\ \ \ \ \ QPushButton\ *\mbox{\hyperlink{class_main_window_ae5e5c1ddc0fbf52e5ef7f0cb73cbfca6}{m\_saveButton}};}
+\DoxyCodeLine{00116\ \ \ \ \ QProgressBar\ *\mbox{\hyperlink{class_main_window_abf92ec91ba0ea6d6265ec74075e5c50d}{m\_progressBar}};}
+\DoxyCodeLine{00117\ \ \ \ \ QLabel\ *\mbox{\hyperlink{class_main_window_ab9c6492b81f3117ca8fed55c7b97da44}{m\_statusLabel}};}
+\DoxyCodeLine{00118\ \ \ \ \ QStatusBar\ *\mbox{\hyperlink{class_main_window_a9b6351507b5ce0cf250e536433c686e4}{m\_statusBar}};}
+\DoxyCodeLine{00119\ \ \ \ \ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{comment}{//\ 扫描设置标签页}}
+\DoxyCodeLine{00121\ \ \ \ \ QWidget\ *\mbox{\hyperlink{class_main_window_a0ad7ee813905c0bb28c864c52bcc8530}{m\_settingsTab}};}
+\DoxyCodeLine{00122\ \ \ \ \ QVBoxLayout\ *\mbox{\hyperlink{class_main_window_a93290c7b84dafa7c3abe179c4227659f}{m\_settingsLayout}};}
+\DoxyCodeLine{00123\ \ \ \ \ }
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{comment}{//\ 端口设置区域}}
+\DoxyCodeLine{00125\ \ \ \ \ QGroupBox\ *\mbox{\hyperlink{class_main_window_a83a96d668e3d24b853d99a74c51c3f57}{m\_portsGroupBox}};}
+\DoxyCodeLine{00126\ \ \ \ \ QCheckBox\ *\mbox{\hyperlink{class_main_window_aacbd2803a584f86685b5f58afbdf57b6}{m\_customPortsCheckBox}};}
+\DoxyCodeLine{00127\ \ \ \ \ QLineEdit\ *\mbox{\hyperlink{class_main_window_a9efc5a0bc3943a315b228f62353e102a}{m\_portsLineEdit}};}
+\DoxyCodeLine{00128\ \ \ \ \ QSpinBox\ *\mbox{\hyperlink{class_main_window_a573b9f461d2fe6514b5deedeb6095d41}{m\_timeoutSpinBox}};}
+\DoxyCodeLine{00129\ \ \ \ \ }
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{comment}{//\ IP范围设置区域}}
+\DoxyCodeLine{00131\ \ \ \ \ QGroupBox\ *\mbox{\hyperlink{class_main_window_a1ddfaccfa9a0652a5468b4af05c8606d}{m\_rangeGroupBox}};}
+\DoxyCodeLine{00132\ \ \ \ \ QCheckBox\ *\mbox{\hyperlink{class_main_window_a95393326363a86caee0fc3510c6f2ad0}{m\_customRangeCheckBox}};}
+\DoxyCodeLine{00133\ \ \ \ \ QLineEdit\ *\mbox{\hyperlink{class_main_window_a31dfa3be7235c663d71d851db72d8c42}{m\_startIPLineEdit}};}
+\DoxyCodeLine{00134\ \ \ \ \ QLineEdit\ *\mbox{\hyperlink{class_main_window_a476b04c5841b66c6ace44b5332a2edff}{m\_endIPLineEdit}};}
+\DoxyCodeLine{00135\ \ \ \ \ }
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{comment}{//\ 主机详情标签页}}
+\DoxyCodeLine{00137\ \ \ \ \ QWidget\ *\mbox{\hyperlink{class_main_window_af32587da7d4f739dbfe86fbadbc7f897}{m\_detailsTab}};}
+\DoxyCodeLine{00138\ \ \ \ \ QVBoxLayout\ *\mbox{\hyperlink{class_main_window_aaf0fdb6b0b3bc971f00fc922aa93dfb3}{m\_detailsLayout}};}
+\DoxyCodeLine{00139\ \ \ \ \ QTextEdit\ *\mbox{\hyperlink{class_main_window_aabd224bf9307a91a0531ce54b886a1d7}{m\_detailsTextEdit}};}
+\DoxyCodeLine{00140\ \ \ \ \ }
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{comment}{//\ 网络拓扑标签页}}
+\DoxyCodeLine{00142\ \ \ \ \ QWidget\ *\mbox{\hyperlink{class_main_window_a872a2dd22f557555f5c960cc3bb87e21}{m\_topologyTab}};}
+\DoxyCodeLine{00143\ \ \ \ \ \mbox{\hyperlink{class_network_topology}{NetworkTopology}}\ *\mbox{\hyperlink{class_main_window_a3ef751f40d803879a0a9fa5043afdf30}{m\_networkTopology}};}
+\DoxyCodeLine{00144\ \ \ \ \ }
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{comment}{//\ 统计分析标签页}}
+\DoxyCodeLine{00146\ \ \ \ \ QWidget\ *\mbox{\hyperlink{class_main_window_ac9557ba0a655b1b88ac28fbf17ebedda}{m\_statisticsTab}};}
+\DoxyCodeLine{00147\ \ \ \ \ \mbox{\hyperlink{class_device_analyzer}{DeviceAnalyzer}}\ *\mbox{\hyperlink{class_main_window_a1e492c9a6cf8cf0345ed043b97c37065}{m\_deviceAnalyzer}};}
+\DoxyCodeLine{00148\ \ \ \ \ QChartView\ *\mbox{\hyperlink{class_main_window_aab5c27a89df8705ccc16b1b55c56dde0}{m\_deviceTypeChartView}};}
+\DoxyCodeLine{00149\ \ \ \ \ QChartView\ *\mbox{\hyperlink{class_main_window_a2ae79443f7d47cc8ae46e8f78ae94b55}{m\_vendorChartView}};}
+\DoxyCodeLine{00150\ \ \ \ \ QChartView\ *\mbox{\hyperlink{class_main_window_a4dc30c7d07b7d94b93051bdf9a0d1e64}{m\_portDistributionChartView}};}
+\DoxyCodeLine{00151\ \ \ \ \ QTextEdit\ *\mbox{\hyperlink{class_main_window_a0ee7722c34e72433cd64b171cdf982c0}{m\_securityReportText}};}
+\DoxyCodeLine{00152\ \ \ \ \ }
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{comment}{//\ 扫描历史标签页}}
+\DoxyCodeLine{00154\ \ \ \ \ QWidget\ *\mbox{\hyperlink{class_main_window_a1971cf2b6b5ebdf34a9552f66d716a71}{m\_historyTab}};}
+\DoxyCodeLine{00155\ \ \ \ \ \mbox{\hyperlink{class_scan_history}{ScanHistory}}\ *\mbox{\hyperlink{class_main_window_af5450d28fa59136d591227fd90596d15}{m\_scanHistory}};}
+\DoxyCodeLine{00156\ \ \ \ \ QComboBox\ *\mbox{\hyperlink{class_main_window_a85b80c3e6dcefacd4a5a0ef17077c658}{m\_sessionComboBox}};}
+\DoxyCodeLine{00157\ \ \ \ \ QTableWidget\ *\mbox{\hyperlink{class_main_window_aaefdba77910ab598c153dfdc8d976f55}{m\_historyTable}};}
+\DoxyCodeLine{00158\ \ \ \ \ }
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{comment}{//\ 菜单项}}
+\DoxyCodeLine{00160\ \ \ \ \ QMenu\ *\mbox{\hyperlink{class_main_window_adec8f01e467bf8d23726b996881fb2e7}{m\_fileMenu}};}
+\DoxyCodeLine{00161\ \ \ \ \ QMenu\ *\mbox{\hyperlink{class_main_window_aea015210dfb510096531b0d4b74a0560}{m\_viewMenu}};}
+\DoxyCodeLine{00162\ \ \ \ \ QMenu\ *\mbox{\hyperlink{class_main_window_abeabed45473d9238dbff21a927cde690}{m\_toolsMenu}};}
+\DoxyCodeLine{00163\ \ \ \ \ QMenu\ *\mbox{\hyperlink{class_main_window_aad8c15f252b869d1003c3a82566ac1b4}{m\_helpMenu}};}
+\DoxyCodeLine{00164\ \ \ \ \ QAction\ *\mbox{\hyperlink{class_main_window_a75a23135f1ee52c5b91803406ee57fbf}{m\_exportAction}};}
+\DoxyCodeLine{00165\ \ \ \ \ QAction\ *\mbox{\hyperlink{class_main_window_a8bb4a8dea70f2c7dbff9590a07dc915a}{m\_saveHistoryAction}};}
+\DoxyCodeLine{00166\ \ \ \ \ QAction\ *\mbox{\hyperlink{class_main_window_ab94930f0e47a8abd2137e31374402764}{m\_loadHistoryAction}};}
+\DoxyCodeLine{00167\ \ \ \ \ QAction\ *\mbox{\hyperlink{class_main_window_adb177ce59ee76518f015b12c5b56f17e}{m\_saveTopologyAction}};}
+\DoxyCodeLine{00168\ \ \ \ \ QAction\ *\mbox{\hyperlink{class_main_window_a96d76acf03c4b8af4828931fc4411eba}{m\_exitAction}};}
+\DoxyCodeLine{00169\ \ \ \ \ QAction\ *\mbox{\hyperlink{class_main_window_a0480b4ed9b2a198781c64a2bca488149}{m\_settingsAction}};}
+\DoxyCodeLine{00170\ \ \ \ \ QAction\ *\mbox{\hyperlink{class_main_window_ad67ac377df3fc8c750fe8990d3b21cf9}{m\_darkModeAction}};}
+\DoxyCodeLine{00171\ \ \ \ \ QAction\ *\mbox{\hyperlink{class_main_window_a4ddad3934e8a9171518414b20ce39a91}{m\_scheduleScanAction}};}
+\DoxyCodeLine{00172\ \ \ \ \ QAction\ *\mbox{\hyperlink{class_main_window_a23de3541f59aa30aca5eb2af14548d1d}{m\_aboutAction}};}
+\DoxyCodeLine{00173\ \ \ \ \ }
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{comment}{//\ 过滤控件}}
+\DoxyCodeLine{00175\ \ \ \ \ QWidget\ *\mbox{\hyperlink{class_main_window_ae1e85d1e8982b6553d098d92bbf9f6d4}{m\_filterWidget}};}
+\DoxyCodeLine{00176\ \ \ \ \ QLineEdit\ *\mbox{\hyperlink{class_main_window_a828111ee401a70fda2d26736d674df9f}{m\_filterIPLineEdit}};}
+\DoxyCodeLine{00177\ \ \ \ \ QComboBox\ *\mbox{\hyperlink{class_main_window_a058e5ff94ea9d7bd11b6325b46c31208}{m\_filterVendorComboBox}};}
+\DoxyCodeLine{00178\ \ \ \ \ QComboBox\ *\mbox{\hyperlink{class_main_window_a5379fea6d42de983e755645318c44954}{m\_filterTypeComboBox}};}
+\DoxyCodeLine{00179\ \ \ \ \ QPushButton\ *\mbox{\hyperlink{class_main_window_a7e060d75e62f570186e6f04e4d74f16c}{m\_filterButton}};}
+\DoxyCodeLine{00180\ \ \ \ \ QPushButton\ *\mbox{\hyperlink{class_main_window_a6dc4c3cc9a03aa99a9e005f9cdbb3faa}{m\_clearFilterButton}};}
+\DoxyCodeLine{00181\ \ \ \ \ }
+\DoxyCodeLine{00182\ \ \ \ \ \textcolor{comment}{//\ 网络扫描器}}
+\DoxyCodeLine{00183\ \ \ \ \ \mbox{\hyperlink{class_network_scanner}{NetworkScanner}}\ *\mbox{\hyperlink{class_main_window_abb22ddcde79991f45509c764db7fb9ba}{m\_scanner}};}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00185\ \ \ \ \ \textcolor{comment}{//\ 扫描的主机数量}}
+\DoxyCodeLine{00186\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_main_window_a1f688c173065551bc877292999dd9671}{m\_hostsFound}};}
+\DoxyCodeLine{00187\ \ \ \ \ }
+\DoxyCodeLine{00188\ \ \ \ \ \textcolor{comment}{//\ 当前查看的主机索引}}
+\DoxyCodeLine{00189\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_main_window_aec413ec818a9839fac7b6f8411e52a40}{m\_currentHostIndex}};}
+\DoxyCodeLine{00190\ \ \ \ \ }
+\DoxyCodeLine{00191\ \ \ \ \ \textcolor{comment}{//\ 主题设置}}
+\DoxyCodeLine{00192\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_main_window_a631c3bcc94648a3692ed237931aaed8b}{m\_darkModeEnabled}};}
+\DoxyCodeLine{00193\ \};}
+\DoxyCodeLine{00194\ }
+\DoxyCodeLine{00195\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MAINWINDOW\_H\ }}
+
+\end{DoxyCode}

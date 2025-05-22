@@ -1,0 +1,71 @@
+\doxysection{scanhistory.\+h}
+\hypertarget{scanhistory_8h_source}{}\label{scanhistory_8h_source}\mbox{\hyperlink{scanhistory_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SCANHISTORY\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SCANHISTORY\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QDateTime>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QList>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QMap>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QString>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QFile>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QTextStream>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{networkscanner_8h}{networkscanner.h}}"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ 扫描会话数据结构}}
+\DoxyCodeLine{00014\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_scan_session}{ScanSession}}\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ QDateTime\ \mbox{\hyperlink{struct_scan_session_a737c514772b31ab3943292358795a82c}{scanTime}};}
+\DoxyCodeLine{00016\ \ \ \ \ QString\ \mbox{\hyperlink{struct_scan_session_af41515e0cd18ccfc0294399c1773956c}{description}};}
+\DoxyCodeLine{00017\ \ \ \ \ QList<HostInfo>\ \mbox{\hyperlink{struct_scan_session_a7b5a4c810d9e35bfeab221e589e90aa2}{hosts}};}
+\DoxyCodeLine{00018\ \ \ \ \ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{comment}{//\ 会话统计信息}}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_scan_session_ac05359624e702e2563bf76491bf4c743}{totalHosts}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{struct_scan_session_a7b5a4c810d9e35bfeab221e589e90aa2}{hosts}}.size();\ \}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_scan_session_a0840c4b4379a33d36d9a2856d3333be9}{reachableHosts}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_scan_session_a1fa497179de9e557e47f9d9be7ca807a}{unreachableHosts}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{struct_scan_session_ac05359624e702e2563bf76491bf4c743}{totalHosts}}()\ -\/\ \mbox{\hyperlink{struct_scan_session_a0840c4b4379a33d36d9a2856d3333be9}{reachableHosts}}();\ \}}
+\DoxyCodeLine{00023\ \ \ \ \ QMap<int,\ int>\ \mbox{\hyperlink{struct_scan_session_abca74c6fee7271ba216a797b2c604e74}{portDistribution}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00024\ \};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{comment}{//\ 扫描历史管理类}}
+\DoxyCodeLine{00027\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_scan_history_a7c4c7700e47c076954e79e8706580f47}{ScanHistory}}\ :\ \textcolor{keyword}{public}\ QObject}
+\DoxyCodeLine{00028\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00030\ \ \ \ \ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_scan_history_a7c4c7700e47c076954e79e8706580f47}{ScanHistory}}(QObject\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00033\ \ \ \ \ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{comment}{//\ 添加扫描会话}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_scan_history_aa51b13a02fdbfac59135178d95eeb373}{addSession}}(\textcolor{keyword}{const}\ QList<HostInfo>\ \&hosts,\ \textcolor{keyword}{const}\ QString\ \&description\ =\ QString());}
+\DoxyCodeLine{00036\ \ \ \ \ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{comment}{//\ 获取历史扫描会话}}
+\DoxyCodeLine{00038\ \ \ \ \ QList<ScanSession>\ \mbox{\hyperlink{class_scan_history_a6d6b0f71d8f344ad6e04ecb99a0a3d27}{getSessions}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_scan_history_a8e4ee2bf3362ec5cb7bfce12b9496c93}{m\_sessions}};\ \}}
+\DoxyCodeLine{00039\ \ \ \ \ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{comment}{//\ 获取特定会话}}
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{struct_scan_session}{ScanSession}}\ \mbox{\hyperlink{class_scan_history_a4db1e8fb7b0763f08d3181971cacefe0}{getSession}}(\textcolor{keywordtype}{int}\ index)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00042\ \ \ \ \ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{comment}{//\ 获取会话数量}}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_scan_history_a5a2c133d218117972edcb61ee88adcae}{sessionCount}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_scan_history_a8e4ee2bf3362ec5cb7bfce12b9496c93}{m\_sessions}}.size();\ \}}
+\DoxyCodeLine{00045\ \ \ \ \ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{comment}{//\ 清除所有历史记录}}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_scan_history_a8e37fba8e166c4771976611c6c237426}{clearHistory}}();}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{comment}{//\ 删除特定会话}}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_scan_history_a340fad8d0f3d11a82f1b0e0a524765cb}{removeSession}}(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00051\ \ \ \ \ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{comment}{//\ 将两次扫描结果进行比较，找出新增和消失的主机}}
+\DoxyCodeLine{00053\ \ \ \ \ QPair<QList<HostInfo>,\ QList<HostInfo>>\ \mbox{\hyperlink{class_scan_history_ab50694b4ad4960001bf713552d374809}{compareScans}}(\textcolor{keywordtype}{int}\ sessionIndex1,\ \textcolor{keywordtype}{int}\ sessionIndex2)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00054\ \ \ \ \ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{comment}{//\ 保存和加载扫描历史}}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_scan_history_a4f479a71412cad71786d49dd1b566748}{saveToFile}}(\textcolor{keyword}{const}\ QString\ \&filename)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_scan_history_a773eca78349c881eccf7fbce5f9a0e4c}{loadFromFile}}(\textcolor{keyword}{const}\ QString\ \&filename);}
+\DoxyCodeLine{00058\ \ \ \ \ }
+\DoxyCodeLine{00059\ signals:}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_scan_history_a829c6ffa9ea8de6291f2f0a6fe1bac95}{historyChanged}}();}
+\DoxyCodeLine{00061\ \ \ \ \ }
+\DoxyCodeLine{00062\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00063\ \ \ \ \ QList<ScanSession>\ \mbox{\hyperlink{class_scan_history_a8e4ee2bf3362ec5cb7bfce12b9496c93}{m\_sessions}};}
+\DoxyCodeLine{00064\ \};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SCANHISTORY\_H\ }}
+
+\end{DoxyCode}

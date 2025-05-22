@@ -1,0 +1,1087 @@
+\doxysection{Network\+Scanner类 参考}
+\hypertarget{class_network_scanner}{}\label{class_network_scanner}\index{NetworkScanner@{NetworkScanner}}
+
+
+网络扫描器类  
+
+
+
+
+{\ttfamily \#include $<$networkscanner.\+h$>$}
+
+
+
+类 Network\+Scanner 继承关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_network_scanner__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Network\+Scanner 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_network_scanner__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 槽}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_network_scanner_ad50732f1a5d713a4229d29a2cec1295c}{on\+Scan\+Task\+Finished}} (const \mbox{\hyperlink{struct_host_info}{Host\+Info}} \&host\+Info)
+\begin{DoxyCompactList}\small\item\em 处理扫描任务完成 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_network_scanner_ae86a6e70a9c71be92ae45209a5a89bfe}{update\+Scan\+Progress}} ()
+\begin{DoxyCompactList}\small\item\em 更新扫描进度 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_network_scanner_a5d6e606c028e6b934e5562254c016710}{on\+Host\+Name\+Looked\+Up}} (const QHost\+Info \&host\+Info)
+\begin{DoxyCompactList}\small\item\em 主机名查询完成处理 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{信号}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_network_scanner_a941867644d70f3b1c512c9e98f082ed3}{host\+Found}} (const \mbox{\hyperlink{struct_host_info}{Host\+Info}} \&host)
+\begin{DoxyCompactList}\small\item\em 找到主机信号 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_network_scanner_a56499014f2f0ee9a87fcbf19ba034eeb}{scan\+Started}} ()
+\begin{DoxyCompactList}\small\item\em 扫描开始信号 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_network_scanner_a311c4f6158b867640590a03f85879b6b}{scan\+Finished}} ()
+\begin{DoxyCompactList}\small\item\em 扫描完成信号 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_network_scanner_a9e780f0ca7e0519b0a7b8ee6db11996e}{scan\+Progress}} (int progress)
+\begin{DoxyCompactList}\small\item\em 扫描进度更新信号 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_network_scanner_a7d443adacaa45d4babee9c5c8cc3927b}{scan\+Error}} (const QString \&error\+Message)
+\begin{DoxyCompactList}\small\item\em 扫描错误信号 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_network_scanner_aa2dcdd86a95aa5a347d48efc6eb0dcb1}{Network\+Scanner}} (QObject \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em 构造函数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_network_scanner_abeccb1ea9774d7962fac4901f738e692}{\texorpdfstring{$\sim$}{\string~}\+Network\+Scanner}} ()
+\begin{DoxyCompactList}\small\item\em 析构函数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_network_scanner_aea1a793e46ec7cc8e2a75b5bc71366ed}{set\+Custom\+Ports\+To\+Scan}} (const QList$<$ int $>$ \&ports)
+\begin{DoxyCompactList}\small\item\em 设置自定义端口扫描列表 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_network_scanner_ae34823cd436f8345ee7dedda3fe56bf6}{set\+Scan\+Timeout}} (int msecs)
+\begin{DoxyCompactList}\small\item\em 设置扫描超时时间 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_network_scanner_ae86106ecdb8aab43231f7d48d6840e50}{set\+Custom\+IPRange}} (const QString \&start\+IP, const QString \&end\+IP)
+\begin{DoxyCompactList}\small\item\em 设置自定义\+IP范围 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_network_scanner_a20f31e911444bcc321a733b5015710fb}{set\+Scan\+Strategy}} (\mbox{\hyperlink{class_scan_strategy_a0e3c3f47f30a45bd2a1e9f0533d893aa}{Scan\+Strategy\+::\+Scan\+Mode}} mode)
+\begin{DoxyCompactList}\small\item\em 设置扫描策略 \end{DoxyCompactList}\item 
+QList$<$ \mbox{\hyperlink{struct_host_info}{Host\+Info}} $>$ \mbox{\hyperlink{class_network_scanner_a1ff09dda96ac397a6700a79651123ae4}{get\+Scanned\+Hosts}} () const
+\begin{DoxyCompactList}\small\item\em 获取扫描结果 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_network_scanner_a65c572325e53a912f34394e7beabb867}{save\+Results\+To\+File}} (const QString \&filename) const
+\begin{DoxyCompactList}\small\item\em 保存结果到文件 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_network_scanner_a3d1a653bce80d595a1c302fda393e5b9}{start\+Scan}} ()
+\begin{DoxyCompactList}\small\item\em 开始扫描 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_network_scanner_a390dcda3d4cd1d76633e6f4611ae8410}{stop\+Scan}} ()
+\begin{DoxyCompactList}\small\item\em 停止扫描 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_network_scanner_a10e2ee230d5126ea043febd28f0559e3}{is\+Scanning}} () const
+\begin{DoxyCompactList}\small\item\em 检查是否正在扫描 \end{DoxyCompactList}\item 
+QList$<$ QHost\+Address $>$ \mbox{\hyperlink{class_network_scanner_ac1d45fc1180ff72ae369fe0966f67d08}{quick\+Ping\+Scan}} (const QList$<$ QHost\+Address $>$ \&addresses)
+\begin{DoxyCompactList}\small\item\em 快速\+Ping扫描方法 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_network_scanner_a34fbb26df044a6ee3f830f79eb2d1ce6}{is\+Host\+Reachable}} (const QHost\+Address \&address, int timeout)
+\begin{DoxyCompactList}\small\item\em 检查主机是否可达 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_network_scanner_a27baba5addfba7cdcd71878c6c9e442a}{is\+Reachable\+On\+Ports}} (const QHost\+Address \&address, const QList$<$ int $>$ \&ports, int timeout)
+\begin{DoxyCompactList}\small\item\em 检查主机在多个端口上是否可达 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_network_scanner_ae1c58186285b571608eb3e1ef699a1d4}{scan\+Host}} (const QHost\+Address \&address)
+\begin{DoxyCompactList}\small\item\em 扫描单个主机 \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{class_network_scanner_afcc19f1f23e444aef7b689e5d64c1422}{lookup\+Host\+Name}} (const QHost\+Address \&address)
+\begin{DoxyCompactList}\small\item\em 查询主机名 \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{class_network_scanner_a879abf7e7a058dda14f6f36645d6763b}{lookup\+Mac\+Address}} (const QHost\+Address \&address)
+\begin{DoxyCompactList}\small\item\em 查询\+MAC地址 \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{class_network_scanner_a86214dd708b98209915b29514cd58296}{lookup\+Mac\+Vendor}} (const QString \&mac\+Address)
+\begin{DoxyCompactList}\small\item\em 查询\+MAC地址对应的厂商 \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{class_network_scanner_a618ee5322d0843ad65a341fff40ce43d}{generate\+Pseudo\+MACFrom\+IP}} (const QString \&ip)
+\begin{DoxyCompactList}\small\item\em 根据\+IP地址生成伪\+MAC地址 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+QList$<$ QHost\+Address $>$ \mbox{\hyperlink{class_network_scanner_af088a70b884ccc65b363ecc235af3058}{get\+Local\+Network\+Addresses}} ()
+\begin{DoxyCompactList}\small\item\em 获取本地网络地址列表 \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{class_network_scanner_a37b59a466d4daa5a5f89d1eb8f588626}{normalize\+Mac\+Address}} (const QString \&mac\+Address)
+\begin{DoxyCompactList}\small\item\em MAC地址规范化 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_network_scanner_a35e8651f2b899836b25b68f1ee673520}{ping\+Target\+With\+Timeout}} (const QString \&ip, int timeout)
+\begin{DoxyCompactList}\small\item\em 使用ping命令检测目标是否可达 \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{class_network_scanner_a1499c78a310999b583c7008a106379d7}{get\+Mac\+Address\+From\+System\+Calls}} (const QString \&ip)
+\begin{DoxyCompactList}\small\item\em 通过系统调用获取\+MAC地址 \end{DoxyCompactList}\item 
+QList$<$ QPair$<$ QHost\+Address, QString $>$ $>$ \mbox{\hyperlink{class_network_scanner_ac28925e0859afc5ae1165c98a7e537c4}{perform\+ARPScan}} ()
+\begin{DoxyCompactList}\small\item\em 执行\+ARP扫描 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_network_scanner_acdcb120eceeec289b7feb2f5d8256b2a}{scan\+Host\+Ports}} (\mbox{\hyperlink{struct_host_info}{Host\+Info}} \&host\+Info)
+\begin{DoxyCompactList}\small\item\em 扫描主机端口 \end{DoxyCompactList}\item 
+QList$<$ QHost\+Address $>$ \mbox{\hyperlink{class_network_scanner_aca3185ddc77f6f4bcc13279cb290d858}{get\+Addresses\+To\+Scan}} ()
+\begin{DoxyCompactList}\small\item\em 获取要扫描的地址列表 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_network_scanner_a3b1ddceb6c092aa96f97cb6aba9321b5}{process\+Scan\+Results}} ()
+\begin{DoxyCompactList}\small\item\em 处理扫描结果 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{静态 Private 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_network_scanner_a3d61598311556d7ab706e013005f7c5f}{execute\+Process}} (const QString \&program, const QString\+List \&args, QString \&std\+Out\+Output, QString \&std\+Err\+Output, int start\+Timeout=2000, int finish\+Timeout=5000)
+\begin{DoxyCompactList}\small\item\em 执行外部进程 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_network_scanner_ab552ddb02bf45cc7293e68d819b08da6}{m\+\_\+is\+Scanning}}
+\begin{DoxyCompactList}\small\item\em 是否正在扫描 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_network_scanner_af1c4f86f0bf57509498127e25bd2dd99}{m\+\_\+scanned\+Hosts}}
+\begin{DoxyCompactList}\small\item\em 已扫描主机数 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_network_scanner_abf3fa14815d6a3cdec60bbcdb1b9c649}{m\+\_\+total\+Hosts}}
+\begin{DoxyCompactList}\small\item\em 总主机数 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_network_scanner_a423ce8a2179223e48189772f80cebb9c}{m\+\_\+scan\+Timeout}}
+\begin{DoxyCompactList}\small\item\em 扫描超时时间 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_network_scanner_a1606df18aa388acb9b685d0f72ba2d8f}{m\+\_\+use\+Custom\+Range}}
+\begin{DoxyCompactList}\small\item\em 是否使用自定义\+IP范围 \end{DoxyCompactList}\item 
+QHost\+Address \mbox{\hyperlink{class_network_scanner_a86b547fcfdd0be16c9c689731887e255}{m\+\_\+start\+IPRange}}
+\begin{DoxyCompactList}\small\item\em 起始\+IP地址 \end{DoxyCompactList}\item 
+QHost\+Address \mbox{\hyperlink{class_network_scanner_adc7a00ffc172c1dfc141d30240a8ac67}{m\+\_\+end\+IPRange}}
+\begin{DoxyCompactList}\small\item\em 结束\+IP地址 \end{DoxyCompactList}\item 
+QList$<$ int $>$ \mbox{\hyperlink{class_network_scanner_aaa8e5c1ecbb18e30b3eaa41ea030aa8b}{m\+\_\+ports\+To\+Scan}}
+\begin{DoxyCompactList}\small\item\em 要扫描的端口列表 \end{DoxyCompactList}\item 
+QList$<$ \mbox{\hyperlink{struct_host_info}{Host\+Info}} $>$ \mbox{\hyperlink{class_network_scanner_a794bc857be82d6b7b9cc3449df61bc0a}{m\+\_\+scanned\+Hosts\+List}}
+\begin{DoxyCompactList}\small\item\em 扫描结果列表 \end{DoxyCompactList}\item 
+QMutex \mbox{\hyperlink{class_network_scanner_a519b23696e548ce76d19b0923b1b2e31}{m\+\_\+mutex}}
+\begin{DoxyCompactList}\small\item\em 线程同步互斥锁 \end{DoxyCompactList}\item 
+QList$<$ QFuture$<$ void $>$ $>$ \mbox{\hyperlink{class_network_scanner_a07591f97b42d5ba072f1dd383ac5aaaf}{m\+\_\+scan\+Futures}}
+\begin{DoxyCompactList}\small\item\em 并行扫描任务 \end{DoxyCompactList}\item 
+QThread\+Pool \mbox{\hyperlink{class_network_scanner_a95c25f8c2863d81f3c9348d8b90c313f}{m\+\_\+thread\+Pool}}
+\begin{DoxyCompactList}\small\item\em 线程池 \end{DoxyCompactList}\item 
+QMap$<$ QString, QString $>$ \mbox{\hyperlink{class_network_scanner_a6565994e3e77dd1f39ed03f7a31f79fb}{m\+\_\+mac\+Address\+Cache}}
+\begin{DoxyCompactList}\small\item\em MAC地址缓存 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_scan_strategy}{Scan\+Strategy}} \mbox{\hyperlink{class_network_scanner_adfa250375b6ed189a694030f831a441c}{m\+\_\+scan\+Strategy}}
+\begin{DoxyCompactList}\small\item\em 扫描策略 \end{DoxyCompactList}\item 
+QList$<$ QHost\+Address $>$ \mbox{\hyperlink{class_network_scanner_a29d0e3495e8170c1b40420d5e301b8d2}{m\+\_\+active\+Hosts}}
+\begin{DoxyCompactList}\small\item\em 活跃主机列表 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+网络扫描器类 
+
+提供网络设备发现和端口扫描的核心功能 
+
+\doxysubsection{构造及析构函数说明}
+\Hypertarget{class_network_scanner_aa2dcdd86a95aa5a347d48efc6eb0dcb1}\index{NetworkScanner@{NetworkScanner}!NetworkScanner@{NetworkScanner}}
+\index{NetworkScanner@{NetworkScanner}!NetworkScanner@{NetworkScanner}}
+\doxysubsubsection{\texorpdfstring{NetworkScanner()}{NetworkScanner()}}
+{\footnotesize\ttfamily \label{class_network_scanner_aa2dcdd86a95aa5a347d48efc6eb0dcb1} 
+Network\+Scanner\+::\+Network\+Scanner (\begin{DoxyParamCaption}\item[{QObject \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})}
+
+
+
+构造函数 
+
+Network\+Scanner类构造函数
+
+
+\begin{DoxyParams}{参数}
+{\em parent} & 父对象\\
+\hline
+{\em parent} & 父对象\\
+\hline
+\end{DoxyParams}
+初始化扫描器参数和线程池 \Hypertarget{class_network_scanner_abeccb1ea9774d7962fac4901f738e692}\index{NetworkScanner@{NetworkScanner}!````~NetworkScanner@{\texorpdfstring{$\sim$}{\string~}NetworkScanner}}
+\index{````~NetworkScanner@{\texorpdfstring{$\sim$}{\string~}NetworkScanner}!NetworkScanner@{NetworkScanner}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}NetworkScanner()}{\string~NetworkScanner()}}
+{\footnotesize\ttfamily \label{class_network_scanner_abeccb1ea9774d7962fac4901f738e692} 
+Network\+Scanner\+::\texorpdfstring{$\sim$}{\string~}\+Network\+Scanner (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+析构函数 
+
+Network\+Scanner类析构函数
+
+停止扫描并清理资源 函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_scanner_abeccb1ea9774d7962fac4901f738e692_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{成员函数说明}
+\Hypertarget{class_network_scanner_a3d61598311556d7ab706e013005f7c5f}\index{NetworkScanner@{NetworkScanner}!executeProcess@{executeProcess}}
+\index{executeProcess@{executeProcess}!NetworkScanner@{NetworkScanner}}
+\doxysubsubsection{\texorpdfstring{executeProcess()}{executeProcess()}}
+{\footnotesize\ttfamily \label{class_network_scanner_a3d61598311556d7ab706e013005f7c5f} 
+bool Network\+Scanner\+::execute\+Process (\begin{DoxyParamCaption}\item[{const QString \&}]{program}{, }\item[{const QString\+List \&}]{args}{, }\item[{QString \&}]{std\+Out\+Output}{, }\item[{QString \&}]{std\+Err\+Output}{, }\item[{int}]{start\+Timeout}{ = {\ttfamily 2000}, }\item[{int}]{finish\+Timeout}{ = {\ttfamily 5000}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+执行外部进程 
+
+
+\begin{DoxyParams}{参数}
+{\em program} & 程序路径 \\
+\hline
+{\em args} & 参数列表 \\
+\hline
+{\em std\+Out\+Output} & 标准输出结果 \\
+\hline
+{\em std\+Err\+Output} & 标准错误结果 \\
+\hline
+{\em start\+Timeout} & 启动超时(毫秒) \\
+\hline
+{\em finish\+Timeout} & 完成超时(毫秒) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+是否执行成功 
+\end{DoxyReturn}
+\Hypertarget{class_network_scanner_a618ee5322d0843ad65a341fff40ce43d}\index{NetworkScanner@{NetworkScanner}!generatePseudoMACFromIP@{generatePseudoMACFromIP}}
+\index{generatePseudoMACFromIP@{generatePseudoMACFromIP}!NetworkScanner@{NetworkScanner}}
+\doxysubsubsection{\texorpdfstring{generatePseudoMACFromIP()}{generatePseudoMACFromIP()}}
+{\footnotesize\ttfamily \label{class_network_scanner_a618ee5322d0843ad65a341fff40ce43d} 
+QString Network\+Scanner\+::generate\+Pseudo\+MACFrom\+IP (\begin{DoxyParamCaption}\item[{const QString \&}]{ip}{}\end{DoxyParamCaption})}
+
+
+
+根据\+IP地址生成伪\+MAC地址 
+
+
+\begin{DoxyParams}{参数}
+{\em ip} & IP地址 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+生成的伪\+MAC地址 
+\end{DoxyReturn}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_scanner_a618ee5322d0843ad65a341fff40ce43d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_network_scanner_aca3185ddc77f6f4bcc13279cb290d858}\index{NetworkScanner@{NetworkScanner}!getAddressesToScan@{getAddressesToScan}}
+\index{getAddressesToScan@{getAddressesToScan}!NetworkScanner@{NetworkScanner}}
+\doxysubsubsection{\texorpdfstring{getAddressesToScan()}{getAddressesToScan()}}
+{\footnotesize\ttfamily \label{class_network_scanner_aca3185ddc77f6f4bcc13279cb290d858} 
+QList$<$ QHost\+Address $>$ Network\+Scanner\+::get\+Addresses\+To\+Scan (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+获取要扫描的地址列表 
+
+\begin{DoxyReturn}{返回}
+地址列表 
+\end{DoxyReturn}
+\Hypertarget{class_network_scanner_af088a70b884ccc65b363ecc235af3058}\index{NetworkScanner@{NetworkScanner}!getLocalNetworkAddresses@{getLocalNetworkAddresses}}
+\index{getLocalNetworkAddresses@{getLocalNetworkAddresses}!NetworkScanner@{NetworkScanner}}
+\doxysubsubsection{\texorpdfstring{getLocalNetworkAddresses()}{getLocalNetworkAddresses()}}
+{\footnotesize\ttfamily \label{class_network_scanner_af088a70b884ccc65b363ecc235af3058} 
+QList$<$ QHost\+Address $>$ Network\+Scanner\+::get\+Local\+Network\+Addresses (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+获取本地网络地址列表 
+
+\begin{DoxyReturn}{返回}
+本地网络地址列表 
+\end{DoxyReturn}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_scanner_af088a70b884ccc65b363ecc235af3058_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_network_scanner_a1499c78a310999b583c7008a106379d7}\index{NetworkScanner@{NetworkScanner}!getMacAddressFromSystemCalls@{getMacAddressFromSystemCalls}}
+\index{getMacAddressFromSystemCalls@{getMacAddressFromSystemCalls}!NetworkScanner@{NetworkScanner}}
+\doxysubsubsection{\texorpdfstring{getMacAddressFromSystemCalls()}{getMacAddressFromSystemCalls()}}
+{\footnotesize\ttfamily \label{class_network_scanner_a1499c78a310999b583c7008a106379d7} 
+QString Network\+Scanner\+::get\+Mac\+Address\+From\+System\+Calls (\begin{DoxyParamCaption}\item[{const QString \&}]{ip}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+通过系统调用获取\+MAC地址 
+
+
+\begin{DoxyParams}{参数}
+{\em ip} & 目标\+IP地址 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+MAC地址 
+\end{DoxyReturn}
+\Hypertarget{class_network_scanner_a1ff09dda96ac397a6700a79651123ae4}\index{NetworkScanner@{NetworkScanner}!getScannedHosts@{getScannedHosts}}
+\index{getScannedHosts@{getScannedHosts}!NetworkScanner@{NetworkScanner}}
+\doxysubsubsection{\texorpdfstring{getScannedHosts()}{getScannedHosts()}}
+{\footnotesize\ttfamily \label{class_network_scanner_a1ff09dda96ac397a6700a79651123ae4} 
+QList$<$ \mbox{\hyperlink{struct_host_info}{Host\+Info}} $>$ Network\+Scanner\+::get\+Scanned\+Hosts (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+获取扫描结果 
+
+\begin{DoxyReturn}{返回}
+扫描到的主机信息列表 
+\end{DoxyReturn}
+\Hypertarget{class_network_scanner_a941867644d70f3b1c512c9e98f082ed3}\index{NetworkScanner@{NetworkScanner}!hostFound@{hostFound}}
+\index{hostFound@{hostFound}!NetworkScanner@{NetworkScanner}}
+\doxysubsubsection{\texorpdfstring{hostFound}{hostFound}}
+{\footnotesize\ttfamily \label{class_network_scanner_a941867644d70f3b1c512c9e98f082ed3} 
+void Network\+Scanner\+::host\+Found (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_host_info}{Host\+Info}} \&}]{host}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+找到主机信号 
+
+
+\begin{DoxyParams}{参数}
+{\em host} & 主机信息 \\
+\hline
+\end{DoxyParams}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_scanner_a941867644d70f3b1c512c9e98f082ed3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_network_scanner_a34fbb26df044a6ee3f830f79eb2d1ce6}\index{NetworkScanner@{NetworkScanner}!isHostReachable@{isHostReachable}}
+\index{isHostReachable@{isHostReachable}!NetworkScanner@{NetworkScanner}}
+\doxysubsubsection{\texorpdfstring{isHostReachable()}{isHostReachable()}}
+{\footnotesize\ttfamily \label{class_network_scanner_a34fbb26df044a6ee3f830f79eb2d1ce6} 
+bool Network\+Scanner\+::is\+Host\+Reachable (\begin{DoxyParamCaption}\item[{const QHost\+Address \&}]{address}{, }\item[{int}]{timeout}{}\end{DoxyParamCaption})}
+
+
+
+检查主机是否可达 
+
+
+\begin{DoxyParams}{参数}
+{\em address} & 主机地址 \\
+\hline
+{\em timeout} & 超时时间(毫秒) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+主机是否可达 
+\end{DoxyReturn}
+\Hypertarget{class_network_scanner_a27baba5addfba7cdcd71878c6c9e442a}\index{NetworkScanner@{NetworkScanner}!isReachableOnPorts@{isReachableOnPorts}}
+\index{isReachableOnPorts@{isReachableOnPorts}!NetworkScanner@{NetworkScanner}}
+\doxysubsubsection{\texorpdfstring{isReachableOnPorts()}{isReachableOnPorts()}}
+{\footnotesize\ttfamily \label{class_network_scanner_a27baba5addfba7cdcd71878c6c9e442a} 
+bool Network\+Scanner\+::is\+Reachable\+On\+Ports (\begin{DoxyParamCaption}\item[{const QHost\+Address \&}]{address}{, }\item[{const QList$<$ int $>$ \&}]{ports}{, }\item[{int}]{timeout}{}\end{DoxyParamCaption})}
+
+
+
+检查主机在多个端口上是否可达 
+
+
+\begin{DoxyParams}{参数}
+{\em address} & 主机地址 \\
+\hline
+{\em ports} & 端口列表 \\
+\hline
+{\em timeout} & 超时时间(毫秒) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+是否至少有一个端口可达 
+\end{DoxyReturn}
+\Hypertarget{class_network_scanner_a10e2ee230d5126ea043febd28f0559e3}\index{NetworkScanner@{NetworkScanner}!isScanning@{isScanning}}
+\index{isScanning@{isScanning}!NetworkScanner@{NetworkScanner}}
+\doxysubsubsection{\texorpdfstring{isScanning()}{isScanning()}}
+{\footnotesize\ttfamily \label{class_network_scanner_a10e2ee230d5126ea043febd28f0559e3} 
+bool Network\+Scanner\+::is\+Scanning (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+检查是否正在扫描 
+
+\begin{DoxyReturn}{返回}
+是否正在扫描 
+\end{DoxyReturn}
+\Hypertarget{class_network_scanner_afcc19f1f23e444aef7b689e5d64c1422}\index{NetworkScanner@{NetworkScanner}!lookupHostName@{lookupHostName}}
+\index{lookupHostName@{lookupHostName}!NetworkScanner@{NetworkScanner}}
+\doxysubsubsection{\texorpdfstring{lookupHostName()}{lookupHostName()}}
+{\footnotesize\ttfamily \label{class_network_scanner_afcc19f1f23e444aef7b689e5d64c1422} 
+QString Network\+Scanner\+::lookup\+Host\+Name (\begin{DoxyParamCaption}\item[{const QHost\+Address \&}]{address}{}\end{DoxyParamCaption})}
+
+
+
+查询主机名 
+
+
+\begin{DoxyParams}{参数}
+{\em address} & 主机地址 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+主机名 
+\end{DoxyReturn}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_scanner_afcc19f1f23e444aef7b689e5d64c1422_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_network_scanner_a879abf7e7a058dda14f6f36645d6763b}\index{NetworkScanner@{NetworkScanner}!lookupMacAddress@{lookupMacAddress}}
+\index{lookupMacAddress@{lookupMacAddress}!NetworkScanner@{NetworkScanner}}
+\doxysubsubsection{\texorpdfstring{lookupMacAddress()}{lookupMacAddress()}}
+{\footnotesize\ttfamily \label{class_network_scanner_a879abf7e7a058dda14f6f36645d6763b} 
+QString Network\+Scanner\+::lookup\+Mac\+Address (\begin{DoxyParamCaption}\item[{const QHost\+Address \&}]{address}{}\end{DoxyParamCaption})}
+
+
+
+查询\+MAC地址 
+
+
+\begin{DoxyParams}{参数}
+{\em address} & 主机地址 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+MAC地址 
+\end{DoxyReturn}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_scanner_a879abf7e7a058dda14f6f36645d6763b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_network_scanner_a86214dd708b98209915b29514cd58296}\index{NetworkScanner@{NetworkScanner}!lookupMacVendor@{lookupMacVendor}}
+\index{lookupMacVendor@{lookupMacVendor}!NetworkScanner@{NetworkScanner}}
+\doxysubsubsection{\texorpdfstring{lookupMacVendor()}{lookupMacVendor()}}
+{\footnotesize\ttfamily \label{class_network_scanner_a86214dd708b98209915b29514cd58296} 
+QString Network\+Scanner\+::lookup\+Mac\+Vendor (\begin{DoxyParamCaption}\item[{const QString \&}]{mac\+Address}{}\end{DoxyParamCaption})}
+
+
+
+查询\+MAC地址对应的厂商 
+
+
+\begin{DoxyParams}{参数}
+{\em mac\+Address} & MAC地址 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+厂商名称 
+\end{DoxyReturn}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{class_network_scanner_a86214dd708b98209915b29514cd58296_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_network_scanner_a37b59a466d4daa5a5f89d1eb8f588626}\index{NetworkScanner@{NetworkScanner}!normalizeMacAddress@{normalizeMacAddress}}
+\index{normalizeMacAddress@{normalizeMacAddress}!NetworkScanner@{NetworkScanner}}
+\doxysubsubsection{\texorpdfstring{normalizeMacAddress()}{normalizeMacAddress()}}
+{\footnotesize\ttfamily \label{class_network_scanner_a37b59a466d4daa5a5f89d1eb8f588626} 
+QString Network\+Scanner\+::normalize\+Mac\+Address (\begin{DoxyParamCaption}\item[{const QString \&}]{mac\+Address}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+MAC地址规范化 
+
+
+\begin{DoxyParams}{参数}
+{\em mac\+Address} & 原始\+MAC地址 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+规范化的\+MAC地址 
+\end{DoxyReturn}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_scanner_a37b59a466d4daa5a5f89d1eb8f588626_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_network_scanner_a5d6e606c028e6b934e5562254c016710}\index{NetworkScanner@{NetworkScanner}!onHostNameLookedUp@{onHostNameLookedUp}}
+\index{onHostNameLookedUp@{onHostNameLookedUp}!NetworkScanner@{NetworkScanner}}
+\doxysubsubsection{\texorpdfstring{onHostNameLookedUp}{onHostNameLookedUp}}
+{\footnotesize\ttfamily \label{class_network_scanner_a5d6e606c028e6b934e5562254c016710} 
+void Network\+Scanner\+::on\+Host\+Name\+Looked\+Up (\begin{DoxyParamCaption}\item[{const QHost\+Info \&}]{host\+Info}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+主机名查询完成处理 
+
+
+\begin{DoxyParams}{参数}
+{\em host\+Info} & 主机信息 \\
+\hline
+\end{DoxyParams}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_scanner_a5d6e606c028e6b934e5562254c016710_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_network_scanner_ad50732f1a5d713a4229d29a2cec1295c}\index{NetworkScanner@{NetworkScanner}!onScanTaskFinished@{onScanTaskFinished}}
+\index{onScanTaskFinished@{onScanTaskFinished}!NetworkScanner@{NetworkScanner}}
+\doxysubsubsection{\texorpdfstring{onScanTaskFinished}{onScanTaskFinished}}
+{\footnotesize\ttfamily \label{class_network_scanner_ad50732f1a5d713a4229d29a2cec1295c} 
+void Network\+Scanner\+::on\+Scan\+Task\+Finished (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_host_info}{Host\+Info}} \&}]{host\+Info}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+处理扫描任务完成 
+
+
+\begin{DoxyParams}{参数}
+{\em host\+Info} & 扫描到的主机信息 \\
+\hline
+\end{DoxyParams}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_scanner_ad50732f1a5d713a4229d29a2cec1295c_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_network_scanner_ac28925e0859afc5ae1165c98a7e537c4}\index{NetworkScanner@{NetworkScanner}!performARPScan@{performARPScan}}
+\index{performARPScan@{performARPScan}!NetworkScanner@{NetworkScanner}}
+\doxysubsubsection{\texorpdfstring{performARPScan()}{performARPScan()}}
+{\footnotesize\ttfamily \label{class_network_scanner_ac28925e0859afc5ae1165c98a7e537c4} 
+QList$<$ QPair$<$ QHost\+Address, QString $>$ $>$ Network\+Scanner\+::perform\+ARPScan (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+执行\+ARP扫描 
+
+\begin{DoxyReturn}{返回}
+地址和\+MAC地址对的列表 
+\end{DoxyReturn}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_scanner_ac28925e0859afc5ae1165c98a7e537c4_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_network_scanner_a35e8651f2b899836b25b68f1ee673520}\index{NetworkScanner@{NetworkScanner}!pingTargetWithTimeout@{pingTargetWithTimeout}}
+\index{pingTargetWithTimeout@{pingTargetWithTimeout}!NetworkScanner@{NetworkScanner}}
+\doxysubsubsection{\texorpdfstring{pingTargetWithTimeout()}{pingTargetWithTimeout()}}
+{\footnotesize\ttfamily \label{class_network_scanner_a35e8651f2b899836b25b68f1ee673520} 
+bool Network\+Scanner\+::ping\+Target\+With\+Timeout (\begin{DoxyParamCaption}\item[{const QString \&}]{ip}{, }\item[{int}]{timeout}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+使用ping命令检测目标是否可达 
+
+
+\begin{DoxyParams}{参数}
+{\em ip} & 目标\+IP地址 \\
+\hline
+{\em timeout} & 超时时间(毫秒) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+是否可达 
+\end{DoxyReturn}
+\Hypertarget{class_network_scanner_a3b1ddceb6c092aa96f97cb6aba9321b5}\index{NetworkScanner@{NetworkScanner}!processScanResults@{processScanResults}}
+\index{processScanResults@{processScanResults}!NetworkScanner@{NetworkScanner}}
+\doxysubsubsection{\texorpdfstring{processScanResults()}{processScanResults()}}
+{\footnotesize\ttfamily \label{class_network_scanner_a3b1ddceb6c092aa96f97cb6aba9321b5} 
+void Network\+Scanner\+::process\+Scan\+Results (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+处理扫描结果 
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_scanner_a3b1ddceb6c092aa96f97cb6aba9321b5_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_scanner_a3b1ddceb6c092aa96f97cb6aba9321b5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_network_scanner_ac1d45fc1180ff72ae369fe0966f67d08}\index{NetworkScanner@{NetworkScanner}!quickPingScan@{quickPingScan}}
+\index{quickPingScan@{quickPingScan}!NetworkScanner@{NetworkScanner}}
+\doxysubsubsection{\texorpdfstring{quickPingScan()}{quickPingScan()}}
+{\footnotesize\ttfamily \label{class_network_scanner_ac1d45fc1180ff72ae369fe0966f67d08} 
+QList$<$ QHost\+Address $>$ Network\+Scanner\+::quick\+Ping\+Scan (\begin{DoxyParamCaption}\item[{const QList$<$ QHost\+Address $>$ \&}]{addresses}{}\end{DoxyParamCaption})}
+
+
+
+快速\+Ping扫描方法 
+
+
+\begin{DoxyParams}{参数}
+{\em addresses} & 要扫描的地址列表 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+活跃的主机地址列表 
+\end{DoxyReturn}
+\Hypertarget{class_network_scanner_a65c572325e53a912f34394e7beabb867}\index{NetworkScanner@{NetworkScanner}!saveResultsToFile@{saveResultsToFile}}
+\index{saveResultsToFile@{saveResultsToFile}!NetworkScanner@{NetworkScanner}}
+\doxysubsubsection{\texorpdfstring{saveResultsToFile()}{saveResultsToFile()}}
+{\footnotesize\ttfamily \label{class_network_scanner_a65c572325e53a912f34394e7beabb867} 
+void Network\+Scanner\+::save\+Results\+To\+File (\begin{DoxyParamCaption}\item[{const QString \&}]{filename}{}\end{DoxyParamCaption}) const}
+
+
+
+保存结果到文件 
+
+
+\begin{DoxyParams}{参数}
+{\em filename} & 文件名 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_network_scanner_a7d443adacaa45d4babee9c5c8cc3927b}\index{NetworkScanner@{NetworkScanner}!scanError@{scanError}}
+\index{scanError@{scanError}!NetworkScanner@{NetworkScanner}}
+\doxysubsubsection{\texorpdfstring{scanError}{scanError}}
+{\footnotesize\ttfamily \label{class_network_scanner_a7d443adacaa45d4babee9c5c8cc3927b} 
+void Network\+Scanner\+::scan\+Error (\begin{DoxyParamCaption}\item[{const QString \&}]{error\+Message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+扫描错误信号 
+
+
+\begin{DoxyParams}{参数}
+{\em error\+Message} & 错误信息 \\
+\hline
+\end{DoxyParams}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_scanner_a7d443adacaa45d4babee9c5c8cc3927b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_network_scanner_a311c4f6158b867640590a03f85879b6b}\index{NetworkScanner@{NetworkScanner}!scanFinished@{scanFinished}}
+\index{scanFinished@{scanFinished}!NetworkScanner@{NetworkScanner}}
+\doxysubsubsection{\texorpdfstring{scanFinished}{scanFinished}}
+{\footnotesize\ttfamily \label{class_network_scanner_a311c4f6158b867640590a03f85879b6b} 
+void Network\+Scanner\+::scan\+Finished (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+扫描完成信号 
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_scanner_a311c4f6158b867640590a03f85879b6b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_network_scanner_ae1c58186285b571608eb3e1ef699a1d4}\index{NetworkScanner@{NetworkScanner}!scanHost@{scanHost}}
+\index{scanHost@{scanHost}!NetworkScanner@{NetworkScanner}}
+\doxysubsubsection{\texorpdfstring{scanHost()}{scanHost()}}
+{\footnotesize\ttfamily \label{class_network_scanner_ae1c58186285b571608eb3e1ef699a1d4} 
+void Network\+Scanner\+::scan\+Host (\begin{DoxyParamCaption}\item[{const QHost\+Address \&}]{address}{}\end{DoxyParamCaption})}
+
+
+
+扫描单个主机 
+
+
+\begin{DoxyParams}{参数}
+{\em address} & 主机地址 \\
+\hline
+\end{DoxyParams}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_scanner_ae1c58186285b571608eb3e1ef699a1d4_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_scanner_ae1c58186285b571608eb3e1ef699a1d4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_network_scanner_acdcb120eceeec289b7feb2f5d8256b2a}\index{NetworkScanner@{NetworkScanner}!scanHostPorts@{scanHostPorts}}
+\index{scanHostPorts@{scanHostPorts}!NetworkScanner@{NetworkScanner}}
+\doxysubsubsection{\texorpdfstring{scanHostPorts()}{scanHostPorts()}}
+{\footnotesize\ttfamily \label{class_network_scanner_acdcb120eceeec289b7feb2f5d8256b2a} 
+void Network\+Scanner\+::scan\+Host\+Ports (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_host_info}{Host\+Info}} \&}]{host\+Info}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+扫描主机端口 
+
+
+\begin{DoxyParams}{参数}
+{\em host\+Info} & 要更新的主机信息结构 \\
+\hline
+\end{DoxyParams}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_scanner_acdcb120eceeec289b7feb2f5d8256b2a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_network_scanner_a9e780f0ca7e0519b0a7b8ee6db11996e}\index{NetworkScanner@{NetworkScanner}!scanProgress@{scanProgress}}
+\index{scanProgress@{scanProgress}!NetworkScanner@{NetworkScanner}}
+\doxysubsubsection{\texorpdfstring{scanProgress}{scanProgress}}
+{\footnotesize\ttfamily \label{class_network_scanner_a9e780f0ca7e0519b0a7b8ee6db11996e} 
+void Network\+Scanner\+::scan\+Progress (\begin{DoxyParamCaption}\item[{int}]{progress}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+扫描进度更新信号 
+
+
+\begin{DoxyParams}{参数}
+{\em progress} & 进度百分比(0-\/100) \\
+\hline
+\end{DoxyParams}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_scanner_a9e780f0ca7e0519b0a7b8ee6db11996e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_network_scanner_a56499014f2f0ee9a87fcbf19ba034eeb}\index{NetworkScanner@{NetworkScanner}!scanStarted@{scanStarted}}
+\index{scanStarted@{scanStarted}!NetworkScanner@{NetworkScanner}}
+\doxysubsubsection{\texorpdfstring{scanStarted}{scanStarted}}
+{\footnotesize\ttfamily \label{class_network_scanner_a56499014f2f0ee9a87fcbf19ba034eeb} 
+void Network\+Scanner\+::scan\+Started (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+扫描开始信号 
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_scanner_a56499014f2f0ee9a87fcbf19ba034eeb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_network_scanner_ae86106ecdb8aab43231f7d48d6840e50}\index{NetworkScanner@{NetworkScanner}!setCustomIPRange@{setCustomIPRange}}
+\index{setCustomIPRange@{setCustomIPRange}!NetworkScanner@{NetworkScanner}}
+\doxysubsubsection{\texorpdfstring{setCustomIPRange()}{setCustomIPRange()}}
+{\footnotesize\ttfamily \label{class_network_scanner_ae86106ecdb8aab43231f7d48d6840e50} 
+void Network\+Scanner\+::set\+Custom\+IPRange (\begin{DoxyParamCaption}\item[{const QString \&}]{start\+IP}{, }\item[{const QString \&}]{end\+IP}{}\end{DoxyParamCaption})}
+
+
+
+设置自定义\+IP范围 
+
+
+\begin{DoxyParams}{参数}
+{\em start\+IP} & 起始\+IP地址 \\
+\hline
+{\em end\+IP} & 结束\+IP地址 \\
+\hline
+\end{DoxyParams}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_scanner_ae86106ecdb8aab43231f7d48d6840e50_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_network_scanner_aea1a793e46ec7cc8e2a75b5bc71366ed}\index{NetworkScanner@{NetworkScanner}!setCustomPortsToScan@{setCustomPortsToScan}}
+\index{setCustomPortsToScan@{setCustomPortsToScan}!NetworkScanner@{NetworkScanner}}
+\doxysubsubsection{\texorpdfstring{setCustomPortsToScan()}{setCustomPortsToScan()}}
+{\footnotesize\ttfamily \label{class_network_scanner_aea1a793e46ec7cc8e2a75b5bc71366ed} 
+void Network\+Scanner\+::set\+Custom\+Ports\+To\+Scan (\begin{DoxyParamCaption}\item[{const QList$<$ int $>$ \&}]{ports}{}\end{DoxyParamCaption})}
+
+
+
+设置自定义端口扫描列表 
+
+
+\begin{DoxyParams}{参数}
+{\em ports} & 要扫描的端口列表 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_network_scanner_a20f31e911444bcc321a733b5015710fb}\index{NetworkScanner@{NetworkScanner}!setScanStrategy@{setScanStrategy}}
+\index{setScanStrategy@{setScanStrategy}!NetworkScanner@{NetworkScanner}}
+\doxysubsubsection{\texorpdfstring{setScanStrategy()}{setScanStrategy()}}
+{\footnotesize\ttfamily \label{class_network_scanner_a20f31e911444bcc321a733b5015710fb} 
+void Network\+Scanner\+::set\+Scan\+Strategy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_scan_strategy_a0e3c3f47f30a45bd2a1e9f0533d893aa}{Scan\+Strategy\+::\+Scan\+Mode}}}]{mode}{}\end{DoxyParamCaption})}
+
+
+
+设置扫描策略 
+
+
+\begin{DoxyParams}{参数}
+{\em mode} & 扫描模式 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_network_scanner_ae34823cd436f8345ee7dedda3fe56bf6}\index{NetworkScanner@{NetworkScanner}!setScanTimeout@{setScanTimeout}}
+\index{setScanTimeout@{setScanTimeout}!NetworkScanner@{NetworkScanner}}
+\doxysubsubsection{\texorpdfstring{setScanTimeout()}{setScanTimeout()}}
+{\footnotesize\ttfamily \label{class_network_scanner_ae34823cd436f8345ee7dedda3fe56bf6} 
+void Network\+Scanner\+::set\+Scan\+Timeout (\begin{DoxyParamCaption}\item[{int}]{msecs}{}\end{DoxyParamCaption})}
+
+
+
+设置扫描超时时间 
+
+
+\begin{DoxyParams}{参数}
+{\em msecs} & 超时时间(毫秒)\\
+\hline
+{\em msecs} & 超时时间（毫秒） \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_network_scanner_a3d1a653bce80d595a1c302fda393e5b9}\index{NetworkScanner@{NetworkScanner}!startScan@{startScan}}
+\index{startScan@{startScan}!NetworkScanner@{NetworkScanner}}
+\doxysubsubsection{\texorpdfstring{startScan()}{startScan()}}
+{\footnotesize\ttfamily \label{class_network_scanner_a3d1a653bce80d595a1c302fda393e5b9} 
+void Network\+Scanner\+::start\+Scan (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+开始扫描 
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_scanner_a3d1a653bce80d595a1c302fda393e5b9_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_network_scanner_a390dcda3d4cd1d76633e6f4611ae8410}\index{NetworkScanner@{NetworkScanner}!stopScan@{stopScan}}
+\index{stopScan@{stopScan}!NetworkScanner@{NetworkScanner}}
+\doxysubsubsection{\texorpdfstring{stopScan()}{stopScan()}}
+{\footnotesize\ttfamily \label{class_network_scanner_a390dcda3d4cd1d76633e6f4611ae8410} 
+void Network\+Scanner\+::stop\+Scan (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+停止扫描 
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_scanner_a390dcda3d4cd1d76633e6f4611ae8410_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_scanner_a390dcda3d4cd1d76633e6f4611ae8410_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_network_scanner_ae86a6e70a9c71be92ae45209a5a89bfe}\index{NetworkScanner@{NetworkScanner}!updateScanProgress@{updateScanProgress}}
+\index{updateScanProgress@{updateScanProgress}!NetworkScanner@{NetworkScanner}}
+\doxysubsubsection{\texorpdfstring{updateScanProgress}{updateScanProgress}}
+{\footnotesize\ttfamily \label{class_network_scanner_ae86a6e70a9c71be92ae45209a5a89bfe} 
+void Network\+Scanner\+::update\+Scan\+Progress (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+更新扫描进度 
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_scanner_ae86a6e70a9c71be92ae45209a5a89bfe_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_scanner_ae86a6e70a9c71be92ae45209a5a89bfe_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\Hypertarget{class_network_scanner_a29d0e3495e8170c1b40420d5e301b8d2}\index{NetworkScanner@{NetworkScanner}!m\_activeHosts@{m\_activeHosts}}
+\index{m\_activeHosts@{m\_activeHosts}!NetworkScanner@{NetworkScanner}}
+\doxysubsubsection{\texorpdfstring{m\_activeHosts}{m\_activeHosts}}
+{\footnotesize\ttfamily \label{class_network_scanner_a29d0e3495e8170c1b40420d5e301b8d2} 
+QList$<$QHost\+Address$>$ Network\+Scanner\+::m\+\_\+active\+Hosts\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+活跃主机列表 
+
+\Hypertarget{class_network_scanner_adc7a00ffc172c1dfc141d30240a8ac67}\index{NetworkScanner@{NetworkScanner}!m\_endIPRange@{m\_endIPRange}}
+\index{m\_endIPRange@{m\_endIPRange}!NetworkScanner@{NetworkScanner}}
+\doxysubsubsection{\texorpdfstring{m\_endIPRange}{m\_endIPRange}}
+{\footnotesize\ttfamily \label{class_network_scanner_adc7a00ffc172c1dfc141d30240a8ac67} 
+QHost\+Address Network\+Scanner\+::m\+\_\+end\+IPRange\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+结束\+IP地址 
+
+\Hypertarget{class_network_scanner_ab552ddb02bf45cc7293e68d819b08da6}\index{NetworkScanner@{NetworkScanner}!m\_isScanning@{m\_isScanning}}
+\index{m\_isScanning@{m\_isScanning}!NetworkScanner@{NetworkScanner}}
+\doxysubsubsection{\texorpdfstring{m\_isScanning}{m\_isScanning}}
+{\footnotesize\ttfamily \label{class_network_scanner_ab552ddb02bf45cc7293e68d819b08da6} 
+bool Network\+Scanner\+::m\+\_\+is\+Scanning\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+是否正在扫描 
+
+\Hypertarget{class_network_scanner_a6565994e3e77dd1f39ed03f7a31f79fb}\index{NetworkScanner@{NetworkScanner}!m\_macAddressCache@{m\_macAddressCache}}
+\index{m\_macAddressCache@{m\_macAddressCache}!NetworkScanner@{NetworkScanner}}
+\doxysubsubsection{\texorpdfstring{m\_macAddressCache}{m\_macAddressCache}}
+{\footnotesize\ttfamily \label{class_network_scanner_a6565994e3e77dd1f39ed03f7a31f79fb} 
+QMap$<$QString, QString$>$ Network\+Scanner\+::m\+\_\+mac\+Address\+Cache\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+MAC地址缓存 
+
+\Hypertarget{class_network_scanner_a519b23696e548ce76d19b0923b1b2e31}\index{NetworkScanner@{NetworkScanner}!m\_mutex@{m\_mutex}}
+\index{m\_mutex@{m\_mutex}!NetworkScanner@{NetworkScanner}}
+\doxysubsubsection{\texorpdfstring{m\_mutex}{m\_mutex}}
+{\footnotesize\ttfamily \label{class_network_scanner_a519b23696e548ce76d19b0923b1b2e31} 
+QMutex Network\+Scanner\+::m\+\_\+mutex\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+线程同步互斥锁 
+
+\Hypertarget{class_network_scanner_aaa8e5c1ecbb18e30b3eaa41ea030aa8b}\index{NetworkScanner@{NetworkScanner}!m\_portsToScan@{m\_portsToScan}}
+\index{m\_portsToScan@{m\_portsToScan}!NetworkScanner@{NetworkScanner}}
+\doxysubsubsection{\texorpdfstring{m\_portsToScan}{m\_portsToScan}}
+{\footnotesize\ttfamily \label{class_network_scanner_aaa8e5c1ecbb18e30b3eaa41ea030aa8b} 
+QList$<$int$>$ Network\+Scanner\+::m\+\_\+ports\+To\+Scan\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+要扫描的端口列表 
+
+\Hypertarget{class_network_scanner_a07591f97b42d5ba072f1dd383ac5aaaf}\index{NetworkScanner@{NetworkScanner}!m\_scanFutures@{m\_scanFutures}}
+\index{m\_scanFutures@{m\_scanFutures}!NetworkScanner@{NetworkScanner}}
+\doxysubsubsection{\texorpdfstring{m\_scanFutures}{m\_scanFutures}}
+{\footnotesize\ttfamily \label{class_network_scanner_a07591f97b42d5ba072f1dd383ac5aaaf} 
+QList$<$QFuture$<$void$>$ $>$ Network\+Scanner\+::m\+\_\+scan\+Futures\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+并行扫描任务 
+
+\Hypertarget{class_network_scanner_af1c4f86f0bf57509498127e25bd2dd99}\index{NetworkScanner@{NetworkScanner}!m\_scannedHosts@{m\_scannedHosts}}
+\index{m\_scannedHosts@{m\_scannedHosts}!NetworkScanner@{NetworkScanner}}
+\doxysubsubsection{\texorpdfstring{m\_scannedHosts}{m\_scannedHosts}}
+{\footnotesize\ttfamily \label{class_network_scanner_af1c4f86f0bf57509498127e25bd2dd99} 
+int Network\+Scanner\+::m\+\_\+scanned\+Hosts\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+已扫描主机数 
+
+\Hypertarget{class_network_scanner_a794bc857be82d6b7b9cc3449df61bc0a}\index{NetworkScanner@{NetworkScanner}!m\_scannedHostsList@{m\_scannedHostsList}}
+\index{m\_scannedHostsList@{m\_scannedHostsList}!NetworkScanner@{NetworkScanner}}
+\doxysubsubsection{\texorpdfstring{m\_scannedHostsList}{m\_scannedHostsList}}
+{\footnotesize\ttfamily \label{class_network_scanner_a794bc857be82d6b7b9cc3449df61bc0a} 
+QList$<$\mbox{\hyperlink{struct_host_info}{Host\+Info}}$>$ Network\+Scanner\+::m\+\_\+scanned\+Hosts\+List\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+扫描结果列表 
+
+\Hypertarget{class_network_scanner_adfa250375b6ed189a694030f831a441c}\index{NetworkScanner@{NetworkScanner}!m\_scanStrategy@{m\_scanStrategy}}
+\index{m\_scanStrategy@{m\_scanStrategy}!NetworkScanner@{NetworkScanner}}
+\doxysubsubsection{\texorpdfstring{m\_scanStrategy}{m\_scanStrategy}}
+{\footnotesize\ttfamily \label{class_network_scanner_adfa250375b6ed189a694030f831a441c} 
+\mbox{\hyperlink{class_scan_strategy}{Scan\+Strategy}} Network\+Scanner\+::m\+\_\+scan\+Strategy\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+扫描策略 
+
+\Hypertarget{class_network_scanner_a423ce8a2179223e48189772f80cebb9c}\index{NetworkScanner@{NetworkScanner}!m\_scanTimeout@{m\_scanTimeout}}
+\index{m\_scanTimeout@{m\_scanTimeout}!NetworkScanner@{NetworkScanner}}
+\doxysubsubsection{\texorpdfstring{m\_scanTimeout}{m\_scanTimeout}}
+{\footnotesize\ttfamily \label{class_network_scanner_a423ce8a2179223e48189772f80cebb9c} 
+int Network\+Scanner\+::m\+\_\+scan\+Timeout\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+扫描超时时间 
+
+\Hypertarget{class_network_scanner_a86b547fcfdd0be16c9c689731887e255}\index{NetworkScanner@{NetworkScanner}!m\_startIPRange@{m\_startIPRange}}
+\index{m\_startIPRange@{m\_startIPRange}!NetworkScanner@{NetworkScanner}}
+\doxysubsubsection{\texorpdfstring{m\_startIPRange}{m\_startIPRange}}
+{\footnotesize\ttfamily \label{class_network_scanner_a86b547fcfdd0be16c9c689731887e255} 
+QHost\+Address Network\+Scanner\+::m\+\_\+start\+IPRange\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+起始\+IP地址 
+
+\Hypertarget{class_network_scanner_a95c25f8c2863d81f3c9348d8b90c313f}\index{NetworkScanner@{NetworkScanner}!m\_threadPool@{m\_threadPool}}
+\index{m\_threadPool@{m\_threadPool}!NetworkScanner@{NetworkScanner}}
+\doxysubsubsection{\texorpdfstring{m\_threadPool}{m\_threadPool}}
+{\footnotesize\ttfamily \label{class_network_scanner_a95c25f8c2863d81f3c9348d8b90c313f} 
+QThread\+Pool Network\+Scanner\+::m\+\_\+thread\+Pool\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+线程池 
+
+\Hypertarget{class_network_scanner_abf3fa14815d6a3cdec60bbcdb1b9c649}\index{NetworkScanner@{NetworkScanner}!m\_totalHosts@{m\_totalHosts}}
+\index{m\_totalHosts@{m\_totalHosts}!NetworkScanner@{NetworkScanner}}
+\doxysubsubsection{\texorpdfstring{m\_totalHosts}{m\_totalHosts}}
+{\footnotesize\ttfamily \label{class_network_scanner_abf3fa14815d6a3cdec60bbcdb1b9c649} 
+int Network\+Scanner\+::m\+\_\+total\+Hosts\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+总主机数 
+
+\Hypertarget{class_network_scanner_a1606df18aa388acb9b685d0f72ba2d8f}\index{NetworkScanner@{NetworkScanner}!m\_useCustomRange@{m\_useCustomRange}}
+\index{m\_useCustomRange@{m\_useCustomRange}!NetworkScanner@{NetworkScanner}}
+\doxysubsubsection{\texorpdfstring{m\_useCustomRange}{m\_useCustomRange}}
+{\footnotesize\ttfamily \label{class_network_scanner_a1606df18aa388acb9b685d0f72ba2d8f} 
+bool Network\+Scanner\+::m\+\_\+use\+Custom\+Range\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+是否使用自定义\+IP范围 
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{networkscanner_8h}{networkscanner.\+h}}\item 
+build/\+Net\+Scanner\+\_\+autogen/\+EWIEGA46\+WW/\mbox{\hyperlink{build_2_net_scanner__autogen_2_e_w_i_e_g_a46_w_w_2moc__networkscanner_8cpp}{moc\+\_\+networkscanner.\+cpp}}\item 
+Net\+Scanner\+\_\+autogen/\+JRIAJ772\+TK/\mbox{\hyperlink{_net_scanner__autogen_2_j_r_i_a_j772_t_k_2moc__networkscanner_8cpp}{moc\+\_\+networkscanner.\+cpp}}\item 
+\mbox{\hyperlink{networkscanner_8cpp}{networkscanner.\+cpp}}\end{DoxyCompactItemize}

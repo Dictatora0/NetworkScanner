@@ -1,0 +1,445 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Network Scanner: ScanStrategy类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Network Scanner
+   </div>
+   <div id="projectbrief">网络扫描和拓扑分析工具</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('class_scan_strategy.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="class_scan_strategy-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">ScanStrategy类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>扫描策略类  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="networkscanner_8h_source.html">networkscanner.h</a>&gt;</code></p>
+<div class="dynheader">
+ScanStrategy 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_scan_strategy__coll__graph.png" border="0" usemap="#a_scan_strategy_coll__map" alt="Collaboration graph"/></div>
+<map name="a_scan_strategy_coll__map" id="a_scan_strategy_coll__map">
+<area shape="rect" title="扫描策略类" alt="" coords="5,5,212,349"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a0e3c3f47f30a45bd2a1e9f0533d893aa" id="r_a0e3c3f47f30a45bd2a1e9f0533d893aa"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e3c3f47f30a45bd2a1e9f0533d893aa">ScanMode</a> { <a class="el" href="#a0e3c3f47f30a45bd2a1e9f0533d893aaa12f5f00989512bdcac4b50b6317dd39a">QUICK_SCAN</a>
+, <a class="el" href="#a0e3c3f47f30a45bd2a1e9f0533d893aaa91a37fa685743f83714c4d40d0200c90">STANDARD_SCAN</a>
+, <a class="el" href="#a0e3c3f47f30a45bd2a1e9f0533d893aaac99476d88991212074d9b25f37ef3f32">DEEP_SCAN</a>
+ }</td></tr>
+<tr class="memdesc:a0e3c3f47f30a45bd2a1e9f0533d893aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">扫描模式枚举  <a href="#a0e3c3f47f30a45bd2a1e9f0533d893aa">更多...</a><br /></td></tr>
+<tr class="separator:a0e3c3f47f30a45bd2a1e9f0533d893aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a76ab981f4500728e20b1c63bfc44ff01" id="r_a76ab981f4500728e20b1c63bfc44ff01"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76ab981f4500728e20b1c63bfc44ff01">ScanStrategy</a> (<a class="el" href="#a0e3c3f47f30a45bd2a1e9f0533d893aa">ScanMode</a> mode=<a class="el" href="#a0e3c3f47f30a45bd2a1e9f0533d893aaa91a37fa685743f83714c4d40d0200c90">STANDARD_SCAN</a>)</td></tr>
+<tr class="memdesc:a76ab981f4500728e20b1c63bfc44ff01"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数  <br /></td></tr>
+<tr class="separator:a76ab981f4500728e20b1c63bfc44ff01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a241232a2d2d446d56970be5cbce6380e" id="r_a241232a2d2d446d56970be5cbce6380e"><td class="memItemLeft" align="right" valign="top">QList&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a241232a2d2d446d56970be5cbce6380e">getPortsToScan</a> () const</td></tr>
+<tr class="memdesc:a241232a2d2d446d56970be5cbce6380e"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取要扫描的端口列表  <br /></td></tr>
+<tr class="separator:a241232a2d2d446d56970be5cbce6380e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a332364d3bec278a0bc52b5673571167e" id="r_a332364d3bec278a0bc52b5673571167e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a332364d3bec278a0bc52b5673571167e">getScanTimeout</a> (const QString &amp;ip) const</td></tr>
+<tr class="memdesc:a332364d3bec278a0bc52b5673571167e"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取扫描超时时间  <br /></td></tr>
+<tr class="separator:a332364d3bec278a0bc52b5673571167e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1dd90fe689b039c15a47f95ca30f9a9" id="r_af1dd90fe689b039c15a47f95ca30f9a9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af1dd90fe689b039c15a47f95ca30f9a9">getMaxParallelTasks</a> () const</td></tr>
+<tr class="memdesc:af1dd90fe689b039c15a47f95ca30f9a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取最大并行任务数  <br /></td></tr>
+<tr class="separator:af1dd90fe689b039c15a47f95ca30f9a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a200cc390646b7699a0c0e97edc83350e" id="r_a200cc390646b7699a0c0e97edc83350e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a200cc390646b7699a0c0e97edc83350e">updateHostResponseTime</a> (const QString &amp;ip, int responseTime)</td></tr>
+<tr class="memdesc:a200cc390646b7699a0c0e97edc83350e"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新主机响应时间记录  <br /></td></tr>
+<tr class="separator:a200cc390646b7699a0c0e97edc83350e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35d27b67331e023b1e5917dae36822de" id="r_a35d27b67331e023b1e5917dae36822de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a0e3c3f47f30a45bd2a1e9f0533d893aa">ScanMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a35d27b67331e023b1e5917dae36822de">getMode</a> () const</td></tr>
+<tr class="memdesc:a35d27b67331e023b1e5917dae36822de"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前扫描模式  <br /></td></tr>
+<tr class="separator:a35d27b67331e023b1e5917dae36822de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69c75a9a4bb267c649a0bc784e884256" id="r_a69c75a9a4bb267c649a0bc784e884256"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69c75a9a4bb267c649a0bc784e884256">setMode</a> (<a class="el" href="#a0e3c3f47f30a45bd2a1e9f0533d893aa">ScanMode</a> mode)</td></tr>
+<tr class="memdesc:a69c75a9a4bb267c649a0bc784e884256"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置扫描模式  <br /></td></tr>
+<tr class="separator:a69c75a9a4bb267c649a0bc784e884256"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:add8cd73d31e5146283413d44ba2805ec" id="r_add8cd73d31e5146283413d44ba2805ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a0e3c3f47f30a45bd2a1e9f0533d893aa">ScanMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add8cd73d31e5146283413d44ba2805ec">m_mode</a></td></tr>
+<tr class="memdesc:add8cd73d31e5146283413d44ba2805ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">当前扫描模式  <br /></td></tr>
+<tr class="separator:add8cd73d31e5146283413d44ba2805ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5110a9e267f184295696c2c14cc0e42f" id="r_a5110a9e267f184295696c2c14cc0e42f"><td class="memItemLeft" align="right" valign="top">QMap&lt; QString, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5110a9e267f184295696c2c14cc0e42f">m_hostResponseTimes</a></td></tr>
+<tr class="memdesc:a5110a9e267f184295696c2c14cc0e42f"><td class="mdescLeft">&#160;</td><td class="mdescRight">IP地址 -&gt; 响应时间映射  <br /></td></tr>
+<tr class="separator:a5110a9e267f184295696c2c14cc0e42f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>扫描策略类 </p>
+<p>定义不同的扫描模式和参数，如快速扫描、标准扫描和深度扫描 </p>
+</div><h2 class="groupheader">成员枚举类型说明</h2>
+<a id="a0e3c3f47f30a45bd2a1e9f0533d893aa" name="a0e3c3f47f30a45bd2a1e9f0533d893aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e3c3f47f30a45bd2a1e9f0533d893aa">&#9670;&#160;</a></span>ScanMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a0e3c3f47f30a45bd2a1e9f0533d893aa">ScanStrategy::ScanMode</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>扫描模式枚举 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a0e3c3f47f30a45bd2a1e9f0533d893aaa12f5f00989512bdcac4b50b6317dd39a" name="a0e3c3f47f30a45bd2a1e9f0533d893aaa12f5f00989512bdcac4b50b6317dd39a"></a>QUICK_SCAN&#160;</td><td class="fielddoc"><p>仅检测主机存活 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a0e3c3f47f30a45bd2a1e9f0533d893aaa91a37fa685743f83714c4d40d0200c90" name="a0e3c3f47f30a45bd2a1e9f0533d893aaa91a37fa685743f83714c4d40d0200c90"></a>STANDARD_SCAN&#160;</td><td class="fielddoc"><p>扫描常用端口 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a0e3c3f47f30a45bd2a1e9f0533d893aaac99476d88991212074d9b25f37ef3f32" name="a0e3c3f47f30a45bd2a1e9f0533d893aaac99476d88991212074d9b25f37ef3f32"></a>DEEP_SCAN&#160;</td><td class="fielddoc"><p>全面端口扫描 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a76ab981f4500728e20b1c63bfc44ff01" name="a76ab981f4500728e20b1c63bfc44ff01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76ab981f4500728e20b1c63bfc44ff01">&#9670;&#160;</a></span>ScanStrategy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ScanStrategy::ScanStrategy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a0e3c3f47f30a45bd2a1e9f0533d893aa">ScanMode</a></td>          <td class="paramname"><span class="paramname"><em>mode</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="#a0e3c3f47f30a45bd2a1e9f0533d893aaa91a37fa685743f83714c4d40d0200c90">STANDARD_SCAN</a></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>构造函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mode</td><td>扫描模式，默认为标准扫描 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="af1dd90fe689b039c15a47f95ca30f9a9" name="af1dd90fe689b039c15a47f95ca30f9a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1dd90fe689b039c15a47f95ca30f9a9">&#9670;&#160;</a></span>getMaxParallelTasks()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ScanStrategy::getMaxParallelTasks </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取最大并行任务数 </p>
+<dl class="section return"><dt>返回</dt><dd>并行任务数量 </dd></dl>
+
+</div>
+</div>
+<a id="a35d27b67331e023b1e5917dae36822de" name="a35d27b67331e023b1e5917dae36822de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35d27b67331e023b1e5917dae36822de">&#9670;&#160;</a></span>getMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a0e3c3f47f30a45bd2a1e9f0533d893aa">ScanMode</a> ScanStrategy::getMode </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取当前扫描模式 </p>
+<dl class="section return"><dt>返回</dt><dd>扫描模式 </dd></dl>
+
+</div>
+</div>
+<a id="a241232a2d2d446d56970be5cbce6380e" name="a241232a2d2d446d56970be5cbce6380e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a241232a2d2d446d56970be5cbce6380e">&#9670;&#160;</a></span>getPortsToScan()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QList&lt; int &gt; ScanStrategy::getPortsToScan </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取要扫描的端口列表 </p>
+<dl class="section return"><dt>返回</dt><dd>端口号列表 </dd></dl>
+
+</div>
+</div>
+<a id="a332364d3bec278a0bc52b5673571167e" name="a332364d3bec278a0bc52b5673571167e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a332364d3bec278a0bc52b5673571167e">&#9670;&#160;</a></span>getScanTimeout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ScanStrategy::getScanTimeout </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>ip</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取扫描超时时间 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ip</td><td>目标IP地址 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>超时时间（毫秒） </dd></dl>
+
+</div>
+</div>
+<a id="a69c75a9a4bb267c649a0bc784e884256" name="a69c75a9a4bb267c649a0bc784e884256"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69c75a9a4bb267c649a0bc784e884256">&#9670;&#160;</a></span>setMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ScanStrategy::setMode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a0e3c3f47f30a45bd2a1e9f0533d893aa">ScanMode</a></td>          <td class="paramname"><span class="paramname"><em>mode</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置扫描模式 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mode</td><td>要设置的扫描模式 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a200cc390646b7699a0c0e97edc83350e" name="a200cc390646b7699a0c0e97edc83350e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a200cc390646b7699a0c0e97edc83350e">&#9670;&#160;</a></span>updateHostResponseTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ScanStrategy::updateHostResponseTime </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>ip</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>responseTime</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>更新主机响应时间记录 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ip</td><td>主机IP地址 </td></tr>
+    <tr><td class="paramname">responseTime</td><td>响应时间（毫秒） </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a5110a9e267f184295696c2c14cc0e42f" name="a5110a9e267f184295696c2c14cc0e42f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5110a9e267f184295696c2c14cc0e42f">&#9670;&#160;</a></span>m_hostResponseTimes</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QMap&lt;QString, int&gt; ScanStrategy::m_hostResponseTimes</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>IP地址 -&gt; 响应时间映射 </p>
+
+</div>
+</div>
+<a id="add8cd73d31e5146283413d44ba2805ec" name="add8cd73d31e5146283413d44ba2805ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add8cd73d31e5146283413d44ba2805ec">&#9670;&#160;</a></span>m_mode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a0e3c3f47f30a45bd2a1e9f0533d893aa">ScanMode</a> ScanStrategy::m_mode</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>当前扫描模式 </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="networkscanner_8h_source.html">networkscanner.h</a></li>
+<li><a class="el" href="networkscanner_8cpp.html">networkscanner.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_scan_strategy.html">ScanStrategy</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

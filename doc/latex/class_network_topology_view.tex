@@ -1,0 +1,223 @@
+\doxysection{Network\+Topology\+View类 参考}
+\hypertarget{class_network_topology_view}{}\label{class_network_topology_view}\index{NetworkTopologyView@{NetworkTopologyView}}
+
+
+{\ttfamily \#include $<$networktopology.\+h$>$}
+
+
+
+类 Network\+Topology\+View 继承关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{class_network_topology_view__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Network\+Topology\+View 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_network_topology_view__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{信号}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_network_topology_view_a126996c6425f4947275c79bc42a8c2f8}{node\+Selected}} (const \mbox{\hyperlink{struct_host_info}{Host\+Info}} \&host)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_network_topology_view_a72fef779d6a4e9b35e234f183bf3fdb4}{Network\+Topology\+View}} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\item 
+void \mbox{\hyperlink{class_network_topology_view_abb26033011fdad463562d3cb56df316b}{set\+Hosts}} (const QList$<$ \mbox{\hyperlink{struct_host_info}{Host\+Info}} $>$ \&hosts)
+\item 
+void \mbox{\hyperlink{class_network_topology_view_a28f8bd8a7ca94d2bf012df95baa8528f}{clear}} ()
+\item 
+void \mbox{\hyperlink{class_network_topology_view_a8bf0a46be9b0a9443996a0dcc5d4185a}{auto\+Layout}} ()
+\item 
+void \mbox{\hyperlink{class_network_topology_view_aaf91e8f992d89a55c382815abcb84184}{hierarchical\+Layout}} (const QMap$<$ int, QString\+List $>$ \&layers)
+\item 
+void \mbox{\hyperlink{class_network_topology_view_aec7caac1d0446056144e3d994ed3965b}{grouped\+Layout}} (const QMap$<$ QString, QString\+List $>$ \&groups)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{networktopology_8h_ad258d4c51629346fceac4679b3209ad9}{Device\+Type}} \mbox{\hyperlink{class_network_topology_view_ab4a6db2c2d7f558ce80a155cc6e960c1}{determine\+Device\+Type}} (const \mbox{\hyperlink{struct_host_info}{Host\+Info}} \&host)
+\item 
+void \mbox{\hyperlink{class_network_topology_view_a35a7ee9e7b84f4d268fa4c371a75c803}{create\+Connection}} (\mbox{\hyperlink{class_device_node}{Device\+Node}} \texorpdfstring{$\ast$}{*}source, \mbox{\hyperlink{class_device_node}{Device\+Node}} \texorpdfstring{$\ast$}{*}target, \mbox{\hyperlink{networktopology_8h_aa1f0e2efd52935fd01bfece0fbead81f}{Connection\+Type}} type=\mbox{\hyperlink{networktopology_8h_aa1f0e2efd52935fd01bfece0fbead81fa1170f811f066620fe382b20395e9c31c}{CONNECTION\+\_\+\+DIRECT}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+QGraphics\+Scene \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_network_topology_view_a0990f2f190b7226d4759c9b98de3678a}{m\+\_\+scene}}
+\item 
+QMap$<$ QString, \mbox{\hyperlink{class_device_node}{Device\+Node}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_network_topology_view_a4b6e2ef46c59706a2e75bb262017b37c}{m\+\_\+nodes}}
+\item 
+QList$<$ \mbox{\hyperlink{class_connection_line}{Connection\+Line}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_network_topology_view_a484340064517ec22f07682e5807f80de}{m\+\_\+connections}}
+\item 
+\mbox{\hyperlink{class_topology_analyzer}{Topology\+Analyzer}} \mbox{\hyperlink{class_network_topology_view_a208658d74b982b5213f9f9713ca8c4a9}{m\+\_\+analyzer}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{构造及析构函数说明}
+\Hypertarget{class_network_topology_view_a72fef779d6a4e9b35e234f183bf3fdb4}\index{NetworkTopologyView@{NetworkTopologyView}!NetworkTopologyView@{NetworkTopologyView}}
+\index{NetworkTopologyView@{NetworkTopologyView}!NetworkTopologyView@{NetworkTopologyView}}
+\doxysubsubsection{\texorpdfstring{NetworkTopologyView()}{NetworkTopologyView()}}
+{\footnotesize\ttfamily \label{class_network_topology_view_a72fef779d6a4e9b35e234f183bf3fdb4} 
+Network\+Topology\+View\+::\+Network\+Topology\+View (\begin{DoxyParamCaption}\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{成员函数说明}
+\Hypertarget{class_network_topology_view_a8bf0a46be9b0a9443996a0dcc5d4185a}\index{NetworkTopologyView@{NetworkTopologyView}!autoLayout@{autoLayout}}
+\index{autoLayout@{autoLayout}!NetworkTopologyView@{NetworkTopologyView}}
+\doxysubsubsection{\texorpdfstring{autoLayout()}{autoLayout()}}
+{\footnotesize\ttfamily \label{class_network_topology_view_a8bf0a46be9b0a9443996a0dcc5d4185a} 
+void Network\+Topology\+View\+::auto\+Layout (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{class_network_topology_view_a8bf0a46be9b0a9443996a0dcc5d4185a_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_topology_view_a8bf0a46be9b0a9443996a0dcc5d4185a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_network_topology_view_a28f8bd8a7ca94d2bf012df95baa8528f}\index{NetworkTopologyView@{NetworkTopologyView}!clear@{clear}}
+\index{clear@{clear}!NetworkTopologyView@{NetworkTopologyView}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily \label{class_network_topology_view_a28f8bd8a7ca94d2bf012df95baa8528f} 
+void Network\+Topology\+View\+::clear (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{class_network_topology_view_a28f8bd8a7ca94d2bf012df95baa8528f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_network_topology_view_a35a7ee9e7b84f4d268fa4c371a75c803}\index{NetworkTopologyView@{NetworkTopologyView}!createConnection@{createConnection}}
+\index{createConnection@{createConnection}!NetworkTopologyView@{NetworkTopologyView}}
+\doxysubsubsection{\texorpdfstring{createConnection()}{createConnection()}}
+{\footnotesize\ttfamily \label{class_network_topology_view_a35a7ee9e7b84f4d268fa4c371a75c803} 
+void Network\+Topology\+View\+::create\+Connection (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_device_node}{Device\+Node}} \texorpdfstring{$\ast$}{*}}]{source}{, }\item[{\mbox{\hyperlink{class_device_node}{Device\+Node}} \texorpdfstring{$\ast$}{*}}]{target}{, }\item[{\mbox{\hyperlink{networktopology_8h_aa1f0e2efd52935fd01bfece0fbead81f}{Connection\+Type}}}]{type}{ = {\ttfamily \mbox{\hyperlink{networktopology_8h_aa1f0e2efd52935fd01bfece0fbead81fa1170f811f066620fe382b20395e9c31c}{CONNECTION\+\_\+\+DIRECT}}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{class_network_topology_view_a35a7ee9e7b84f4d268fa4c371a75c803_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_network_topology_view_ab4a6db2c2d7f558ce80a155cc6e960c1}\index{NetworkTopologyView@{NetworkTopologyView}!determineDeviceType@{determineDeviceType}}
+\index{determineDeviceType@{determineDeviceType}!NetworkTopologyView@{NetworkTopologyView}}
+\doxysubsubsection{\texorpdfstring{determineDeviceType()}{determineDeviceType()}}
+{\footnotesize\ttfamily \label{class_network_topology_view_ab4a6db2c2d7f558ce80a155cc6e960c1} 
+\mbox{\hyperlink{networktopology_8h_ad258d4c51629346fceac4679b3209ad9}{Device\+Type}} Network\+Topology\+View\+::determine\+Device\+Type (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_host_info}{Host\+Info}} \&}]{host}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{class_network_topology_view_ab4a6db2c2d7f558ce80a155cc6e960c1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_network_topology_view_aec7caac1d0446056144e3d994ed3965b}\index{NetworkTopologyView@{NetworkTopologyView}!groupedLayout@{groupedLayout}}
+\index{groupedLayout@{groupedLayout}!NetworkTopologyView@{NetworkTopologyView}}
+\doxysubsubsection{\texorpdfstring{groupedLayout()}{groupedLayout()}}
+{\footnotesize\ttfamily \label{class_network_topology_view_aec7caac1d0446056144e3d994ed3965b} 
+void Network\+Topology\+View\+::grouped\+Layout (\begin{DoxyParamCaption}\item[{const QMap$<$ QString, QString\+List $>$ \&}]{groups}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_network_topology_view_aaf91e8f992d89a55c382815abcb84184}\index{NetworkTopologyView@{NetworkTopologyView}!hierarchicalLayout@{hierarchicalLayout}}
+\index{hierarchicalLayout@{hierarchicalLayout}!NetworkTopologyView@{NetworkTopologyView}}
+\doxysubsubsection{\texorpdfstring{hierarchicalLayout()}{hierarchicalLayout()}}
+{\footnotesize\ttfamily \label{class_network_topology_view_aaf91e8f992d89a55c382815abcb84184} 
+void Network\+Topology\+View\+::hierarchical\+Layout (\begin{DoxyParamCaption}\item[{const QMap$<$ int, QString\+List $>$ \&}]{layers}{}\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_topology_view_aaf91e8f992d89a55c382815abcb84184_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_network_topology_view_a126996c6425f4947275c79bc42a8c2f8}\index{NetworkTopologyView@{NetworkTopologyView}!nodeSelected@{nodeSelected}}
+\index{nodeSelected@{nodeSelected}!NetworkTopologyView@{NetworkTopologyView}}
+\doxysubsubsection{\texorpdfstring{nodeSelected}{nodeSelected}}
+{\footnotesize\ttfamily \label{class_network_topology_view_a126996c6425f4947275c79bc42a8c2f8} 
+void Network\+Topology\+View\+::node\+Selected (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_host_info}{Host\+Info}} \&}]{host}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_topology_view_a126996c6425f4947275c79bc42a8c2f8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_network_topology_view_abb26033011fdad463562d3cb56df316b}\index{NetworkTopologyView@{NetworkTopologyView}!setHosts@{setHosts}}
+\index{setHosts@{setHosts}!NetworkTopologyView@{NetworkTopologyView}}
+\doxysubsubsection{\texorpdfstring{setHosts()}{setHosts()}}
+{\footnotesize\ttfamily \label{class_network_topology_view_abb26033011fdad463562d3cb56df316b} 
+void Network\+Topology\+View\+::set\+Hosts (\begin{DoxyParamCaption}\item[{const QList$<$ \mbox{\hyperlink{struct_host_info}{Host\+Info}} $>$ \&}]{hosts}{}\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_topology_view_abb26033011fdad463562d3cb56df316b_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\Hypertarget{class_network_topology_view_a208658d74b982b5213f9f9713ca8c4a9}\index{NetworkTopologyView@{NetworkTopologyView}!m\_analyzer@{m\_analyzer}}
+\index{m\_analyzer@{m\_analyzer}!NetworkTopologyView@{NetworkTopologyView}}
+\doxysubsubsection{\texorpdfstring{m\_analyzer}{m\_analyzer}}
+{\footnotesize\ttfamily \label{class_network_topology_view_a208658d74b982b5213f9f9713ca8c4a9} 
+\mbox{\hyperlink{class_topology_analyzer}{Topology\+Analyzer}} Network\+Topology\+View\+::m\+\_\+analyzer\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_network_topology_view_a484340064517ec22f07682e5807f80de}\index{NetworkTopologyView@{NetworkTopologyView}!m\_connections@{m\_connections}}
+\index{m\_connections@{m\_connections}!NetworkTopologyView@{NetworkTopologyView}}
+\doxysubsubsection{\texorpdfstring{m\_connections}{m\_connections}}
+{\footnotesize\ttfamily \label{class_network_topology_view_a484340064517ec22f07682e5807f80de} 
+QList$<$\mbox{\hyperlink{class_connection_line}{Connection\+Line}}\texorpdfstring{$\ast$}{*}$>$ Network\+Topology\+View\+::m\+\_\+connections\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_network_topology_view_a4b6e2ef46c59706a2e75bb262017b37c}\index{NetworkTopologyView@{NetworkTopologyView}!m\_nodes@{m\_nodes}}
+\index{m\_nodes@{m\_nodes}!NetworkTopologyView@{NetworkTopologyView}}
+\doxysubsubsection{\texorpdfstring{m\_nodes}{m\_nodes}}
+{\footnotesize\ttfamily \label{class_network_topology_view_a4b6e2ef46c59706a2e75bb262017b37c} 
+QMap$<$QString, \mbox{\hyperlink{class_device_node}{Device\+Node}}\texorpdfstring{$\ast$}{*}$>$ Network\+Topology\+View\+::m\+\_\+nodes\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_network_topology_view_a0990f2f190b7226d4759c9b98de3678a}\index{NetworkTopologyView@{NetworkTopologyView}!m\_scene@{m\_scene}}
+\index{m\_scene@{m\_scene}!NetworkTopologyView@{NetworkTopologyView}}
+\doxysubsubsection{\texorpdfstring{m\_scene}{m\_scene}}
+{\footnotesize\ttfamily \label{class_network_topology_view_a0990f2f190b7226d4759c9b98de3678a} 
+QGraphics\+Scene\texorpdfstring{$\ast$}{*} Network\+Topology\+View\+::m\+\_\+scene\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{networktopology_8h}{networktopology.\+h}}\item 
+build/\+Net\+Scanner\+\_\+autogen/\+EWIEGA46\+WW/\mbox{\hyperlink{build_2_net_scanner__autogen_2_e_w_i_e_g_a46_w_w_2moc__networktopology_8cpp}{moc\+\_\+networktopology.\+cpp}}\item 
+Net\+Scanner\+\_\+autogen/\+JRIAJ772\+TK/\mbox{\hyperlink{_net_scanner__autogen_2_j_r_i_a_j772_t_k_2moc__networktopology_8cpp}{moc\+\_\+networktopology.\+cpp}}\item 
+\mbox{\hyperlink{networktopology_8cpp}{networktopology.\+cpp}}\end{DoxyCompactItemize}

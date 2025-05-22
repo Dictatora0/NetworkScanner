@@ -1,0 +1,5 @@
+<map id="NetworkScanner" name="NetworkScanner">
+<area shape="rect" id="Node000001" title="网络扫描器类" alt="" coords="5,120,222,1343"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="84,5,143,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,87,116,120,111,120,111,87"/>
+</map>

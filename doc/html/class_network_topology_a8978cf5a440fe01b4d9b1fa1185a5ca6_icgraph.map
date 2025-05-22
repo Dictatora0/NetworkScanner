@@ -1,0 +1,11 @@
+<map id="NetworkTopology::deviceSelected" name="NetworkTopology::deviceSelected">
+<area shape="rect" id="Node000001" title=" " alt="" coords="696,35,916,60"/>
+<area shape="rect" id="Node000002" href="$class_main_window.html#aee6c67086bb42a78185847b603f3566e" title=" " alt="" coords="435,5,648,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="681,36,649,33,649,27,681,31"/>
+<area shape="rect" id="Node000005" href="$class_network_topology.html#a7c64308620bf6f3ef5b2eb00a37b3438" title=" " alt="" coords="452,55,631,96"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="681,63,632,69,632,63,681,58"/>
+<area shape="rect" id="Node000003" href="$class_main_window.html#aabd8d480a18455fd70abceb51345d6a6" title=" " alt="" coords="233,5,387,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="419,21,388,21,388,16,419,16"/>
+<area shape="rect" id="Node000004" href="$class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,5,185,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="217,21,185,21,185,16,217,16"/>
+</map>

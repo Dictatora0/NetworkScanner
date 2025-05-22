@@ -1,0 +1,135 @@
+\doxysection{Connection\+Line类 参考}
+\hypertarget{class_connection_line}{}\label{class_connection_line}\index{ConnectionLine@{ConnectionLine}}
+
+
+{\ttfamily \#include $<$networktopology.\+h$>$}
+
+
+
+类 Connection\+Line 继承关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{class_connection_line__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Connection\+Line 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_connection_line__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_connection_line_a693b4ce7bcae3a65cecb9817b5e1dd3d}{Connection\+Line}} (\mbox{\hyperlink{class_device_node}{Device\+Node}} \texorpdfstring{$\ast$}{*}source, \mbox{\hyperlink{class_device_node}{Device\+Node}} \texorpdfstring{$\ast$}{*}target, \mbox{\hyperlink{networktopology_8h_aa1f0e2efd52935fd01bfece0fbead81f}{Connection\+Type}} type=\mbox{\hyperlink{networktopology_8h_aa1f0e2efd52935fd01bfece0fbead81fa1170f811f066620fe382b20395e9c31c}{CONNECTION\+\_\+\+DIRECT}})
+\item 
+QRectF \mbox{\hyperlink{class_connection_line_a0c7d47271ba7f0e7ec27b2b85fc32f36}{bounding\+Rect}} () const override
+\item 
+void \mbox{\hyperlink{class_connection_line_a1740cffc2a385a430d8637a1c559e2c6}{paint}} (QPainter \texorpdfstring{$\ast$}{*}painter, const QStyle\+Option\+Graphics\+Item \texorpdfstring{$\ast$}{*}option, QWidget \texorpdfstring{$\ast$}{*}widget) override
+\item 
+void \mbox{\hyperlink{class_connection_line_a0218b726097ec9e949be522d08353d7f}{update\+Position}} ()
+\item 
+void \mbox{\hyperlink{class_connection_line_a74b7744c136bf84c7dbe323580de01e5}{set\+Connection\+Type}} (\mbox{\hyperlink{networktopology_8h_aa1f0e2efd52935fd01bfece0fbead81f}{Connection\+Type}} type)
+\item 
+\mbox{\hyperlink{networktopology_8h_aa1f0e2efd52935fd01bfece0fbead81f}{Connection\+Type}} \mbox{\hyperlink{class_connection_line_a631cf3fbdbf13c1530429016eabb6992}{connection\+Type}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_device_node}{Device\+Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_connection_line_ad404939adbcdd87d86b389e236c2d806}{m\+\_\+source}}
+\item 
+\mbox{\hyperlink{class_device_node}{Device\+Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_connection_line_aab5f6fc9b560e5bafb6c1ee9c08a835a}{m\+\_\+target}}
+\item 
+\mbox{\hyperlink{networktopology_8h_aa1f0e2efd52935fd01bfece0fbead81f}{Connection\+Type}} \mbox{\hyperlink{class_connection_line_a4298630c2696233ba09bb033057cb0bd}{m\+\_\+connection\+Type}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{构造及析构函数说明}
+\Hypertarget{class_connection_line_a693b4ce7bcae3a65cecb9817b5e1dd3d}\index{ConnectionLine@{ConnectionLine}!ConnectionLine@{ConnectionLine}}
+\index{ConnectionLine@{ConnectionLine}!ConnectionLine@{ConnectionLine}}
+\doxysubsubsection{\texorpdfstring{ConnectionLine()}{ConnectionLine()}}
+{\footnotesize\ttfamily \label{class_connection_line_a693b4ce7bcae3a65cecb9817b5e1dd3d} 
+Connection\+Line\+::\+Connection\+Line (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_device_node}{Device\+Node}} \texorpdfstring{$\ast$}{*}}]{source}{, }\item[{\mbox{\hyperlink{class_device_node}{Device\+Node}} \texorpdfstring{$\ast$}{*}}]{target}{, }\item[{\mbox{\hyperlink{networktopology_8h_aa1f0e2efd52935fd01bfece0fbead81f}{Connection\+Type}}}]{type}{ = {\ttfamily \mbox{\hyperlink{networktopology_8h_aa1f0e2efd52935fd01bfece0fbead81fa1170f811f066620fe382b20395e9c31c}{CONNECTION\+\_\+\+DIRECT}}}}\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_connection_line_a693b4ce7bcae3a65cecb9817b5e1dd3d_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{成员函数说明}
+\Hypertarget{class_connection_line_a0c7d47271ba7f0e7ec27b2b85fc32f36}\index{ConnectionLine@{ConnectionLine}!boundingRect@{boundingRect}}
+\index{boundingRect@{boundingRect}!ConnectionLine@{ConnectionLine}}
+\doxysubsubsection{\texorpdfstring{boundingRect()}{boundingRect()}}
+{\footnotesize\ttfamily \label{class_connection_line_a0c7d47271ba7f0e7ec27b2b85fc32f36} 
+QRectF Connection\+Line\+::bounding\+Rect (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+\Hypertarget{class_connection_line_a631cf3fbdbf13c1530429016eabb6992}\index{ConnectionLine@{ConnectionLine}!connectionType@{connectionType}}
+\index{connectionType@{connectionType}!ConnectionLine@{ConnectionLine}}
+\doxysubsubsection{\texorpdfstring{connectionType()}{connectionType()}}
+{\footnotesize\ttfamily \label{class_connection_line_a631cf3fbdbf13c1530429016eabb6992} 
+\mbox{\hyperlink{networktopology_8h_aa1f0e2efd52935fd01bfece0fbead81f}{Connection\+Type}} Connection\+Line\+::connection\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_connection_line_a1740cffc2a385a430d8637a1c559e2c6}\index{ConnectionLine@{ConnectionLine}!paint@{paint}}
+\index{paint@{paint}!ConnectionLine@{ConnectionLine}}
+\doxysubsubsection{\texorpdfstring{paint()}{paint()}}
+{\footnotesize\ttfamily \label{class_connection_line_a1740cffc2a385a430d8637a1c559e2c6} 
+void Connection\+Line\+::paint (\begin{DoxyParamCaption}\item[{QPainter \texorpdfstring{$\ast$}{*}}]{painter}{, }\item[{const QStyle\+Option\+Graphics\+Item \texorpdfstring{$\ast$}{*}}]{option}{, }\item[{QWidget \texorpdfstring{$\ast$}{*}}]{widget}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\Hypertarget{class_connection_line_a74b7744c136bf84c7dbe323580de01e5}\index{ConnectionLine@{ConnectionLine}!setConnectionType@{setConnectionType}}
+\index{setConnectionType@{setConnectionType}!ConnectionLine@{ConnectionLine}}
+\doxysubsubsection{\texorpdfstring{setConnectionType()}{setConnectionType()}}
+{\footnotesize\ttfamily \label{class_connection_line_a74b7744c136bf84c7dbe323580de01e5} 
+void Connection\+Line\+::set\+Connection\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{networktopology_8h_aa1f0e2efd52935fd01bfece0fbead81f}{Connection\+Type}}}]{type}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_connection_line_a0218b726097ec9e949be522d08353d7f}\index{ConnectionLine@{ConnectionLine}!updatePosition@{updatePosition}}
+\index{updatePosition@{updatePosition}!ConnectionLine@{ConnectionLine}}
+\doxysubsubsection{\texorpdfstring{updatePosition()}{updatePosition()}}
+{\footnotesize\ttfamily \label{class_connection_line_a0218b726097ec9e949be522d08353d7f} 
+void Connection\+Line\+::update\+Position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_connection_line_a0218b726097ec9e949be522d08353d7f_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\Hypertarget{class_connection_line_a4298630c2696233ba09bb033057cb0bd}\index{ConnectionLine@{ConnectionLine}!m\_connectionType@{m\_connectionType}}
+\index{m\_connectionType@{m\_connectionType}!ConnectionLine@{ConnectionLine}}
+\doxysubsubsection{\texorpdfstring{m\_connectionType}{m\_connectionType}}
+{\footnotesize\ttfamily \label{class_connection_line_a4298630c2696233ba09bb033057cb0bd} 
+\mbox{\hyperlink{networktopology_8h_aa1f0e2efd52935fd01bfece0fbead81f}{Connection\+Type}} Connection\+Line\+::m\+\_\+connection\+Type\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_connection_line_ad404939adbcdd87d86b389e236c2d806}\index{ConnectionLine@{ConnectionLine}!m\_source@{m\_source}}
+\index{m\_source@{m\_source}!ConnectionLine@{ConnectionLine}}
+\doxysubsubsection{\texorpdfstring{m\_source}{m\_source}}
+{\footnotesize\ttfamily \label{class_connection_line_ad404939adbcdd87d86b389e236c2d806} 
+\mbox{\hyperlink{class_device_node}{Device\+Node}}\texorpdfstring{$\ast$}{*} Connection\+Line\+::m\+\_\+source\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_connection_line_aab5f6fc9b560e5bafb6c1ee9c08a835a}\index{ConnectionLine@{ConnectionLine}!m\_target@{m\_target}}
+\index{m\_target@{m\_target}!ConnectionLine@{ConnectionLine}}
+\doxysubsubsection{\texorpdfstring{m\_target}{m\_target}}
+{\footnotesize\ttfamily \label{class_connection_line_aab5f6fc9b560e5bafb6c1ee9c08a835a} 
+\mbox{\hyperlink{class_device_node}{Device\+Node}}\texorpdfstring{$\ast$}{*} Connection\+Line\+::m\+\_\+target\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{networktopology_8h}{networktopology.\+h}}\item 
+\mbox{\hyperlink{networktopology_8cpp}{networktopology.\+cpp}}\end{DoxyCompactItemize}

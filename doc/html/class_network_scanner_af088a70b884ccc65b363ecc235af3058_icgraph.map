@@ -1,0 +1,5 @@
+<map id="NetworkScanner::getLocalNetworkAddresses" name="NetworkScanner::getLocalNetworkAddresses">
+<area shape="rect" id="Node000001" title="获取本地网络地址列表" alt="" coords="236,5,411,46"/>
+<area shape="rect" id="Node000002" href="$class_network_scanner.html#a3d1a653bce80d595a1c302fda393e5b9" title="开始扫描" alt="" coords="5,13,188,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="220,28,188,28,188,23,220,23"/>
+</map>

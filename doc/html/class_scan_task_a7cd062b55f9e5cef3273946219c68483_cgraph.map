@@ -1,0 +1,9 @@
+<map id="ScanTask::run" name="ScanTask::run">
+<area shape="rect" id="Node000001" title="执行扫描任务" alt="" coords="5,70,111,96"/>
+<area shape="rect" id="Node000002" href="$class_network_scanner.html#a618ee5322d0843ad65a341fff40ce43d" title="根据IP地址生成伪MAC地址" alt="" coords="184,5,360,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,67,178,48,179,53,110,72"/>
+<area shape="rect" id="Node000003" href="$class_network_scanner.html#afcc19f1f23e444aef7b689e5d64c1422" title="查询主机名" alt="" coords="159,70,386,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="111,80,143,80,143,86,111,86"/>
+<area shape="rect" id="Node000004" href="$class_network_scanner.html#a86214dd708b98209915b29514cd58296" title="查询MAC地址对应的厂商" alt="" coords="178,120,367,161"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="110,94,179,113,178,118,108,99"/>
+</map>

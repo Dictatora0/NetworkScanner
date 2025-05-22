@@ -1,0 +1,188 @@
+\doxysection{Scan\+History类 参考}
+\hypertarget{class_scan_history}{}\label{class_scan_history}\index{ScanHistory@{ScanHistory}}
+
+
+{\ttfamily \#include $<$scanhistory.\+h$>$}
+
+
+
+类 Scan\+History 继承关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{class_scan_history__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Scan\+History 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{class_scan_history__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{信号}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_scan_history_a829c6ffa9ea8de6291f2f0a6fe1bac95}{history\+Changed}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_scan_history_a7c4c7700e47c076954e79e8706580f47}{Scan\+History}} (QObject \texorpdfstring{$\ast$}{*}parent=nullptr)
+\item 
+void \mbox{\hyperlink{class_scan_history_aa51b13a02fdbfac59135178d95eeb373}{add\+Session}} (const QList$<$ \mbox{\hyperlink{struct_host_info}{Host\+Info}} $>$ \&hosts, const QString \&description=QString())
+\item 
+QList$<$ \mbox{\hyperlink{struct_scan_session}{Scan\+Session}} $>$ \mbox{\hyperlink{class_scan_history_a6d6b0f71d8f344ad6e04ecb99a0a3d27}{get\+Sessions}} () const
+\item 
+\mbox{\hyperlink{struct_scan_session}{Scan\+Session}} \mbox{\hyperlink{class_scan_history_a4db1e8fb7b0763f08d3181971cacefe0}{get\+Session}} (int index) const
+\item 
+int \mbox{\hyperlink{class_scan_history_a5a2c133d218117972edcb61ee88adcae}{session\+Count}} () const
+\item 
+void \mbox{\hyperlink{class_scan_history_a8e37fba8e166c4771976611c6c237426}{clear\+History}} ()
+\item 
+void \mbox{\hyperlink{class_scan_history_a340fad8d0f3d11a82f1b0e0a524765cb}{remove\+Session}} (int index)
+\item 
+QPair$<$ QList$<$ \mbox{\hyperlink{struct_host_info}{Host\+Info}} $>$, QList$<$ \mbox{\hyperlink{struct_host_info}{Host\+Info}} $>$ $>$ \mbox{\hyperlink{class_scan_history_ab50694b4ad4960001bf713552d374809}{compare\+Scans}} (int session\+Index1, int session\+Index2) const
+\item 
+bool \mbox{\hyperlink{class_scan_history_a4f479a71412cad71786d49dd1b566748}{save\+To\+File}} (const QString \&filename) const
+\item 
+bool \mbox{\hyperlink{class_scan_history_a773eca78349c881eccf7fbce5f9a0e4c}{load\+From\+File}} (const QString \&filename)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+QList$<$ \mbox{\hyperlink{struct_scan_session}{Scan\+Session}} $>$ \mbox{\hyperlink{class_scan_history_a8e4ee2bf3362ec5cb7bfce12b9496c93}{m\+\_\+sessions}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{构造及析构函数说明}
+\Hypertarget{class_scan_history_a7c4c7700e47c076954e79e8706580f47}\index{ScanHistory@{ScanHistory}!ScanHistory@{ScanHistory}}
+\index{ScanHistory@{ScanHistory}!ScanHistory@{ScanHistory}}
+\doxysubsubsection{\texorpdfstring{ScanHistory()}{ScanHistory()}}
+{\footnotesize\ttfamily \label{class_scan_history_a7c4c7700e47c076954e79e8706580f47} 
+Scan\+History\+::\+Scan\+History (\begin{DoxyParamCaption}\item[{QObject \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\doxysubsection{成员函数说明}
+\Hypertarget{class_scan_history_aa51b13a02fdbfac59135178d95eeb373}\index{ScanHistory@{ScanHistory}!addSession@{addSession}}
+\index{addSession@{addSession}!ScanHistory@{ScanHistory}}
+\doxysubsubsection{\texorpdfstring{addSession()}{addSession()}}
+{\footnotesize\ttfamily \label{class_scan_history_aa51b13a02fdbfac59135178d95eeb373} 
+void Scan\+History\+::add\+Session (\begin{DoxyParamCaption}\item[{const QList$<$ \mbox{\hyperlink{struct_host_info}{Host\+Info}} $>$ \&}]{hosts}{, }\item[{const QString \&}]{description}{ = {\ttfamily QString()}}\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_scan_history_aa51b13a02fdbfac59135178d95eeb373_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_scan_history_a8e37fba8e166c4771976611c6c237426}\index{ScanHistory@{ScanHistory}!clearHistory@{clearHistory}}
+\index{clearHistory@{clearHistory}!ScanHistory@{ScanHistory}}
+\doxysubsubsection{\texorpdfstring{clearHistory()}{clearHistory()}}
+{\footnotesize\ttfamily \label{class_scan_history_a8e37fba8e166c4771976611c6c237426} 
+void Scan\+History\+::clear\+History (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_scan_history_a8e37fba8e166c4771976611c6c237426_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_scan_history_ab50694b4ad4960001bf713552d374809}\index{ScanHistory@{ScanHistory}!compareScans@{compareScans}}
+\index{compareScans@{compareScans}!ScanHistory@{ScanHistory}}
+\doxysubsubsection{\texorpdfstring{compareScans()}{compareScans()}}
+{\footnotesize\ttfamily \label{class_scan_history_ab50694b4ad4960001bf713552d374809} 
+QPair$<$ QList$<$ \mbox{\hyperlink{struct_host_info}{Host\+Info}} $>$, QList$<$ \mbox{\hyperlink{struct_host_info}{Host\+Info}} $>$ $>$ Scan\+History\+::compare\+Scans (\begin{DoxyParamCaption}\item[{int}]{session\+Index1}{, }\item[{int}]{session\+Index2}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_scan_history_a4db1e8fb7b0763f08d3181971cacefe0}\index{ScanHistory@{ScanHistory}!getSession@{getSession}}
+\index{getSession@{getSession}!ScanHistory@{ScanHistory}}
+\doxysubsubsection{\texorpdfstring{getSession()}{getSession()}}
+{\footnotesize\ttfamily \label{class_scan_history_a4db1e8fb7b0763f08d3181971cacefe0} 
+\mbox{\hyperlink{struct_scan_session}{Scan\+Session}} Scan\+History\+::get\+Session (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_scan_history_a6d6b0f71d8f344ad6e04ecb99a0a3d27}\index{ScanHistory@{ScanHistory}!getSessions@{getSessions}}
+\index{getSessions@{getSessions}!ScanHistory@{ScanHistory}}
+\doxysubsubsection{\texorpdfstring{getSessions()}{getSessions()}}
+{\footnotesize\ttfamily \label{class_scan_history_a6d6b0f71d8f344ad6e04ecb99a0a3d27} 
+QList$<$ \mbox{\hyperlink{struct_scan_session}{Scan\+Session}} $>$ Scan\+History\+::get\+Sessions (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_scan_history_a829c6ffa9ea8de6291f2f0a6fe1bac95}\index{ScanHistory@{ScanHistory}!historyChanged@{historyChanged}}
+\index{historyChanged@{historyChanged}!ScanHistory@{ScanHistory}}
+\doxysubsubsection{\texorpdfstring{historyChanged}{historyChanged}}
+{\footnotesize\ttfamily \label{class_scan_history_a829c6ffa9ea8de6291f2f0a6fe1bac95} 
+void Scan\+History\+::history\+Changed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_scan_history_a829c6ffa9ea8de6291f2f0a6fe1bac95_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_scan_history_a773eca78349c881eccf7fbce5f9a0e4c}\index{ScanHistory@{ScanHistory}!loadFromFile@{loadFromFile}}
+\index{loadFromFile@{loadFromFile}!ScanHistory@{ScanHistory}}
+\doxysubsubsection{\texorpdfstring{loadFromFile()}{loadFromFile()}}
+{\footnotesize\ttfamily \label{class_scan_history_a773eca78349c881eccf7fbce5f9a0e4c} 
+bool Scan\+History\+::load\+From\+File (\begin{DoxyParamCaption}\item[{const QString \&}]{filename}{}\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_scan_history_a773eca78349c881eccf7fbce5f9a0e4c_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_scan_history_a340fad8d0f3d11a82f1b0e0a524765cb}\index{ScanHistory@{ScanHistory}!removeSession@{removeSession}}
+\index{removeSession@{removeSession}!ScanHistory@{ScanHistory}}
+\doxysubsubsection{\texorpdfstring{removeSession()}{removeSession()}}
+{\footnotesize\ttfamily \label{class_scan_history_a340fad8d0f3d11a82f1b0e0a524765cb} 
+void Scan\+History\+::remove\+Session (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_scan_history_a340fad8d0f3d11a82f1b0e0a524765cb_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_scan_history_a4f479a71412cad71786d49dd1b566748}\index{ScanHistory@{ScanHistory}!saveToFile@{saveToFile}}
+\index{saveToFile@{saveToFile}!ScanHistory@{ScanHistory}}
+\doxysubsubsection{\texorpdfstring{saveToFile()}{saveToFile()}}
+{\footnotesize\ttfamily \label{class_scan_history_a4f479a71412cad71786d49dd1b566748} 
+bool Scan\+History\+::save\+To\+File (\begin{DoxyParamCaption}\item[{const QString \&}]{filename}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_scan_history_a5a2c133d218117972edcb61ee88adcae}\index{ScanHistory@{ScanHistory}!sessionCount@{sessionCount}}
+\index{sessionCount@{sessionCount}!ScanHistory@{ScanHistory}}
+\doxysubsubsection{\texorpdfstring{sessionCount()}{sessionCount()}}
+{\footnotesize\ttfamily \label{class_scan_history_a5a2c133d218117972edcb61ee88adcae} 
+int Scan\+History\+::session\+Count (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{类成员变量说明}
+\Hypertarget{class_scan_history_a8e4ee2bf3362ec5cb7bfce12b9496c93}\index{ScanHistory@{ScanHistory}!m\_sessions@{m\_sessions}}
+\index{m\_sessions@{m\_sessions}!ScanHistory@{ScanHistory}}
+\doxysubsubsection{\texorpdfstring{m\_sessions}{m\_sessions}}
+{\footnotesize\ttfamily \label{class_scan_history_a8e4ee2bf3362ec5cb7bfce12b9496c93} 
+QList$<$\mbox{\hyperlink{struct_scan_session}{Scan\+Session}}$>$ Scan\+History\+::m\+\_\+sessions\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{scanhistory_8h}{scanhistory.\+h}}\item 
+build/\+Net\+Scanner\+\_\+autogen/\+EWIEGA46\+WW/\mbox{\hyperlink{build_2_net_scanner__autogen_2_e_w_i_e_g_a46_w_w_2moc__scanhistory_8cpp}{moc\+\_\+scanhistory.\+cpp}}\item 
+Net\+Scanner\+\_\+autogen/\+JRIAJ772\+TK/\mbox{\hyperlink{_net_scanner__autogen_2_j_r_i_a_j772_t_k_2moc__scanhistory_8cpp}{moc\+\_\+scanhistory.\+cpp}}\item 
+\mbox{\hyperlink{scanhistory_8cpp}{scanhistory.\+cpp}}\end{DoxyCompactItemize}

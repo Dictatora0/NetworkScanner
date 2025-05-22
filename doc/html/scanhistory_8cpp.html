@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Network Scanner: scanhistory.cpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Network Scanner
+   </div>
+   <div id="projectbrief">网络扫描和拓扑分析工具</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('scanhistory_8cpp.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">scanhistory.cpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="scanhistory_8h_source.html">scanhistory.h</a>&quot;</code><br />
+<code>#include &lt;QJsonDocument&gt;</code><br />
+<code>#include &lt;QJsonArray&gt;</code><br />
+<code>#include &lt;QJsonObject&gt;</code><br />
+<code>#include &lt;QDebug&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+scanhistory.cpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="scanhistory_8cpp__incl.png" border="0" usemap="#ascanhistory_8cpp" alt=""/></div>
+<map name="ascanhistory_8cpp" id="ascanhistory_8cpp">
+<area shape="rect" title=" " alt="" coords="590,5,701,31"/>
+<area shape="rect" href="scanhistory_8h.html" title=" " alt="" coords="335,79,433,105"/>
+<area shape="poly" title=" " alt="" coords="602,34,443,77,442,72,600,29"/>
+<area shape="rect" title=" " alt="" coords="456,79,576,105"/>
+<area shape="poly" title=" " alt="" coords="625,34,553,73,550,69,622,29"/>
+<area shape="rect" title=" " alt="" coords="600,79,690,105"/>
+<area shape="poly" title=" " alt="" coords="648,31,648,63,643,63,643,31"/>
+<area shape="rect" title=" " alt="" coords="714,79,811,105"/>
+<area shape="poly" title=" " alt="" coords="667,29,731,68,729,73,664,34"/>
+<area shape="rect" title=" " alt="" coords="836,79,905,105"/>
+<area shape="poly" title=" " alt="" coords="684,29,822,72,820,77,683,34"/>
+<area shape="rect" title=" " alt="" coords="5,226,75,252"/>
+<area shape="poly" title=" " alt="" coords="356,108,84,222,82,217,354,103"/>
+<area shape="rect" title=" " alt="" coords="98,226,187,252"/>
+<area shape="poly" title=" " alt="" coords="365,108,177,220,175,216,362,103"/>
+<area shape="rect" title=" " alt="" coords="211,226,264,252"/>
+<area shape="poly" title=" " alt="" coords="374,107,262,217,258,213,370,103"/>
+<area shape="rect" title=" " alt="" coords="288,226,344,252"/>
+<area shape="poly" title=" " alt="" coords="381,106,330,213,326,211,376,104"/>
+<area shape="rect" title=" " alt="" coords="519,153,585,178"/>
+<area shape="poly" title=" " alt="" coords="414,103,510,144,508,149,411,108"/>
+<area shape="rect" title=" " alt="" coords="608,153,661,178"/>
+<area shape="poly" title=" " alt="" coords="429,103,594,149,593,154,428,108"/>
+<area shape="rect" title=" " alt="" coords="686,153,784,178"/>
+<area shape="poly" title=" " alt="" coords="434,101,671,149,670,154,433,106"/>
+<area shape="rect" href="networkscanner_8h.html" title="网络扫描器类定义" alt="" coords="372,153,495,178"/>
+<area shape="poly" title=" " alt="" coords="394,103,419,138,414,141,390,106"/>
+<area shape="poly" title=" " alt="" coords="372,179,246,199,91,228,90,223,245,194,371,174"/>
+<area shape="poly" title=" " alt="" coords="385,181,203,226,202,221,383,176"/>
+<area shape="poly" title=" " alt="" coords="401,181,279,226,277,221,399,176"/>
+<area shape="poly" title=" " alt="" coords="415,181,350,220,347,216,412,177"/>
+<area shape="rect" title=" " alt="" coords="1160,226,1267,252"/>
+<area shape="poly" title=" " alt="" coords="496,174,508,176,685,192,825,199,965,206,1145,224,1144,229,964,211,824,204,685,197,508,181,495,179"/>
+<area shape="rect" title=" " alt="" coords="1292,226,1359,252"/>
+<area shape="poly" title=" " alt="" coords="496,174,508,176,624,186,722,191,891,194,1061,200,1160,209,1277,224,1276,229,1159,214,1060,205,891,200,722,197,623,191,508,181,495,180"/>
+<area shape="rect" title=" " alt="" coords="1383,226,1476,252"/>
+<area shape="poly" title=" " alt="" coords="496,174,508,176,638,187,748,193,937,197,1126,202,1237,210,1368,224,1368,229,1237,215,1126,207,936,202,748,199,637,192,508,181,495,180"/>
+<area shape="rect" title=" " alt="" coords="368,226,499,252"/>
+<area shape="poly" title=" " alt="" coords="436,179,436,211,431,211,431,179"/>
+<area shape="rect" title=" " alt="" coords="523,226,592,252"/>
+<area shape="poly" title=" " alt="" coords="456,177,525,216,522,221,453,181"/>
+<area shape="rect" title=" " alt="" coords="616,226,797,252"/>
+<area shape="poly" title=" " alt="" coords="480,176,647,219,645,225,479,181"/>
+<area shape="rect" title=" " alt="" coords="822,226,903,252"/>
+<area shape="poly" title=" " alt="" coords="496,174,807,223,806,229,495,179"/>
+<area shape="rect" title=" " alt="" coords="927,226,1025,252"/>
+<area shape="poly" title=" " alt="" coords="496,174,508,176,709,198,912,223,912,228,709,204,508,181,495,179"/>
+<area shape="rect" title=" " alt="" coords="1049,226,1135,252"/>
+<area shape="poly" title=" " alt="" coords="496,174,508,176,654,190,770,197,886,205,1034,223,1033,229,885,211,769,203,654,195,508,181,495,179"/>
+</map>
+</div>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="scanhistory_8cpp.html">scanhistory.cpp</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Network Scanner: networkscanner.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Network Scanner
+   </div>
+   <div id="projectbrief">网络扫描和拓扑分析工具</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('networkscanner_8h.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a>  </div>
+  <div class="headertitle"><div class="title">networkscanner.h 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>网络扫描器类定义  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &lt;QObject&gt;</code><br />
+<code>#include &lt;QHostAddress&gt;</code><br />
+<code>#include &lt;QList&gt;</code><br />
+<code>#include &lt;QMap&gt;</code><br />
+<code>#include &lt;QMutex&gt;</code><br />
+<code>#include &lt;QTcpSocket&gt;</code><br />
+<code>#include &lt;QDateTime&gt;</code><br />
+<code>#include &lt;QNetworkInterface&gt;</code><br />
+<code>#include &lt;QFuture&gt;</code><br />
+<code>#include &lt;QtConcurrent/QtConcurrent&gt;</code><br />
+<code>#include &lt;QHostInfo&gt;</code><br />
+<code>#include &lt;QThreadPool&gt;</code><br />
+<code>#include &lt;QRunnable&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+networkscanner.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="networkscanner_8h__incl.png" border="0" usemap="#anetworkscanner_8h" alt=""/></div>
+<map name="anetworkscanner_8h" id="anetworkscanner_8h">
+<area shape="rect" title="网络扫描器类定义" alt="" coords="577,5,700,31"/>
+<area shape="rect" title=" " alt="" coords="5,79,75,105"/>
+<area shape="poly" title=" " alt="" coords="577,26,365,44,230,60,90,81,90,76,229,55,365,39,576,21"/>
+<area shape="rect" title=" " alt="" coords="98,79,206,105"/>
+<area shape="poly" title=" " alt="" coords="577,30,222,81,221,76,576,25"/>
+<area shape="rect" title=" " alt="" coords="230,79,282,105"/>
+<area shape="poly" title=" " alt="" coords="577,31,452,50,298,81,297,76,451,45,576,25"/>
+<area shape="rect" title=" " alt="" coords="306,79,363,105"/>
+<area shape="poly" title=" " alt="" coords="581,34,379,81,378,76,580,29"/>
+<area shape="rect" title=" " alt="" coords="386,79,454,105"/>
+<area shape="poly" title=" " alt="" coords="602,34,469,77,468,72,601,29"/>
+<area shape="rect" title=" " alt="" coords="478,79,570,105"/>
+<area shape="poly" title=" " alt="" coords="621,34,558,73,555,68,618,29"/>
+<area shape="rect" title=" " alt="" coords="594,79,683,105"/>
+<area shape="poly" title=" " alt="" coords="641,31,641,63,636,63,636,31"/>
+<area shape="rect" title=" " alt="" coords="706,79,838,105"/>
+<area shape="poly" title=" " alt="" coords="663,29,737,69,735,74,660,34"/>
+<area shape="rect" title=" " alt="" coords="862,79,930,105"/>
+<area shape="poly" title=" " alt="" coords="683,29,847,74,846,79,682,34"/>
+<area shape="rect" title=" " alt="" coords="955,79,1136,105"/>
+<area shape="poly" title=" " alt="" coords="701,28,961,73,961,78,700,33"/>
+<area shape="rect" title=" " alt="" coords="1161,79,1242,105"/>
+<area shape="poly" title=" " alt="" coords="701,22,895,42,1146,76,1145,81,895,47,701,27"/>
+<area shape="rect" title=" " alt="" coords="1266,79,1363,105"/>
+<area shape="poly" title=" " alt="" coords="701,21,939,40,1092,56,1251,76,1250,81,1092,61,938,46,701,26"/>
+<area shape="rect" title=" " alt="" coords="1388,79,1474,105"/>
+<area shape="poly" title=" " alt="" coords="701,19,987,36,1177,53,1373,76,1372,81,1176,58,987,41,700,25"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件被哪些文件直接或间接地引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="networkscanner_8h__dep__incl.png" border="0" usemap="#anetworkscanner_8hdep" alt=""/></div>
+<map name="anetworkscanner_8hdep" id="anetworkscanner_8hdep">
+<area shape="rect" title="网络扫描器类定义" alt="" coords="1119,5,1242,31"/>
+<area shape="rect" href="_net_scanner__autogen_2_j_r_i_a_j772_t_k_2moc__networkscanner_8cpp.html" title=" " alt="" coords="5,256,258,297"/>
+<area shape="poly" title=" " alt="" coords="1104,27,919,45,809,61,700,82,622,101,563,121,428,170,185,258,183,253,427,165,561,116,621,96,699,76,808,56,918,40,1104,22"/>
+<area shape="rect" href="build_2_net_scanner__autogen_2_e_w_i_e_g_a46_w_w_2moc__networkscanner_8cpp.html" title=" " alt="" coords="1777,79,2048,120"/>
+<area shape="poly" title=" " alt="" coords="1258,25,1777,81,1776,86,1257,30"/>
+<area shape="rect" href="deviceanalyzer_8h.html" title=" " alt="" coords="711,86,829,112"/>
+<area shape="poly" title=" " alt="" coords="1105,37,830,89,829,84,1104,32"/>
+<area shape="rect" href="mainwindow_8h.html" title=" " alt="" coords="927,175,1029,201"/>
+<area shape="poly" title=" " alt="" coords="1156,43,1108,81,994,177,991,173,1104,77,1152,39"/>
+<area shape="rect" href="networkscanner_8cpp.html" title="网络扫描器类的实现" alt="" coords="1268,86,1406,112"/>
+<area shape="poly" title=" " alt="" coords="1220,36,1314,84,1312,88,1217,41"/>
+<area shape="rect" href="networktopology_8h.html" title=" " alt="" coords="1118,86,1244,112"/>
+<area shape="poly" title=" " alt="" coords="1184,47,1184,86,1178,86,1178,47"/>
+<area shape="rect" href="scanhistory_8h.html" title=" " alt="" coords="1511,86,1608,112"/>
+<area shape="poly" title=" " alt="" coords="1254,32,1511,85,1510,91,1253,37"/>
+<area shape="rect" href="_net_scanner__autogen_2mocs__compilation_8cpp.html" title=" " alt="" coords="591,345,746,386"/>
+<area shape="poly" title=" " alt="" coords="269,297,591,349,590,354,268,303"/>
+<area shape="rect" href="build_2_net_scanner__autogen_2mocs__compilation_8cpp.html" title=" " alt="" coords="1724,345,1899,386"/>
+<area shape="poly" title=" " alt="" coords="1961,128,1979,145,1993,167,1998,195,1998,235,1994,273,1986,298,1968,317,1947,332,1900,352,1898,347,1944,328,1965,313,1981,296,1989,272,1993,234,1993,196,1988,169,1975,149,1957,131"/>
+<area shape="rect" href="_net_scanner__autogen_2_j_r_i_a_j772_t_k_2moc__deviceanalyzer_8cpp.html" title=" " alt="" coords="281,256,528,297"/>
+<area shape="poly" title=" " alt="" coords="695,104,642,109,582,120,523,140,469,170,449,189,433,212,413,257,408,255,429,209,445,186,466,166,521,135,581,115,641,103,695,98"/>
+<area shape="rect" href="build_2_net_scanner__autogen_2_e_w_i_e_g_a46_w_w_2moc__deviceanalyzer_8cpp.html" title=" " alt="" coords="637,168,903,208"/>
+<area shape="poly" title=" " alt="" coords="773,128,773,168,768,168,768,128"/>
+<area shape="rect" href="deviceanalyzer_8cpp.html" title=" " alt="" coords="480,175,612,201"/>
+<area shape="poly" title=" " alt="" coords="726,121,579,177,577,172,724,116"/>
+<area shape="poly" title=" " alt="" coords="815,116,950,172,948,177,813,121"/>
+<area shape="poly" title=" " alt="" coords="480,300,610,342,608,347,478,305"/>
+<area shape="poly" title=" " alt="" coords="787,221,812,261,829,280,849,295,898,309,985,322,1230,341,1503,353,1724,359,1724,365,1503,358,1230,346,985,327,897,314,846,299,825,284,808,265,782,224"/>
+<area shape="rect" href="_net_scanner__autogen_2_j_r_i_a_j772_t_k_2moc__mainwindow_8cpp.html" title=" " alt="" coords="553,256,784,297"/>
+<area shape="poly" title=" " alt="" coords="925,208,916,211,744,258,743,253,915,206,923,203"/>
+<area shape="rect" href="build_2_net_scanner__autogen_2_e_w_i_e_g_a46_w_w_2moc__mainwindow_8cpp.html" title=" " alt="" coords="1150,256,1401,297"/>
+<area shape="poly" title=" " alt="" coords="1034,203,1043,206,1207,253,1206,258,1041,211,1033,208"/>
+<area shape="rect" href="main_8cpp.html" title=" " alt="" coords="860,264,934,290"/>
+<area shape="poly" title=" " alt="" coords="958,214,910,265,906,262,955,210"/>
+<area shape="rect" href="mainwindow_8cpp.html" title=" " alt="" coords="959,264,1075,290"/>
+<area shape="poly" title=" " alt="" coords="992,214,1014,262,1009,265,987,216"/>
+<area shape="poly" title=" " alt="" coords="672,313,672,345,666,345,666,313"/>
+<area shape="poly" title=" " alt="" coords="1413,297,1724,347,1724,353,1412,303"/>
+<area shape="poly" title=" " alt="" coords="1140,121,1008,177,1006,172,1138,116"/>
+<area shape="rect" href="_net_scanner__autogen_2_j_r_i_a_j772_t_k_2moc__networktopology_8cpp.html" title=" " alt="" coords="1054,168,1308,208"/>
+<area shape="poly" title=" " alt="" coords="1184,128,1184,168,1178,168,1178,128"/>
+<area shape="rect" href="build_2_net_scanner__autogen_2_e_w_i_e_g_a46_w_w_2moc__networktopology_8cpp.html" title=" " alt="" coords="1675,256,1948,297"/>
+<area shape="poly" title=" " alt="" coords="1243,114,1256,117,1371,139,1421,148,1484,165,1535,185,1586,206,1740,253,1738,258,1584,211,1533,190,1483,170,1420,153,1370,144,1255,122,1241,119"/>
+<area shape="rect" href="networktopology_8cpp.html" title=" " alt="" coords="1332,175,1472,201"/>
+<area shape="poly" title=" " alt="" coords="1227,116,1372,172,1370,177,1225,121"/>
+<area shape="poly" title=" " alt="" coords="1164,223,1132,264,1112,283,1089,299,1062,311,1026,321,936,338,747,361,747,355,935,333,1024,316,1060,306,1086,295,1108,279,1128,260,1160,220"/>
+<area shape="poly" title=" " alt="" coords="1814,313,1814,345,1809,345,1809,313"/>
+<area shape="poly" title=" " alt="" coords="1496,112,1417,122,1229,141,1147,151,1043,170,1016,177,1014,172,1042,165,1146,146,1228,136,1417,117,1495,107"/>
+<area shape="rect" href="_net_scanner__autogen_2_j_r_i_a_j772_t_k_2moc__scanhistory_8cpp.html" title=" " alt="" coords="1425,256,1651,297"/>
+<area shape="poly" title=" " alt="" coords="1559,128,1543,256,1538,256,1554,127"/>
+<area shape="rect" href="build_2_net_scanner__autogen_2_e_w_i_e_g_a46_w_w_2moc__scanhistory_8cpp.html" title=" " alt="" coords="1597,168,1842,208"/>
+<area shape="poly" title=" " alt="" coords="1597,118,1685,165,1682,170,1594,122"/>
+<area shape="rect" href="scanhistory_8cpp.html" title=" " alt="" coords="1866,175,1978,201"/>
+<area shape="poly" title=" " alt="" coords="1624,112,1855,165,1881,172,1879,177,1854,170,1623,117"/>
+<area shape="poly" title=" " alt="" coords="1410,300,1034,338,747,361,746,356,1034,333,1409,295"/>
+<area shape="poly" title=" " alt="" coords="1856,210,1921,229,1946,241,1963,255,1971,270,1971,284,1964,298,1952,310,1920,331,1880,347,1878,342,1917,326,1949,306,1960,295,1965,283,1965,271,1959,258,1944,245,1919,234,1855,215"/>
+</map>
+</div>
+</div>
+<p><a href="networkscanner_8h_source.html">浏览该文件的源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_host_info.html">HostInfo</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">存储主机信息的结构体  <a href="struct_host_info.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scan_strategy.html">ScanStrategy</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">扫描策略类  <a href="class_scan_strategy.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scan_task.html">ScanTask</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">扫描任务类  <a href="class_scan_task.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network_scanner.html">NetworkScanner</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">网络扫描器类  <a href="class_network_scanner.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>网络扫描器类定义 </p>
+<p>提供网络设备发现和端口扫描功能 </p><dl class="section author"><dt>作者</dt><dd>Network Scanner Team </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>2.1.0 </dd></dl>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="networkscanner_8h.html">networkscanner.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

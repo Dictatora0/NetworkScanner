@@ -1,0 +1,15 @@
+<map id="ScanHistory::historyChanged" name="ScanHistory::historyChanged">
+<area shape="rect" id="Node000001" title=" " alt="" coords="490,104,682,130"/>
+<area shape="rect" id="Node000002" href="$class_scan_history.html#aa51b13a02fdbfac59135178d95eeb373" title=" " alt="" coords="253,5,422,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="549,98,499,70,441,45,407,34,409,29,443,40,501,66,552,93"/>
+<area shape="rect" id="Node000003" href="$class_scan_history.html#a8e37fba8e166c4771976611c6c237426" title=" " alt="" coords="252,55,423,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="502,103,405,84,406,78,503,98"/>
+<area shape="rect" id="Node000004" href="$class_scan_history.html#a773eca78349c881eccf7fbce5f9a0e4c" title=" " alt="" coords="249,104,426,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="475,120,426,120,426,114,475,114"/>
+<area shape="rect" id="Node000005" href="$class_scan_history.html#a340fad8d0f3d11a82f1b0e0a524765cb" title=" " alt="" coords="242,153,433,179"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="503,136,406,155,405,150,502,131"/>
+<area shape="rect" id="Node000006" href="$class_main_window.html#a95dc085bf70bd0c1ad05bd80f897fd1d" title=" " alt="" coords="233,203,442,228"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="552,140,501,168,443,194,409,205,407,199,441,189,499,163,549,136"/>
+<area shape="rect" id="Node000007" href="$class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,203,185,228"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="217,218,185,218,185,213,217,213"/>
+</map>
